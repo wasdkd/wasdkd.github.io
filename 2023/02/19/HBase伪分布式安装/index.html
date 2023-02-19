@@ -6,44 +6,41 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hadoop完全分布式安装 | 鳌伊耶学习IT历程</title>
+  <title>HBase伪分布式安装 | 鳌伊耶学习IT历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hadoop完全分布式">
+  <meta name="description" content="Hbase伪分布式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hadoop完全分布式安装">
-<meta property="og:url" content="http://example.com/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:title" content="HBase伪分布式安装">
+<meta property="og:url" content="http://example.com/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="鳌伊耶学习IT历程">
-<meta property="og:description" content="Hadoop完全分布式">
+<meta property="og:description" content="Hbase伪分布式">
 <meta property="og:locale">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xfypc.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XffWJ.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfD4o.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xf49A.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfnhV.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfUNN.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xftud.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfkHb.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xf0Eq.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfCTz.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xfwkw.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xf2pa.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfH9x.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfbAk.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfjNL.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfCTz.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xf8hp.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfNZU.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfrHv.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xf3e3.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfRay.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfpB8.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/Xfmk5.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/18/XfJiV.png">
-<meta property="article:published_time" content="2023-02-18T14:54:33.000Z">
-<meta property="article:modified_time" content="2023-02-18T15:48:21.526Z">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XtTGA.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XtaYo.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XtQwN.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XtY7V.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XtqMd.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWZtb.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWVsz.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWicq.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWyyw.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XW48a.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWAGx.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWDqk.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWnwL.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWWPU.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWt7p.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XW0tv.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWCm3.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWlvy.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XW2y5.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWOdZ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWHI8.png">
+<meta property="article:published_time" content="2023-02-19T03:06:49.000Z">
+<meta property="article:modified_time" content="2023-02-19T03:17:36.686Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.328888.xyz/2023/02/18/Xfypc.png">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/02/19/XtTGA.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习IT历程" type="application/atom+xml">
   
@@ -184,14 +181,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hadoop完全分布式安装" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-HBase伪分布式安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hadoop完全分布式安装
+      HBase伪分布式安装
     </h1>
   
 
@@ -208,102 +205,81 @@
 <!--显示阅读次数完毕-->
 
         
-        <a href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-18T14:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-18</time>
+        <a href="/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2023-02-19T03:06:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hadoop完全分布式"><a href="#Hadoop完全分布式" class="headerlink" title="Hadoop完全分布式"></a>Hadoop完全分布式</h1><span id="more"></span>
-
-<h2 id="1、安装3个节点："><a href="#1、安装3个节点：" class="headerlink" title="1、安装3个节点："></a>1、安装3个节点：</h2><p>master+2个slave, 三个节点的网络要求在同一个区域网内（连接同一个WiFi，热点也行），且如果是在虚拟机里安装的Ubuntu，需要修改虚拟机的网络适配器的设置如下图，记得勾选”复制物理网络连接状态”，这样子才能实现不同电脑上虚拟机之间相互连接。</p>
-  <img src="https://i.328888.xyz/2023/02/18/Xfypc.png" alt="Xfypc.png" border="0">  
-
-<h2 id="2、启动root账号"><a href="#2、启动root账号" class="headerlink" title="2、启动root账号"></a>2、启动root账号</h2><p>先用 sudo passwd命令修改密码</p>
-<p>再切换到root用户： su – 回车后输入密码</p>
-  <img src="https://i.328888.xyz/2023/02/18/XffWJ.png" alt="XffWJ.png" border="0">  
-
-<h2 id="3、使用apt-get-install-vim-命令重装vim工具"><a href="#3、使用apt-get-install-vim-命令重装vim工具" class="headerlink" title="3、使用apt-get install vim 命令重装vim工具"></a>3、使用apt-get install vim 命令重装vim工具</h2>  <img src="https://i.328888.xyz/2023/02/18/XfD4o.png" alt="XfD4o.png" border="0">  
-
-<h2 id="4、修改每个机器的hostname"><a href="#4、修改每个机器的hostname" class="headerlink" title="4、修改每个机器的hostname"></a>4、修改每个机器的hostname</h2>  <img src="https://i.328888.xyz/2023/02/18/Xf49A.png" alt="Xf49A.png" border="0">  
-
-<h2 id="5、查看每台虚拟机的ip地址，在每台节点上，都使用vi-x2F-ect-x2F-hosts-修改添加信息"><a href="#5、查看每台虚拟机的ip地址，在每台节点上，都使用vi-x2F-ect-x2F-hosts-修改添加信息" class="headerlink" title="5、查看每台虚拟机的ip地址，在每台节点上，都使用vi &#x2F;ect&#x2F;hosts 修改添加信息"></a>5、查看每台虚拟机的ip地址，在每台节点上，都使用vi &#x2F;ect&#x2F;hosts 修改添加信息</h2>  <img src="https://i.328888.xyz/2023/02/18/XfnhV.png" alt="XfnhV.png" border="0">  
-
-  <img src="https://i.328888.xyz/2023/02/18/XfUNN.png" alt="XfUNN.png" border="0">  
-
-<h2 id="6、使用sudo-apt-get-update命令和apt-get-install-ntp安装ntp"><a href="#6、使用sudo-apt-get-update命令和apt-get-install-ntp安装ntp" class="headerlink" title="6、使用sudo apt-get update命令和apt-get install ntp安装ntp"></a>6、使用sudo apt-get update命令和apt-get install ntp安装ntp</h2>  <img src="https://i.328888.xyz/2023/02/18/Xftud.png" alt="Xftud.png" border="0">  
-
-  <img src="https://i.328888.xyz/2023/02/18/XfkHb.png" alt="XfkHb.png" border="0">  
-
-  <img src="https://i.328888.xyz/2023/02/18/Xf0Eq.png" alt="Xf0Eq.png" border="0">  
-
-<h2 id="7、安装jdk并配置"><a href="#7、安装jdk并配置" class="headerlink" title="7、安装jdk并配置"></a>7、安装jdk并配置</h2><p>将Java的安装包解压，直接解压在系统根目录&#x2F;</p>
-<p>tar -zxvf jdk1.8.0_301.tar.gz -C &#x2F;</p>
-  <img src="https://i.328888.xyz/2023/02/18/XfCTz.png" alt="XfCTz.png" border="0">  
-
-<p>验证java是否安装成功</p>
-  <img src="https://i.328888.xyz/2023/02/18/Xfwkw.png" alt="Xfwkw.png" border="0">  
-
-<h2 id="8、安装ssh的server服务端"><a href="#8、安装ssh的server服务端" class="headerlink" title="8、安装ssh的server服务端"></a>8、安装ssh的server服务端</h2><p>apt-get install openssh-server</p>
-  <img src="https://i.328888.xyz/2023/02/18/Xf2pa.png" alt="Xf2pa.png" border="0">  
-
-<p>用vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config</p>
-<p>命令修改如图的配置</p>
-  <img src="https://i.328888.xyz/2023/02/18/XfH9x.png" alt="XfH9x.png" border="0">  
-
-<h2 id="9、配置免密登录"><a href="#9、配置免密登录" class="headerlink" title="9、配置免密登录"></a>9、配置免密登录</h2><p>在master主机和node1、node2分别生成密钥对</p>
-<p>ssh-keygen -t rsa</p>
-<p>将master 公钥id_rsa.pub 追加到master 的~&#x2F;.ssh&#x2F;authorized_keys 文件中,并复制到node1和node2机器上(node1和node2进行同样的操作)</p>
-<p>ssh-copy-id -i ~&#x2F;.ssh&#x2F;id_rsa.pub master</p>
-<p>ssh-copy-id -i ~&#x2F;.ssh&#x2F;id_rsa.pub node1</p>
-<p>ssh-copy-id -i ~&#x2F;.ssh&#x2F;id_rsa.pub node2</p>
-<p>验证免密登录：在master主机验证免密登录集群所有机器</p>
-<p>ssh master 如果成功，使用exit退出（如果退出了root用户，就进root），再验证下一个</p>
-<p>ssh node1 如果成功，使用exit退出（如果退出了root用户，就进root），再验证下一个</p>
-<p>ssh node2 如果成功，使用exit退出（如果退出了root用户，就进root）</p>
-  <img src="https://i.328888.xyz/2023/02/18/XfbAk.png" alt="XfbAk.png" border="0">  
-
-  <img src="https://i.328888.xyz/2023/02/18/XfjNL.png" alt="XfjNL.png" border="0">  
-
-<h2 id="10、解压Hadoop安装包-直接解压在系统根目录-x2F"><a href="#10、解压Hadoop安装包-直接解压在系统根目录-x2F" class="headerlink" title="10、解压Hadoop安装包(直接解压在系统根目录&#x2F;)"></a>10、解压Hadoop安装包(直接解压在系统根目录&#x2F;)</h2><p>tar -zxvf Hadoop-3.2.2.tar.gz -C &#x2F;</p>
-<p>接着去把解压后的文件夹改名为hadoop</p>
-<p>mv hadoop-3.2.2 hadoop</p>
-<h2 id="11、配置Hadoop环境变量"><a href="#11、配置Hadoop环境变量" class="headerlink" title="11、配置Hadoop环境变量"></a>11、配置Hadoop环境变量</h2><img src="https://i.328888.xyz/2023/02/18/XfCTz.png" alt="XfCTz.png" border="0">
-
-<h2 id="12、修改hadoop-env-sh文档"><a href="#12、修改hadoop-env-sh文档" class="headerlink" title="12、修改hadoop-env.sh文档"></a>12、修改hadoop-env.sh文档</h2><p>找到export JAVA_HOME,修改为如下：（或sudo vi &#x2F;etc&#x2F;profile 修改）</p>
-  <img src="https://i.328888.xyz/2023/02/18/Xf8hp.png" alt="Xf8hp.png" border="0">  
-
-<h2 id="13、修改配置文件core-site-xml"><a href="#13、修改配置文件core-site-xml" class="headerlink" title="13、修改配置文件core-site.xml"></a>13、修改配置文件core-site.xml</h2>  <img src="https://i.328888.xyz/2023/02/18/XfNZU.png" alt="XfNZU.png" border="0">  
-
-<h2 id="14、修改hdfs-site-xml文件"><a href="#14、修改hdfs-site-xml文件" class="headerlink" title="14、修改hdfs-site.xml文件"></a>14、修改hdfs-site.xml文件</h2>  <img src="https://i.328888.xyz/2023/02/18/XfrHv.png" alt="XfrHv.png" border="0">  
-
-<h2 id="15、配置mapred-site-xml"><a href="#15、配置mapred-site-xml" class="headerlink" title="15、配置mapred-site.xml"></a>15、配置mapred-site.xml</h2>  <img src="https://i.328888.xyz/2023/02/18/Xf3e3.png" alt="Xf3e3.png" border="0">  
-
-<h2 id="16、配置yarn-site-xml文件"><a href="#16、配置yarn-site-xml文件" class="headerlink" title="16、配置yarn-site.xml文件"></a>16、配置yarn-site.xml文件</h2>  <img src="https://i.328888.xyz/2023/02/18/XfRay.png" alt="XfRay.png" border="0">  
-
-<h2 id="17、将master-上的hadoop文件夹分发至其他机器（node1和node2）"><a href="#17、将master-上的hadoop文件夹分发至其他机器（node1和node2）" class="headerlink" title="17、将master 上的hadoop文件夹分发至其他机器（node1和node2）"></a>17、将master 上的hadoop文件夹分发至其他机器（node1和node2）</h2><p>发送到各自节点上也是放在root用户的系统根目录下</p>
-<p>sudo scp -r hadoop root@node1:&#x2F;</p>
-<p>sudo scp -r hadoop root@node2:&#x2F;</p>
-<p>18、单独修改master上&#x2F;hadoop&#x2F;etc&#x2F;hadoop下的workers文件</p>
-<p>vi workers</p>
-<p>将workers文件的内容修改为：node1 node2</p>
-<h2 id="19、格式化HDFS"><a href="#19、格式化HDFS" class="headerlink" title="19、格式化HDFS"></a>19、格式化HDFS</h2>  <img src="https://i.328888.xyz/2023/02/18/XfpB8.png" alt="XfpB8.png" border="0">  
-
-<h2 id="20、验证hadoop进程"><a href="#20、验证hadoop进程" class="headerlink" title="20、验证hadoop进程"></a>20、验证hadoop进程</h2><p>用 jps 命令分别在每一台机器验证,执行jps 命令后，master 主机包含以下三个进程为启动成功 SecondaryNameNode NameNode ResourceManager</p>
-<p>分别在两台slave节点（node1和node2）执行jps 命令，包含以下两个进程为启动成功</p>
-<p>NodeManager DataNode</p>
-  <img src="https://i.328888.xyz/2023/02/18/Xfmk5.png" alt="Xfmk5.png" border="0">  
-
-<img src="https://i.328888.xyz/2023/02/18/XfJiV.png" alt="XfJiV.png" border="0">
-
-
+        <h1 id="Hbase伪分布式"><a href="#Hbase伪分布式" class="headerlink" title="Hbase伪分布式"></a>Hbase伪分布式</h1><span id="more"></span>
 
 <hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2022116424&auto=1&height=66"></iframe>
+
 <hr>
-<hr>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1855412867&auto=1&height=66"></iframe>
+<h2 id="1、下载HBase"><a href="#1、下载HBase" class="headerlink" title="1、下载HBase"></a>1、下载HBase</h2><blockquote>
+<p>官网下载地址：<a target="_blank" rel="noopener" href="https://hbase.apache.org/downloads.html">https://hbase.apache.org/downloads.html</a></p>
+</blockquote>
+<h2 id="2、HBase的安装"><a href="#2、HBase的安装" class="headerlink" title="2、HBase的安装"></a>2、HBase的安装</h2><p>通过Xftp将安装包上传到当前用户的主目录下</p>
+  <img src="https://i.328888.xyz/2023/02/19/XtTGA.png" alt="XtTGA.png" border="0">  
+
+<p>通过 cd~ 命令进入到当前用户主目录下，然后解压安装包hbase-2.3.6-bin.tar.gz至路径 &#x2F;usr&#x2F;local 下：</p>
+  <img src="https://i.328888.xyz/2023/02/19/XtaYo.png" alt="XtaYo.png" border="0">  
+
+<h3 id="1）、将hbase-2-3-6-文件夹名称修改为-hbase"><a href="#1）、将hbase-2-3-6-文件夹名称修改为-hbase" class="headerlink" title="1）、将hbase-2.3.6 文件夹名称修改为 hbase"></a>1）、将hbase-2.3.6 文件夹名称修改为 hbase</h3>  <img src="https://i.328888.xyz/2023/02/19/XtQwN.png" alt="XtQwN.png" border="0">  
+
+<h3 id="2）、配置HBase环境变量"><a href="#2）、配置HBase环境变量" class="headerlink" title="2）、配置HBase环境变量"></a>2）、配置HBase环境变量</h3><p>先切换到 hbase下的bin目录，执行命令：vi ~&#x2F;.bashrc</p>
+<p>在export PATH这行追加&#x2F;usr&#x2F;local&#x2F;hbase&#x2F;bin ，”:”为分隔符。</p>
+<p>编辑并保存完成后执行 source ~&#x2F;.bashrc 让配置生效</p>
+  <img src="https://i.328888.xyz/2023/02/19/XtY7V.png" alt="XtY7V.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/02/19/XtqMd.png" alt="XtqMd.png" border="0">  
+
+<h3 id="3）、为-当前用户添加-hbase-权限"><a href="#3）、为-当前用户添加-hbase-权限" class="headerlink" title="3）、为 当前用户添加 hbase 权限"></a>3）、为 当前用户添加 hbase 权限</h3><p>进入到 &#x2F;usr&#x2F;local 下 执行命令：</p>
+<p>sudo chown -R gudeng:gudeng &#x2F;usr&#x2F;local &#x2F;hbase</p>
+<p>此命令意思为将 hbase 文件所有者修改为 gudeng 用户</p>
+  <img src="https://i.328888.xyz/2023/02/19/XWZtb.png" alt="XWZtb.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/02/19/XWVsz.png" alt="XWVsz.png" border="0">  
+
+<h3 id="4）、检查是否安装成功"><a href="#4）、检查是否安装成功" class="headerlink" title="4）、检查是否安装成功"></a>4）、检查是否安装成功</h3><p>执行命令：hbase version，有看到版本信息则安装成功</p>
+  <img src="https://i.328888.xyz/2023/02/19/XWicq.png" alt="XWicq.png" border="0">  
+
+<h2 id="3、HBase配置"><a href="#3、HBase配置" class="headerlink" title="3、HBase配置"></a>3、HBase配置</h2><h3 id="1）配置hbase-env-sh"><a href="#1）配置hbase-env-sh" class="headerlink" title="1）配置hbase-env.sh"></a>1）配置hbase-env.sh</h3><p>进入到confs文件目录下，然后执行vi hbase-env.sh 命令打开并编辑</p>
+<p>JAVA_HOME 为jdk安装路径，可以先进入jdk安装目录，然后 pwd 查看安装路径。配置HBASE_MANAGES_ZK为true，表示使用hbase自带的zookeeper</p>
+  <img src="https://i.328888.xyz/2023/02/19/XWyyw.png" alt="XWyyw.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/02/19/XW48a.png" alt="XW48a.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/02/19/XWAGx.png" alt="XWAGx.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/02/19/XWDqk.png" alt="XWDqk.png" border="0">  
+
+<h3 id="2）配置-hbase-site-xml"><a href="#2）配置-hbase-site-xml" class="headerlink" title="2）配置 hbase-site.xml"></a>2）配置 hbase-site.xml</h3>  <img src="https://i.328888.xyz/2023/02/19/XWnwL.png" alt="XWnwL.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/02/19/XWWPU.png" alt="XWWPU.png" border="0">  
+
+<h2 id="4、HBase测试运行"><a href="#4、HBase测试运行" class="headerlink" title="4、HBase测试运行"></a>4、HBase测试运行</h2><h3 id="1）启动hadoop"><a href="#1）启动hadoop" class="headerlink" title="1）启动hadoop"></a>1）启动hadoop</h3>  <img src="https://i.328888.xyz/2023/02/19/XWt7p.png" alt="XWt7p.png" border="0">  
+
+<p>启动HBase</p>
+<p>检查hbase是否启动成功</p>
+<p>执行命令：jps 查看进程，发现多了三个如截图所示的进程，说明启动成功。</p>
+  <img src="https://i.328888.xyz/2023/02/19/XW0tv.png" alt="XW0tv.png" border="0">  
+
+<p>进入 &#x2F;usr&#x2F;local&#x2F;hbase&#x2F;bin 目录，然后执行 hbase shell 命令，进入 hbase shell 界面。</p>
+  <img src="https://i.328888.xyz/2023/02/19/XWCm3.png" alt="XWCm3.png" border="0">  
+
+<h3 id="2-关闭hbaase"><a href="#2-关闭hbaase" class="headerlink" title="2)关闭hbaase"></a>2)关闭hbaase</h3><p>bin目录下执行 stop-hbase.sh 命令</p>
+  <img src="https://i.328888.xyz/2023/02/19/XWlvy.png" alt="XWlvy.png" border="0">  
+
+<p>执行 jps 查看关闭情况，看不到hbase的三个相关进程，说明关闭成功</p>
+  <img src="https://i.328888.xyz/2023/02/19/XW2y5.png" alt="XW2y5.png" border="0">  
+
+<h3 id="3）执行hbase-shell命令运行hbase"><a href="#3）执行hbase-shell命令运行hbase" class="headerlink" title="3）执行hbase shell命令运行hbase"></a>3）执行hbase shell命令运行hbase</h3>  <img src="https://i.328888.xyz/2023/02/19/XWOdZ.png" alt="XWOdZ.png" border="0">  
+
+<h3 id="4-测试hbase"><a href="#4-测试hbase" class="headerlink" title="4)测试hbase"></a>4)测试hbase</h3>  <img src="https://i.328888.xyz/2023/02/19/XWHI8.png" alt="XWHI8.png" border="0">  
       
 		
 		
@@ -393,7 +369,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -407,18 +383,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          HBase伪分布式安装
-        
-      </div>
-    </a>
   
-  
-    <a href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Word文档转换成Markdown</div>
+    <a href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hadoop完全分布式安装</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -445,7 +412,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">Hadoop完全分布式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%853%E4%B8%AA%E8%8A%82%E7%82%B9%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">1、安装3个节点：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%90%AF%E5%8A%A8root%E8%B4%A6%E5%8F%B7"><span class="toc-number">1.2.</span> <span class="toc-text">2、启动root账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8apt-get-install-vim-%E5%91%BD%E4%BB%A4%E9%87%8D%E8%A3%85vim%E5%B7%A5%E5%85%B7"><span class="toc-number">1.3.</span> <span class="toc-text">3、使用apt-get install vim 命令重装vim工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E4%BF%AE%E6%94%B9%E6%AF%8F%E4%B8%AA%E6%9C%BA%E5%99%A8%E7%9A%84hostname"><span class="toc-number">1.4.</span> <span class="toc-text">4、修改每个机器的hostname</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E6%9F%A5%E7%9C%8B%E6%AF%8F%E5%8F%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%9C%A8%E6%AF%8F%E5%8F%B0%E8%8A%82%E7%82%B9%E4%B8%8A%EF%BC%8C%E9%83%BD%E4%BD%BF%E7%94%A8vi-x2F-ect-x2F-hosts-%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E4%BF%A1%E6%81%AF"><span class="toc-number">1.5.</span> <span class="toc-text">5、查看每台虚拟机的ip地址，在每台节点上，都使用vi &#x2F;ect&#x2F;hosts 修改添加信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E4%BD%BF%E7%94%A8sudo-apt-get-update%E5%91%BD%E4%BB%A4%E5%92%8Capt-get-install-ntp%E5%AE%89%E8%A3%85ntp"><span class="toc-number">1.6.</span> <span class="toc-text">6、使用sudo apt-get update命令和apt-get install ntp安装ntp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E5%AE%89%E8%A3%85jdk%E5%B9%B6%E9%85%8D%E7%BD%AE"><span class="toc-number">1.7.</span> <span class="toc-text">7、安装jdk并配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E5%AE%89%E8%A3%85ssh%E7%9A%84server%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">1.8.</span> <span class="toc-text">8、安装ssh的server服务端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E9%85%8D%E7%BD%AE%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95"><span class="toc-number">1.9.</span> <span class="toc-text">9、配置免密登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E8%A7%A3%E5%8E%8BHadoop%E5%AE%89%E8%A3%85%E5%8C%85-%E7%9B%B4%E6%8E%A5%E8%A7%A3%E5%8E%8B%E5%9C%A8%E7%B3%BB%E7%BB%9F%E6%A0%B9%E7%9B%AE%E5%BD%95-x2F"><span class="toc-number">1.10.</span> <span class="toc-text">10、解压Hadoop安装包(直接解压在系统根目录&#x2F;)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E9%85%8D%E7%BD%AEHadoop%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.11.</span> <span class="toc-text">11、配置Hadoop环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81%E4%BF%AE%E6%94%B9hadoop-env-sh%E6%96%87%E6%A1%A3"><span class="toc-number">1.12.</span> <span class="toc-text">12、修改hadoop-env.sh文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6core-site-xml"><span class="toc-number">1.13.</span> <span class="toc-text">13、修改配置文件core-site.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E4%BF%AE%E6%94%B9hdfs-site-xml%E6%96%87%E4%BB%B6"><span class="toc-number">1.14.</span> <span class="toc-text">14、修改hdfs-site.xml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81%E9%85%8D%E7%BD%AEmapred-site-xml"><span class="toc-number">1.15.</span> <span class="toc-text">15、配置mapred-site.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16%E3%80%81%E9%85%8D%E7%BD%AEyarn-site-xml%E6%96%87%E4%BB%B6"><span class="toc-number">1.16.</span> <span class="toc-text">16、配置yarn-site.xml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17%E3%80%81%E5%B0%86master-%E4%B8%8A%E7%9A%84hadoop%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%86%E5%8F%91%E8%87%B3%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%EF%BC%88node1%E5%92%8Cnode2%EF%BC%89"><span class="toc-number">1.17.</span> <span class="toc-text">17、将master 上的hadoop文件夹分发至其他机器（node1和node2）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19%E3%80%81%E6%A0%BC%E5%BC%8F%E5%8C%96HDFS"><span class="toc-number">1.18.</span> <span class="toc-text">19、格式化HDFS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20%E3%80%81%E9%AA%8C%E8%AF%81hadoop%E8%BF%9B%E7%A8%8B"><span class="toc-number">1.19.</span> <span class="toc-text">20、验证hadoop进程</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hbase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">Hbase伪分布式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BDHBase"><span class="toc-number">1.1.</span> <span class="toc-text">1、下载HBase</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81HBase%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">2、HBase的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E3%80%81%E5%B0%86hbase-2-3-6-%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D%E7%A7%B0%E4%BF%AE%E6%94%B9%E4%B8%BA-hbase"><span class="toc-number">1.2.1.</span> <span class="toc-text">1）、将hbase-2.3.6 文件夹名称修改为 hbase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E3%80%81%E9%85%8D%E7%BD%AEHBase%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">2）、配置HBase环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89%E3%80%81%E4%B8%BA-%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E6%B7%BB%E5%8A%A0-hbase-%E6%9D%83%E9%99%90"><span class="toc-number">1.2.3.</span> <span class="toc-text">3）、为 当前用户添加 hbase 权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%89%E3%80%81%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="toc-number">1.2.4.</span> <span class="toc-text">4）、检查是否安装成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81HBase%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">3、HBase配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E9%85%8D%E7%BD%AEhbase-env-sh"><span class="toc-number">1.3.1.</span> <span class="toc-text">1）配置hbase-env.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E9%85%8D%E7%BD%AE-hbase-site-xml"><span class="toc-number">1.3.2.</span> <span class="toc-text">2）配置 hbase-site.xml</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81HBase%E6%B5%8B%E8%AF%95%E8%BF%90%E8%A1%8C"><span class="toc-number">1.4.</span> <span class="toc-text">4、HBase测试运行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E5%90%AF%E5%8A%A8hadoop"><span class="toc-number">1.4.1.</span> <span class="toc-text">1）启动hadoop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%B3%E9%97%ADhbaase"><span class="toc-number">1.4.2.</span> <span class="toc-text">2)关闭hbaase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89%E6%89%A7%E8%A1%8Chbase-shell%E5%91%BD%E4%BB%A4%E8%BF%90%E8%A1%8Chbase"><span class="toc-number">1.4.3.</span> <span class="toc-text">3）执行hbase shell命令运行hbase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%B5%8B%E8%AF%95hbase"><span class="toc-number">1.4.4.</span> <span class="toc-text">4)测试hbase</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
