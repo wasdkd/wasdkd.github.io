@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/02/20/XM2Ub.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/02/20/XMH3q.png">
 <meta property="article:published_time" content="2023-02-20T08:25:22.000Z">
-<meta property="article:modified_time" content="2023-02-20T08:40:17.921Z">
+<meta property="article:modified_time" content="2023-02-26T09:56:43.629Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/02/20/XLq1H.png">
@@ -213,8 +213,8 @@
 <hr>
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=494865824&auto=1&height=66"></iframe>
+---
 
-<hr>
 <hr>
 <h2 id="1、下载安装"><a href="#1、下载安装" class="headerlink" title="1、下载安装"></a>1、下载安装</h2><p>将安装包解压到&#x2F;usr&#x2F;local文件下</p>
   <img src="https://i.328888.xyz/2023/02/20/XLq1H.png" alt="XLq1H.png" border="0">  
@@ -225,12 +225,15 @@
 
   <img src="https://i.328888.xyz/2023/02/20/XMVKC.png" alt="XMVKC.png" border="0">  
 
-<h2 id="4、修改zk1-cfg、zk2-cfg、zk3-cfg这三个配置文档"><a href="#4、修改zk1-cfg、zk2-cfg、zk3-cfg这三个配置文档" class="headerlink" title="4、修改zk1.cfg、zk2.cfg、zk3.cfg这三个配置文档"></a>4、修改zk1.cfg、zk2.cfg、zk3.cfg这三个配置文档</h2><p>sudo vi zk1.cfg </p>
+<h2 id="4、修改zk1-cfg、zk2-cfg、zk3-cfg这三个配置文档"><a href="#4、修改zk1-cfg、zk2-cfg、zk3-cfg这三个配置文档" class="headerlink" title="4、修改zk1.cfg、zk2.cfg、zk3.cfg这三个配置文档"></a>4、修改zk1.cfg、zk2.cfg、zk3.cfg这三个配置文档</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi zk1.cfg </span><br></pre></td></tr></table></figure>
+
    <img src="https://i.328888.xyz/2023/02/20/XM43X.png" alt="XM43X.png" border="0">   
 
-<p>sudo vi zk2.cfg </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi zk2.cfg </span><br></pre></td></tr></table></figure>
+
 <p>​    <img src="https://i.328888.xyz/2023/02/20/XMASt.png" alt="XMASt.png" border="0">    </p>
-<p>sudo vi zk3.cfg</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi zk3.cfg</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/20/XMyDP.png" alt="XMyDP.png" border="0">  
 
 <h2 id="5、根据zk1-cfg、zk2-cfg、zk3-cfg三个配置文档中dataDir的配置信息，在路径"><a href="#5、根据zk1-cfg、zk2-cfg、zk3-cfg三个配置文档中dataDir的配置信息，在路径" class="headerlink" title="5、根据zk1.cfg、zk2.cfg、zk3.cfg三个配置文档中dataDir的配置信息，在路径"></a>5、根据zk1.cfg、zk2.cfg、zk3.cfg三个配置文档中dataDir的配置信息，在路径</h2><p>&#x2F;usr&#x2F;local&#x2F;zknew 下创建文件夹data，以及再在data下创建zk1、zk2和zk3,具体指令和最后的效果如下：</p>
@@ -243,24 +246,24 @@
 
 <img src="https://i.328888.xyz/2023/02/20/XMt6A.png" alt="XMt6A.png" border="0">  
 
-<h2 id="7、修改在-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下的zkServer-sh文档"><a href="#7、修改在-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下的zkServer-sh文档" class="headerlink" title="7、修改在&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下的zkServer.sh文档"></a>7、修改在&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下的zkServer.sh文档</h2><p>Sudo vi zkServer.sh</p>
+<h2 id="7、修改在-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下的zkServer-sh文档"><a href="#7、修改在-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下的zkServer-sh文档" class="headerlink" title="7、修改在&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下的zkServer.sh文档"></a>7、修改在&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下的zkServer.sh文档</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi zkServer.sh</span><br></pre></td></tr></table></figure>
+
 <p>在开始位置添加两句语句：</p>
-<p>export JAVA_HOME&#x3D;~&#x2F;jdk1.8.0_301</p>
-<p>export PATH&#x3D;$JAVA_HOME&#x2F;bin:$PATH</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="variable constant_">JAVA_HOME</span>=\~/jdk1<span class="number">.8</span><span class="number">.0_301</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">PATH</span>=\$JAVA_HOME/<span class="attr">bin</span>:\$PATH</span><br></pre></td></tr></table></figure>
+
 <img src="https://i.328888.xyz/2023/02/20/XM0CN.png" alt="XM0CN.png" border="0">
 
 <p>​    </p>
-<h2 id="8、启动（进到-x2F-usr-x2F-local-x2F-zknew路径下）"><a href="#8、启动（进到-x2F-usr-x2F-local-x2F-zknew路径下）" class="headerlink" title="8、启动（进到&#x2F;usr&#x2F;local&#x2F;zknew路径下）"></a>8、启动（进到&#x2F;usr&#x2F;local&#x2F;zknew路径下）</h2><p>sudo .&#x2F;bin&#x2F;zkServer.sh start conf&#x2F;zk1.cfg</p>
-<p>sudo .&#x2F;bin&#x2F;zkServer.sh start conf&#x2F;zk2.cfg</p>
-<p>sudo .&#x2F;bin&#x2F;zkServer.sh start conf&#x2F;zk3.cfg</p>
+<h2 id="8、启动（进到-x2F-usr-x2F-local-x2F-zknew路径下）"><a href="#8、启动（进到-x2F-usr-x2F-local-x2F-zknew路径下）" class="headerlink" title="8、启动（进到&#x2F;usr&#x2F;local&#x2F;zknew路径下）"></a>8、启动（进到&#x2F;usr&#x2F;local&#x2F;zknew路径下）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/zkServer.sh start conf/zk1.cfg</span><br><span class="line"></span><br><span class="line">sudo ./bin/zkServer.sh start conf/zk2.cfg</span><br><span class="line"></span><br><span class="line">sudo ./bin/zkServer.sh start conf/zk3.cfg</span><br></pre></td></tr></table></figure>
+
 <p>​      <img src="https://i.328888.xyz/2023/02/20/XMCgV.png" alt="XMCgV.png" border="0">  </p>
-<h2 id="9、查看服务器的状态"><a href="#9、查看服务器的状态" class="headerlink" title="9、查看服务器的状态"></a>9、查看服务器的状态</h2><p>sudo .&#x2F;bin&#x2F;zkServer.sh status conf&#x2F;zk1.cfg</p>
-<p>sudo .&#x2F;bin&#x2F;zkServer.sh status conf&#x2F;zk2.cfg</p>
-<p>sudo .&#x2F;bin&#x2F;zkServer.sh status conf&#x2F;zk3.cfg</p>
+<h2 id="9、查看服务器的状态"><a href="#9、查看服务器的状态" class="headerlink" title="9、查看服务器的状态"></a>9、查看服务器的状态</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/zkServer.sh status conf/zk1.cfg</span><br><span class="line"></span><br><span class="line">sudo ./bin/zkServer.sh status conf/zk2.cfg</span><br><span class="line"></span><br><span class="line">sudo ./bin/zkServer.sh status conf/zk3.cfg</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/20/XMlKd.png" alt="XMlKd.png" border="0">  
 
-<h2 id="10、客户端与服务器连接（进入到-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下）"><a href="#10、客户端与服务器连接（进入到-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下）" class="headerlink" title="10、客户端与服务器连接（进入到&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下）"></a>10、客户端与服务器连接（进入到&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下）</h2><p>.&#x2F;zkCli.sh -server localhost:2181（</p>
-<p>2181是zk1.cfg里设置的端口号，此处也可以使用zk2.cfg的2182和zk3.cfg的2183）</p>
+<h2 id="10、客户端与服务器连接（进入到-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下）"><a href="#10、客户端与服务器连接（进入到-x2F-usr-x2F-local-x2F-zknew-x2F-bin路径下）" class="headerlink" title="10、客户端与服务器连接（进入到&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下）"></a>10、客户端与服务器连接（进入到&#x2F;usr&#x2F;local&#x2F;zknew&#x2F;bin路径下）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkCli.sh -server localhost:2181</span><br></pre></td></tr></table></figure>
+
+<p>（2181是zk1.cfg里设置的端口号，此处也可以使用zk2.cfg的2182和zk3.cfg的2183）</p>
   <img src="https://i.328888.xyz/2023/02/20/XM2Ub.png" alt="XM2Ub.png" border="0">  
 
   <img src="https://i.328888.xyz/2023/02/20/XMH3q.png" alt="XMH3q.png" border="0">  

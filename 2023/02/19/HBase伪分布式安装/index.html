@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWOdZ.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/02/19/XWHI8.png">
 <meta property="article:published_time" content="2023-02-19T03:06:49.000Z">
-<meta property="article:modified_time" content="2023-02-19T03:17:36.686Z">
+<meta property="article:modified_time" content="2023-02-26T09:49:41.531Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/02/19/XtTGA.png">
@@ -217,10 +217,15 @@
 
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2022116424&auto=1&height=66"></iframe>
+---
 
-<hr>
+
+
 <h2 id="1、下载HBase"><a href="#1、下载HBase" class="headerlink" title="1、下载HBase"></a>1、下载HBase</h2><blockquote>
-<p>官网下载地址：<a target="_blank" rel="noopener" href="https://hbase.apache.org/downloads.html">https://hbase.apache.org/downloads.html</a></p>
+<p>官网下载地址：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://hbase.apache.org/downloads.html&gt;</span><br></pre></td></tr></table></figure>
+
+
 </blockquote>
 <h2 id="2、HBase的安装"><a href="#2、HBase的安装" class="headerlink" title="2、HBase的安装"></a>2、HBase的安装</h2><p>通过Xftp将安装包上传到当前用户的主目录下</p>
   <img src="https://i.328888.xyz/2023/02/19/XtTGA.png" alt="XtTGA.png" border="0">  
@@ -238,7 +243,8 @@
   <img src="https://i.328888.xyz/2023/02/19/XtqMd.png" alt="XtqMd.png" border="0">  
 
 <h3 id="3）、为-当前用户添加-hbase-权限"><a href="#3）、为-当前用户添加-hbase-权限" class="headerlink" title="3）、为 当前用户添加 hbase 权限"></a>3）、为 当前用户添加 hbase 权限</h3><p>进入到 &#x2F;usr&#x2F;local 下 执行命令：</p>
-<p>sudo chown -R gudeng:gudeng &#x2F;usr&#x2F;local &#x2F;hbase</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R gudeng:gudeng /usr/local /hbase</span><br></pre></td></tr></table></figure>
+
 <p>此命令意思为将 hbase 文件所有者修改为 gudeng 用户</p>
   <img src="https://i.328888.xyz/2023/02/19/XWZtb.png" alt="XWZtb.png" border="0">  
 
@@ -260,6 +266,10 @@
 <h3 id="2）配置-hbase-site-xml"><a href="#2）配置-hbase-site-xml" class="headerlink" title="2）配置 hbase-site.xml"></a>2）配置 hbase-site.xml</h3>  <img src="https://i.328888.xyz/2023/02/19/XWnwL.png" alt="XWnwL.png" border="0">  
 
   <img src="https://i.328888.xyz/2023/02/19/XWWPU.png" alt="XWWPU.png" border="0">  
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.cluster.distributed\<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">value</span>&gt;</span>true\<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.rootdir\<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://node1:8020/hbase\<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">description</span>&gt;</span>指定Region服务器共享的目录，用来持久存储HBase的数据，URL必须完全正确，其中包含了文件系统的schema。</span><br><span class="line"></span><br><span class="line">默认值\&quot;\$&#123;hbase.tmp.dir&#125;/hbase\&quot;,**该值要和Hadoop里的core-site.html 的fs.defaultFS值相同**，node1 为主机名称，执行 hostname 命令可以查看主机名称；执行 sudo vi /etc/hostname 命令 可以修改主机名称。</span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.zookeeper.quorum\<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">value</span>&gt;</span>node1:2181\<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">description</span>&gt;</span>配置zookeeper集群地址,如果有多个 zookeeper 可以用逗号分开配置多个 \<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\&lt;!\--指定Zookeeper数据存储目录\--\&gt;</span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.zookeeper.property.dataDir\<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">value</span>&gt;</span>/home/hyk/zookeeper/zkdata\<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;<span class="name">description</span>&gt;</span>此为zookeeper数据存放位置配置，在zookeeper安装目录下新建 zkdata文件夹用于存放zookeeper数据，可以自行创建一个文件夹保存 \<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">\<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
 
 <h2 id="4、HBase测试运行"><a href="#4、HBase测试运行" class="headerlink" title="4、HBase测试运行"></a>4、HBase测试运行</h2><h3 id="1）启动hadoop"><a href="#1）启动hadoop" class="headerlink" title="1）启动hadoop"></a>1）启动hadoop</h3>  <img src="https://i.328888.xyz/2023/02/19/XWt7p.png" alt="XWt7p.png" border="0">  
 

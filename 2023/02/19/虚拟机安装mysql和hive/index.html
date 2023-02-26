@@ -53,7 +53,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/02/19/XRpg3.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/02/19/XRBLy.png">
 <meta property="article:published_time" content="2023-02-19T08:49:10.000Z">
-<meta property="article:modified_time" content="2023-02-19T09:08:21.638Z">
+<meta property="article:modified_time" content="2023-02-26T09:45:38.953Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/02/19/X3sZL.png">
@@ -234,8 +234,8 @@
 <hr>
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29947420&auto=1&height=66"></iframe>
+---
 
-<hr>
 <hr>
 <h2 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h2><ol>
 <li><h3 id="执行sudo-apt-get-update"><a href="#执行sudo-apt-get-update" class="headerlink" title="执行sudo apt-get update"></a>执行sudo apt-get update</h3></li>
@@ -243,7 +243,7 @@
   <img src="https://i.328888.xyz/2023/02/19/X3sZL.png" alt="X3sZL.png" border="0">  
 
 <blockquote>
-<p>sudo apt-get install mysql-server语句</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure>
 </blockquote>
   <img src="https://i.328888.xyz/2023/02/19/X3S5k.png" alt="X3S5k.png" border="0">  
 
@@ -253,13 +253,15 @@
 
 <h3 id="4、安装成功后通过sudo-netstat-tap-grep-mysql命令测试是否安装成功-如下图："><a href="#4、安装成功后通过sudo-netstat-tap-grep-mysql命令测试是否安装成功-如下图：" class="headerlink" title="4、安装成功后通过sudo netstat -tap | grep mysql命令测试是否安装成功,如下图："></a>4、安装成功后通过sudo netstat -tap | grep mysql命令测试是否安装成功,如下图：</h3>  <img src="https://i.328888.xyz/2023/02/19/X3Jav.png" alt="X3Jav.png" border="0">  
 
-<h3 id="5、设置mysql允许远程访问，首先编辑文件-x2F-etc-x2F-mysql-x2F-mysql-conf-d-x2F-mysqld-cnf："><a href="#5、设置mysql允许远程访问，首先编辑文件-x2F-etc-x2F-mysql-x2F-mysql-conf-d-x2F-mysqld-cnf：" class="headerlink" title="5、设置mysql允许远程访问，首先编辑文件&#x2F;etc&#x2F;mysql&#x2F;mysql.conf.d&#x2F;mysqld.cnf："></a>5、设置mysql允许远程访问，首先编辑文件&#x2F;etc&#x2F;mysql&#x2F;mysql.conf.d&#x2F;mysqld.cnf：</h3><p>sudo vi &#x2F;etc&#x2F;mysql&#x2F;mysql.conf.d&#x2F;mysqld.cnf</p>
+<h3 id="5、设置mysql允许远程访问，首先编辑文件-x2F-etc-x2F-mysql-x2F-mysql-conf-d-x2F-mysqld-cnf："><a href="#5、设置mysql允许远程访问，首先编辑文件-x2F-etc-x2F-mysql-x2F-mysql-conf-d-x2F-mysqld-cnf：" class="headerlink" title="5、设置mysql允许远程访问，首先编辑文件&#x2F;etc&#x2F;mysql&#x2F;mysql.conf.d&#x2F;mysqld.cnf："></a>5、设置mysql允许远程访问，首先编辑文件&#x2F;etc&#x2F;mysql&#x2F;mysql.conf.d&#x2F;mysqld.cnf：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
+
 <p>注释掉bind-address &#x3D; 127.0.0.1：如下图：</p>
   <img src="https://i.328888.xyz/2023/02/19/X3L03.png" alt="X3L03.png" border="0">  
 
 <h3 id="6、用sudo-service-mysql-status命令查看mysql的状态"><a href="#6、用sudo-service-mysql-status命令查看mysql的状态" class="headerlink" title="6、用sudo service mysql status命令查看mysql的状态"></a>6、用sudo service mysql status命令查看mysql的状态</h3>  <img src="https://i.328888.xyz/2023/02/19/X3MXy.png" alt="X3MXy.png" border="0">  
 
-<h3 id="7、初始化mysql"><a href="#7、初始化mysql" class="headerlink" title="7、初始化mysql"></a>7、初始化mysql</h3><p>sudo mysql_secure_installation</p>
+<h3 id="7、初始化mysql"><a href="#7、初始化mysql" class="headerlink" title="7、初始化mysql"></a>7、初始化mysql</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/X3PJ5.png" alt="X3PJ5.png" border="0">  
 
   <img src="https://i.328888.xyz/2023/02/19/X3aD8.png" alt="X3aD8.png" border="0">  
@@ -269,66 +271,50 @@
 <h3 id="8、用sudo-mysql-u-root-p命令打开数据库"><a href="#8、用sudo-mysql-u-root-p命令打开数据库" class="headerlink" title="8、用sudo mysql -u root -p命令打开数据库"></a>8、用sudo mysql -u root -p命令打开数据库</h3>  <img src="https://i.328888.xyz/2023/02/19/X3Q5F.png" alt="X3Q5F.png" border="0">  
 
 <h3 id="9、创建登录mysql数据库的root用户"><a href="#9、创建登录mysql数据库的root用户" class="headerlink" title="9、创建登录mysql数据库的root用户"></a>9、创建登录mysql数据库的root用户</h3><p>命令如下：</p>
-<p>create user &#39;root&#39;@&#39;1ocalhost&#39; identified with mysql_native_password by &#39;WKDnl$20&#39;;</p>
-<p>grant all privileges on *.* to &#39;root&#39;@&#39;1ocalhost&#39; with grant option;</p>
-<p>flush privileges;</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create user \&#x27;root\&#x27;@\&#x27;1ocalhost\&#x27; identified with mysql_native_password by \&#x27;WKDnl\$20\&#x27;;</span><br><span class="line"></span><br><span class="line">grant all privileges on \*.\* to \&#x27;root\&#x27;@\&#x27;1ocalhost\&#x27; with grant option;</span><br><span class="line"></span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/X3qiH.png" alt="X3qiH.png" border="0">  
 
 <p>然后执行quit命令退出mysql服务</p>
 <h3 id="10、启动mysql-mysql-u-root-p"><a href="#10、启动mysql-mysql-u-root-p" class="headerlink" title="10、启动mysql:mysql -u root -p"></a>10、启动mysql:mysql -u root -p</h3>  <img src="https://i.328888.xyz/2023/02/19/X3uOQ.png" alt="X3uOQ.png" border="0">  
 
-<h2 id="hive安装"><a href="#hive安装" class="headerlink" title="hive安装"></a>hive安装</h2><h3 id="1、下载hive安装包"><a href="#1、下载hive安装包" class="headerlink" title="1、下载hive安装包"></a>1、下载hive安装包</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/james_nan/article/details/82053430">https://blog.csdn.net/james_nan/article/details/82053430</a></p>
-<h3 id="2、解压hive的安装包到根目录下"><a href="#2、解压hive的安装包到根目录下" class="headerlink" title="2、解压hive的安装包到根目录下"></a>2、解压hive的安装包到根目录下</h3><p>sudo tar -zxvf apache-hive-3.1.2-bin.tar.gz -C ~</p>
+<h2 id="hive安装"><a href="#hive安装" class="headerlink" title="hive安装"></a>hive安装</h2><h3 id="1、下载hive安装包"><a href="#1、下载hive安装包" class="headerlink" title="1、下载hive安装包"></a>1、下载hive安装包</h3><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://blog.csdn.net/james_nan/article/details/82053430&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、解压hive的安装包到根目录下"><a href="#2、解压hive的安装包到根目录下" class="headerlink" title="2、解压hive的安装包到根目录下"></a>2、解压hive的安装包到根目录下</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -zxvf apache-hive-3.1.2-bin.tar.gz -C \~</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/XRZzE.png" alt="XRZzE.png" border="0">  
 
-<h3 id="3、修改解压后的文件名称为hive"><a href="#3、修改解压后的文件名称为hive" class="headerlink" title="3、修改解压后的文件名称为hive"></a>3、修改解压后的文件名称为hive</h3><p>sudo mv apache-hive-3.1.2-bin hive</p>
+<h3 id="3、修改解压后的文件名称为hive"><a href="#3、修改解压后的文件名称为hive" class="headerlink" title="3、修改解压后的文件名称为hive"></a>3、修改解压后的文件名称为hive</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv apache-hive-3.1.2-bin hive</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/XRi1C.png" alt="XRi1C.png" border="0">  
 
 <h3 id="4、进到hive文件夹下的conf文件夹，修改hive-default-xml-template和hive-env-sh-template文件名"><a href="#4、进到hive文件夹下的conf文件夹，修改hive-default-xml-template和hive-env-sh-template文件名" class="headerlink" title="4、进到hive文件夹下的conf文件夹，修改hive- default.xml.template和hive-env.sh.template文件名"></a>4、进到hive文件夹下的conf文件夹，修改hive- default.xml.template和hive-env.sh.template文件名</h3>  <img src="https://i.328888.xyz/2023/02/19/XRf0P.png" alt="XRf0P.png" border="0">  
 
-<h3 id="5、新建一个hive-site-xml文件"><a href="#5、新建一个hive-site-xml文件" class="headerlink" title="5、新建一个hive-site.xml文件"></a>5、新建一个hive-site.xml文件</h3><p>sudo vi hive-site.xml</p>
+<h3 id="5、新建一个hive-site-xml文件"><a href="#5、新建一个hive-site-xml文件" class="headerlink" title="5、新建一个hive-site.xml文件"></a>5、新建一个hive-site.xml文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi hive-site.xml</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/XRyXX.png" alt="XRyXX.png" border="0">  
 
 <h3 id="6、在hive-site-xml中添加如下图配置"><a href="#6、在hive-site-xml中添加如下图配置" class="headerlink" title="6、在hive-site.xml中添加如下图配置"></a>6、在hive-site.xml中添加如下图配置</h3><p>​    <img src="https://i.328888.xyz/2023/02/19/XR4Kt.png" alt="XR4Kt.png" border="0">    </p>
 <p>文本如下：</p>
-<p>&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot; standalone&#x3D;&quot;no&quot;?&gt;</p>
-<p>&lt;?xml-stylesheet type&#x3D;&quot;text&#x2F;xsl&quot; href&#x3D;&quot;configuration.xsl&quot;?&gt;</p>
-<p>&lt;configuration&gt;</p>
-<p>&lt;property&gt;</p>
-<p>&lt;name&gt;javax.jdo.option.ConnectionURL&lt;&#x2F;name&gt;</p>
-<p>&lt;value&gt;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;hive?createDatabaseIfNotExist&#x3D;true&lt;&#x2F;value&gt;</p>
-<p>&lt;description&gt;JDBC connect string for a JDBC metastore&lt;&#x2F;description&gt;</p>
-<p>&lt;&#x2F;property&gt;</p>
-<p>&lt;property&gt;</p>
-<p>&lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;&#x2F;name&gt;</p>
-<p>&lt;value&gt;com.mysql.jdbc.Driver&lt;&#x2F;value&gt;</p>
-<p>&lt;description&gt;Driver class name for a JDBC metastore&lt;&#x2F;description&gt;</p>
-<p>&lt;&#x2F;property&gt;</p>
-<p>&lt;property&gt;</p>
-<p>&lt;name&gt;javax.jdo.option.ConnectionUserName&lt;&#x2F;name&gt;</p>
-<p>&lt;value&gt;root&lt;&#x2F;value&gt;</p>
-<p>&lt;description&gt;username to use against metastore database&lt;&#x2F;description&gt;</p>
-<p>&lt;&#x2F;property&gt;</p>
-<p>&lt;property&gt;</p>
-<p>&lt;name&gt;javax.jdo.option.ConnectionPassword&lt;&#x2F;name&gt;</p>
-<p>&lt;value&gt;123456&lt;&#x2F;value&gt;</p>
-<p>&lt;description&gt;password to use against metastore database&lt;&#x2F;description&gt;</p>
-<p>&lt;&#x2F;property&gt;</p>
-<p>&lt;&#x2F;configuration&gt;</p>
-<h3 id="7、修改-bashrc文件"><a href="#7、修改-bashrc文件" class="headerlink" title="7、修改.bashrc文件"></a>7、修改.bashrc文件</h3><p>sudo vi ~&#x2F;.bashrc</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=\<span class="string">&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot; standalone=\&quot;no\&quot;?&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;?xml-stylesheet type=\&quot;text/xsl\&quot; href=\&quot;configuration.xsl\&quot;?&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;configuration&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;name&gt;javax.jdo.option.ConnectionURL\&lt;/name&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;value&gt;jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true\&lt;/value&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;description&gt;JDBC connect string for a JDBC metastore\&lt;/description&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;/property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;name&gt;javax.jdo.option.ConnectionDriverName\&lt;/name&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;value&gt;com.mysql.jdbc.Driver\&lt;/value&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;description&gt;Driver class name for a JDBC metastore\&lt;/description&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;/property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;name&gt;javax.jdo.option.ConnectionUserName\&lt;/name&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;value&gt;root\&lt;/value&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;description&gt;username to use against metastore database\&lt;/description&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;/property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;name&gt;javax.jdo.option.ConnectionPassword\&lt;/name&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;value&gt;123456\&lt;/value&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;description&gt;password to use against metastore database\&lt;/description&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;/property&gt;</span></span></span><br><span class="line"><span class="string"><span class="meta"></span></span></span><br><span class="line"><span class="string"><span class="meta">\&lt;/configuration&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7、修改-bashrc文件"><a href="#7、修改-bashrc文件" class="headerlink" title="7、修改.bashrc文件"></a>7、修改.bashrc文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi \~/.bashrc</span><br></pre></td></tr></table></figure>
+
 <p>在文件的末尾添加：</p>
-<p>export HIVE_HOME&#x3D;&#x2F;home&#x2F;gudeng&#x2F;hive</p>
-<p>export PATH&#x3D;$PATH:$HIVE_HOME&#x2F;bin</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export HIVE_HOME=/home/gudeng/hive</span><br><span class="line"></span><br><span class="line">export PATH=\$PATH:\$HIVE_HOME/bin</span><br></pre></td></tr></table></figure>
+
 <p>修改后source ~&#x2F;.bashrc</p>
   <img src="https://i.328888.xyz/2023/02/19/XRDDJ.png" alt="XRDDJ.png" border="0">  
 
   <img src="https://i.328888.xyz/2023/02/19/XRnSA.png" alt="XRnSA.png" border="0">  
 
-<h3 id="8、用root登录mysql数据库"><a href="#8、用root登录mysql数据库" class="headerlink" title="8、用root登录mysql数据库"></a>8、用root登录mysql数据库</h3><p>mysql -u root -p</p>
+<h3 id="8、用root登录mysql数据库"><a href="#8、用root登录mysql数据库" class="headerlink" title="8、用root登录mysql数据库"></a>8、用root登录mysql数据库</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/XRWio.png" alt="XRWio.png" border="0">  
 
 <p>创建hive数据库，然后quit退出</p>
-<p>create database hive;</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database hive;</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/XRkbN.png" alt="XRkbN.png" border="0">  
 
   <img src="https://i.328888.xyz/2023/02/19/XR06V.png" alt="XR06V.png" border="0">  
@@ -345,8 +331,8 @@
   <img src="https://i.328888.xyz/2023/02/19/XRbUw.png" alt="XRbUw.png" border="0">  
 
 <p>hadoop和hive的两个guava.jar版本不一致，删除低版本的那个，将高版本的复制到低版本目录下，两个位置分别位于下面两个目录：</p>
-<p>~&#x2F;Hadoop&#x2F;share&#x2F;Hadoop&#x2F;common&#x2F;lib</p>
-<p>~&#x2F;hive&#x2F;lib</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/Hadoop/share/Hadoop/common/lib</span><br><span class="line"></span><br><span class="line">\~/hive/lib</span><br></pre></td></tr></table></figure>
+
   <img src="https://i.328888.xyz/2023/02/19/XRj3a.png" alt="XRj3a.png" border="0">  
 
   <img src="https://i.328888.xyz/2023/02/19/XR8Sx.png" alt="XR8Sx.png" border="0">  

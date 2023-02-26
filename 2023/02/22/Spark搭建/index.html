@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/02/22/xi4X5.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/02/22/xiAK8.png">
 <meta property="article:published_time" content="2023-02-22T04:29:48.000Z">
-<meta property="article:modified_time" content="2023-02-22T04:34:37.292Z">
+<meta property="article:modified_time" content="2023-02-26T09:54:41.430Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/02/22/xZPXw.png">
@@ -209,64 +209,73 @@
 <hr>
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2006664069&auto=1&height=66"></iframe>
+---
 
-<hr>
 <hr>
 <h2 id="1、搭建前准备"><a href="#1、搭建前准备" class="headerlink" title="1、搭建前准备"></a>1、搭建前准备</h2><p>下载Spark、scala和jdk</p>
 <p>使用的环境组合是Spark2.3.0+Java8+Scala2.11。</p>
 <p>下载网址：</p>
-<p>Spark：<a target="_blank" rel="noopener" href="http://spark.apache.org/docs/latest/">http://spark.apache.org/docs/latest/</a></p>
-<p>Scala：<a target="_blank" rel="noopener" href="http://www.scala-lang.org/">http://www.Scala-lang.org/</a></p>
-<p>Jdk:<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/Java/Javase/downloads/jdk8-downloads-2133151.html">http://www.oracle.com/technetwork/Java/Javase/downloads/jdk8-downloads-2133151.html</a></p>
+<p>Spark：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://spark.apache.org/docs/latest/</span><br></pre></td></tr></table></figure>
+
+<p>Scala：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.Scala-lang.org/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Jdk:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.oracle.com/technetwork/Java/Javase/downloads/jdk8-downloads-2133151.html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="2、通过FinalShell上传Spark、scala和jdk的安装包"><a href="#2、通过FinalShell上传Spark、scala和jdk的安装包" class="headerlink" title="2、通过FinalShell上传Spark、scala和jdk的安装包"></a>2、通过FinalShell上传Spark、scala和jdk的安装包</h2><p>并且使用tar -zxvf 压缩包名 命令解压</p>
 <img src="https://i.328888.xyz/2023/02/22/xZPXw.png" alt="xZPXw.png" border="0">
 
 <h2 id="3、复制解压好的文件夹到-x2F-opt目录下"><a href="#3、复制解压好的文件夹到-x2F-opt目录下" class="headerlink" title="3、复制解压好的文件夹到&#x2F;opt目录下"></a>3、复制解压好的文件夹到&#x2F;opt目录下</h2><p>使用命令 sudo cp -R 文件夹名 &#x2F;opt</p>
 <img src="https://i.328888.xyz/2023/02/22/xZTJa.png" alt="xZTJa.png" border="0">
 
-<h2 id="4、修改文件夹的权限为777"><a href="#4、修改文件夹的权限为777" class="headerlink" title="4、修改文件夹的权限为777"></a>4、修改文件夹的权限为777</h2><p>sudo chmod –R 777 &#x2F;opt</p>
+<h2 id="4、修改文件夹的权限为777"><a href="#4、修改文件夹的权限为777" class="headerlink" title="4、修改文件夹的权限为777"></a>4、修改文件夹的权限为777</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod --R 777 /opt</span><br></pre></td></tr></table></figure>
+
 <img src="https://i.328888.xyz/2023/02/22/xZ1Dx.png" alt="xZ1Dx.png" border="0">
 
-<h2 id="5、修改profile文件"><a href="#5、修改profile文件" class="headerlink" title="5、修改profile文件"></a>5、修改profile文件</h2><p>sudo vi &#x2F;etc&#x2F;profile</p>
+<h2 id="5、修改profile文件"><a href="#5、修改profile文件" class="headerlink" title="5、修改profile文件"></a>5、修改profile文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/profile</span><br></pre></td></tr></table></figure>
+
 <p>环境变量文件配置</p>
-<p>export JAVA_HOME&#x3D;&#x2F;opt&#x2F;jdk1.8.0_301</p>
-<p>export CLASS_PATH&#x3D;&#x2F;opt&#x2F;jdk1.8.0_301&#x2F;lib</p>
-<p>export SCALA_HOME&#x3D;&#x2F;opt&#x2F;Scala-2.11.12</p>
-<p>export SPARK_HOME&#x3D;&#x2F;opt&#x2F;spark-2.3.0-bin-hadoop2.7</p>
-<p>export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin:$SCALA_HOME&#x2F;bin:$SPARK_HOME&#x2F;bin</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="variable constant_">JAVA_HOME</span>=<span class="regexp">/opt/</span>jdk1<span class="number">.8</span><span class="number">.0_301</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">CLASS_PATH</span>=<span class="regexp">/opt/</span>jdk1<span class="number">.8</span><span class="number">.0_301</span>/lib</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">SCALA_HOME</span>=<span class="regexp">/opt/</span><span class="title class_">Scala</span>-<span class="number">2.11</span><span class="number">.12</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">SPARK_HOME</span>=<span class="regexp">/opt/</span>spark-<span class="number">2.3</span><span class="number">.0</span>-bin-hadoop2<span class="number">.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">PATH</span>=\<span class="attr">$PATH</span>:\$JAVA_HOME/<span class="attr">bin</span>:\$SCALA_HOME/<span class="attr">bin</span>:\$SPARK_HOME/bin</span><br></pre></td></tr></table></figure>
+
 <img src="https://i.328888.xyz/2023/02/22/xZQ3k.png" alt="xZQ3k.png" border="0">
 
-<h2 id="6、环境变量重新加载"><a href="#6、环境变量重新加载" class="headerlink" title="6、环境变量重新加载"></a>6、环境变量重新加载</h2><p>source &#x2F;etc&#x2F;profile</p>
+<h2 id="6、环境变量重新加载"><a href="#6、环境变量重新加载" class="headerlink" title="6、环境变量重新加载"></a>6、环境变量重新加载</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
 <img src="https://i.328888.xyz/2023/02/22/xZY5L.png" alt="xZY5L.png" border="0">
 
-<h2 id="7、修改Spark配置文件"><a href="#7、修改Spark配置文件" class="headerlink" title="7、修改Spark配置文件"></a>7、修改Spark配置文件</h2><h3 id="（1）复制模板文件"><a href="#（1）复制模板文件" class="headerlink" title="（1）复制模板文件"></a>（1）复制模板文件</h3><p>cd &#x2F;opt&#x2F;spark-2.3.0-bin-hadoop2.7&#x2F;conf &#x2F;&#x2F;进入到配置文件夹中</p>
-<p>cp spark-env.sh.template spark-env.sh &#x2F;&#x2F;Spark环境相关</p>
-<p>cp log4j.properties.template log4j.properties &#x2F;&#x2F;Spark日志相关</p>
-<p>cp slaves.template slaves &#x2F;&#x2F;Spark集群节点</p>
+<h2 id="7、修改Spark配置文件"><a href="#7、修改Spark配置文件" class="headerlink" title="7、修改Spark配置文件"></a>7、修改Spark配置文件</h2><h3 id="（1）复制模板文件"><a href="#（1）复制模板文件" class="headerlink" title="（1）复制模板文件"></a>（1）复制模板文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/spark-2.3.0-bin-hadoop2.7/conf //进入到配置文件夹中</span><br><span class="line"></span><br><span class="line">cp spark-env.sh.template spark-env.sh //Spark环境相关</span><br><span class="line"></span><br><span class="line">cp log4j.properties.template log4j.properties //Spark日志相关</span><br><span class="line"></span><br><span class="line">cp slaves.template slaves //Spark集群节点</span><br></pre></td></tr></table></figure>
+
 <img src="https://i.328888.xyz/2023/02/22/xZuip.png" alt="xZuip.png" border="0">
 
-<h3 id="（2）使用vim-spark-env-sh命令修改spark-env-sh设置主节点和从节点的配置"><a href="#（2）使用vim-spark-env-sh命令修改spark-env-sh设置主节点和从节点的配置" class="headerlink" title="（2）使用vim spark-env.sh命令修改spark-env.sh设置主节点和从节点的配置"></a>（2）使用vim spark-env.sh命令修改spark-env.sh设置主节点和从节点的配置</h3><p>export JAVA_HOME&#x3D;&#x2F;opt&#x2F;jdk1.8.0_301 #添加Java位置</p>
-<p>export SCALA_HOME&#x3D;&#x2F;opt&#x2F;Scala-2.11.12 #添加Scala位置</p>
-<p>export SPARK_MASTER_IP&#x3D;SparkMaster #设置主节点地址</p>
-<p>export SPARK_WORKER_MEMORY&#x3D;4g #设置节点内存大小，此处为4G。</p>
-<p>export SPARK_WORKER_CORES&#x3D;2 #设置节点参与计算的核心数</p>
-<p>export SPARK_WORKER_INSTANCES&#x3D;1 #设置节点实例数</p>
+<h3 id="（2）使用vim-spark-env-sh命令修改spark-env-sh设置主节点和从节点的配置"><a href="#（2）使用vim-spark-env-sh命令修改spark-env-sh设置主节点和从节点的配置" class="headerlink" title="（2）使用vim spark-env.sh命令修改spark-env.sh设置主节点和从节点的配置"></a>（2）使用vim spark-env.sh命令修改spark-env.sh设置主节点和从节点的配置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="variable constant_">JAVA_HOME</span>=<span class="regexp">/opt/</span>jdk1<span class="number">.8</span><span class="number">.0_301</span> #添加<span class="title class_">Java</span>位置</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">SCALA_HOME</span>=<span class="regexp">/opt/</span><span class="title class_">Scala</span>-<span class="number">2.11</span><span class="number">.12</span> #添加<span class="title class_">Scala</span>位置</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">SPARK_MASTER_IP</span>=<span class="title class_">SparkMaster</span> #设置主节点地址</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">SPARK_WORKER_MEMORY</span>=4g #设置节点内存大小，此处为4G。</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">SPARK_WORKER_CORES</span>=<span class="number">2</span> #设置节点参与计算的核心数</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">SPARK_WORKER_INSTANCES</span>=<span class="number">1</span> #设置节点实例数</span><br></pre></td></tr></table></figure>
+
 <img src="https://i.328888.xyz/2023/02/22/xiZbU.png" alt="xiZbU.png" border="0">
 
 <h3 id="（3）使用vim-slaves修改slaves设置从节点地址"><a href="#（3）使用vim-slaves修改slaves设置从节点地址" class="headerlink" title="（3）使用vim slaves修改slaves设置从节点地址"></a>（3）使用vim slaves修改slaves设置从节点地址</h3><p>添加节点主机名称。默认为：localhost</p>
 <img src="https://i.328888.xyz/2023/02/22/xiizv.png" alt="xiizv.png" border="0">
 
 <h2 id="8、Spark集群启动与关闭"><a href="#8、Spark集群启动与关闭" class="headerlink" title="8、Spark集群启动与关闭"></a>8、Spark集群启动与关闭</h2><h3 id="（1）启动"><a href="#（1）启动" class="headerlink" title="（1）启动"></a>（1）启动</h3><p>先进入到&#x2F;opt&#x2F;spark-2.3.0-bin-hadoop2.7&#x2F;sbin目录下</p>
-<p>使用命令： .&#x2F;start-all.sh启动</p>
+<p>使用命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./start-all.sh</span><br></pre></td></tr></table></figure>
+
+<p>启动</p>
 <img src="https://i.328888.xyz/2023/02/22/xiyCy.png" alt="xiyCy.png" border="0">
 
 <h3 id="（2）使用jps查看进程"><a href="#（2）使用jps查看进程" class="headerlink" title="（2）使用jps查看进程"></a>（2）使用jps查看进程</h3><img src="https://i.328888.xyz/2023/02/22/xiV13.png" alt="xiV13.png" border="0">
 
-<h3 id="（3）使用虚拟机-本机-网页访问"><a href="#（3）使用虚拟机-本机-网页访问" class="headerlink" title="（3）使用虚拟机(本机)网页访问"></a>（3）使用虚拟机(本机)网页访问</h3><p>localhost:8080</p>
+<h3 id="（3）使用虚拟机-本机-网页访问"><a href="#（3）使用虚拟机-本机-网页访问" class="headerlink" title="（3）使用虚拟机(本机)网页访问"></a>（3）使用虚拟机(本机)网页访问</h3><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:8080</span><br></pre></td></tr></table></figure>
+
 <img src="https://i.328888.xyz/2023/02/22/xi4X5.png" alt="xi4X5.png" border="0">
 
 <h3 id="（4）关闭集群"><a href="#（4）关闭集群" class="headerlink" title="（4）关闭集群"></a>（4）关闭集群</h3><p>与启动相似，同样进入到sbin文件夹中，使用stop-all.sh脚本关闭集群。</p>
-<p>运行stop-all.sh，关闭后使用jps查看一下进程。</p>
+<p>运行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stop-all.sh</span><br></pre></td></tr></table></figure>
+
+<p>，关闭后使用jps查看一下进程。</p>
 <img src="https://i.328888.xyz/2023/02/22/xiAK8.png" alt="xiAK8.png" border="0">
 
 
