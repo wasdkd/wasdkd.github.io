@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/02/27/ej1r8.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/02/27/ejQ5Z.jpeg">
 <meta property="article:published_time" content="2023-02-27T09:26:13.000Z">
-<meta property="article:modified_time" content="2023-02-27T09:27:07.629Z">
+<meta property="article:modified_time" content="2023-02-28T09:03:30.835Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/02/27/ejShx.png">
@@ -209,8 +209,8 @@
 <hr>
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1918643865&auto=1&height=66"></iframe>
+---
 
-<hr>
 <hr>
 <h2 id="1、新建一个表格"><a href="#1、新建一个表格" class="headerlink" title="1、新建一个表格"></a>1、新建一个表格</h2><p>表格名为自己名字的小写全拼+后两位学号（比如lisi04），列族为stuinfo和grades（VERSIONS采用系统默认），2、 并往表格中填入数据，表格具体内容如下，其中Hadoop一列需要指定时间戳为0，其他列系统自动分配即可。请根据以上要求完成所有操作。其中表格中红色填充的单元格，要求写自己的信息：name一列写自己名字的全拼，number写自己的学号，class写自己班级的编号，如191、192、193，此步骤在实验报告中以scan ‘表格名字’的结果截图为最终结果展示，不需要展现具体的过程指令。</p>
   <img src="https://i.328888.xyz/2023/02/27/ejShx.png" alt="ejShx.png" border="0">  
@@ -244,7 +244,7 @@
 
   <img src="https://i.328888.xyz/2023/02/27/ejLkv.png" alt="ejLkv.png" border="0">  
 
-<h2 id="3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。"><a href="#3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。" class="headerlink" title="3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。"></a>3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scan &#x27;weikedan42&#x27;,&#123;CLOUMN=&gt;&#x27;stuinfo&#x27;,FILTER=&gt;&quot;RowFilter(=,&#x27;substring:0&#x27;)&quot;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。"><a href="#3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。" class="headerlink" title="3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。"></a>3、列出行健中包含数字0，且列族为stuinfo的所有信息，实验报告中要求展示指令和结果。</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scan &#x27;weikedan42&#x27;,&#123;COLUMN=&gt;&#x27;stuinfo&#x27;,FILTER=&gt;&quot;RowFilter(=,&#x27;substring:0&#x27;)&quot;&#125;</span><br></pre></td></tr></table></figure>
 
   <img src="https://i.328888.xyz/2023/02/27/ejMB3.png" alt="ejMB3.png" border="0">  
 
