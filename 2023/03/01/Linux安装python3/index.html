@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>Linux安装python3 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="Ubuntu21.04下安装Python3.4.4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux安装python3">
+<meta property="og:url" content="http://example.com/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="Ubuntu21.04下安装Python3.4.4">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-03-01T09:50:53.000Z">
+<meta property="article:modified_time" content="2023-03-01T09:52:16.456Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
   
@@ -155,37 +159,101 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Hadoop完全分布式安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Linux安装python3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">Hadoop完全分布式安装</a>
+    <h1 class="article-title" itemprop="name">
+      Linux安装python3
     </h1>
   
 
 		<!--显示阅读次数-->
 
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
 <!--显示阅读次数完毕-->
 
         
-        <a href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-18T14:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-18</time>
+        <a href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/" class="archive-article-date">
+  	<time datetime="2023-03-01T09:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hadoop完全分布式"><a href="#Hadoop完全分布式" class="headerlink" title="Hadoop完全分布式"></a>Hadoop完全分布式</h1>
-        
+        <h1 id="Ubuntu21-04下安装Python3-4-4"><a href="#Ubuntu21-04下安装Python3-4-4" class="headerlink" title="Ubuntu21.04下安装Python3.4.4"></a>Ubuntu21.04下安装Python3.4.4</h1><span id="more"></span>
+
+<h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><h3 id="1-安装依赖环境"><a href="#1-安装依赖环境" class="headerlink" title="1. 安装依赖环境"></a>1. 安装依赖环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get install build-essentail</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-下载Python3-4"><a href="#2-下载Python3-4" class="headerlink" title="2.下载Python3.4"></a>2.下载Python3.4</h3><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.4.4/Python-3.4.4.tgz</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-新建目录"><a href="#3-新建目录" class="headerlink" title="3.新建目录"></a>3.新建目录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /opt/python3</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-解压下载好的Python-3-4-4-tgz包"><a href="#4-解压下载好的Python-3-4-4-tgz包" class="headerlink" title="4.解压下载好的Python-3.4.4.tgz包"></a>4.解压下载好的Python-3.4.4.tgz包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.4.4.tgz -C /opt</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、编译安装-确认已经有make工具"><a href="#二、编译安装-确认已经有make工具" class="headerlink" title="二、编译安装(确认已经有make工具)"></a>二、编译安装(确认已经有make工具)</h2><h3 id="a-进入解压后的目录，编译安装。"><a href="#a-进入解压后的目录，编译安装。" class="headerlink" title="a. 进入解压后的目录，编译安装。"></a>a. 进入解压后的目录，编译安装。</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.4.4/</span><br><span class="line"></span><br><span class="line">./configure \--prefix=/opt/python3</span><br></pre></td></tr></table></figure>
+
+<h3 id="b-编译"><a href="#b-编译" class="headerlink" title="b. 编译"></a>b. 编译</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<h3 id="c-安装"><a href="#c-安装" class="headerlink" title="c. 安装"></a>c. 安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<h3 id="d-建立python3的软链"><a href="#d-建立python3的软链" class="headerlink" title="d.建立python3的软链"></a>d.建立python3的软链</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /opt/python3/bin/python3 /usr/bin/python3</span><br></pre></td></tr></table></figure>
+
+<p>如已经存在python3,先删除</p>
+<h2 id="三、设置配置文件"><a href="#三、设置配置文件" class="headerlink" title="三、设置配置文件"></a>三、设置配置文件</h2><p>编辑.bashrc文件，将&#x2F;opt&#x2F;python3&#x2F;bin加入环境PATH</p>
+<h3 id="编辑文件"><a href="#编辑文件" class="headerlink" title="# 编辑文件"></a># 编辑文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vi \~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="追加变量"><a href="#追加变量" class="headerlink" title="# 追加变量"></a># 追加变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PATH=$PATH:$HOME/bin:/opt/python3/bin</span><br><span class="line"></span><br><span class="line">export PATH　</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="加载生效"><a href="#加载生效" class="headerlink" title="#加载生效"></a>#加载生效</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source \~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="四、检查安装"><a href="#四、检查安装" class="headerlink" title="四、检查安装"></a>四、检查安装</h2><h3 id="检查Python3及pip3是否正常可用："><a href="#检查Python3及pip3是否正常可用：" class="headerlink" title="检查Python3及pip3是否正常可用："></a>检查Python3及pip3是否正常可用：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python3 -V</span><br><span class="line">或</span><br><span class="line">python3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,16 +262,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/03/01/Linux%E5%AE%89%E8%A3%85python3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu更新失败解决办法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -218,232 +345,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Word文档转换成Markdown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/">Word文档转换成Markdown</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/" class="archive-article-date">
-  	<time datetime="2023-02-17T13:08:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Word文档转换成Markdown"><a href="#Word文档转换成Markdown" class="headerlink" title="Word文档转换成Markdown"></a>Word文档转换成Markdown</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu21-04%E4%B8%8B%E5%AE%89%E8%A3%85Python3-4-4"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu21.04下安装Python3.4.4</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-number">1.1.</span> <span class="toc-text">一、环境准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E7%8E%AF%E5%A2%83"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 安装依赖环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BDPython3-4"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.下载Python3.4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%96%B0%E5%BB%BA%E7%9B%AE%E5%BD%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.新建目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%A7%A3%E5%8E%8B%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84Python-3-4-4-tgz%E5%8C%85"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.解压下载好的Python-3.4.4.tgz包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85-%E7%A1%AE%E8%AE%A4%E5%B7%B2%E7%BB%8F%E6%9C%89make%E5%B7%A5%E5%85%B7"><span class="toc-number">1.2.</span> <span class="toc-text">二、编译安装(确认已经有make工具)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#a-%E8%BF%9B%E5%85%A5%E8%A7%A3%E5%8E%8B%E5%90%8E%E7%9A%84%E7%9B%AE%E5%BD%95%EF%BC%8C%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85%E3%80%82"><span class="toc-number">1.2.1.</span> <span class="toc-text">a. 进入解压后的目录，编译安装。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#b-%E7%BC%96%E8%AF%91"><span class="toc-number">1.2.2.</span> <span class="toc-text">b. 编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c-%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.3.</span> <span class="toc-text">c. 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#d-%E5%BB%BA%E7%AB%8Bpython3%E7%9A%84%E8%BD%AF%E9%93%BE"><span class="toc-number">1.2.4.</span> <span class="toc-text">d.建立python3的软链</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AE%BE%E7%BD%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.</span> <span class="toc-text">三、设置配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.1.</span> <span class="toc-text"># 编辑文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%BD%E5%8A%A0%E5%8F%98%E9%87%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text"># 追加变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E7%94%9F%E6%95%88"><span class="toc-number">1.3.3.</span> <span class="toc-text">#加载生效</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%A3%80%E6%9F%A5%E5%AE%89%E8%A3%85"><span class="toc-number">1.4.</span> <span class="toc-text">四、检查安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5Python3%E5%8F%8Apip3%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8%E5%8F%AF%E7%94%A8%EF%BC%9A"><span class="toc-number">1.4.1.</span> <span class="toc-text">检查Python3及pip3是否正常可用：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-02-16T05:37:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/15/hello-world/" class="archive-article-date">
-  	<time datetime="2023-02-15T12:58:51.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/15/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -470,8 +397,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
