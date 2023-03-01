@@ -16,7 +16,7 @@
 <meta property="og:description" content="Ubuntu21.04下安装Python3.4.4">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-03-01T09:50:53.000Z">
-<meta property="article:modified_time" content="2023-03-01T09:52:16.456Z">
+<meta property="article:modified_time" content="2023-03-01T09:54:46.068Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
   
@@ -201,7 +201,7 @@
 
 <h3 id="4-解压下载好的Python-3-4-4-tgz包"><a href="#4-解压下载好的Python-3-4-4-tgz包" class="headerlink" title="4.解压下载好的Python-3.4.4.tgz包"></a>4.解压下载好的Python-3.4.4.tgz包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.4.4.tgz -C /opt</span><br></pre></td></tr></table></figure>
 
-<h2 id="二、编译安装-确认已经有make工具"><a href="#二、编译安装-确认已经有make工具" class="headerlink" title="二、编译安装(确认已经有make工具)"></a>二、编译安装(确认已经有make工具)</h2><h3 id="a-进入解压后的目录，编译安装。"><a href="#a-进入解压后的目录，编译安装。" class="headerlink" title="a. 进入解压后的目录，编译安装。"></a>a. 进入解压后的目录，编译安装。</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.4.4/</span><br><span class="line"></span><br><span class="line">./configure \--prefix=/opt/python3</span><br></pre></td></tr></table></figure>
+<h2 id="二、编译安装-确认已经有make工具"><a href="#二、编译安装-确认已经有make工具" class="headerlink" title="二、编译安装(确认已经有make工具)"></a>二、编译安装(确认已经有make工具)</h2><h3 id="a-进入解压后的目录，编译安装。"><a href="#a-进入解压后的目录，编译安装。" class="headerlink" title="a. 进入解压后的目录，编译安装。"></a>a. 进入解压后的目录，编译安装。</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.4.4/</span><br><span class="line"></span><br><span class="line">./configure --prefix=/opt/python3</span><br></pre></td></tr></table></figure>
 
 <h3 id="b-编译"><a href="#b-编译" class="headerlink" title="b. 编译"></a>b. 编译</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
 
@@ -211,11 +211,11 @@
 
 <p>如已经存在python3,先删除</p>
 <h2 id="三、设置配置文件"><a href="#三、设置配置文件" class="headerlink" title="三、设置配置文件"></a>三、设置配置文件</h2><p>编辑.bashrc文件，将&#x2F;opt&#x2F;python3&#x2F;bin加入环境PATH</p>
-<h3 id="编辑文件"><a href="#编辑文件" class="headerlink" title="# 编辑文件"></a># 编辑文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vi \~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="编辑文件"><a href="#编辑文件" class="headerlink" title="# 编辑文件"></a># 编辑文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vi ~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="追加变量"><a href="#追加变量" class="headerlink" title="# 追加变量"></a># 追加变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PATH=$PATH:$HOME/bin:/opt/python3/bin</span><br><span class="line"></span><br><span class="line">export PATH　</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="加载生效"><a href="#加载生效" class="headerlink" title="#加载生效"></a>#加载生效</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source \~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="加载生效"><a href="#加载生效" class="headerlink" title="#加载生效"></a>#加载生效</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="四、检查安装"><a href="#四、检查安装" class="headerlink" title="四、检查安装"></a>四、检查安装</h2><h3 id="检查Python3及pip3是否正常可用："><a href="#检查Python3及pip3是否正常可用：" class="headerlink" title="检查Python3及pip3是否正常可用："></a>检查Python3及pip3是否正常可用：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python3 -V</span><br><span class="line">或</span><br><span class="line">python3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
