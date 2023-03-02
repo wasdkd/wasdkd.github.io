@@ -17,7 +17,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://i.328888.xyz/2023/03/02/FDQ4V.jpeg">
 <meta property="article:published_time" content="2023-03-01T09:50:53.000Z">
-<meta property="article:modified_time" content="2023-03-02T14:31:14.505Z">
+<meta property="article:modified_time" content="2023-03-02T14:34:07.467Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/03/02/FDQ4V.jpeg">
@@ -213,12 +213,9 @@
 <h3 id="d-建立python3的软链"><a href="#d-建立python3的软链" class="headerlink" title="d.建立python3的软链"></a>d.建立python3的软链</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">sudo ln -s python3.9 python3</span><br><span class="line"></span><br><span class="line">ln -s /opt/python3/bin/python3 /usr/bin/python</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p> 让python3.4用python软连接，python3.9用python3 </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建好后使用  ll python* 查看的结果</span><br><span class="line">python -&gt; /opt/python3/bin/python3*</span><br><span class="line">python3 -&gt; python3.9*</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">创建好后使用  ll python* 查看的结果</span><br><span class="line"></span><br><span class="line">python -&gt; /opt/python3/bin/python3*</span><br><span class="line"></span><br><span class="line">python3 -&gt; python3.9*</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>注：这步不做好会使虚拟机打不开终端</p>
-<p>验证一下结果</p>
-<img src="https://i.328888.xyz/2023/03/02/FDQ4V.jpeg" alt="FDQ4V.jpeg" border="0" />
-
 <h2 id="三、设置配置文件"><a href="#三、设置配置文件" class="headerlink" title="三、设置配置文件"></a>三、设置配置文件</h2><p>编辑.bashrc文件，将&#x2F;opt&#x2F;python3&#x2F;bin加入环境PATH</p>
 <h3 id="编辑文件"><a href="#编辑文件" class="headerlink" title="# 编辑文件"></a># 编辑文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi ~/.bashrc</span><br></pre></td></tr></table></figure>
 
@@ -228,7 +225,8 @@
 
 <h2 id="四、检查安装"><a href="#四、检查安装" class="headerlink" title="四、检查安装"></a>四、检查安装</h2><h3 id="检查Python3及pip3是否正常可用："><a href="#检查Python3及pip3是否正常可用：" class="headerlink" title="检查Python3及pip3是否正常可用："></a>检查Python3及pip3是否正常可用：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python3 -V</span><br><span class="line">或</span><br><span class="line">python3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
+<p>验证一下结果</p>
+<img src="https://i.328888.xyz/2023/03/02/FDQ4V.jpeg" alt="FDQ4V.jpeg" border="0" />
       
 		
 		
