@@ -6,15 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>使用Java编程方法对HBase数据库进行操作 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="使用Java编程的方法对HBase数据库进行操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Java编程方法对HBase数据库进行操作">
+<meta property="og:url" content="http://example.com/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="使用Java编程的方法对HBase数据库进行操作">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FRQqX.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FRq2t.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FRu7J.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FcVWA.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FcZPc.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/Fcfmo.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FcA4V.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FcyvN.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FcDId.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FcUdb.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/Fcnqq.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FcW2z.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/Fc0Pa.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/03/FckEw.png">
+<meta property="article:published_time" content="2023-03-03T05:39:07.000Z">
+<meta property="article:modified_time" content="2023-03-03T05:41:10.698Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/03/03/FRQqX.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,37 +174,120 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-pig和sqoop的安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-使用Java编程方法对HBase数据库进行操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/">pig和sqoop的安装</a>
+    <h1 class="article-title" itemprop="name">
+      使用Java编程方法对HBase数据库进行操作
     </h1>
   
 
 		<!--显示阅读次数-->
 
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
 <!--显示阅读次数完毕-->
 
         
-        <a href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-20T04:53:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
+        <a href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2023-03-03T05:39:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="pig和sqoop"><a href="#pig和sqoop" class="headerlink" title="pig和sqoop"></a>pig和sqoop</h1>
-        
+        <h1 id="使用Java编程的方法对HBase数据库进行操作"><a href="#使用Java编程的方法对HBase数据库进行操作" class="headerlink" title="使用Java编程的方法对HBase数据库进行操作"></a>使用Java编程的方法对HBase数据库进行操作</h1><span id="more"></span>
+
+<hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1950343972&auto=1&height=66"></iframe>
+
+<hr>
+<p>实验条件</p>
+<p>IDEA、Hadoop、hbase</p>
+<p>代码—-文档末尾</p>
+<h2 id="1、新建一个表格"><a href="#1、新建一个表格" class="headerlink" title="1、新建一个表格"></a>1、新建一个表格</h2><p>表格名为自己名字的小写全拼+后两位学号（比如zhangsan04），列族为stuinfo和grades，VERSIONS为5，并往表格中填入数据，表格具体内容如下图。其中表格中红色填充的单元格，要求写自己的信息，name一列写自己名字的全拼，number写自己的学号，class写自己班级的编号，如191、192、193。</p>
+<p>实验报告要求：将实现的代码段截图贴出来，以及进入HBASE shell中将scan扫描全表的结果贴出来。</p>
+  <img src="https://i.328888.xyz/2023/03/03/FRQqX.png" alt="FRQqX.png" border="0">  
+
+<h3 id="（1）连接数据库"><a href="#（1）连接数据库" class="headerlink" title="（1）连接数据库"></a>（1）连接数据库</h3><p>  <img src="https://i.328888.xyz/2023/03/03/FRq2t.png" alt="FRq2t.png" border="0">  {width&#x3D;”5.625in” height&#x3D;”3.875in”</p>
+<h3 id="（2）创建表"><a href="#（2）创建表" class="headerlink" title="（2）创建表"></a>（2）创建表</h3>  <img src="https://i.328888.xyz/2023/03/03/FRu7J.png" alt="FRu7J.png" border="0">  
+
+<h3 id="（3）向表中插入数据"><a href="#（3）向表中插入数据" class="headerlink" title="（3）向表中插入数据"></a>（3）向表中插入数据</h3>  <img src="https://i.328888.xyz/2023/03/03/FcVWA.png" alt="FcVWA.png" border="0">  
+
+<h3 id="（4）在main方法中调用创建表和添加数据的方法"><a href="#（4）在main方法中调用创建表和添加数据的方法" class="headerlink" title="（4）在main方法中调用创建表和添加数据的方法"></a>（4）在main方法中调用创建表和添加数据的方法</h3>  <img src="https://i.328888.xyz/2023/03/03/FcZPc.png" alt="FcZPc.png" border="0">  
+
+<h3 id="（5）运行前在虚拟机中看hbase中有哪些表"><a href="#（5）运行前在虚拟机中看hbase中有哪些表" class="headerlink" title="（5）运行前在虚拟机中看hbase中有哪些表"></a>（5）运行前在虚拟机中看hbase中有哪些表</h3>  <img src="https://i.328888.xyz/2023/03/03/Fcfmo.png" alt="Fcfmo.png" border="0">  
+
+<h3 id="（6）运行"><a href="#（6）运行" class="headerlink" title="（6）运行"></a>（6）运行</h3>  <img src="https://i.328888.xyz/2023/03/03/FcA4V.png" alt="FcA4V.png" border="0">  
+
+<h3 id="（7）查看表"><a href="#（7）查看表" class="headerlink" title="（7）查看表"></a>（7）查看表</h3>  <img src="https://i.328888.xyz/2023/03/03/FcyvN.png" alt="FcyvN.png" border="0">  
+
+<h3 id="（8）查看表中的数据"><a href="#（8）查看表中的数据" class="headerlink" title="（8）查看表中的数据"></a>（8）查看表中的数据</h3>  <img src="https://i.328888.xyz/2023/03/03/FcDId.png" alt="FcDId.png" border="0">  
+
+<h2 id="2、从表中筛选出zhaoming成绩大于80的所有键值对，并显示出来。"><a href="#2、从表中筛选出zhaoming成绩大于80的所有键值对，并显示出来。" class="headerlink" title="2、从表中筛选出zhaoming成绩大于80的所有键值对，并显示出来。"></a>2、从表中筛选出zhaoming成绩大于80的所有键值对，并显示出来。</h2><h3 id="（1）创建过滤的方法findlistData"><a href="#（1）创建过滤的方法findlistData" class="headerlink" title="（1）创建过滤的方法findlistData()"></a>（1）创建过滤的方法findlistData()</h3>  <img src="https://i.328888.xyz/2023/03/03/FcUdb.png" alt="FcUdb.png" border="0">  
+
+<h3 id="2-调用并运行"><a href="#2-调用并运行" class="headerlink" title="(2)调用并运行"></a>(2)调用并运行</h3>  <img src="https://i.328888.xyz/2023/03/03/Fcnqq.png" alt="Fcnqq.png" border="0">  
+
+<h2 id="3、删除行键为002的grades列族数据。"><a href="#3、删除行键为002的grades列族数据。" class="headerlink" title="3、删除行键为002的grades列族数据。"></a>3、删除行键为002的grades列族数据。</h2><h3 id="（1）创建删除数据的方法"><a href="#（1）创建删除数据的方法" class="headerlink" title="（1）创建删除数据的方法"></a>（1）创建删除数据的方法</h3>  <img src="https://i.328888.xyz/2023/03/03/FcW2z.png" alt="FcW2z.png" border="0">  
+
+<h3 id="（2）调用并运行"><a href="#（2）调用并运行" class="headerlink" title="（2）调用并运行"></a>（2）调用并运行</h3>  <img src="https://i.328888.xyz/2023/03/03/Fc0Pa.png" alt="Fc0Pa.png" border="0">  
+
+<h3 id="（3）在hbase中查看"><a href="#（3）在hbase中查看" class="headerlink" title="（3）在hbase中查看"></a>（3）在hbase中查看</h3>  <img src="https://i.328888.xyz/2023/03/03/FckEw.png" alt="FckEw.png" border="0">  
+
+<p>此时行键为002的grades列族数据已经没有了</p>
+<p>实验代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HBaseConn</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Log</span> <span class="variable">log</span> <span class="operator">=</span> LogFactory.getLog(HBaseConn.class);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Configuration configuration;<span class="comment">//hbase配置</span></span><br><span class="line">    <span class="keyword">private</span>  <span class="keyword">static</span> Connection connection;<span class="comment">//hbase 连接</span></span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(configuration==<span class="literal">null</span>)&#123;</span><br><span class="line">                configuration = HBaseConfiguration.create();</span><br><span class="line">                configuration.set(<span class="string">&quot;hbase.zookeeper.quorum&quot;</span>,<span class="string">&quot;192.168.119.135:2181&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            log.info(<span class="string">&quot;hbase连接配置异常：&quot;</span>+e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取数据库连接</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title function_">getHBaseConn</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (connection==<span class="literal">null</span> || connection.isClosed())&#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                connection=ConnectionFactory.createConnection(configuration);</span><br><span class="line">            &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">                log.info(<span class="string">&quot;获取hbase连接异常：&quot;</span>+e);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> connection;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//插入数据</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">addData</span><span class="params">()</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">Table</span> <span class="variable">table</span> <span class="operator">=</span> connection.getTable(TableName.valueOf(<span class="string">&quot;weikedan42&quot;</span>));</span><br><span class="line">        <span class="type">Put</span> <span class="variable">put</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Put</span>(Bytes.toBytes(<span class="string">&quot;001&quot;</span>));</span><br><span class="line">        put.addColumn(Bytes.toBytes(<span class="string">&quot;stuinfo&quot;</span>),Bytes.toBytes(<span class="string">&quot;name&quot;</span>), Bytes.toBytes(<span class="string">&quot;weikedan&quot;</span>));</span><br><span class="line">        put.addColumn(Bytes.toBytes(<span class="string">&quot;stuinfo&quot;</span>),Bytes.toBytes(<span class="string">&quot;number&quot;</span>), Bytes.toBytes(<span class="string">&quot;2005010142&quot;</span>));</span><br><span class="line">        put.addColumn(Bytes.toBytes(<span class="string">&quot;stuinfo&quot;</span>),Bytes.toBytes(<span class="string">&quot;class&quot;</span>), Bytes.toBytes(<span class="string">&quot;201&quot;</span>));</span><br><span class="line">        put.addColumn(Bytes.toBytes(<span class="string">&quot;grades&quot;</span>),Bytes.toBytes(<span class="string">&quot;Hadoop&quot;</span>), Bytes.toBytes(<span class="string">&quot;79&quot;</span>));</span><br><span class="line">        put.addColumn(Bytes.toBytes(<span class="string">&quot;grades&quot;</span>),Bytes.toBytes(<span class="string">&quot;NoSql&quot;</span>), Bytes.toBytes(<span class="string">&quot;80&quot;</span>));</span><br><span class="line">        put.addColumn(Bytes.toBytes(<span class="string">&quot;grades&quot;</span>),Bytes.toBytes(<span class="string">&quot;Math&quot;</span>), Bytes.toBytes(<span class="string">&quot;75&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="type">Put</span> <span class="variable">put1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Put</span>(Bytes.toBytes(<span class="string">&quot;002&quot;</span>));</span><br><span class="line">        put1.addColumn(Bytes.toBytes(<span class="string">&quot;stuinfo&quot;</span>),Bytes.toBytes(<span class="string">&quot;name&quot;</span>), Bytes.toBytes(<span class="string">&quot;zhaoming&quot;</span>));</span><br><span class="line">        put1.addColumn(Bytes.toBytes(<span class="string">&quot;stuinfo&quot;</span>),Bytes.toBytes(<span class="string">&quot;number&quot;</span>), Bytes.toBytes(<span class="string">&quot;100001&quot;</span>));</span><br><span class="line">        put1.addColumn(Bytes.toBytes(<span class="string">&quot;stuinfo&quot;</span>),Bytes.toBytes(<span class="string">&quot;class&quot;</span>), Bytes.toBytes(<span class="string">&quot;1704&quot;</span>));</span><br><span class="line">        put1.addColumn(Bytes.toBytes(<span class="string">&quot;grades&quot;</span>),Bytes.toBytes(<span class="string">&quot;Hadoop&quot;</span>), Bytes.toBytes(<span class="string">&quot;90&quot;</span>));</span><br><span class="line">        put1.addColumn(Bytes.toBytes(<span class="string">&quot;grades&quot;</span>),Bytes.toBytes(<span class="string">&quot;NoSql&quot;</span>), Bytes.toBytes(<span class="string">&quot;86&quot;</span>));</span><br><span class="line">        put1.addColumn(Bytes.toBytes(<span class="string">&quot;grades&quot;</span>),Bytes.toBytes(<span class="string">&quot;Math&quot;</span>), Bytes.toBytes(<span class="string">&quot;76&quot;</span>));</span><br><span class="line"></span><br><span class="line">        table.put(put);</span><br><span class="line">        table.put(put1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//过滤数据</span></span><br><span class="line">    <span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">findlistData</span><span class="params">()</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        Table table= connection.getTable(TableName.valueOf(<span class="string">&quot;weikedan42&quot;</span>));<span class="comment">//从表weikedan42中筛选数据</span></span><br><span class="line">        <span class="type">Scan</span> <span class="variable">scan</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scan</span>();</span><br><span class="line">        <span class="type">BinaryComparator</span> <span class="variable">comparator</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BinaryComparator</span>(<span class="string">&quot;80&quot;</span>.getBytes());<span class="comment">//比较器，找到比80大的</span></span><br><span class="line">        <span class="type">Filter</span> <span class="variable">filter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ValueFilter</span>(CompareFilter.CompareOp.GREATER,comparator);<span class="comment">//过滤器</span></span><br><span class="line">        scan.addFamily(<span class="string">&quot;grades&quot;</span>.getBytes());<span class="comment">//设置查找的列为grades</span></span><br><span class="line">        scan.setFilter(filter);</span><br><span class="line">        <span class="type">ResultScanner</span> <span class="variable">resultScanner</span> <span class="operator">=</span> table.getScanner(scan);<span class="comment">//扫描</span></span><br><span class="line">        <span class="keyword">for</span> (Result result:resultScanner)&#123;</span><br><span class="line">            List&lt;Cell&gt; cells=result.listCells();</span><br><span class="line">            <span class="keyword">for</span> (Cell cell:cells)&#123;</span><br><span class="line">                System.out.println(<span class="keyword">new</span> <span class="title class_">String</span>(CellUtil.cloneRow(cell))+<span class="string">&quot;\t&quot;</span>+</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">String</span>(CellUtil.cloneFamily(cell))+<span class="string">&quot;\t&quot;</span>+</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">String</span>(CellUtil.cloneQualifier(cell))+<span class="string">&quot;\t&quot;</span>+</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">String</span>(CellUtil.cloneValue(cell)));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//删除数据</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">delete</span><span class="params">()</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">Table</span> <span class="variable">table</span> <span class="operator">=</span>connection.getTable(TableName.valueOf(<span class="string">&quot;weikedan42&quot;</span>));</span><br><span class="line">        Delete delete= <span class="keyword">new</span> <span class="title class_">Delete</span>(Bytes.toBytes(<span class="string">&quot;002&quot;</span>));</span><br><span class="line">        delete.addFamily(Bytes.toBytes(<span class="string">&quot;grades&quot;</span>));</span><br><span class="line">        table.delete(delete);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//关闭数据库</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">closeConn</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (connection!=<span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                connection.close();</span><br><span class="line">            &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">                log.info(<span class="string">&quot;关闭hbase连接异常：&quot;</span>+e);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>main函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HBaseText</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="comment">//创建表</span></span><br><span class="line">        HBaseUtil.createTable(<span class="string">&quot;weikedan42&quot;</span>, <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;stuinfo&quot;</span>, <span class="string">&quot;grades&quot;</span>&#125;);</span><br><span class="line">        <span class="comment">//插入数据</span></span><br><span class="line">        HBaseConn.addData();</span><br><span class="line">        <span class="comment">//筛选数据</span></span><br><span class="line">        HBaseConn.findlistData();</span><br><span class="line">        <span class="comment">//删除数据</span></span><br><span class="line">        HBaseConn.delete();</span><br><span class="line">        <span class="comment">//删除表</span></span><br><span class="line">        <span class="comment">//Delete_table.deleteTable1(&quot;weikedan42&quot;);</span></span><br><span class="line">        <span class="comment">//关闭连接</span></span><br><span class="line">        HBaseConn.closeConn();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,16 +296,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MongoDB的基本操作_2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -218,436 +379,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-虚拟机安装mysql和hive" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/19/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mysql%E5%92%8Chive/">虚拟机安装mysql和hive</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/19/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mysql%E5%92%8Chive/" class="archive-article-date">
-  	<time datetime="2023-02-19T08:49:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="mysql和hive"><a href="#mysql和hive" class="headerlink" title="mysql和hive"></a>mysql和hive</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/19/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mysql%E5%92%8Chive/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">使用Java编程的方法对HBase数据库进行操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%A1%A8%E6%A0%BC"><span class="toc-number">1.1.</span> <span class="toc-text">1、新建一个表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.1.1.</span> <span class="toc-text">（1）连接数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">（2）创建表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%90%91%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.3.</span> <span class="toc-text">（3）向表中插入数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%9C%A8main%E6%96%B9%E6%B3%95%E4%B8%AD%E8%B0%83%E7%94%A8%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%92%8C%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.4.</span> <span class="toc-text">（4）在main方法中调用创建表和添加数据的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E8%BF%90%E8%A1%8C%E5%89%8D%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9C%8Bhbase%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A1%A8"><span class="toc-number">1.1.5.</span> <span class="toc-text">（5）运行前在虚拟机中看hbase中有哪些表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E8%BF%90%E8%A1%8C"><span class="toc-number">1.1.6.</span> <span class="toc-text">（6）运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%887%EF%BC%89%E6%9F%A5%E7%9C%8B%E8%A1%A8"><span class="toc-number">1.1.7.</span> <span class="toc-text">（7）查看表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%888%EF%BC%89%E6%9F%A5%E7%9C%8B%E8%A1%A8%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.8.</span> <span class="toc-text">（8）查看表中的数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E4%BB%8E%E8%A1%A8%E4%B8%AD%E7%AD%9B%E9%80%89%E5%87%BAzhaoming%E6%88%90%E7%BB%A9%E5%A4%A7%E4%BA%8E80%E7%9A%84%E6%89%80%E6%9C%89%E9%94%AE%E5%80%BC%E5%AF%B9%EF%BC%8C%E5%B9%B6%E6%98%BE%E7%A4%BA%E5%87%BA%E6%9D%A5%E3%80%82"><span class="toc-number">1.2.</span> <span class="toc-text">2、从表中筛选出zhaoming成绩大于80的所有键值对，并显示出来。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%88%9B%E5%BB%BA%E8%BF%87%E6%BB%A4%E7%9A%84%E6%96%B9%E6%B3%95findlistData"><span class="toc-number">1.2.1.</span> <span class="toc-text">（1）创建过滤的方法findlistData()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B0%83%E7%94%A8%E5%B9%B6%E8%BF%90%E8%A1%8C"><span class="toc-number">1.2.2.</span> <span class="toc-text">(2)调用并运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%88%A0%E9%99%A4%E8%A1%8C%E9%94%AE%E4%B8%BA002%E7%9A%84grades%E5%88%97%E6%97%8F%E6%95%B0%E6%8D%AE%E3%80%82"><span class="toc-number">1.3.</span> <span class="toc-text">3、删除行键为002的grades列族数据。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%88%9B%E5%BB%BA%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.1.</span> <span class="toc-text">（1）创建删除数据的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%B0%83%E7%94%A8%E5%B9%B6%E8%BF%90%E8%A1%8C"><span class="toc-number">1.3.2.</span> <span class="toc-text">（2）调用并运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%9C%A8hbase%E4%B8%AD%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">（3）在hbase中查看</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-HBase伪分布式安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">HBase伪分布式安装</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-19T03:06:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hbase伪分布式"><a href="#Hbase伪分布式" class="headerlink" title="Hbase伪分布式"></a>Hbase伪分布式</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hadoop完全分布式安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">Hadoop完全分布式安装</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-18T14:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hadoop完全分布式"><a href="#Hadoop完全分布式" class="headerlink" title="Hadoop完全分布式"></a>Hadoop完全分布式</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Word文档转换成Markdown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/">Word文档转换成Markdown</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/" class="archive-article-date">
-  	<time datetime="2023-02-17T13:08:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Word文档转换成Markdown"><a href="#Word文档转换成Markdown" class="headerlink" title="Word文档转换成Markdown"></a>Word文档转换成Markdown</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-02-16T05:37:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/15/hello-world/" class="archive-article-date">
-  	<time datetime="2023-02-15T12:58:51.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/15/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -674,8 +431,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
