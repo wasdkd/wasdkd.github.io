@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/03/04/GcTtZ.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/03/04/GcacF.png">
 <meta property="article:published_time" content="2023-03-04T14:19:25.000Z">
-<meta property="article:modified_time" content="2023-03-04T14:23:27.716Z">
+<meta property="article:modified_time" content="2023-03-04T14:26:04.715Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/03/04/GmkGd.png">
@@ -249,19 +249,25 @@
 
 <h2 id="2-创建员工表emp042。"><a href="#2-创建员工表emp042。" class="headerlink" title="(2)创建员工表emp042。"></a>(2)创建员工表emp042。</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> emp042 (empno <span class="type">int</span>,ename string,job string,mgr <span class="type">int</span>,hiredate string,sal <span class="type">int</span>,comm <span class="type">int</span>,deptno <span class="type">int</span>) <span class="type">row</span> format delimited fields terminated <span class="keyword">by</span> <span class="string">&#x27;,&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/04/Gc3gJ.png" alt="Gc3gJ.png" border="0">  
+  <img src="https://i.328888.xyz/2023/03/04/Gc3gJ.png" alt="Gc3gJ.png" border="0">
+
+  
 
   <img src="https://i.328888.xyz/2023/03/04/GcRLc.png" alt="GcRLc.png" border="0">  
 
 <h2 id="3-创建部门表dept042。"><a href="#3-创建部门表dept042。" class="headerlink" title="(3)创建部门表dept042。"></a>(3)创建部门表dept042。</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept042 (deptno <span class="type">int</span>,dname string,loc string) <span class="type">row</span> format delimited fields terminated <span class="keyword">by</span> <span class="string">&#x27;,&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/04/GcmnA.png" alt="GcmnA.png" border="0">  
+  <img src="https://i.328888.xyz/2023/03/04/GcmnA.png" alt="GcmnA.png" border="0">
+
+  
 
   <img src="https://i.328888.xyz/2023/03/04/GcpRo.png" alt="GcpRo.png" border="0">  
 
 <h2 id="4-导入数据。"><a href="#4-导入数据。" class="headerlink" title="(4)导入数据。"></a>(4)导入数据。</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load data inpath <span class="string">&#x27;/042/hive/emp.csv&#x27;</span> <span class="keyword">into</span> <span class="keyword">table</span> emp042;</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/04/GcBoN.png" alt="GcBoN.png" border="0">  
+  <img src="https://i.328888.xyz/2023/03/04/GcBoN.png" alt="GcBoN.png" border="0">
+
+  
 
   <img src="https://i.328888.xyz/2023/03/04/GcgfV.png" alt="GcgfV.png" border="0">  
 
@@ -277,15 +283,21 @@
 <h2 id="5-创建分区emp-part042"><a href="#5-创建分区emp-part042" class="headerlink" title="(5)创建分区emp_part042"></a>(5)创建分区emp_part042</h2><p>根据员工的部门号</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> emp_part042 (empno <span class="type">int</span>,ename string,job string,mgr <span class="type">int</span>,hiredate string,sal <span class="type">int</span>,comm <span class="type">int</span>) partitioned <span class="keyword">by</span> (deptno <span class="type">int</span>) <span class="type">row</span> format delimited fields terminated <span class="keyword">by</span> <span class="string">&#x27;,&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/04/Gczlz.png" alt="Gczlz.png" border="0">  
+  <img src="https://i.328888.xyz/2023/03/04/Gczlz.png" alt="Gczlz.png" border="0">
+
+  
 
   <img src="https://i.328888.xyz/2023/03/04/Gc6xw.png" alt="Gc6xw.png" border="0">  
 
 <h3 id="向分区表插入数据："><a href="#向分区表插入数据：" class="headerlink" title="向分区表插入数据："></a>向分区表插入数据：</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">table</span> emp_part042 <span class="keyword">partition</span> (deptno<span class="operator">=</span> <span class="number">10</span>) <span class="keyword">select</span> empno,ename,job,mgr,hiredate,sal,comm <span class="keyword">from</span> emp042 <span class="keyword">where</span> deptno<span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">table</span> emp_part042 <span class="keyword">partition</span> (deptno<span class="operator">=</span> <span class="number">20</span>) <span class="keyword">select</span> empno,ename,job,mgr,hiredate,sal,comm <span class="keyword">from</span> emp042 <span class="keyword">where</span> deptno<span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">table</span> emp_part042 <span class="keyword">partition</span> (deptno<span class="operator">=</span> <span class="number">30</span>) <span class="keyword">select</span> empno,ename,job,mgr,hiredate,sal,comm <span class="keyword">from</span> emp042 <span class="keyword">where</span> deptno<span class="operator">=</span> <span class="number">30</span>;</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/04/GcFLa.png" alt="GcFLa.png" border="0">  
+  <img src="https://i.328888.xyz/2023/03/04/GcFLa.png" alt="GcFLa.png" border="0">
 
-  <img src="https://i.328888.xyz/2023/03/04/Gcdnx.png" alt="Gcdnx.png" border="0">  
+  
+
+  <img src="https://i.328888.xyz/2023/03/04/Gcdnx.png" alt="Gcdnx.png" border="0">
+
+  
 
   <img src="https://i.328888.xyz/2023/03/04/Gchck.png" alt="Gchck.png" border="0">  
 
