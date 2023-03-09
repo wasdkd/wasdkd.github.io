@@ -183,69 +183,7 @@
       
         <h1 id="Linux系统DNS服务器配置"><a href="#Linux系统DNS服务器配置" class="headerlink" title="Linux系统DNS服务器配置"></a><strong>Linux系统DNS服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
 <hr>
-<h2 id="1、使用"><a href="#1、使用" class="headerlink" title="1、使用"></a>1、使用</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep bind</span><br></pre></td></tr></table></figure>
-
-<p> 查看是否安装了bind</p>
-  <img src="https://i.328888.xyz/2023/03/09/oHpMx.png" alt="oHpMx.png" border="0">  
-
-<h2 id="2、查看虚拟机ens33的IP和主机IP"><a href="#2、查看虚拟机ens33的IP和主机IP" class="headerlink" title="2、查看虚拟机ens33的IP和主机IP"></a>2、查看虚拟机ens33的IP和主机IP</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
-
-  <img src="https://i.328888.xyz/2023/03/09/oHmxa.png" alt="oHmxa.png" border="0">  
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure>
-
-  <img src="https://i.328888.xyz/2023/03/09/oHXtk.png" alt="oHXtk.png" border="0">  
-
-<h2 id="3、修改配置文件"><a href="#3、修改配置文件" class="headerlink" title="3、修改配置文件"></a>3、修改配置文件</h2><h3 id="3-1-使用"><a href="#3-1-使用" class="headerlink" title="3.1 使用"></a>3.1 使用</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/named.conf</span><br></pre></td></tr></table></figure>
-
-<p>命令修改named.conf文件(修改如下)</p>
-<p>#修改成{}内容为any</p>
-<img src="https://i.328888.xyz/2023/03/09/oHgcL.png" alt="oHgcL.png" border="0">  
-
-<h3 id="3-2-使用命令修改named-rfc1912-zones文件，在末尾加上如下图内容"><a href="#3-2-使用命令修改named-rfc1912-zones文件，在末尾加上如下图内容" class="headerlink" title="3.2 使用命令修改named.rfc1912.zones文件，在末尾加上如下图内容"></a>3.2 使用命令修改named.rfc1912.zones文件，在末尾加上如下图内容</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/named.rfc1912.zones</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增加正向解析</span></span><br><span class="line"></span><br><span class="line">zone <span class="string">&quot;hbliti.com&quot;</span> IN &#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span> master;</span><br><span class="line"></span><br><span class="line">file <span class="string">&quot; hbliti.com.file&quot;</span>;</span><br><span class="line"></span><br><span class="line">allow-update &#123; none; &#125;;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加反向解析</span></span><br><span class="line"></span><br><span class="line">zone <span class="string">&quot;100.168.192.in-addr.arpa&quot;</span> IN &#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span> master;</span><br><span class="line"></span><br><span class="line">file <span class="string">&quot;192.168.100.file&quot;</span>;</span><br><span class="line"></span><br><span class="line">allow-update &#123; none; &#125;;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<img src="https://i.328888.xyz/2023/03/09/oHxsp.png" alt="oHxsp.png" border="0">  
-
-<h3 id="3-3使用-cp-p-将系统自带的正反向解析文件拷贝重命名进行修改使用"><a href="#3-3使用-cp-p-将系统自带的正反向解析文件拷贝重命名进行修改使用" class="headerlink" title="3.3使用 cp -p 将系统自带的正反向解析文件拷贝重命名进行修改使用"></a>3.3使用 cp -p 将系统自带的正反向解析文件拷贝重命名进行修改使用</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /var/named/</span><br><span class="line"></span><br><span class="line">cp -p named.localhost hbliti.com.file</span><br><span class="line"></span><br><span class="line">cp -p named.loopback 192.168.100.file</span><br></pre></td></tr></table></figure>
-
-<img src="https://i.328888.xyz/2023/03/09/oHEyU.png" alt="oHEyU.png" border="0">  
-
-<p>hbliti.com.file文件修改如下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim hbliti.com.file</span><br></pre></td></tr></table></figure>
-
-<img src="https://i.328888.xyz/2023/03/09/oHe8v.png" alt="oHe8v.png" border="0">  
-
-<p>192.168.100.file文件修改如下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 192.168.100.file</span><br></pre></td></tr></table></figure>
-
-<img src="https://i.328888.xyz/2023/03/09/oHzG3.png" alt="oHzG3.png" border="0">  
-
-<h3 id="3-4-使用vim-x2F-etc-x2F-resolv-conf命令修改resolv-conf文件"><a href="#3-4-使用vim-x2F-etc-x2F-resolv-conf命令修改resolv-conf文件" class="headerlink" title="3.4 使用vim &#x2F;etc&#x2F;resolv.conf命令修改resolv.conf文件"></a>3.4 使用vim &#x2F;etc&#x2F;resolv.conf命令修改resolv.conf文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-
-<p>在里面加上</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameserver 192.168.100.2</span><br></pre></td></tr></table></figure>
-
-  <img src="https://i.328888.xyz/2023/03/09/oH6qy.png" alt="oH6qy.png" border="0">  
-
-<h2 id="4、启动（重启）DNS服务"><a href="#4、启动（重启）DNS服务" class="headerlink" title="4、启动（重启）DNS服务"></a>4、启动（重启）DNS服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl start named</span><br><span class="line"></span><br><span class="line">systemctl restart named</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-  <img src="https://i.328888.xyz/2023/03/09/oHGw5.png" alt="oHGw5.png" border="0">  
-
-<h2 id="5、测试nslookup"><a href="#5、测试nslookup" class="headerlink" title="5、测试nslookup"></a>5、测试nslookup</h2><p>关闭防火墙：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
-
-<p> 修改SElinux级别：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setenforce 0 </span><br></pre></td></tr></table></figure>
-
-<p>修改windows系统网卡的DNS地址为192.168.100.254，虚拟dos下运行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br></pre></td></tr></table></figure>
-
-<p>命令即可进行测试</p>
-  <img src="https://i.328888.xyz/2023/03/09/oHd78.png" alt="oHd78.png" border="0">  
-
-  <img src="https://i.328888.xyz/2023/03/09/oHhPZ.png" alt="oHhPZ.png" border="0">  
+        
       
 		
 		
