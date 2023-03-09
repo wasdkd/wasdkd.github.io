@@ -6,15 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023 | 鳌伊耶学习历程</title>
+  <title>Linux系统DNS服务器配置 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/archives/2023/page/3/index.html">
+  <meta name="description" content="Linux系统DNS服务器配置已安装VMware workstatio pro和CenOs7系统的电脑  1、使用1rpm -qa|grep bind   查看是否安装了bind       2、查看虚拟机ens33的IP和主机IP1ifconfig        1ipconfig        3、修改配置文件3.1 使用1vim &#x2F;etc&#x2F;named.conf  命令修改named.conf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux系统DNS服务器配置">
+<meta property="og:url" content="http://example.com/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="Linux系统DNS服务器配置已安装VMware workstatio pro和CenOs7系统的电脑  1、使用1rpm -qa|grep bind   查看是否安装了bind       2、查看虚拟机ens33的IP和主机IP1ifconfig        1ipconfig        3、修改配置文件3.1 使用1vim &#x2F;etc&#x2F;named.conf  命令修改named.conf">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHpMx.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHmxa.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHXtk.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHgcL.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHxsp.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHEyU.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHe8v.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHzG3.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oH6qy.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHGw5.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHd78.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/09/oHhPZ.png">
+<meta property="article:published_time" content="2023-03-09T15:43:03.000Z">
+<meta property="article:modified_time" content="2023-03-09T15:44:18.816Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/03/09/oHpMx.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,144 +172,254 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Linux系统DNS服务器配置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux系统DNS服务器配置
+    </h1>
+  
+
+		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+        
+        <a href="/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2023-03-09T15:43:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-09</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux系统DNS服务器配置"><a href="#Linux系统DNS服务器配置" class="headerlink" title="Linux系统DNS服务器配置"></a><strong>Linux系统DNS服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
+<hr>
+<h2 id="1、使用"><a href="#1、使用" class="headerlink" title="1、使用"></a>1、使用</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep bind</span><br></pre></td></tr></table></figure>
+
+<p> 查看是否安装了bind</p>
+  <img src="https://i.328888.xyz/2023/03/09/oHpMx.png" alt="oHpMx.png" border="0">  
+
+<h2 id="2、查看虚拟机ens33的IP和主机IP"><a href="#2、查看虚拟机ens33的IP和主机IP" class="headerlink" title="2、查看虚拟机ens33的IP和主机IP"></a>2、查看虚拟机ens33的IP和主机IP</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/09/oHmxa.png" alt="oHmxa.png" border="0">  
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/09/oHXtk.png" alt="oHXtk.png" border="0">  
+
+<h2 id="3、修改配置文件"><a href="#3、修改配置文件" class="headerlink" title="3、修改配置文件"></a>3、修改配置文件</h2><h3 id="3-1-使用"><a href="#3-1-使用" class="headerlink" title="3.1 使用"></a>3.1 使用</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/named.conf</span><br></pre></td></tr></table></figure>
+
+<p>命令修改named.conf文件(修改如下)</p>
+<p>#修改成{}内容为any</p>
+<img src="https://i.328888.xyz/2023/03/09/oHgcL.png" alt="oHgcL.png" border="0">  
+
+<h3 id="3-2-使用命令修改named-rfc1912-zones文件，在末尾加上如下图内容"><a href="#3-2-使用命令修改named-rfc1912-zones文件，在末尾加上如下图内容" class="headerlink" title="3.2 使用命令修改named.rfc1912.zones文件，在末尾加上如下图内容"></a>3.2 使用命令修改named.rfc1912.zones文件，在末尾加上如下图内容</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/named.rfc1912.zones</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增加正向解析</span></span><br><span class="line"></span><br><span class="line">zone <span class="string">&quot;hbliti.com&quot;</span> IN &#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span> master;</span><br><span class="line"></span><br><span class="line">file <span class="string">&quot; hbliti.com.file&quot;</span>;</span><br><span class="line"></span><br><span class="line">allow-update &#123; none; &#125;;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加反向解析</span></span><br><span class="line"></span><br><span class="line">zone <span class="string">&quot;100.168.192.in-addr.arpa&quot;</span> IN &#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span> master;</span><br><span class="line"></span><br><span class="line">file <span class="string">&quot;192.168.100.file&quot;</span>;</span><br><span class="line"></span><br><span class="line">allow-update &#123; none; &#125;;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.328888.xyz/2023/03/09/oHxsp.png" alt="oHxsp.png" border="0">  
+
+<h3 id="3-3使用-cp-p-将系统自带的正反向解析文件拷贝重命名进行修改使用"><a href="#3-3使用-cp-p-将系统自带的正反向解析文件拷贝重命名进行修改使用" class="headerlink" title="3.3使用 cp -p 将系统自带的正反向解析文件拷贝重命名进行修改使用"></a>3.3使用 cp -p 将系统自带的正反向解析文件拷贝重命名进行修改使用</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /var/named/</span><br><span class="line"></span><br><span class="line">cp -p named.localhost hbliti.com.file</span><br><span class="line"></span><br><span class="line">cp -p named.loopback 192.168.100.file</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.328888.xyz/2023/03/09/oHEyU.png" alt="oHEyU.png" border="0">  
+
+<p>hbliti.com.file文件修改如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim hbliti.com.file</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.328888.xyz/2023/03/09/oHe8v.png" alt="oHe8v.png" border="0">  
+
+<p>192.168.100.file文件修改如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 192.168.100.file</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.328888.xyz/2023/03/09/oHzG3.png" alt="oHzG3.png" border="0">  
+
+<h3 id="3-4-使用vim-x2F-etc-x2F-resolv-conf命令修改resolv-conf文件"><a href="#3-4-使用vim-x2F-etc-x2F-resolv-conf命令修改resolv-conf文件" class="headerlink" title="3.4 使用vim &#x2F;etc&#x2F;resolv.conf命令修改resolv.conf文件"></a>3.4 使用vim &#x2F;etc&#x2F;resolv.conf命令修改resolv.conf文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+<p>在里面加上</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameserver 192.168.100.2</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/09/oH6qy.png" alt="oH6qy.png" border="0">  
+
+<h2 id="4、启动（重启）DNS服务"><a href="#4、启动（重启）DNS服务" class="headerlink" title="4、启动（重启）DNS服务"></a>4、启动（重启）DNS服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl start named</span><br><span class="line"></span><br><span class="line">systemctl restart named</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/09/oHGw5.png" alt="oHGw5.png" border="0">  
+
+<h2 id="5、测试nslookup"><a href="#5、测试nslookup" class="headerlink" title="5、测试nslookup"></a>5、测试nslookup</h2><p>关闭防火墙：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p> 修改SElinux级别：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setenforce 0 </span><br></pre></td></tr></table></figure>
+
+<p>修改windows系统网卡的DNS地址为192.168.100.254，虚拟dos下运行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup</span><br></pre></td></tr></table></figure>
+
+<p>命令即可进行测试</p>
+  <img src="https://i.328888.xyz/2023/03/09/oHd78.png" alt="oHd78.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/03/09/oHhPZ.png" alt="oHhPZ.png" border="0">  
+      
+		
+		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-18T14:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/18/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">Hadoop完全分布式安装</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/" class="archive-article-date">
-  	<time datetime="2023-02-17T13:08:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Pyecharts绘制玫瑰图</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/">Word文档转换成Markdown</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">Linux系统DNS服务器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">1、使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%9F%A5%E7%9C%8B%E8%99%9A%E6%8B%9F%E6%9C%BAens33%E7%9A%84IP%E5%92%8C%E4%B8%BB%E6%9C%BAIP"><span class="toc-number">1.2.</span> <span class="toc-text">2、查看虚拟机ens33的IP和主机IP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.</span> <span class="toc-text">3、修改配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9named-rfc1912-zones%E6%96%87%E4%BB%B6%EF%BC%8C%E5%9C%A8%E6%9C%AB%E5%B0%BE%E5%8A%A0%E4%B8%8A%E5%A6%82%E4%B8%8B%E5%9B%BE%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 使用命令修改named.rfc1912.zones文件，在末尾加上如下图内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3%E4%BD%BF%E7%94%A8-cp-p-%E5%B0%86%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E7%9A%84%E6%AD%A3%E5%8F%8D%E5%90%91%E8%A7%A3%E6%9E%90%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D%E9%87%8D%E5%91%BD%E5%90%8D%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3使用 cp -p 将系统自带的正反向解析文件拷贝重命名进行修改使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E4%BD%BF%E7%94%A8vim-x2F-etc-x2F-resolv-conf%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9resolv-conf%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.4 使用vim &#x2F;etc&#x2F;resolv.conf命令修改resolv.conf文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%90%AF%E5%8A%A8%EF%BC%88%E9%87%8D%E5%90%AF%EF%BC%89DNS%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.4.</span> <span class="toc-text">4、启动（重启）DNS服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E6%B5%8B%E8%AF%95nslookup"><span class="toc-number">1.5.</span> <span class="toc-text">5、测试nslookup</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-02-16T05:37:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-16</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/15/hello-world/" class="archive-article-date">
-  	<time datetime="2023-02-15T12:58:51.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/15/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2023/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2023/">1</a><a class="page-number" href="/archives/2023/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
   
 
 
@@ -320,8 +447,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
