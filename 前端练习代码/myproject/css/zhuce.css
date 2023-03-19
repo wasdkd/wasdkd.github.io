@@ -1,0 +1,49 @@
+
+		.uname h1{
+			position: absolute;
+			top: 100px;
+			right: 690px;
+		}
+		
+		.table {
+			position: relative;
+			top: 200px;
+			right: -15px;
+			margin: 0 auto;
+			
+		}
+		
+		.get {
+			
+			color:#00aaff;
+		}
+		.get:hover{
+			background-color:#00aaff;
+			color:black;
+		}
+        #house{
+			position: absolute;
+			top: 10px;
+			width:1520px;
+			height:740px;
+			background-image:url("../img/zhuce1.jpg"); 
+			background-position: center 0;
+			background-repeat: repeat;
+			 
+            
+        }
+        #register{
+            width: 400px;
+            margin-left: 570px;
+
+        }
+        #ge{
+			position: absolute;
+			top: 450px;
+			right: 645px;
+            margin-left: 103px;
+            width: 170px;
+            height: 43px;
+            border: coral;
+			background-color:#00aaff;
+        }
