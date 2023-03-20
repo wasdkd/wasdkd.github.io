@@ -6,15 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>使用Matplotlib绘制基本图表1(时间数据) | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="使用Matplotlib绘制基本图表1时间数据可视化Matplotlib官网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Matplotlib绘制基本图表1(时间数据)">
+<meta property="og:url" content="http://example.com/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="使用Matplotlib绘制基本图表1时间数据可视化Matplotlib官网">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PoJG3.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/Po98v.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PoKqy.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PoMw5.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PoP78.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PoTPZ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/Po1tF.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PoQmH.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PoYsQ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PouyE.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PsZIC.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/20/PsiGP.png">
+<meta property="article:published_time" content="2023-03-20T12:57:27.000Z">
+<meta property="article:modified_time" content="2023-03-20T12:57:51.253Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/03/20/PoJG3.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,20 +172,26 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-使用Matplotlib绘制基本图表1-时间数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-使用Matplotlib绘制基本图表1-时间数据" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Matplotlib绘制基本图表1(时间数据)</a>
+    <h1 class="article-title" itemprop="name">
+      使用Matplotlib绘制基本图表1(时间数据)
     </h1>
   
 
 		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
 
 <!--显示阅读次数完毕-->
 
@@ -182,10 +205,73 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="使用Matplotlib绘制基本图表1"><a href="#使用Matplotlib绘制基本图表1" class="headerlink" title="使用Matplotlib绘制基本图表1"></a>使用Matplotlib绘制基本图表1</h1><h2 id="时间数据可视化"><a href="#时间数据可视化" class="headerlink" title="时间数据可视化"></a>时间数据可视化</h2><p><a target="_blank" rel="noopener" href="https://matplotlib.org/">Matplotlib官网</a> </p>
-        
+<span id="more"></span>
+
+<h2 id="1、折线图-x2F-阶梯图"><a href="#1、折线图-x2F-阶梯图" class="headerlink" title="1、折线图&#x2F;阶梯图"></a>1、折线图&#x2F;阶梯图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 matplotlib绘制折线图</span></span><br><span class="line"><span class="comment"># plot()----折线图   step()----阶梯图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line">x = [<span class="string">&#x27;一月&#x27;</span>, <span class="string">&#x27;二月&#x27;</span>, <span class="string">&#x27;三月&#x27;</span>, <span class="string">&#x27;四月&#x27;</span>, <span class="string">&#x27;五月&#x27;</span>, <span class="string">&#x27;六月&#x27;</span>, <span class="string">&#x27;七月&#x27;</span>, <span class="string">&#x27;八月&#x27;</span>, <span class="string">&#x27;九月&#x27;</span>, <span class="string">&#x27;十月&#x27;</span>, <span class="string">&#x27;十一月&#x27;</span>, <span class="string">&#x27;十二月&#x27;</span>]</span><br><span class="line">y = [<span class="number">300</span>, <span class="number">500</span>, <span class="number">1300</span>, <span class="number">1600</span>, <span class="number">1200</span>, <span class="number">1300</span>, <span class="number">700</span>, <span class="number">500</span>, <span class="number">300</span>, <span class="number">1500</span>, <span class="number">1200</span>, <span class="number">1300</span>]</span><br><span class="line"><span class="comment"># 显示数值</span></span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">enumerate</span>(y):</span><br><span class="line">    plt.text(x=i, y=j, s=<span class="built_in">str</span>(j), ha=<span class="string">&#x27;center&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&quot;2023年学生每月花销&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;月份&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;花销&quot;</span>)</span><br><span class="line">plt.step(x, y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PoJG3.png" alt="PoJG3.png" border="0">    </p>
+<p>折线图</p>
+<p>​    <img src="https://i.328888.xyz/2023/03/20/Po98v.png" alt="Po98v.png" border="0">    </p>
+<p>阶梯图</p>
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PoKqy.png" alt="PoKqy.png" border="0">    </p>
+<h2 id="2、柱状图"><a href="#2、柱状图" class="headerlink" title="2、柱状图"></a>2、柱状图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 matplotlib绘制柱状图</span></span><br><span class="line"><span class="comment"># bar() ---柱状图   barh()---- 条形图  (需要改一些x轴和y轴的标签)</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\hot-dog-contest-winners.csv&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df.head(<span class="number">5</span>))</span><br><span class="line">x = df[<span class="string">&#x27;Year&#x27;</span>].tolist()</span><br><span class="line">y = df[<span class="string">&#x27;Dogs eaten&#x27;</span>].tolist()</span><br><span class="line">plt.title(<span class="string">&#x27;吃热狗比赛&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;年份&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;成绩&#x27;</span>)</span><br><span class="line">plt.bar(x, y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PoMw5.png" alt="PoMw5.png" border="0">    </p>
+<p>柱状图</p>
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PoP78.png" alt="PoP78.png" border="0">    </p>
+<p>条形图  barh()</p>
+  <img src="https://i.328888.xyz/2023/03/20/PoTPZ.png" alt="PoTPZ.png" border="0">  
+
+<h2 id="3、散点图"><a href="#3、散点图" class="headerlink" title="3、散点图"></a>3、散点图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 matplotlib绘制散点图</span></span><br><span class="line"><span class="comment"># scatter()----散点图，s:点的大小, c:点的颜色, marker:点的样式, alpha:点的透明度</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\unemployment-rate-1948-2010.csv&quot;</span>)</span><br><span class="line"><span class="comment"># print(df.head(5))</span></span><br><span class="line">x = df[<span class="string">&#x27;Year&#x27;</span>].tolist()</span><br><span class="line">y = df[<span class="string">&#x27;Value&#x27;</span>].tolist()</span><br><span class="line">plt.scatter(x, y, s=<span class="number">50</span>, c=<span class="string">&#x27;g&#x27;</span>, marker=<span class="string">&#x27;o&#x27;</span>, alpha=<span class="number">0.5</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;美国过去几十年失业率散点图&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;年份&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;失业率&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://i.328888.xyz/2023/03/20/Po1tF.png" alt="Po1tF.png" border="0">    </p>
+<p>散点图</p>
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PoQmH.png" alt="PoQmH.png" border="0">    </p>
+<h2 id="4、堆叠柱状图"><a href="#4、堆叠柱状图" class="headerlink" title="4、堆叠柱状图"></a>4、堆叠柱状图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 matplotlib绘制堆叠柱状图</span></span><br><span class="line"><span class="comment"># bar() ---柱状图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\places.csv&quot;</span>)</span><br><span class="line"><span class="comment"># print(df.head(5))</span></span><br><span class="line">x = df.columns.tolist()</span><br><span class="line">y1 = df.values[<span class="number">0</span>]</span><br><span class="line">y2 = df.values[<span class="number">1</span>]</span><br><span class="line">y3 = df.values[<span class="number">2</span>]</span><br><span class="line"><span class="comment"># 第一次画的柱形图y值为冠亚季军所吃热狗数量的总和</span></span><br><span class="line">y_1 = np.array(y1)+np.array(y2)+np.array(y3)</span><br><span class="line"><span class="comment"># 第二次  亚军+季军</span></span><br><span class="line">y_2 = np.array(y2)+np.array(y3)</span><br><span class="line"><span class="comment"># 第三次  季军</span></span><br><span class="line">y_3 = y3</span><br><span class="line"></span><br><span class="line">plt.bar(x, y_1, color=<span class="string">&#x27;green&#x27;</span>, label=<span class="string">&quot;冠军&quot;</span>)</span><br><span class="line">plt.bar(x, y_2, color=<span class="string">&#x27;red&#x27;</span>, label=<span class="string">&quot;亚军&quot;</span>)</span><br><span class="line">plt.bar(x, y_3, color=<span class="string">&#x27;blue&#x27;</span>, label=<span class="string">&quot;季军&quot;</span>)</span><br><span class="line"><span class="comment"># 添加图例</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.title(<span class="string">&#x27;热狗大胃王比赛前三甲&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;时间&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;比赛结果（Kg)&#x27;</span>)</span><br><span class="line"><span class="comment"># 显示网格</span></span><br><span class="line"><span class="comment"># plt.grid(True, color=&#x27;k&#x27;)</span></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PoYsQ.png" alt="PoYsQ.png" border="0">    </p>
+<p>堆叠柱状图</p>
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PouyE.png" alt="PouyE.png" border="0">    </p>
+<h2 id="5、两个图在一个坐标轴"><a href="#5、两个图在一个坐标轴" class="headerlink" title="5、两个图在一个坐标轴"></a>5、两个图在一个坐标轴</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 matplotlib绘制两图在一个坐标轴</span></span><br><span class="line"><span class="comment"># bar() ---柱状图   scatter()---散点图</span></span><br><span class="line"><span class="comment"># plot() ----折线图  step() --- 阶梯图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\hot-dog-contest-winners.csv&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df.head(<span class="number">5</span>))</span><br><span class="line">x = df[<span class="string">&#x27;Year&#x27;</span>].tolist()</span><br><span class="line">y = df[<span class="string">&#x27;Dogs eaten&#x27;</span>].tolist()</span><br><span class="line">plt.title(<span class="string">&#x27;吃热狗比赛&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;年份&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;成绩&#x27;</span>)</span><br><span class="line">plt.scatter(x, y, s=<span class="number">100</span>, c=<span class="string">&#x27;g&#x27;</span>,marker=<span class="string">&#x27;h&#x27;</span>, alpha=<span class="number">0.6</span>)</span><br><span class="line">plt.plot(x, y, color=<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PsZIC.png" alt="PsZIC.png" border="0">    </p>
+<p>折线图+柱状图</p>
+<p>​    <img src="https://i.328888.xyz/2023/03/20/PsiGP.png" alt="PsiGP.png" border="0">    </p>
+
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,16 +280,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Pyecharts绘制基本图表(时间数据)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -218,635 +363,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Pyecharts绘制基本图表-时间数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Pyecharts绘制基本图表(时间数据)</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-  	<time datetime="2023-03-20T10:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Pyecharts绘制基本图表1"><a href="#使用Pyecharts绘制基本图表1" class="headerlink" title="使用Pyecharts绘制基本图表1"></a>使用Pyecharts绘制基本图表1</h1><h2 id="时间数据可视化"><a href="#时间数据可视化" class="headerlink" title="时间数据可视化"></a>时间数据可视化</h2><p><a target="_blank" rel="noopener" href="https://05x-docs.pyecharts.org/">Pyecharts官网</a></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81"><span class="toc-number">1.</span> <span class="toc-text">使用Matplotlib绘制基本图表1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.1.</span> <span class="toc-text">时间数据可视化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%8A%98%E7%BA%BF%E5%9B%BE-x2F-%E9%98%B6%E6%A2%AF%E5%9B%BE"><span class="toc-number">1.2.</span> <span class="toc-text">1、折线图&#x2F;阶梯图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="toc-number">1.3.</span> <span class="toc-text">2、柱状图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-number">1.4.</span> <span class="toc-text">3、散点图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%A0%86%E5%8F%A0%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="toc-number">1.5.</span> <span class="toc-text">4、堆叠柱状图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E4%B8%A4%E4%B8%AA%E5%9B%BE%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%9D%90%E6%A0%87%E8%BD%B4"><span class="toc-number">1.6.</span> <span class="toc-text">5、两个图在一个坐标轴</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-github上传项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/">github上传项目</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2023-03-19T09:36:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="github上传项目"><a href="#github上传项目" class="headerlink" title="github上传项目"></a>github上传项目</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-通过VUE-ElementUI绘制一个前端页面" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">通过VUE+ElementUI绘制一个前端页面</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/" class="archive-article-date">
-  	<time datetime="2023-03-19T07:50:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="通过VUE-ElementUI绘制一个前端页面"><a href="#通过VUE-ElementUI绘制一个前端页面" class="headerlink" title="通过VUE+ElementUI绘制一个前端页面"></a>通过VUE+ElementUI绘制一个前端页面</h1><p>展示图如下</p>
-<p>代码文件：myvueproject</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/wasdkd/wasdkd.github.io">我的GitHub</a></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统Apache服务器的应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/">Linux系统Apache服务器的应用</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2023-03-11T05:46:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统Apache服务器的应用"><a href="#Linux系统Apache服务器的应用" class="headerlink" title="Linux系统Apache服务器的应用"></a><strong>Linux系统Apache服务器的应用</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统FTP服务器配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统FTP服务器配置</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-10T08:24:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统FTP服务器配置"><a href="#Linux系统FTP服务器配置" class="headerlink" title="Linux系统FTP服务器配置"></a><strong>Linux系统FTP服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-<hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统DNS服务器配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统DNS服务器配置</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-09T15:43:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统DNS服务器配置"><a href="#Linux系统DNS服务器配置" class="headerlink" title="Linux系统DNS服务器配置"></a><strong>Linux系统DNS服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-<hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Pyecharts绘制玫瑰图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/">使用Pyecharts绘制玫瑰图</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/" class="archive-article-date">
-  	<time datetime="2023-03-08T14:13:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图"><a href="#使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图" class="headerlink" title="使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图"></a>使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图</h1><hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统DHCP服务器配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统DHCP服务器配置</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-07T12:50:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统DHCP服务器配置"><a href="#Linux系统DHCP服务器配置" class="headerlink" title="Linux系统DHCP服务器配置"></a><strong>Linux系统DHCP服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-<hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用JAVA-API访问及操作HDFS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/">使用JAVA API访问及操作HDFS</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/" class="archive-article-date">
-  	<time datetime="2023-03-05T08:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用JAVA-API访问及操作HDFS"><a href="#使用JAVA-API访问及操作HDFS" class="headerlink" title="使用JAVA API访问及操作HDFS"></a><strong>使用JAVA API访问及操作HDFS</strong></h1><hr>
-<p>Java代码—-文档末尾</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -873,8 +415,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
