@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>github上传项目 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="github上传项目">
+  <meta name="description" content="github上传和删除项目">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github上传项目">
 <meta property="og:url" content="http://example.com/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
-<meta property="og:description" content="github上传项目">
+<meta property="og:description" content="github上传和删除项目">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-03-19T09:36:20.000Z">
-<meta property="article:modified_time" content="2023-03-19T09:36:42.472Z">
+<meta property="article:modified_time" content="2023-03-20T13:23:49.712Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
   
@@ -191,11 +191,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="github上传项目"><a href="#github上传项目" class="headerlink" title="github上传项目"></a>github上传项目</h1><span id="more"></span>
+        <h1 id="github上传和删除项目"><a href="#github上传和删除项目" class="headerlink" title="github上传和删除项目"></a>github上传和删除项目</h1><span id="more"></span>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init //把这个目录变成Git可以管理的仓库</span><br><span class="line"></span><br><span class="line">git add README.md //文件添加到仓库</span><br><span class="line"></span><br><span class="line">git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </span><br><span class="line"></span><br><span class="line">git commit -m &quot;first commit&quot; //把文件提交到仓库</span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:wasdkd/wasdkd.github.io.git //关联远程仓库</span><br><span class="line"></span><br><span class="line">git push -u origin master //把本地库的所有内容推送到远程库上</span><br></pre></td></tr></table></figure>
+<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init //把这个目录变成Git可以管理的仓库</span><br><span class="line"></span><br><span class="line">git add README.md //文件添加到仓库</span><br><span class="line"></span><br><span class="line">git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </span><br><span class="line"></span><br><span class="line">git commit -m &quot;first commit&quot; //把文件提交到仓库</span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:wasdkd/wasdkd.github.io.git //关联远程仓库</span><br><span class="line"></span><br><span class="line">git push -u origin master //把本地库的所有内容推送到远程库上</span><br></pre></td></tr></table></figure>
 
-
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1、首先在电脑上新建一个空的文件夹</span><br><span class="line">2、进入文件夹，右击，选择Git Bash here</span><br><span class="line">输入命令</span><br><span class="line">git init</span><br><span class="line">3、复制自己想要删除文件的仓库的地址：</span><br><span class="line">输入命令</span><br><span class="line">git clone git@github.com:wasdkd/wasdkd.github.io.git</span><br><span class="line">进到想要删除文件的目录下</span><br><span class="line">dir #列出文件夹和文件</span><br><span class="line">进入文件夹</span><br><span class="line">cd</span><br><span class="line">查看</span><br><span class="line">ls</span><br><span class="line">4、删除</span><br><span class="line">git rm -r 文件名</span><br><span class="line">如果是文件夹，需要用-r</span><br><span class="line">5、删除完成后，需要提交本次修改</span><br><span class="line">输入命令</span><br><span class="line">git commit -m &#x27;备注&#x27;</span><br><span class="line">6、把删除的文件恢复到最新版本（这一步很重要）</span><br><span class="line">git checkout</span><br><span class="line">7、将本地内容推送到远程仓库</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
       
 		
 		
@@ -337,7 +337,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">github上传项目</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#github%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%88%A0%E9%99%A4%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">github上传和删除项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0"><span class="toc-number">1.1.</span> <span class="toc-text">上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">1.2.</span> <span class="toc-text">删除</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
