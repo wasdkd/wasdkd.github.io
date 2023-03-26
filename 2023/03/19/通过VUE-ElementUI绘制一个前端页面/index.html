@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/03/19/MSmsd.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/03/19/MSX8q.png">
 <meta property="article:published_time" content="2023-03-19T07:50:19.000Z">
-<meta property="article:modified_time" content="2023-03-19T09:22:43.126Z">
+<meta property="article:modified_time" content="2023-03-26T12:23:15.078Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/03/19/MSrMo.png">
@@ -225,6 +225,25 @@
 
 <h2 id="关于我们"><a href="#关于我们" class="headerlink" title="关于我们"></a>关于我们</h2>  <img src="https://i.328888.xyz/2023/03/19/MSX8q.png" alt="MSX8q.png" border="0">  
 
+<h2 id="下载到自己电脑怎么运行"><a href="#下载到自己电脑怎么运行" class="headerlink" title="下载到自己电脑怎么运行"></a>下载到自己电脑怎么运行</h2><h3 id="1、下载node-js"><a href="#1、下载node-js" class="headerlink" title="1、下载node.js"></a>1、下载node.js</h3><p><a target="_blank" rel="noopener" href="https://nodejs.cn/download/">node.js官网</a></p>
+<p>检测是否安装成功(node 自带npm)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、设置cnpm"><a href="#2、设置cnpm" class="headerlink" title="2、设置cnpm"></a>2、设置cnpm</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、初始化项目脚手架vue-cli"><a href="#3、初始化项目脚手架vue-cli" class="headerlink" title="3、初始化项目脚手架vue-cli"></a>3、初始化项目脚手架vue-cli</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --global vue-cli</span><br></pre></td></tr></table></figure>
+
+<p>检测</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
+
+<p>出现vue的信息，说明安装成功</p>
+<h3 id="4、安装项目依赖"><a href="#4、安装项目依赖" class="headerlink" title="4、安装项目依赖"></a>4、安装项目依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install </span><br></pre></td></tr></table></figure>
+
+<p> 安装完成之后，会在我们的项目目录vue-element-admin-master文件夹中多出一个<code>node_modules</code>文件夹，这里边就是我们项目需要的依赖包资源 </p>
+<h3 id="5、运行"><a href="#5、运行" class="headerlink" title="5、运行"></a>5、运行</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev </span><br></pre></td></tr></table></figure>
+
+<p> 运行成功会自动打开浏览器 </p>
+<p>没有自动打开就复制网址去浏览器</p>
 
       
 		
@@ -367,7 +386,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">通过VUE+ElementUI绘制一个前端页面</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5"><span class="toc-number">1.1.</span> <span class="toc-text">首页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E9%A1%B5"><span class="toc-number">1.2.</span> <span class="toc-text">登录页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B5"><span class="toc-number">1.3.</span> <span class="toc-text">注册页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%A1%E5%9B%AD%E6%97%A5%E5%B8%B8%E5%B8%AE%E6%89%8B"><span class="toc-number">1.4.</span> <span class="toc-text">校园日常帮手</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E4%BA%BA%E5%85%BC%E8%81%8C"><span class="toc-number">1.5.</span> <span class="toc-text">人人兼职</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93"><span class="toc-number">1.6.</span> <span class="toc-text">二手交易</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B0%B4%E6%9E%9C%E9%94%80%E5%94%AE"><span class="toc-number">1.7.</span> <span class="toc-text">水果销售</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E7%99%BD%E5%A2%99"><span class="toc-number">1.8.</span> <span class="toc-text">表白墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC"><span class="toc-number">1.9.</span> <span class="toc-text">关于我们</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">通过VUE+ElementUI绘制一个前端页面</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5"><span class="toc-number">1.1.</span> <span class="toc-text">首页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E9%A1%B5"><span class="toc-number">1.2.</span> <span class="toc-text">登录页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B5"><span class="toc-number">1.3.</span> <span class="toc-text">注册页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%A1%E5%9B%AD%E6%97%A5%E5%B8%B8%E5%B8%AE%E6%89%8B"><span class="toc-number">1.4.</span> <span class="toc-text">校园日常帮手</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E4%BA%BA%E5%85%BC%E8%81%8C"><span class="toc-number">1.5.</span> <span class="toc-text">人人兼职</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93"><span class="toc-number">1.6.</span> <span class="toc-text">二手交易</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B0%B4%E6%9E%9C%E9%94%80%E5%94%AE"><span class="toc-number">1.7.</span> <span class="toc-text">水果销售</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E7%99%BD%E5%A2%99"><span class="toc-number">1.8.</span> <span class="toc-text">表白墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC"><span class="toc-number">1.9.</span> <span class="toc-text">关于我们</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%88%B0%E8%87%AA%E5%B7%B1%E7%94%B5%E8%84%91%E6%80%8E%E4%B9%88%E8%BF%90%E8%A1%8C"><span class="toc-number">1.10.</span> <span class="toc-text">下载到自己电脑怎么运行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BDnode-js"><span class="toc-number">1.10.1.</span> <span class="toc-text">1、下载node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%AE%BE%E7%BD%AEcnpm"><span class="toc-number">1.10.2.</span> <span class="toc-text">2、设置cnpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6vue-cli"><span class="toc-number">1.10.3.</span> <span class="toc-text">3、初始化项目脚手架vue-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96"><span class="toc-number">1.10.4.</span> <span class="toc-text">4、安装项目依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%BF%90%E8%A1%8C"><span class="toc-number">1.10.5.</span> <span class="toc-text">5、运行</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
