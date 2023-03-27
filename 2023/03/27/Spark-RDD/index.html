@@ -6,15 +6,47 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>Spark RDD | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/page/4/index.html">
+  <meta name="description" content="Spark RDDRDD是一种可扩展的弹性分布式数据集，只读、分区、不变的数据集合，可以基于任何数据结构创建 RDD的创建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark RDD">
+<meta property="og:url" content="http://example.com/2023/03/27/Spark-RDD/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="Spark RDDRDD是一种可扩展的弹性分布式数据集，只读、分区、不变的数据集合，可以基于任何数据结构创建 RDD的创建">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/inzYpN.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/inzq9V.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6Z4d.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6iNb.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6Vdq.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6fuz.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in64Hw.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6AEa.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6DTx.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6tpL.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in60AU.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6W9p.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6CNv.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6lh3.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in62Zy.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6HH5.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6Oe8.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6baZ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in68kF.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6IBH.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6N9Q.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in63AE.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6RrC.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6chP.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6pZX.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6BOt.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/27/in6XeJ.png">
+<meta property="article:published_time" content="2023-03-27T15:54:22.000Z">
+<meta property="article:modified_time" content="2023-03-27T15:55:00.672Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/03/27/inzYpN.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,37 +187,223 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Word文档转换成Markdown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Spark-RDD" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/">Word文档转换成Markdown</a>
+    <h1 class="article-title" itemprop="name">
+      Spark RDD
     </h1>
   
 
 		<!--显示阅读次数-->
 
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
 <!--显示阅读次数完毕-->
 
         
-        <a href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/" class="archive-article-date">
-  	<time datetime="2023-02-17T13:08:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-17</time>
+        <a href="/2023/03/27/Spark-RDD/" class="archive-article-date">
+  	<time datetime="2023-03-27T15:54:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Word文档转换成Markdown"><a href="#Word文档转换成Markdown" class="headerlink" title="Word文档转换成Markdown"></a>Word文档转换成Markdown</h1>
-        
+        <h1 id="Spark-RDD"><a href="#Spark-RDD" class="headerlink" title="Spark RDD"></a>Spark RDD</h1><p>RDD是一种可扩展的弹性分布式数据集，只读、分区、不变的数据集合，可以基于任何数据结构创建</p>
+<h2 id="RDD的创建"><a href="#RDD的创建" class="headerlink" title="RDD的创建"></a>RDD的创建</h2><span id="more"></span>
+
+<h3 id="1、通过已存在的并行集合创建"><a href="#1、通过已存在的并行集合创建" class="headerlink" title="1、通过已存在的并行集合创建"></a>1、通过已存在的并行集合创建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>]=<span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>]=<span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext  <span class="comment"># 导入pyspark包</span></span><br><span class="line">sc = SparkContext()  <span class="comment"># 实例化入口</span></span><br><span class="line">data = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">distData = sc.parallelize(data)  <span class="comment"># 通过并行化创建RDD</span></span><br><span class="line">disrData.collect()  <span class="comment"># 将内存中的数据显示在屏幕中</span></span><br><span class="line">distData = sc.parallelize(data, <span class="number">10</span>)  <span class="comment"># 指定分区数，10个分区</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、从外部数据集-Datasets-创建"><a href="#2、从外部数据集-Datasets-创建" class="headerlink" title="2、从外部数据集(Datasets)创建"></a>2、从外部数据集(Datasets)创建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">distFile = sc.textFile(<span class="string">&#x27;file:///data/data.txt&#x27;</span>)  <span class="comment"># 注意是file后面是三个斜杠，在有些版本中一个斜杠也行，如果不添加前面的file，就会报文件找不到的异常</span></span><br><span class="line">distFile.collect()</span><br><span class="line"><span class="comment"># spark可读取文件夹、压缩文件和通配符。</span></span><br><span class="line">sc.textFile(<span class="string">&quot;/my/directory&quot;</span>)  <span class="comment"># 读取文件夹</span></span><br><span class="line"><span class="comment"># textFile方法可以通过第二个可选参数来控制该文件的分区数量</span></span><br><span class="line">sc.textFile(<span class="string">&quot;/my/directory&quot;</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="RDD的操作"><a href="#RDD的操作" class="headerlink" title="RDD的操作"></a>RDD的操作</h2><hr>
+<h2 id="transform算子"><a href="#transform算子" class="headerlink" title="transform算子"></a>transform算子</h2><h3 id="1、map转换（映射）"><a href="#1、map转换（映射）" class="headerlink" title="1、map转换（映射）"></a>1、map转换（映射）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;a&#x27;</span>])</span><br><span class="line">result = rdd.<span class="built_in">map</span>(<span class="keyword">lambda</span> x: (x, <span class="number">1</span>)).collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/inzYpN.png" alt="inzYpN.png" border="0">  
+
+<h3 id="2、flatMap转换（压平）"><a href="#2、flatMap转换（压平）" class="headerlink" title="2、flatMap转换（压平）"></a>2、flatMap转换（压平）</h3><p>首先将map函数应用于RDD的所有元素，然后将结果平坦化，最后返回新的RDD</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">result = rdd.flatMap(<span class="keyword">lambda</span> x: [(x, x), (x, x)]).collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/inzq9V.png" alt="inzq9V.png" border="0">  
+
+<h3 id="3、filter转换（过滤）"><a href="#3、filter转换（过滤）" class="headerlink" title="3、filter转换（过滤）"></a>3、filter转换（过滤）</h3><p>返回包含指定过滤条件的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">result = rdd.<span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x % <span class="number">2</span> == <span class="number">0</span>).collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6Z4d.png" alt="in6Z4d.png" border="0">  
+
+<h3 id="4、union转换（求并集）"><a href="#4、union转换（求并集）" class="headerlink" title="4、union转换（求并集）"></a>4、union转换（求并集）</h3><p>对一个RDD和另一个RDD求并集</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rdd1 = sc.parallelize([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">rdd2 = sc.parallelize([<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>])</span><br><span class="line">result = rdd1.union(rdd2).collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6iNb.png" alt="in6iNb.png" border="0">  
+
+<h3 id="5、intersection转换（求交集）"><a href="#5、intersection转换（求交集）" class="headerlink" title="5、intersection转换（求交集）"></a>5、intersection转换（求交集）</h3><p>对一个RDD和另一个RDD求交集</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rdd1 = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">rdd2 = sc.parallelize([<span class="number">2</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">8</span>])</span><br><span class="line">result = rdd1.intersection(rdd2).collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6Vdq.png" alt="in6Vdq.png" border="0">  
+
+<h3 id="6、distinct转换"><a href="#6、distinct转换" class="headerlink" title="6、distinct转换"></a>6、distinct转换</h3><p>操作返回包含不同元素的新RDD，即去掉重复值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">result = rdd.distinct().collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6fuz.png" alt="in6fuz.png" border="0">  
+
+<h3 id="7、sortBy转换（排序）"><a href="#7、sortBy转换（排序）" class="headerlink" title="7、sortBy转换（排序）"></a>7、sortBy转换（排序）</h3><p>通过指定Key的方法对RDD内部元素进行排序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([(<span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>), (<span class="string">&#x27;b&#x27;</span>, <span class="number">2</span>), (<span class="string">&#x27;1&#x27;</span>, <span class="number">3</span>), (<span class="string">&#x27;d&#x27;</span>, <span class="number">4</span>), (<span class="string">&#x27;2&#x27;</span>, <span class="number">5</span>)])</span><br><span class="line">result = rdd.sortBy(<span class="keyword">lambda</span> x: x[<span class="number">0</span>]).collect()  <span class="comment"># 对key排序</span></span><br><span class="line">result1 = rdd.sortBy(<span class="keyword">lambda</span> x: x[<span class="number">1</span>]).collect()  <span class="comment"># 对Value排序</span></span><br><span class="line">result2 = rdd.sortBy(<span class="keyword">lambda</span> x: x[<span class="number">1</span>], <span class="literal">False</span>).collect()  <span class="comment"># 对Value排序（倒序）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result结果:&#x27;</span>, result)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result1结果:&#x27;</span>, result1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result2结果:&#x27;</span>, result2)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in64Hw.png" alt="in64Hw.png" border="0">  
+
+<h3 id="8、mapPartitions转换（"><a href="#8、mapPartitions转换（" class="headerlink" title="8、mapPartitions转换（"></a>8、mapPartitions转换（</h3><p>作用每一分区，默认两个分区</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">iterator</span>): <span class="keyword">yield</span> <span class="built_in">sum</span>(iterator)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result = rdd.mapPartitions(f).collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6AEa.png" alt="in6AEa.png" border="0">  
+
+<p>f 函数接收的参数为每个分区的迭代器，返回值为求和操作，返回值3，7分别为每个分区的和</p>
+<h3 id="9、mapPartitionsWithIndex转换"><a href="#9、mapPartitionsWithIndex转换" class="headerlink" title="9、mapPartitionsWithIndex转换"></a>9、mapPartitionsWithIndex转换</h3><p>传入两个参数，第一个：分区编号，第二个：对应元素组成的迭代器，返回值类型：迭代器&#x2F;生成器</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">splitIndex, iterator</span>): <span class="keyword">yield</span> splitIndex, <span class="built_in">list</span>(iterator)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result = rdd.mapPartitionsWithIndex(f).collect()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6DTx.png" alt="in6DTx.png" border="0">  
+
+<p>返回的第一个元素(0, [1, 2])，0为分区编号，[1, 2] 为0号分区的元素值</p>
+<h3 id="10、partitionBy转换"><a href="#10、partitionBy转换" class="headerlink" title="10、partitionBy转换"></a>10、partitionBy转换</h3><p>针对Key-Value结构的RDD重新分区，采用Hash分区</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">1</span>]).<span class="built_in">map</span>(<span class="keyword">lambda</span> x: (x, x))</span><br><span class="line">result = rdd.partitionBy(<span class="number">2</span>).glom().collect()  <span class="comment"># 两个区</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result 的结果:&#x27;</span>, result)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;--------------------------&#x27;</span>)</span><br><span class="line">result1 = rdd.partitionBy(<span class="number">3</span>).glom().collect()  <span class="comment"># 三个区</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result1 的结果:&#x27;</span>, result1)</span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://i.328888.xyz/2023/03/27/in6tpL.png" alt="in6tpL.png" border="0">    </p>
+<h2 id="action算子"><a href="#action算子" class="headerlink" title="action算子"></a>action算子</h2><h3 id="1、reduce-f-动作"><a href="#1、reduce-f-动作" class="headerlink" title="1、reduce(f)动作"></a>1、reduce(f)动作</h3><p>相当于MapReduce中的reduce操作，可以通过指定的聚合方法来对RDD中的元素进行聚合</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from operator import add</span><br><span class="line"># 指定一个聚合操作</span><br><span class="line">print(&#x27;add：&#x27;, add(1, 2))</span><br><span class="line">print(&#x27;---------------&#x27;)</span><br><span class="line">result = sc.parallelize([1, 2, 3, 4, 5]).reduce(add)</span><br><span class="line">print(&#x27;result：&#x27;, result)    </span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in60AU.png" alt="in60AU.png" border="0">  
+
+<h3 id="2、collect-动作"><a href="#2、collect-动作" class="headerlink" title="2、collect()动作"></a>2、collect()动作</h3><p>返回一个包含RDD所有元素的列表（list）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result= sc.parallelize([1, 3]).collect()</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6W9p.png" alt="in6W9p.png" border="0">  
+
+<h3 id="3、count-动作"><a href="#3、count-动作" class="headerlink" title="3、count()动作"></a>3、count()动作</h3><p>返回RDD内元素的个数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]).count()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;RDD内的元素个数:&#x27;</span>, result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6CNv.png" alt="in6CNv.png" border="0">  
+
+<h3 id="4、take-num-动作"><a href="#4、take-num-动作" class="headerlink" title="4、take(num)动作"></a>4、take(num)动作</h3><p>返回RDD中前n个元素值，返回的结果为列表类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>], <span class="number">3</span>).take(<span class="number">4</span>)  <span class="comment"># 返回前4个元素值</span></span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6lh3.png" alt="in6lh3.png" border="0">  
+
+<h3 id="5、first-动作"><a href="#5、first-动作" class="headerlink" title="5、first()动作"></a>5、first()动作</h3><p>返回RDD中的第一个元素，与take(1)返回结果相同，返回的数据类型为数据类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>], <span class="number">3</span>).first()  <span class="comment"># 返回第一个元素值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result:&#x27;</span>, result)</span><br><span class="line"></span><br><span class="line">result1 = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>], <span class="number">3</span>).take(<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result1:&#x27;</span>, result1)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in62Zy.png" alt="in62Zy.png" border="0">  
+
+<h3 id="6、top-num-动作"><a href="#6、top-num-动作" class="headerlink" title="6、top(num)动作"></a>6、top(num)动作</h3><p>返回RDD内部元素的前n个最大值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 返回前三个最大值</span></span><br><span class="line">result = sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]).top(<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6HH5.png" alt="in6HH5.png" border="0">  
+
+<h3 id="7、saveAsTextFile-动作"><a href="#7、saveAsTextFile-动作" class="headerlink" title="7、saveAsTextFile()动作"></a>7、saveAsTextFile()动作</h3><p>将RDD中的元素以字符串的格式存储在文件系统中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc.parallelize(<span class="built_in">range</span>(<span class="number">10</span>)).saveAsTextFile(<span class="string">&#x27;/home/ubuntu/Code/output/zifuc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6Oe8.png" alt="in6Oe8.png" border="0">  
+
+<h3 id="8、foreach-f-动作"><a href="#8、foreach-f-动作" class="headerlink" title="8、foreach(f)动作"></a>8、foreach(f)动作</h3><p>遍历RDD内的每一个元素，同时可以通过转递自定义的处理函数f,对RDD内的每一个元素进行处理，与map算子相似，但map有返回值，foreach算子没有返回值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>): <span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>, x)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">8</span>]).foreach(f)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6baZ.png" alt="in6baZ.png" border="0">  
+
+<h3 id="9、foreachPartition-f-动作"><a href="#9、foreachPartition-f-动作" class="headerlink" title="9、foreachPartition(f)动作"></a>9、foreachPartition(f)动作</h3><p>用法与mapPartions()类似，可以遍历RDD的每一个分区，可转递f函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">iterator</span>):</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> iterator:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>, x)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sc.parallelize([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]).foreachPartition(f)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in68kF.png" alt="in68kF.png" border="0">  
+
+<h2 id="RDD-Key-Value转换算子"><a href="#RDD-Key-Value转换算子" class="headerlink" title="RDD Key-Value转换算子"></a>RDD Key-Value转换算子</h2><h3 id="1、mapValue-f-操作"><a href="#1、mapValue-f-操作" class="headerlink" title="1、mapValue(f)操作"></a>1、mapValue(f)操作</h3><p>在不改变原有Key键的基础上，对Key-Value结构RDD的Value值进行一个map操作，分区保持不变</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = sc.parallelize([(<span class="string">&quot;a&quot;</span>, [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;lemon&quot;</span>]), (<span class="string">&quot;b&quot;</span>, [<span class="string">&quot;grapes&quot;</span>])])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>): <span class="keyword">return</span> <span class="built_in">len</span>(x)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">re = x.mapValues(f).collect()</span><br><span class="line"><span class="built_in">print</span>(re)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6IBH.png" alt="in6IBH.png" border="0">  
+
+<h3 id="2、flatMapValue-f-操作"><a href="#2、flatMapValue-f-操作" class="headerlink" title="2、flatMapValue(f)操作"></a>2、flatMapValue(f)操作</h3><p>对Key-Value结构的RDD先执行mapValue操作，再执行压平的操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = sc.parallelize([(<span class="string">&quot;a&quot;</span>, [<span class="string">&quot;x&quot;</span>, <span class="string">&quot;y&quot;</span>, <span class="string">&quot;z&quot;</span>]), (<span class="string">&quot;b&quot;</span>, [<span class="string">&quot;p&quot;</span>, <span class="string">&quot;r&quot;</span>])])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>): <span class="keyword">return</span> x  <span class="comment"># 对x不进行任何的操作</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">re = x.flatMapValues(f).collect()</span><br><span class="line"><span class="built_in">print</span>(re)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6N9Q.png" alt="in6N9Q.png" border="0">  
+
+<h3 id="3、combineByKey操作"><a href="#3、combineByKey操作" class="headerlink" title="3、combineByKey操作"></a>3、combineByKey操作</h3><p>遍历分区中的所有元素，因此每一个元素的Key要么没遇见过，要么和之前某个元素的Key相同</p>
+<h3 id="4、reduceByKey操作"><a href="#4、reduceByKey操作" class="headerlink" title="4、reduceByKey操作"></a>4、reduceByKey操作</h3><p>根据Key进行分组，对分组内的元素进行操作。输出分区数和指定分区数相同，如果没有指定分区数，安装默认是并行级别，默认分区规则是哈希分区</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">1</span>), (<span class="string">&quot;b&quot;</span>, <span class="number">1</span>), (<span class="string">&quot;a&quot;</span>, <span class="number">1</span>)])</span><br><span class="line">re = rdd.reduceByKey(<span class="keyword">lambda</span> x, y: x + y).collect()</span><br><span class="line"><span class="built_in">print</span>(re)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in63AE.png" alt="in63AE.png" border="0">  
+
+<h3 id="5、groupByKey操作"><a href="#5、groupByKey操作" class="headerlink" title="5、groupByKey操作"></a>5、groupByKey操作</h3><p>将PairRDD中具有相同Key的值放在同一个序列中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rdd = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">1</span>), (<span class="string">&quot;b&quot;</span>, <span class="number">1</span>), (<span class="string">&quot;a&quot;</span>, <span class="number">1</span>)])</span><br><span class="line">re = <span class="built_in">sorted</span>(rdd.groupByKey().mapValues(<span class="built_in">len</span>).collect())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;re:&#x27;</span>, re)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------------------&#x27;</span>)</span><br><span class="line">re1 = <span class="built_in">sorted</span>(rdd.groupByKey().mapValues(<span class="built_in">list</span>).collect())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;re1:&#x27;</span>, re1)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6RrC.png" alt="in6RrC.png" border="0">  
+
+<h3 id="6、sortByKey操作"><a href="#6、sortByKey操作" class="headerlink" title="6、sortByKey操作"></a>6、sortByKey操作</h3><p>根据RDD的键对内部元素重新排序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tmp = [(<span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>), (<span class="string">&#x27;b&#x27;</span>, <span class="number">2</span>), (<span class="string">&#x27;1&#x27;</span>, <span class="number">3</span>), (<span class="string">&#x27;d&#x27;</span>, <span class="number">4</span>), (<span class="string">&#x27;2&#x27;</span>, <span class="number">5</span>)]</span><br><span class="line">re = sc.parallelize(tmp).sortByKey().first()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;re:&#x27;</span>, re)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------------------&#x27;</span>)</span><br><span class="line">re1 = sc.parallelize(tmp).sortByKey(<span class="literal">True</span>, <span class="number">1</span>).collect()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;re1:&#x27;</span>, re1)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6chP.png" alt="in6chP.png" border="0">  
+
+<h3 id="7、Keys-操作"><a href="#7、Keys-操作" class="headerlink" title="7、Keys()操作"></a>7、Keys()操作</h3><p>Keys()操作的返回类型为RDD，RDD内部包含的元素为每个键值对类型的键</p>
+<h3 id="8、value-操作"><a href="#8、value-操作" class="headerlink" title="8、value()操作"></a>8、value()操作</h3><p>返回类型为RDD，RDD内部包含的元素为每个键值对类型的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">m = sc.parallelize([(<span class="number">1</span>, <span class="number">2</span>), (<span class="number">3</span>, <span class="number">4</span>)]).keys()</span><br><span class="line">re1 = m.collect()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Keys():&#x27;</span>, re1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------&#x27;</span>)</span><br><span class="line">m = sc.parallelize([(<span class="number">1</span>, <span class="number">2</span>), (<span class="number">3</span>, <span class="number">4</span>)]).values()</span><br><span class="line">re2 = m.collect()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Value():&#x27;</span>, re2)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/27/in6pZX.png" alt="in6pZX.png" border="0">  
+
+<h3 id="9、join操作"><a href="#9、join操作" class="headerlink" title="9、join操作"></a>9、join操作</h3><p>与SQL中的join操作含义一致，用户可以根据数据的Key进行连接</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">1</span>), (<span class="string">&quot;b&quot;</span>, <span class="number">4</span>)])</span><br><span class="line">y = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">2</span>), (<span class="string">&quot;a&quot;</span>, <span class="number">3</span>)])</span><br><span class="line">re = x.join(y).collect()</span><br><span class="line"><span class="built_in">print</span>(re)</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.328888.xyz/2023/03/27/in6BOt.png" alt="in6BOt.png" border="0" />
+
+<h3 id="10、leftOuterJoin操作"><a href="#10、leftOuterJoin操作" class="headerlink" title="10、leftOuterJoin操作"></a>10、leftOuterJoin操作</h3><p>表示左外连接，与SQL中的左外连接一致</p>
+<h3 id="11、rightOuterJoin操作"><a href="#11、rightOuterJoin操作" class="headerlink" title="11、rightOuterJoin操作"></a>11、rightOuterJoin操作</h3><p>表示右外连接</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">1</span>), (<span class="string">&quot;b&quot;</span>, <span class="number">4</span>)])</span><br><span class="line">y = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">2</span>)])</span><br><span class="line">re = x.leftOuterJoin(y).collect()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;leftOuterJoin:&#x27;</span>, re)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-----------------&#x27;</span>)</span><br><span class="line">x = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">1</span>), (<span class="string">&quot;b&quot;</span>, <span class="number">4</span>)])</span><br><span class="line">y = sc.parallelize([(<span class="string">&quot;a&quot;</span>, <span class="number">2</span>)])</span><br><span class="line">re2 = y.rightOuterJoin(x).collect()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;rightOuterJoin&#x27;</span>, re2)</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.328888.xyz/2023/03/27/in6XeJ.png" alt="in6XeJ.png" border="0" />
+
+<h2 id="RDD-Key-Value动作运算"><a href="#RDD-Key-Value动作运算" class="headerlink" title="RDD Key-Value动作运算"></a>RDD Key-Value动作运算</h2><h3 id="1、collectAsMap-操作"><a href="#1、collectAsMap-操作" class="headerlink" title="1、collectAsMap()操作"></a>1、collectAsMap()操作</h3><p>将Key-Value结构的RDD收集到driver端，并返回一个字典</p>
+<h3 id="2、countByKey-操作"><a href="#2、countByKey-操作" class="headerlink" title="2、countByKey()操作"></a>2、countByKey()操作</h3><p>统计每个Key键的元素值</p>
+<h2 id="共享变量"><a href="#共享变量" class="headerlink" title="共享变量"></a>共享变量</h2><h3 id="1、累加器"><a href="#1、累加器" class="headerlink" title="1、累加器"></a>1、累加器</h3><h3 id="2、广播变量"><a href="#2、广播变量" class="headerlink" title="2、广播变量"></a>2、广播变量</h3>
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,16 +412,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/17/Word%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E6%88%90Markdown/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/03/27/Spark-RDD/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/27/%E4%BD%BF%E7%94%A8Pycharm%E5%BC%80%E5%8F%91%E6%97%B6%EF%BC%8C%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Pycharm开发时，可能遇到的问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -218,164 +495,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-02-16T05:37:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spark-RDD"><span class="toc-number">1.</span> <span class="toc-text">Spark RDD</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RDD%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">RDD的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%80%9A%E8%BF%87%E5%B7%B2%E5%AD%98%E5%9C%A8%E7%9A%84%E5%B9%B6%E8%A1%8C%E9%9B%86%E5%90%88%E5%88%9B%E5%BB%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、通过已存在的并行集合创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BB%8E%E5%A4%96%E9%83%A8%E6%95%B0%E6%8D%AE%E9%9B%86-Datasets-%E5%88%9B%E5%BB%BA"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、从外部数据集(Datasets)创建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RDD%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">1.2.</span> <span class="toc-text">RDD的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#transform%E7%AE%97%E5%AD%90"><span class="toc-number">1.3.</span> <span class="toc-text">transform算子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81map%E8%BD%AC%E6%8D%A2%EF%BC%88%E6%98%A0%E5%B0%84%EF%BC%89"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、map转换（映射）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81flatMap%E8%BD%AC%E6%8D%A2%EF%BC%88%E5%8E%8B%E5%B9%B3%EF%BC%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、flatMap转换（压平）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81filter%E8%BD%AC%E6%8D%A2%EF%BC%88%E8%BF%87%E6%BB%A4%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、filter转换（过滤）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81union%E8%BD%AC%E6%8D%A2%EF%BC%88%E6%B1%82%E5%B9%B6%E9%9B%86%EF%BC%89"><span class="toc-number">1.3.4.</span> <span class="toc-text">4、union转换（求并集）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81intersection%E8%BD%AC%E6%8D%A2%EF%BC%88%E6%B1%82%E4%BA%A4%E9%9B%86%EF%BC%89"><span class="toc-number">1.3.5.</span> <span class="toc-text">5、intersection转换（求交集）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81distinct%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.6.</span> <span class="toc-text">6、distinct转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81sortBy%E8%BD%AC%E6%8D%A2%EF%BC%88%E6%8E%92%E5%BA%8F%EF%BC%89"><span class="toc-number">1.3.7.</span> <span class="toc-text">7、sortBy转换（排序）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81mapPartitions%E8%BD%AC%E6%8D%A2%EF%BC%88"><span class="toc-number">1.3.8.</span> <span class="toc-text">8、mapPartitions转换（</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81mapPartitionsWithIndex%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.9.</span> <span class="toc-text">9、mapPartitionsWithIndex转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81partitionBy%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.10.</span> <span class="toc-text">10、partitionBy转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#action%E7%AE%97%E5%AD%90"><span class="toc-number">1.4.</span> <span class="toc-text">action算子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81reduce-f-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.1.</span> <span class="toc-text">1、reduce(f)动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81collect-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.2.</span> <span class="toc-text">2、collect()动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81count-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.3.</span> <span class="toc-text">3、count()动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81take-num-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.4.</span> <span class="toc-text">4、take(num)动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81first-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.5.</span> <span class="toc-text">5、first()动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81top-num-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.6.</span> <span class="toc-text">6、top(num)动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81saveAsTextFile-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.7.</span> <span class="toc-text">7、saveAsTextFile()动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81foreach-f-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.8.</span> <span class="toc-text">8、foreach(f)动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81foreachPartition-f-%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.4.9.</span> <span class="toc-text">9、foreachPartition(f)动作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RDD-Key-Value%E8%BD%AC%E6%8D%A2%E7%AE%97%E5%AD%90"><span class="toc-number">1.5.</span> <span class="toc-text">RDD Key-Value转换算子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81mapValue-f-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.1.</span> <span class="toc-text">1、mapValue(f)操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81flatMapValue-f-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.2.</span> <span class="toc-text">2、flatMapValue(f)操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81combineByKey%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.3.</span> <span class="toc-text">3、combineByKey操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81reduceByKey%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.4.</span> <span class="toc-text">4、reduceByKey操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81groupByKey%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.5.</span> <span class="toc-text">5、groupByKey操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81sortByKey%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.6.</span> <span class="toc-text">6、sortByKey操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81Keys-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.7.</span> <span class="toc-text">7、Keys()操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81value-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.8.</span> <span class="toc-text">8、value()操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81join%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.9.</span> <span class="toc-text">9、join操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81leftOuterJoin%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.10.</span> <span class="toc-text">10、leftOuterJoin操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11%E3%80%81rightOuterJoin%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.11.</span> <span class="toc-text">11、rightOuterJoin操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RDD-Key-Value%E5%8A%A8%E4%BD%9C%E8%BF%90%E7%AE%97"><span class="toc-number">1.6.</span> <span class="toc-text">RDD Key-Value动作运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81collectAsMap-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.6.1.</span> <span class="toc-text">1、collectAsMap()操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81countByKey-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.6.2.</span> <span class="toc-text">2、countByKey()操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F"><span class="toc-number">1.7.</span> <span class="toc-text">共享变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%B4%AF%E5%8A%A0%E5%99%A8"><span class="toc-number">1.7.1.</span> <span class="toc-text">1、累加器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%B9%BF%E6%92%AD%E5%8F%98%E9%87%8F"><span class="toc-number">1.7.2.</span> <span class="toc-text">2、广播变量</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/15/hello-world/" class="archive-article-date">
-  	<time datetime="2023-02-15T12:58:51.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/15/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -402,8 +547,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
