@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023 | 鳌伊耶学习历程</title>
+  <title>DataFrame和Spark SQL | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/archives/2023/page/3/index.html">
+  <meta name="description" content="DataFrame和Spark SQL创建DataFrame在Spark中，DataFrame以RDD为基础，是一种分布式数据集，与传统数据库中的二维表格类似">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DataFrame和Spark SQL">
+<meta property="og:url" content="http://example.com/2023/03/29/DataFrame%E5%92%8CSpark-SQL/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="DataFrame和Spark SQL创建DataFrame在Spark中，DataFrame以RDD为基础，是一种分布式数据集，与传统数据库中的二维表格类似">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/29/iWhFnJ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/29/iWhGcc.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/29/iWhdsA.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/03/29/iWhS8N.png">
+<meta property="article:published_time" content="2023-03-29T04:55:21.000Z">
+<meta property="article:modified_time" content="2023-03-29T04:55:58.291Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/03/29/iWhFnJ.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,295 +164,213 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-DataFrame和Spark-SQL" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DataFrame和Spark SQL
+    </h1>
+  
+
+		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+        
+        <a href="/2023/03/29/DataFrame%E5%92%8CSpark-SQL/" class="archive-article-date">
+  	<time datetime="2023-03-29T04:55:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-29</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DataFrame和Spark-SQL"><a href="#DataFrame和Spark-SQL" class="headerlink" title="DataFrame和Spark SQL"></a>DataFrame和Spark SQL</h1><h2 id="创建DataFrame"><a href="#创建DataFrame" class="headerlink" title="创建DataFrame"></a>创建DataFrame</h2><p>在Spark中，DataFrame以RDD为基础，是一种分布式数据集，与传统数据库中的二维表格类似</p>
+<span id="more"></span>
+
+<h3 id="1、RDD转换为DataFrame"><a href="#1、RDD转换为DataFrame" class="headerlink" title="1、RDD转换为DataFrame"></a>1、RDD转换为DataFrame</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.sql <span class="keyword">import</span> SparkSession</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">printRDD</span>(<span class="params">rdd</span>):</span><br><span class="line">    resluct = rdd.collect()</span><br><span class="line">    <span class="built_in">print</span>(resluct)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()</span><br><span class="line"><span class="comment"># 创建SparkSession对象</span></span><br><span class="line">Sbg = SparkSession.builder.getOrCreate()</span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">lines = sc.textFile(<span class="string">&#x27;/home/ubuntu/Code/input/newUser.txt&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;读取数据：&#x27;</span>)</span><br><span class="line">printRDD(lines)</span><br><span class="line"><span class="comment"># # 按,切割</span></span><br><span class="line">words = lines.<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;按,切割:&#x27;</span>)</span><br><span class="line">printRDD(words)</span><br><span class="line"><span class="comment"># RDD转换为DataFrame</span></span><br><span class="line">dataFrame = Sbg.createDataFrame(words, [<span class="string">&#x27;date&#x27;</span>, <span class="string">&#x27;user&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;RDD转换为DataFrame：&#x27;</span>)</span><br><span class="line">dataFrame.show()</span><br><span class="line"><span class="comment"># 创建构造器</span></span><br><span class="line"><span class="keyword">from</span> pyspark.sql.types <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">schema = StructType([StructField(<span class="string">&#x27;date&#x27;</span>, StringType(), <span class="literal">True</span>), StructField(<span class="string">&#x27;user&#x27;</span>, StringType(), <span class="literal">True</span>)])</span><br><span class="line"><span class="comment"># 规范化写法</span></span><br><span class="line">dataFrame1 = Sbg.createDataFrame(words, schema)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;RDD转换为DataFrame(使用构造器)：&#x27;</span>)</span><br><span class="line">dataFrame1.show()</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/29/iWhFnJ.png" alt="iWhFnJ.png" border="0">  
+
+<h3 id="2、通过CSV创建DataFrame"><a href="#2、通过CSV创建DataFrame" class="headerlink" title="2、通过CSV创建DataFrame"></a>2、通过CSV创建DataFrame</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过CSV创建DataFrame</span></span><br><span class="line"><span class="comment"># option(&#x27;header&#x27;, True)显示列名</span></span><br><span class="line">csvDF = Sbg.read.option(<span class="string">&#x27;header&#x27;</span>, <span class="literal">True</span>).csv(<span class="string">&#x27;/home/ubuntu/Code/input/car_price.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;通过CSV创建DataFrame:&#x27;</span>)</span><br><span class="line">csvDF.show(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/29/iWhGcc.png" alt="iWhGcc.png" border="0">  
+
+<h3 id="3、通过json文件创建DataFrame"><a href="#3、通过json文件创建DataFrame" class="headerlink" title="3、通过json文件创建DataFrame"></a>3、通过json文件创建DataFrame</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过json文件创建DataFrame</span></span><br><span class="line">jsonDF = Sbg.read.json(<span class="string">&#x27;/home/ubuntu/Code/input/test.json&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;通过json文件创建DataFrame:&#x27;</span>)</span><br><span class="line">jsonDF.show()</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/29/iWhdsA.png" alt="iWhdsA.png" border="0">  
+
+<h3 id="4、-本地数据容器转变为DataFrame"><a href="#4、-本地数据容器转变为DataFrame" class="headerlink" title="4、 本地数据容器转变为DataFrame"></a>4、 本地数据容器转变为DataFrame</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 本地数据容器转变为DataFrame</span></span><br><span class="line">data = [(<span class="string">&#x27;a&#x27;</span>, <span class="number">11</span>), (<span class="string">&#x27;b&#x27;</span>, <span class="number">33</span>), (<span class="string">&#x27;c&#x27;</span>, <span class="number">77</span>)]</span><br><span class="line">dadaDF = Sbg.createDataFrame(data, [<span class="string">&#x27;key&#x27;</span>, <span class="string">&#x27;value&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;本地数据容器转变为DataFrame:&#x27;</span>)</span><br><span class="line">dadaDF.show()</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/03/29/iWhS8N.png" alt="iWhS8N.png" border="0">  
+
+
+
+<h3 id="创建DataFrame的全部代码："><a href="#创建DataFrame的全部代码：" class="headerlink" title="创建DataFrame的全部代码："></a>创建DataFrame的全部代码：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.sql <span class="keyword">import</span> SparkSession</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">printRDD</span>(<span class="params">rdd</span>):</span><br><span class="line">    resluct = rdd.collect()</span><br><span class="line">    <span class="built_in">print</span>(resluct)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()</span><br><span class="line">Sbg = SparkSession.builder.getOrCreate()</span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">lines = sc.textFile(<span class="string">&#x27;/home/ubuntu/Code/input/newUser.txt&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;读取数据：&#x27;</span>)</span><br><span class="line">printRDD(lines)</span><br><span class="line"><span class="comment"># # 按,切割</span></span><br><span class="line">words = lines.<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;按,切割:&#x27;</span>)</span><br><span class="line">printRDD(words)</span><br><span class="line"><span class="comment"># RDD转换为DataFrame</span></span><br><span class="line">dataFrame = Sbg.createDataFrame(words, [<span class="string">&#x27;date&#x27;</span>, <span class="string">&#x27;user&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;RDD转换为DataFrame：&#x27;</span>)</span><br><span class="line">dataFrame.show()</span><br><span class="line"><span class="comment"># 创建构造器</span></span><br><span class="line"><span class="keyword">from</span> pyspark.sql.types <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">schema = StructType([StructField(<span class="string">&#x27;date&#x27;</span>, StringType(), <span class="literal">True</span>), StructField(<span class="string">&#x27;user&#x27;</span>, StringType(), <span class="literal">True</span>)])</span><br><span class="line"><span class="comment"># 规范化写法</span></span><br><span class="line">dataFrame1 = Sbg.createDataFrame(words, schema)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;RDD转换为DataFrame(使用构造器)：&#x27;</span>)</span><br><span class="line">dataFrame1.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过CSV创建DataFrame</span></span><br><span class="line"><span class="comment"># option(&#x27;header&#x27;, True)显示列名</span></span><br><span class="line">csvDF = Sbg.read.option(<span class="string">&#x27;header&#x27;</span>, <span class="literal">True</span>).csv(<span class="string">&#x27;/home/ubuntu/Code/input/car_price.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;通过CSV创建DataFrame:&#x27;</span>)</span><br><span class="line">csvDF.show(<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 通过json文件创建DataFrame</span></span><br><span class="line">jsonDF = Sbg.read.json(<span class="string">&#x27;/home/ubuntu/Code/input/test.json&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;通过json文件创建DataFrame:&#x27;</span>)</span><br><span class="line">jsonDF.show()</span><br><span class="line"><span class="comment"># 本地数据容器转变为DataFrame</span></span><br><span class="line">data = [(<span class="string">&#x27;a&#x27;</span>, <span class="number">11</span>), (<span class="string">&#x27;b&#x27;</span>, <span class="number">33</span>), (<span class="string">&#x27;c&#x27;</span>, <span class="number">77</span>)]</span><br><span class="line">dadaDF = Sbg.createDataFrame(data, [<span class="string">&#x27;key&#x27;</span>, <span class="string">&#x27;value&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;本地数据容器转变为DataFrame:&#x27;</span>)</span><br><span class="line">dadaDF.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+		
+		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/">Linux安装python3</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/03/29/DataFrame%E5%92%8CSpark-SQL/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:28:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/27/Spark-RDD/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spark RDD</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Ubuntu执行sudo apt-get update失败解决办法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DataFrame%E5%92%8CSpark-SQL"><span class="toc-number">1.</span> <span class="toc-text">DataFrame和Spark SQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BADataFrame"><span class="toc-number">1.1.</span> <span class="toc-text">创建DataFrame</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81RDD%E8%BD%AC%E6%8D%A2%E4%B8%BADataFrame"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、RDD转换为DataFrame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%80%9A%E8%BF%87CSV%E5%88%9B%E5%BB%BADataFrame"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、通过CSV创建DataFrame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%80%9A%E8%BF%87json%E6%96%87%E4%BB%B6%E5%88%9B%E5%BB%BADataFrame"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、通过json文件创建DataFrame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81-%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%E8%BD%AC%E5%8F%98%E4%B8%BADataFrame"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、 本地数据容器转变为DataFrame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BADataFrame%E7%9A%84%E5%85%A8%E9%83%A8%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">1.1.5.</span> <span class="toc-text">创建DataFrame的全部代码：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/28/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-02-28T05:22:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-28</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/28/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/">Hadoop伪分布式配置</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/27/HBase-shell-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-02-27T09:26:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/27/HBase-shell-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">HBase shell 基本操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/22/Spark%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2023-02-22T04:29:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/22/Spark%E6%90%AD%E5%BB%BA/">Spark搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/20/%E9%85%8D%E7%BD%AEhbase%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E5%AE%89%E8%A3%85%E7%9A%84Zookeeper/" class="archive-article-date">
-  	<time datetime="2023-02-20T15:34:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/20/%E9%85%8D%E7%BD%AEhbase%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E5%AE%89%E8%A3%85%E7%9A%84Zookeeper/">配置hbase使用自己安装的Zookeeper</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/20/Zookeeper%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-20T08:25:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/20/Zookeeper%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">Zookeeper伪分布式安装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-20T04:53:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/">pig和sqoop的安装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/19/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mysql%E5%92%8Chive/" class="archive-article-date">
-  	<time datetime="2023-02-19T08:49:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/19/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mysql%E5%92%8Chive/">虚拟机安装mysql和hive</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-19T03:06:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/19/HBase%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">HBase伪分布式安装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2023/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2023/">1</a><a class="page-number" href="/archives/2023/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2023/page/4/">4</a><a class="extend next" rel="next" href="/archives/2023/page/4/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -471,8 +398,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
