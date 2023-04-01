@@ -6,15 +6,50 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>关系数据可视化 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="关系数据可视化绘制散点拟合曲线图ggplot绘图 ggplot主要绘图思想是为图层叠加思维 ggplot安装之后是不能直接用的，因为源代码里面有些关于pandas的使用是错的，我们需要去修改一下它的源代码，这样才能保证ggplot的正常使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关系数据可视化">
+<meta property="og:url" content="http://example.com/2023/04/01/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="关系数据可视化绘制散点拟合曲线图ggplot绘图 ggplot主要绘图思想是为图层叠加思维 ggplot安装之后是不能直接用的，因为源代码里面有些关于pandas的使用是错的，我们需要去修改一下它的源代码，这样才能保证ggplot的正常使用。">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHilxN.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiClo.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiwMV.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiHnd.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiOcb.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiboq.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHi8fz.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiI8w.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiNFa.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHirYx.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiRwk.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHicxL.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHimMp.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiBtU.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiXcv.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHigs3.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHi7yy.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiE85.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHieG8.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHizqZ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiFwF.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiG7H.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHidMQ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHi5tE.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiSmC.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiosP.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHivyX.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHi9It.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiJGJ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/01/iHiKqc.png">
+<meta property="article:published_time" content="2023-04-01T15:01:08.000Z">
+<meta property="article:modified_time" content="2023-04-01T15:01:41.593Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/04/01/iHilxN.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,20 +190,26 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-关系数据可视化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-关系数据可视化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/01/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">关系数据可视化</a>
+    <h1 class="article-title" itemprop="name">
+      关系数据可视化
     </h1>
   
 
 		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
 
 <!--显示阅读次数完毕-->
 
@@ -184,10 +225,167 @@
         <h1 id="关系数据可视化"><a href="#关系数据可视化" class="headerlink" title="关系数据可视化"></a>关系数据可视化</h1><h2 id="绘制散点拟合曲线图"><a href="#绘制散点拟合曲线图" class="headerlink" title="绘制散点拟合曲线图"></a>绘制散点拟合曲线图</h2><p>ggplot绘图</p>
 <p>ggplot主要绘图思想是为图层叠加思维</p>
 <p>ggplot安装之后是不能直接用的，因为源代码里面有些关于pandas的使用是错的，我们需要去修改一下它的源代码，这样才能保证ggplot的正常使用。</p>
-        
+<span id="more"></span>
+
+<p>ggplot需要修改源代码的地方</p>
+<p>当前项目下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">venv\Lib\site-packages\ggplot\stats\smoothers.py</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/01/iHilxN.png" alt="iHilxN.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiClo.png" alt="iHiClo.png" border="0">  
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">venv\Lib\site-packages\ggplot\stats\stat_smooth.py</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiwMV.png" alt="iHiwMV.png" border="0">  
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">venv\Lib\site-packages\ggplot\utils.py</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiHnd.png" alt="iHiHnd.png" border="0">  
+
+<h3 id="1、ggplot绘制散点图"><a href="#1、ggplot绘制散点图" class="headerlink" title="1、ggplot绘制散点图"></a>1、ggplot绘制散点图</h3><p>使用的数据是2005年美国各州的犯罪率，合计7种犯罪类型，即美国人口统计局公布的每10万人口中谋杀、抢劫和故意伤害等罪案的发生率。</p>
+<p>本例研究入室盗窃和谋杀。研究这两者之间是否存在某种联系？是否人口越多犯罪率越高？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过ggplot绘图</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ggplot主要绘图思想是为图层叠加思维</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入模块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ggplot <span class="keyword">as</span> gp</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\crimeRatesByState2005.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">data = pd.read_csv(filename)</span><br><span class="line"></span><br><span class="line"><span class="comment"># x--横轴标签 y--纵轴标签 data---数据</span></span><br><span class="line"></span><br><span class="line">plot = gp.ggplot(gp.aes(x=<span class="string">&#x27;murder&#x27;</span>, y=<span class="string">&#x27;burglary&#x27;</span>), data=data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置点的颜色</span></span><br><span class="line"></span><br><span class="line">points = gp.geom_point(color=<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(plot + points)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiOcb.png" alt="iHiOcb.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiboq.png" alt="iHiboq.png" border="0">  
+
+<p>可以看出，谋杀案（murder）和入室盗窃案（burglary）的两组数据似乎呈现一个正相关的关系。但是有一个离群点，使得横轴延伸的很长，整体数据布局不是很清楚，我们可以将其过滤掉。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ggplot <span class="keyword">as</span> gp</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\crimeRatesByState2005.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">data = pd.read_csv(filename)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 过滤离群点</span></span><br><span class="line"></span><br><span class="line">data = data[data.state != <span class="string">&#x27;United States\&#x27;\]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">data = data[data.state != &#x27;</span>District of Columbia<span class="string">&#x27;]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># x--横轴标签 y--纵轴标签 data---数据</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">plot = gp.ggplot(gp.aes(x=&#x27;</span>murde<span class="string">r&#x27;, y=&#x27;</span>burglary<span class="string">&#x27;), data=data)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 设置点的颜色</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">points = gp.geom_point(color=&#x27;</span>red<span class="string">&#x27;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 添加拟合曲线图</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">smooth = gp.stat_smooth(method=&#x27;</span>loess<span class="string">&#x27;, color=&#x27;</span>green<span class="string">&#x27;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">print(plot + points + smooth)</span></span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHi8fz.png" alt="iHi8fz.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiI8w.png" alt="iHiI8w.png" border="0">  
+
+<p>基本呈现的是正相关关系，这里加入了一条拟合曲线让这个图表更加有用，可以更加明确的看出谋杀案和入室抢劫案之间的关系。</p>
+<h3 id="pyecharts绘制散点图添加拟合曲线"><a href="#pyecharts绘制散点图添加拟合曲线" class="headerlink" title="pyecharts绘制散点图添加拟合曲线"></a>pyecharts绘制散点图添加拟合曲线</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pyecharst绘制散点图+拟合曲线图</span></span><br><span class="line"><span class="comment"># Scatter ---散点图</span></span><br><span class="line"><span class="comment"># 导入必要的库</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment"># 用于数学计算</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd <span class="comment"># 用于数据处理</span></span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Scatter, Line, Overlap <span class="comment"># 用于可视化</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\crimeRatesByState2005.csv&#x27;</span></span><br><span class="line">data = pd.read_csv(filename)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 过滤离群点</span></span><br><span class="line">data = data[data.state != <span class="string">&#x27;United States&#x27;</span>]</span><br><span class="line">data = data[data.state != <span class="string">&#x27;District of Columbia&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建散点图</span></span><br><span class="line">scatter = Scatter(<span class="string">&#x27;2005年美国各州的犯罪情况&#x27;</span>)</span><br><span class="line">x = data[<span class="string">&#x27;murder&#x27;</span>]</span><br><span class="line">y = data[<span class="string">&#x27;burglary&#x27;</span>]</span><br><span class="line">scatter.add(<span class="string">&#x27;犯罪率&#x27;</span>, x, y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加拟合曲线</span></span><br><span class="line"><span class="comment"># 使用polyfit函数，对x,y进行拟合，1是要拟合的多项式的项数（即拟合直线）</span></span><br><span class="line">poly = np.polyfit(x, y, deg=<span class="number">1</span>)</span><br><span class="line">y_fit = np.polyval(poly, x)  <span class="comment"># 根据拟合系数求出拟合后的y值</span></span><br><span class="line">line = Line(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">line.add(<span class="string">&#x27;&#x27;</span>, x, y_fit)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将散点图和拟合曲线放在一个图中</span></span><br><span class="line">overlap = Overlap()</span><br><span class="line">overlap.add(scatter)</span><br><span class="line">overlap.add(line)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将图保存为html文件</span></span><br><span class="line">overlap.render(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\2005年美国各州的犯罪情况.html&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiNFa.png" alt="iHiNFa.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHirYx.png" alt="iHirYx.png" border="0">  
+
+<h3 id="matplotlib绘制散点图添加拟合曲线"><a href="#matplotlib绘制散点图添加拟合曲线" class="headerlink" title="matplotlib绘制散点图添加拟合曲线"></a>matplotlib绘制散点图添加拟合曲线</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\crimeRatesByState2005.csv&#x27;</span></span><br><span class="line">data = pd.read_csv(filename)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 过滤离群点</span></span><br><span class="line">data = data[data.state != <span class="string">&#x27;United States&#x27;</span>]</span><br><span class="line">data = data[data.state != <span class="string">&#x27;District of Columbia&#x27;</span>]</span><br><span class="line">x = data[<span class="string">&#x27;murder&#x27;</span>]</span><br><span class="line">y = data[<span class="string">&#x27;burglary&#x27;</span>]</span><br><span class="line">plt.scatter(x, y, s=<span class="number">50</span>, c=<span class="string">&#x27;r&#x27;</span>, marker=<span class="string">&#x27;o&#x27;</span>, alpha=<span class="number">0.5</span>)</span><br><span class="line"><span class="comment"># 拟合曲线</span></span><br><span class="line">poly = np.polyfit(x, y, deg=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 多项式求值</span></span><br><span class="line">y_fit = np.polyval(poly, x)</span><br><span class="line">plt.plot(x, y_fit)</span><br><span class="line">plt.title(<span class="string">&#x27;2005年美国各州的犯罪情况&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;murder&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;burglary&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiRwk.png" alt="iHiRwk.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHicxL.png" alt="iHicxL.png" border="0">  
+
+<h3 id="seabor绘制散点矩阵图"><a href="#seabor绘制散点矩阵图" class="headerlink" title="seabor绘制散点矩阵图"></a>seabor绘制散点矩阵图</h3><p>使用seaborns的pairplot函数来绘制散点矩阵</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\crimeRatesByState2005.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line"><span class="comment"># print(df.head(5))</span></span><br><span class="line"><span class="comment"># 删除离群点</span></span><br><span class="line">df2 = df[df.state != <span class="string">&#x27;United States&#x27;</span>]</span><br><span class="line">df2 = df2[df2.state != <span class="string">&#x27;District of Columbia&#x27;</span>]</span><br><span class="line"><span class="comment"># axis=1表示按列删除，0按行删除</span></span><br><span class="line">df2 = df2.drop([<span class="string">&#x27;state&#x27;</span>], axis=<span class="number">1</span>)</span><br><span class="line">df2 = df2.drop([<span class="string">&#x27;population&#x27;</span>], axis=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># diag_kind指定对角图，kde--密度图，hist---直方图</span></span><br><span class="line"><span class="comment"># king:设置图形类别，scatter:散点图，reg:将散点图尽量聚合到一条拟合曲线旁边</span></span><br><span class="line">g = sns.pairplot(df2, diag_kind=<span class="string">&#x27;kde&#x27;</span>, kind=<span class="string">&#x27;reg&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHimMp.png" alt="iHimMp.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiBtU.png" alt="iHiBtU.png" border="0">  
+
+<p>散点矩阵图展示了7种类型的犯罪之间的关系，其中很多是正相关的，例如，故意伤害罪（aggravated_assault）和偷窃（larceny_theft）的关联性就比较高，呈正相关。到那时偷窃（larceny_theft）和谋杀（murder）之间的联系就不是很明显，此时就不能轻易的做出假设</p>
+<h2 id="气泡图展示数据的关联性"><a href="#气泡图展示数据的关联性" class="headerlink" title="气泡图展示数据的关联性"></a>气泡图展示数据的关联性</h2><p>除了散点图和散点矩阵图之外，气泡图也可以用来展示数据的关联性，气泡图与散点图相似，不同之处在于，气泡图允许用户在图表中额外加入一个表示大小的变量。实际上，这就如同以二维的方式绘制包含三个变量的图表。气泡的大小不同的标记（指示相对重要程度）表示。这种图表类型的优势在于它便于同时比较三个变量。框架图如图所示，一个变量用x轴表现，另一个变量用y轴表现，而第三个变量则通过气泡的面积的大小来体现。</p>
+  <img src="https://i.328888.xyz/2023/04/01/iHiXcv.png" alt="iHiXcv.png" border="0">  
+
+<h3 id="matplotlib绘制气泡图"><a href="#matplotlib绘制气泡图" class="headerlink" title="matplotlib绘制气泡图"></a>matplotlib绘制气泡图</h3><p>选用的还是谋杀案和入室盗窃案的相关数据，同时加入了各州的人口数量作为第三个变量，用气泡的大小表示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span> <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\crimeRatesByState2005.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line"></span><br><span class="line"><span class="comment"># print(df.head(5))</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除离群点</span></span><br><span class="line"></span><br><span class="line">df2 = df[df.state != <span class="string">&#x27;United States&#x27;</span>]</span><br><span class="line"></span><br><span class="line">df2 = df2[df2.state != <span class="string">&#x27;District of Columbia&#x27;</span>]</span><br><span class="line"></span><br><span class="line">s = <span class="built_in">list</span>(df2.population / <span class="number">10000</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成一个随机列表，列表长度为传入的参数，列表的元素为0~1的float类型数据</span></span><br><span class="line"></span><br><span class="line">color = np.random.rand(<span class="built_in">len</span>(<span class="built_in">list</span>(df2.murder)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># x:x轴数据，y:y轴数据，s:气泡半径，c:气泡颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># linewidths:气泡外圈的线宽</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># alpha:透明度</span></span><br><span class="line"></span><br><span class="line">plt.scatter(x=<span class="built_in">list</span>(df2.murder), y=<span class="built_in">list</span>(df2.burglary), s=s, c=color,</span><br><span class="line"></span><br><span class="line">linewidths=<span class="number">0.5</span>, alpha=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">&#x27;谋杀案、入室盗窃案和人口数量的相关关系&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">&#x27;murder&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.ylabel(<span class="string">&#x27;burglary&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/01/iHigs3.png" alt="iHigs3.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHi7yy.png" alt="iHi7yy.png" border="0">  
+
+<p>从图中我们可以看出，并非人口越多，犯罪率就越高</p>
+<h3 id="Pyecharts绘制气泡散点图"><a href="#Pyecharts绘制气泡散点图" class="headerlink" title="Pyecharts绘制气泡散点图"></a>Pyecharts绘制气泡散点图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Scatter</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\crimeRatesByState2005.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line"><span class="comment"># 删除离群点</span></span><br><span class="line">df2 = df[df.state != <span class="string">&#x27;United States&#x27;</span>]</span><br><span class="line">df2 = df2[df2.state != <span class="string">&#x27;District of Columbia&#x27;</span>]</span><br><span class="line">scatter = Scatter(<span class="string">&#x27;2005年美国各州的犯罪情况&#x27;</span>)</span><br><span class="line">scatter.add(</span><br><span class="line">    <span class="string">&#x27;气泡散点图&#x27;</span>,</span><br><span class="line">    <span class="built_in">list</span>(df2.murder),</span><br><span class="line">    <span class="built_in">list</span>(df2.burglary),</span><br><span class="line">    extra_data=<span class="built_in">list</span>(df2.murder),  <span class="comment"># 加第三个数据</span></span><br><span class="line">    is_visualmap=<span class="literal">True</span>,  <span class="comment"># 显示第三个数据</span></span><br><span class="line">    visual_dimension=<span class="number">2</span>,  <span class="comment"># 可视化尺寸</span></span><br><span class="line">    visual_type=<span class="string">&#x27;size&#x27;</span>,  <span class="comment"># 修改类型为大小类型</span></span><br><span class="line">    visual_range_size=[<span class="number">10</span>, <span class="number">60</span>],  <span class="comment"># 气泡大小</span></span><br><span class="line">    visual_range=[<span class="number">1</span>, <span class="number">10</span>]  <span class="comment"># low-high 的范围</span></span><br><span class="line">)</span><br><span class="line">scatter.render(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\2005年美国各州的犯罪情况.html&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiE85.png" alt="iHiE85.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHieG8.png" alt="iHieG8.png" border="0">  
+
+<h2 id="茎叶图"><a href="#茎叶图" class="headerlink" title="茎叶图"></a>茎叶图</h2><p>使用python的print语句绘制一个茎叶图，本案例所使用的数据是每年各国的出生率，只拿2008年的数据作图分析</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> groupby</span><br><span class="line"></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\birth-rate.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line"><span class="comment"># subset:它是一个数组，将删除过程限制为通过列表转递行/列</span></span><br><span class="line"><span class="comment"># inplace:如果为True，则它是一个布尔值，它会在数据帧本身中进行更改</span></span><br><span class="line"><span class="comment"># df 会改变，为False，df则不会改变</span></span><br><span class="line">df.dropna(subset=[<span class="string">&#x27;2008&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">dirt = &#123;&#125;</span><br><span class="line"><span class="comment"># round函数四舍五入</span></span><br><span class="line">df = <span class="built_in">list</span>(<span class="built_in">round</span>(df[<span class="string">&#x27;2008&#x27;</span>], <span class="number">1</span>))</span><br><span class="line">rangenum = []</span><br><span class="line"><span class="comment"># sorted:排序  groupby:分组</span></span><br><span class="line"><span class="keyword">for</span> k ,g <span class="keyword">in</span> groupby(<span class="built_in">sorted</span>(df), key=<span class="keyword">lambda</span> x: <span class="built_in">int</span>(x)):</span><br><span class="line">    lst = <span class="built_in">map</span>(<span class="built_in">str</span>, <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> y: <span class="built_in">divmod</span>(<span class="built_in">int</span>(y * <span class="number">10</span>), <span class="number">10</span>)[<span class="number">1</span>], <span class="built_in">list</span>(g))))</span><br><span class="line">    dirt[k] = <span class="string">&#x27; &#x27;</span>.join(lst)</span><br><span class="line">    rangenum.append(k)</span><br><span class="line">num = <span class="built_in">list</span>(<span class="built_in">range</span>(rangenum[<span class="number">0</span>], rangenum[-<span class="number">1</span>], <span class="number">2</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> num:</span><br><span class="line">    a = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">sorted</span>(dirt.keys()):</span><br><span class="line">        <span class="keyword">if</span> <span class="number">0</span> &lt;= k - i &lt;= <span class="number">1</span>:</span><br><span class="line">            a = a + <span class="string">&#x27; &#x27;</span> + dirt[k]</span><br><span class="line">        <span class="keyword">elif</span> k - i &gt; <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">str</span>(i).rjust(<span class="number">5</span>), <span class="string">&#x27;|&#x27;</span>, a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHizqZ.png" alt="iHizqZ.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiFwF.png" alt="iHiFwF.png" border="0">  
+
+<p>在控制台中打印输出的结果。可以看出，多数国家的出生率都集中在10%～20%</p>
+<h2 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h2><p>直方图，又称质量分布图，是一种统计报告图，由一系列高度不等的纵向条纹或线段表示数据分布的情况。 一般用横轴表示数据类型，纵轴表示分布情况。直方图的基本架构如图所示。</p>
+  <img src="https://i.328888.xyz/2023/04/01/iHiG7H.png" alt="iHiG7H.png" border="0">  
+
+<h3 id="Pyecharts绘制直方图"><a href="#Pyecharts绘制直方图" class="headerlink" title="Pyecharts绘制直方图"></a>Pyecharts绘制直方图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直方图</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar</span><br><span class="line"></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\birth-rate.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line"><span class="comment"># subset:它是一个数组，将删除过程限制为通过列表转递行/列</span></span><br><span class="line"><span class="comment"># inplace:如果为True，则它是一个布尔值，它会在数据帧本身中进行更改df 会改变，为False，df则不会改变</span></span><br><span class="line">df.dropna(subset=[<span class="string">&#x27;2008&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">data = df[<span class="string">&#x27;2008&#x27;</span>]</span><br><span class="line">bar = Bar(<span class="string">&#x27;各国出生率的分布直方图&#x27;</span>)</span><br><span class="line">data_x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>, <span class="number">100</span>, <span class="number">10</span>))  <span class="comment"># 取到[5,15,25,35,45,55,65,75,85,95]</span></span><br><span class="line">data_y = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]  <span class="comment"># 得到[0,0,0,0,0,0,0,0,0,0]</span></span><br><span class="line"><span class="keyword">for</span> b <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">for</span> i, x <span class="keyword">in</span> <span class="built_in">enumerate</span>(data_x):</span><br><span class="line">        <span class="keyword">if</span> (x - <span class="number">5</span>) &lt;= b &lt; (x + <span class="number">5</span>):</span><br><span class="line">            data_y[i] += <span class="number">1</span></span><br><span class="line">bar.add(<span class="string">&#x27;出生率&#x27;</span>, data_x, data_y, bar_category_gap=<span class="number">0</span>)  <span class="comment"># 需要设置bar_category_gap参数</span></span><br><span class="line">bar.render(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\各国出生率的分布直方图.html&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHidMQ.png" alt="iHidMQ.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHi5tE.png" alt="iHi5tE.png" border="0">  
+
+<h3 id="Matplotlib绘制直方图"><a href="#Matplotlib绘制直方图" class="headerlink" title="Matplotlib绘制直方图"></a>Matplotlib绘制直方图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示符号</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\birth-rate.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line">df.dropna(subset=[<span class="string">&#x27;2008&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">data = df[<span class="string">&#x27;2008&#x27;</span>]</span><br><span class="line"><span class="comment"># 使用ggplot的样式</span></span><br><span class="line">plt.style.use(<span class="string">&#x27;ggplot&#x27;</span>)</span><br><span class="line"><span class="comment"># bins指定分段数目，color颜色，edgecolor指定边的颜色，label:设置图例名称</span></span><br><span class="line">plt.hist(data, bins=<span class="number">10</span>, color=<span class="string">&#x27;steelblue&#x27;</span>, edgecolor=<span class="string">&#x27;k&#x27;</span>, label=<span class="string">&#x27;直方图&#x27;</span>)</span><br><span class="line"><span class="comment"># 更改刻度、刻度标签和网格线的外观</span></span><br><span class="line">plt.tick_params(top=<span class="string">&#x27;oof&#x27;</span>, right=<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line"><span class="comment"># 显示图例</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.title(<span class="string">&#x27;各国出生率直方图&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;出生率（%）&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;频率（%）&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiSmC.png" alt="iHiSmC.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiosP.png" alt="iHiosP.png" border="0">  
+
+<h2 id="密度图"><a href="#密度图" class="headerlink" title="密度图"></a>密度图</h2><p>密度图可以用来对分布的细节变化进行可视化。一般用于呈现连续变量。基本框架图如图所示</p>
+  <img src="https://i.328888.xyz/2023/04/01/iHivyX.png" alt="iHivyX.png" border="0">  
+
+<h3 id="Matplotlib实现密度图"><a href="#Matplotlib实现密度图" class="headerlink" title="Matplotlib实现密度图"></a>Matplotlib实现密度图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.mlab <span class="keyword">as</span> mlab</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示符号</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\birth-rate.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line">df.dropna(subset=[<span class="string">&#x27;2008&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">data = df[<span class="string">&#x27;2008&#x27;</span>]</span><br><span class="line"><span class="comment"># 获取数值对应的比例</span></span><br><span class="line">kde = mlab.GaussianKDE(data)</span><br><span class="line"><span class="comment"># np.linspace在指定的间隔内返回均匀间隔的数字</span></span><br><span class="line"><span class="comment"># start:指定序列的起点</span></span><br><span class="line"><span class="comment"># stop:指定序列的终点</span></span><br><span class="line"><span class="comment"># num:生成的样本数，默认是50，必须是非负数</span></span><br><span class="line">x2 = np.linspace(start=data.<span class="built_in">min</span>(), stop=data.<span class="built_in">max</span>(), num=<span class="number">1000</span>)</span><br><span class="line"><span class="comment"># g-:表示绿色实现 ，linewidth:宽度</span></span><br><span class="line">line2 = plt.plot(x2, kde(x2), <span class="string">&#x27;g-&#x27;</span>, linewidth=<span class="number">2</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;2008年各国出生率密度图&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;出生率（%）&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;频率（%）&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHi9It.png" alt="iHi9It.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiJGJ.png" alt="iHiJGJ.png" border="0">  
+
+<p>从图中同样可以看出，多数国家的出生率都集中在10‰～20‰分段，还可以继续深入一步，将直方图和密度图绘制在一起  </p>
+<h3 id="直方图-密度图"><a href="#直方图-密度图" class="headerlink" title="直方图+密度图"></a>直方图+密度图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> mlab</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示符号</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\birth-rate.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line">df.dropna(subset=[<span class="string">&#x27;2008&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">data = df[<span class="string">&#x27;2008&#x27;</span>]</span><br><span class="line"><span class="comment"># 使用ggplot的样式</span></span><br><span class="line">plt.style.use(<span class="string">&#x27;ggplot&#x27;</span>)</span><br><span class="line"><span class="comment"># bins指定分段数目，color颜色，edgecolor指定边的颜色，label:设置图例名称</span></span><br><span class="line">plt.hist(data, bins=np.arange(data.<span class="built_in">min</span>(), data.<span class="built_in">max</span>(), <span class="number">3</span>), density=<span class="literal">True</span>,</span><br><span class="line">         color=<span class="string">&#x27;steelblue&#x27;</span>, edgecolor=<span class="string">&#x27;k&#x27;</span>, label=<span class="string">&#x27;直方图&#x27;</span>)</span><br><span class="line"><span class="comment"># 获取数值对应的比例</span></span><br><span class="line">kde = mlab.GaussianKDE(data)</span><br><span class="line"><span class="comment"># np.linspace在指定的间隔内返回均匀间隔的数字</span></span><br><span class="line"><span class="comment"># start:指定序列的起点</span></span><br><span class="line"><span class="comment"># stop:指定序列的终点</span></span><br><span class="line"><span class="comment"># num:生成的样本数，默认是50，必须是非负数</span></span><br><span class="line">x2 = np.linspace(start=data.<span class="built_in">min</span>(), stop=data.<span class="built_in">max</span>(), num=<span class="number">1000</span>)</span><br><span class="line"><span class="comment"># g-:表示绿色实现 ，linewidth:宽度</span></span><br><span class="line">line2 = plt.plot(x2, kde(x2), <span class="string">&#x27;g-&#x27;</span>, linewidth=<span class="number">2</span>, label=<span class="string">&#x27;密度图&#x27;</span>)</span><br><span class="line"><span class="comment"># 更改刻度、刻度标签和网格线的外观</span></span><br><span class="line">plt.tick_params(top=<span class="string">&#x27;oof&#x27;</span>, right=<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line"><span class="comment"># 显示图例</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.title(<span class="string">&#x27;2008年各国出生率直方图和密度图&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;出生率（%）&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;频率（%）&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+  <img src="https://i.328888.xyz/2023/04/01/iHiKqc.png" alt="iHiKqc.png" border="0">  
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -196,16 +394,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/01/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/04/01/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/01/%E4%BD%BF%E7%94%A8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%A2%84%E6%B5%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用神经网络实现鸢尾花的预测</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,636 +477,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用神经网络实现鸢尾花的预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/01/%E4%BD%BF%E7%94%A8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%A2%84%E6%B5%8B/">使用神经网络实现鸢尾花的预测</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/04/01/%E4%BD%BF%E7%94%A8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%A2%84%E6%B5%8B/" class="archive-article-date">
-  	<time datetime="2023-04-01T04:00:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用神经网络实现鸢尾花的预测"><a href="#使用神经网络实现鸢尾花的预测" class="headerlink" title="使用神经网络实现鸢尾花的预测"></a>使用神经网络实现鸢尾花的预测</h1><h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><p>1、从给出的csv文件中加载数据，并划分为训练集和验证集，划分比例为：训练集&#x2F;验证集&#x3D;7&#x2F;3。注意需要做数据的标准化，可使用pandas读取数据，再将dataframe转成numpy数组(to_numpy())，然后打乱数据、再切片、值标准化。</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/01/%E4%BD%BF%E7%94%A8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%A2%84%E6%B5%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.</span> <span class="toc-text">关系数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E6%8B%9F%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.1.</span> <span class="toc-text">绘制散点拟合曲线图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81ggplot%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、ggplot绘制散点图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pyecharts%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%8B%9F%E5%90%88%E6%9B%B2%E7%BA%BF"><span class="toc-number">1.1.2.</span> <span class="toc-text">pyecharts绘制散点图添加拟合曲线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matplotlib%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%8B%9F%E5%90%88%E6%9B%B2%E7%BA%BF"><span class="toc-number">1.1.3.</span> <span class="toc-text">matplotlib绘制散点图添加拟合曲线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#seabor%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E7%9F%A9%E9%98%B5%E5%9B%BE"><span class="toc-number">1.1.4.</span> <span class="toc-text">seabor绘制散点矩阵图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B0%94%E6%B3%A1%E5%9B%BE%E5%B1%95%E7%A4%BA%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B3%E8%81%94%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">气泡图展示数据的关联性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#matplotlib%E7%BB%98%E5%88%B6%E6%B0%94%E6%B3%A1%E5%9B%BE"><span class="toc-number">1.2.1.</span> <span class="toc-text">matplotlib绘制气泡图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pyecharts%E7%BB%98%E5%88%B6%E6%B0%94%E6%B3%A1%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-number">1.2.2.</span> <span class="toc-text">Pyecharts绘制气泡散点图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%8E%E5%8F%B6%E5%9B%BE"><span class="toc-number">1.3.</span> <span class="toc-text">茎叶图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE"><span class="toc-number">1.4.</span> <span class="toc-text">直方图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pyecharts%E7%BB%98%E5%88%B6%E7%9B%B4%E6%96%B9%E5%9B%BE"><span class="toc-number">1.4.1.</span> <span class="toc-text">Pyecharts绘制直方图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Matplotlib%E7%BB%98%E5%88%B6%E7%9B%B4%E6%96%B9%E5%9B%BE"><span class="toc-number">1.4.2.</span> <span class="toc-text">Matplotlib绘制直方图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="toc-number">1.5.</span> <span class="toc-text">密度图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Matplotlib%E5%AE%9E%E7%8E%B0%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="toc-number">1.5.1.</span> <span class="toc-text">Matplotlib实现密度图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE-%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="toc-number">1.5.2.</span> <span class="toc-text">直方图+密度图</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-DataFrame和Spark-SQL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/29/DataFrame%E5%92%8CSpark-SQL/">DataFrame和Spark SQL</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/29/DataFrame%E5%92%8CSpark-SQL/" class="archive-article-date">
-  	<time datetime="2023-03-29T04:55:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="DataFrame和Spark-SQL"><a href="#DataFrame和Spark-SQL" class="headerlink" title="DataFrame和Spark SQL"></a>DataFrame和Spark SQL</h1><h2 id="创建DataFrame"><a href="#创建DataFrame" class="headerlink" title="创建DataFrame"></a>创建DataFrame</h2><p>在Spark中，DataFrame以RDD为基础，是一种分布式数据集，与传统数据库中的二维表格类似</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/29/DataFrame%E5%92%8CSpark-SQL/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spark-RDD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/27/Spark-RDD/">Spark RDD</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/27/Spark-RDD/" class="archive-article-date">
-  	<time datetime="2023-03-27T15:54:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Spark-RDD"><a href="#Spark-RDD" class="headerlink" title="Spark RDD"></a>Spark RDD</h1><p>RDD是一种可扩展的弹性分布式数据集，只读、分区、不变的数据集合，可以基于任何数据结构创建</p>
-<h2 id="RDD的创建"><a href="#RDD的创建" class="headerlink" title="RDD的创建"></a>RDD的创建</h2>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/27/Spark-RDD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Pycharm开发时，可能遇到的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/27/%E4%BD%BF%E7%94%A8Pycharm%E5%BC%80%E5%8F%91%E6%97%B6%EF%BC%8C%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">使用Pycharm开发时，可能遇到的问题</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/27/%E4%BD%BF%E7%94%A8Pycharm%E5%BC%80%E5%8F%91%E6%97%B6%EF%BC%8C%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2023-03-27T09:29:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Pycharm开发时，可能遇到的问题"><a href="#使用Pycharm开发时，可能遇到的问题" class="headerlink" title="使用Pycharm开发时，可能遇到的问题"></a>使用Pycharm开发时，可能遇到的问题</h1><ol>
-<li><h2 id="使用Pycharm开发时，终端运行pip下载命令遇到”No-module-named-‘pip’”问题"><a href="#使用Pycharm开发时，终端运行pip下载命令遇到”No-module-named-‘pip’”问题" class="headerlink" title="使用Pycharm开发时，终端运行pip下载命令遇到”No module named ‘pip’”问题"></a>使用Pycharm开发时，终端运行pip下载命令遇到”No module named ‘pip’”问题</h2></li>
-</ol>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/27/%E4%BD%BF%E7%94%A8Pycharm%E5%BC%80%E5%8F%91%E6%97%B6%EF%BC%8C%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Pyecharts和Matplotlib绘制基本图表2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/21/%E4%BD%BF%E7%94%A8Pyecharts%E5%92%8CMatplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A82/">使用Pyecharts和Matplotlib绘制基本图表2(比例数据)</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/21/%E4%BD%BF%E7%94%A8Pyecharts%E5%92%8CMatplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A82/" class="archive-article-date">
-  	<time datetime="2023-03-21T15:16:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Pyecharts-Matplotlib"><a href="#Pyecharts-Matplotlib" class="headerlink" title="Pyecharts  +  Matplotlib"></a>Pyecharts  +  Matplotlib</h1><h1 id="使用Pyecharts绘制基本图表2"><a href="#使用Pyecharts绘制基本图表2" class="headerlink" title="使用Pyecharts绘制基本图表2"></a>使用Pyecharts绘制基本图表2</h1><h2 id="比例数据"><a href="#比例数据" class="headerlink" title="比例数据"></a>比例数据</h2><p>pyecharts版本：0.5.11</p>
-<p> <a target="_blank" rel="noopener" href="https://05x-docs.pyecharts.org/#/">pyecharts官网</a> </p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/21/%E4%BD%BF%E7%94%A8Pyecharts%E5%92%8CMatplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A82/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Matplotlib绘制基本图表1-时间数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Matplotlib绘制基本图表1(时间数据)</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-  	<time datetime="2023-03-20T12:57:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Matplotlib绘制基本图表1"><a href="#使用Matplotlib绘制基本图表1" class="headerlink" title="使用Matplotlib绘制基本图表1"></a>使用Matplotlib绘制基本图表1</h1><h2 id="时间数据可视化"><a href="#时间数据可视化" class="headerlink" title="时间数据可视化"></a>时间数据可视化</h2><p><a target="_blank" rel="noopener" href="https://matplotlib.org/">Matplotlib官网</a> </p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Pyecharts绘制基本图表-时间数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Pyecharts绘制基本图表1(时间数据)</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-  	<time datetime="2023-03-20T10:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Pyecharts绘制基本图表1"><a href="#使用Pyecharts绘制基本图表1" class="headerlink" title="使用Pyecharts绘制基本图表1"></a>使用Pyecharts绘制基本图表1</h1><h2 id="时间数据可视化"><a href="#时间数据可视化" class="headerlink" title="时间数据可视化"></a>时间数据可视化</h2><p>pyecharts版本：0.5.11</p>
-<p><a target="_blank" rel="noopener" href="https://05x-docs.pyecharts.org/">Pyecharts官网</a></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-github上传项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/">github上传、删除项目</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2023-03-19T09:36:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="github上传和删除项目"><a href="#github上传和删除项目" class="headerlink" title="github上传和删除项目"></a>github上传和删除项目</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-通过VUE-ElementUI绘制一个前端页面" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">通过VUE+ElementUI绘制一个前端页面</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/" class="archive-article-date">
-  	<time datetime="2023-03-19T07:50:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="通过VUE-ElementUI绘制一个前端页面"><a href="#通过VUE-ElementUI绘制一个前端页面" class="headerlink" title="通过VUE+ElementUI绘制一个前端页面"></a>通过VUE+ElementUI绘制一个前端页面</h1><p>展示图如下</p>
-<p>代码文件：myvueproject</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/wasdkd/wasdkd.github.io">我的GitHub</a></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -876,8 +529,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
