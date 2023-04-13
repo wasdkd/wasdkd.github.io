@@ -29,6 +29,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/04/12/iXxHg3.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/04/12/iXxjU5.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/04/12/iXx8R8.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/13/igTMjA.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/04/05/i8HetN.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/04/05/i8H7Mo.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/04/05/i8HzmV.png">
@@ -37,7 +38,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/04/05/i8HhGz.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/04/05/i8Howa.png">
 <meta property="article:published_time" content="2023-03-29T04:55:21.000Z">
-<meta property="article:modified_time" content="2023-04-12T15:23:01.552Z">
+<meta property="article:modified_time" content="2023-04-13T13:43:55.453Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/03/29/iWhFnJ.png">
@@ -288,9 +289,9 @@
 
   <img src="https://i.328888.xyz/2023/04/12/iXx8R8.png" alt="iXx8R8.png" border="0">  
 
-<h3 id="5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。"><a href="#5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。" class="headerlink" title="5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。"></a>5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。"><a href="#5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。" class="headerlink" title="5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。"></a>5）找出所有薪资大于等于本部门平均工资的员工，字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。先按部门号升序排列，再按照薪资降序排列。</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第五题：找出所有薪资大于等于本部门平均工资的员工，</span></span><br><span class="line"><span class="comment"># 字段包括部门编号，部门名称，部门平均工资，员工编号，姓名，岗位，薪资。</span></span><br><span class="line"><span class="comment"># 先按部门号升序排列，再按照薪资降序排列</span></span><br><span class="line"></span><br><span class="line">sql5 = <span class="string">&quot;select e.dept_id,d.dept_name,(select avg(salary) from Emp e1 &quot;</span> \</span><br><span class="line">		<span class="string">&quot;where e1.dept_id=e.dept_id) avg_salary, &quot;</span> \</span><br><span class="line">         <span class="string">&quot;e.emp_id,e.emp_name,e.emp_job,e.salary from Emp e left join </span></span><br><span class="line"><span class="string">         &quot;</span>Dept d on(e.dept_id=d.dept_id) <span class="string">&quot; \</span></span><br><span class="line"><span class="string">         &quot;</span>where e.salary&gt;=(select avg(salary) <span class="keyword">from</span> Emp e2 where e2.dept_id = e.dept_id) <span class="string">&quot; \</span></span><br><span class="line"><span class="string">         &quot;</span>order by e.dept_id,e.salary desc<span class="string">&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">sparksql.sql(sql5).show()</span></span><br></pre></td></tr></table></figure>
 
-
+<img src="https://i.328888.xyz/2023/04/13/igTMjA.png" alt="igTMjA.png" border="0" />
 
 <h2 id="Spark-SQL练习2"><a href="#Spark-SQL练习2" class="headerlink" title="Spark SQL练习2"></a>Spark SQL练习2</h2><p>有三个表（三个表的字段与字段之间都是 :: 分隔开的）</p>
 <p>Users.bat（对应字段：UserID，Gender，Age，Occupation，ZipCode）</p>
