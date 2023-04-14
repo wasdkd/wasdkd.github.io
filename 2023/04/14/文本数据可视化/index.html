@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>文本数据可视化 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="文本数据可视化一般把对文本的理解需求分成三级：词汇级，语法级、语义级 文本文档的类别多种多样，包括单文本、文档集合和时序文本数据三大类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文本数据可视化">
+<meta property="og:url" content="http://example.com/2023/04/14/%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="文本数据可视化一般把对文本的理解需求分成三级：词汇级，语法级、语义级 文本文档的类别多种多样，包括单文本、文档集合和时序文本数据三大类">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-04-14T15:46:02.000Z">
+<meta property="article:modified_time" content="2023-04-14T15:46:46.347Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
   
@@ -155,37 +159,142 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-使用Matplotlib绘制基本图表1-时间数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-文本数据可视化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Matplotlib绘制基本图表1(时间数据)</a>
+    <h1 class="article-title" itemprop="name">
+      文本数据可视化
     </h1>
   
 
 		<!--显示阅读次数-->
 
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
 <!--显示阅读次数完毕-->
 
         
-        <a href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-  	<time datetime="2023-03-20T12:57:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
+        <a href="/2023/04/14/%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" class="archive-article-date">
+  	<time datetime="2023-04-14T15:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="数据可视化基本图表"><a href="#数据可视化基本图表" class="headerlink" title="数据可视化基本图表"></a>数据可视化基本图表</h1><p>原始数据绘图用于可视化原始数据信息的直观呈现。其典型的方法有数据轨迹、柱状图、条形图、折线图、直方图、饼图、等值线图、走势图、散点图、气泡图、维恩图、热力图和雷达图等</p>
-        
+        <h1 id="文本数据可视化"><a href="#文本数据可视化" class="headerlink" title="文本数据可视化"></a>文本数据可视化</h1><p>一般把对文本的理解需求分成三级：词汇级，语法级、语义级</p>
+<p>文本文档的类别多种多样，包括<strong>单文本、文档集合</strong>和<strong>时序文本数据</strong>三大类</p>
+<span id="more"></span>
+
+<h2 id="1、使用网络爬虫提取文本数据"><a href="#1、使用网络爬虫提取文本数据" class="headerlink" title="1、使用网络爬虫提取文本数据"></a>1、使用网络爬虫提取文本数据</h2><p>Python爬虫架构主要有调度器、URL管理器、网页下载器、网页解析器、应用程序(爬取的有价值数据)</p>
+<h3 id="（1）调度器"><a href="#（1）调度器" class="headerlink" title="（1）调度器"></a>（1）调度器</h3><p>相当于电脑CPU，主要负责调度URL管理器、下载、解析器之间的协调工作</p>
+<h3 id="（2）URL管理器"><a href="#（2）URL管理器" class="headerlink" title="（2）URL管理器"></a>（2）URL管理器</h3><p>包括待爬取的URL地址和已爬取的URL地址，防止重复抓取URL和循环抓取URL。</p>
+<p>URL管理器只要通过内存、数据库、缓存数据库来是实现</p>
+<h3 id="（3）网页下载器"><a href="#（3）网页下载器" class="headerlink" title="（3）网页下载器"></a>（3）网页下载器</h3><p>通过传入一个URL地址来下载网页，将网页转换成一个字符串</p>
+<h3 id="（4）网页解析器"><a href="#（4）网页解析器" class="headerlink" title="（4）网页解析器"></a>（4）网页解析器</h3><p>将一个网页字符串进行解析。网页解析器有正则表达式、html.parser(Python自带的)、beautifulsoup(第三方插件，可以使用python自带的html.parser进行解析，也可以使用lxml进行解析)（pip install beautifulsoup4）</p>
+<h3 id="（5）应用程序"><a href="#（5）应用程序" class="headerlink" title="（5）应用程序"></a>（5）应用程序</h3><p>就是从网页中提取的有用数据组成的一个应用</p>
+<h2 id="2、Python内置抓取网页的组件urllib"><a href="#2、Python内置抓取网页的组件urllib" class="headerlink" title="2、Python内置抓取网页的组件urllib"></a>2、Python内置抓取网页的组件urllib</h2><p>urllib是一个URL处理包</p>
+<p>（1）urllib.request模块：用于打开和读取URL</p>
+<p>（2）urllib.error模块：包含一些有urllib.request产生的错误，可以使用try进行捕捉处理</p>
+<p>（3）urllib.parse模块：包含一些解析URLs的方法</p>
+<p>（4）urllib.robotparser模块：用来解析robots.txt文本文件。它提供了一个单独的RobotFileParser类，通过该类提供的can_fetch()方法测试爬虫是否可以下载一个页面。</p>
+<p>可以通过urllib.request.urlopen()接口函数打开网站，读取并打印信息，具体使用方法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.urlopen(url, data = <span class="literal">None</span>, [timeout,]*, cafile = <span class="literal">None</span>, capath = <span class="literal">None</span>,</span><br><span class="line">                      cadefault = <span class="literal">False</span>, context = <span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、文本信息分析"><a href="#3、文本信息分析" class="headerlink" title="3、文本信息分析"></a>3、文本信息分析</h2><h4 id="3-1-向量空间模型"><a href="#3-1-向量空间模型" class="headerlink" title="3.1 向量空间模型"></a>3.1 向量空间模型</h4><p>在文本可视化中，无法将非结构化的文本数据直接用于可视化，因此需要先对文本信息进行提取。</p>
+<p>提取文本信息需要采用适合的文本度量方法，向量空间模型（VSM）是常用的方法之一</p>
+<p><strong>向量空间模型</strong>是指利用向量符号对文本进行度量的代数模型，把对文本内容的处理简化为向量空间中的向量运算，并且以空间上的相似度表达语义的相似度</p>
+<h5 id="3-1-1-词袋模型"><a href="#3-1-1-词袋模型" class="headerlink" title="3.1.1 词袋模型"></a>3.1.1 词袋模型</h5><p>词袋模型是指在信息检索中，将某一文本仅看作是一个词集合而不考虑其语法、词序等信息。</p>
+<p>文本中的每个词相互独立，不依赖其它词是否出现。（关键字提取）</p>
+<p>分词工具：jieba (pip install jieba)</p>
+<h5 id="3-1-2-TF-IDF"><a href="#3-1-2-TF-IDF" class="headerlink" title="3.1.2 TF-IDF"></a>3.1.2 TF-IDF</h5><p>TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术。</p>
+<p>TF-IDF用以评估一个单词或字对于一个文档集或一个语料库中的其中一份文档的重要程度</p>
+<p>核心思想：如果某个词在一篇文档中出现的频率TF（词频）很高，并且在文档集中的其他文章中出现得很少，我们认为该词对文章具有很好的类别区分能力，是我们感兴趣的词汇</p>
+<h2 id="4、文本信息可视化"><a href="#4、文本信息可视化" class="headerlink" title="4、文本信息可视化"></a>4、文本信息可视化</h2><p>文本可视化可以分为：文本内容的可视化、文本关系的可视化以及文本多样特征信息的可视化。</p>
+<h4 id="4-1文本内容的可视化"><a href="#4-1文本内容的可视化" class="headerlink" title="4.1文本内容的可视化"></a>4.1文本内容的可视化</h4><p>对文本内的关键信息分析后的展示</p>
+<p>文本的内容可以通过关键字、短语、句子和主题进行展现</p>
+<h5 id="4-1-1-关键字可视化"><a href="#4-1-1-关键字可视化" class="headerlink" title="4.1.1 关键字可视化"></a>4.1.1 关键字可视化</h5><p>一个词语在一个文本中出现的频率较高，那么这个词语就可能是这个文本的关键词，它可以一定程度上反应出一个文本内容所要表达的含义</p>
+<h6 id="（1）标签云（Tag-Clould）"><a href="#（1）标签云（Tag-Clould）" class="headerlink" title="（1）标签云（Tag Clould）"></a>（1）标签云（Tag Clould）</h6><p>标签云是一种最常见的、简单的关键字可视化方法，它的步骤分为2步：</p>
+<p>①统计出文本中词语的出现频率，提取出出现频率较高的关键字</p>
+<p>②按照一定的顺序和规律将这些关键词展示出来。比如：用颜色的深浅，或者字体的大小，来区分关键词的重要性</p>
+<h6 id="（2）文档散（DocuBurst）"><a href="#（2）文档散（DocuBurst）" class="headerlink" title="（2）文档散（DocuBurst）"></a>（2）文档散（DocuBurst）</h6><p>文档散是一个在线文本分析和文档可视化工具，通过导入TXT形式的文本数据，生成HTML形式的可视化图片</p>
+<p>文档散使用词汇库中的结构关系来布局关键词，同时使用词语关系网中具有上下语义关系的词语来布局关键词，从而揭示文本中的内容。上下语义关系是指词语之间往往存在语义层级的关系，也就是说，一些词语是某些词语的下义词，而一篇文章中，上下语义关系的词语一般是同时存在的。</p>
+<p>文档散的方法如下：</p>
+<p>①给一个单词作为中心。</p>
+<p>中心词的词汇可以由用户指定，不同的中心点词汇呈现出的可视化结果不大相同。</p>
+<p>②将整个文章内的词语视觉化在一个放射式层次圆环中，外层的词是内层词的下义词</p>
+<h5 id="4-1-2-时序文本可视化"><a href="#4-1-2-时序文本可视化" class="headerlink" title="4.1.2 时序文本可视化"></a>4.1.2 时序文本可视化</h5><p>时序性的文本特征就是具有时间性和顺序性，比如，新闻会随着时间变化，小说会随着故事情节发展</p>
+<h6 id="（1）主题河流"><a href="#（1）主题河流" class="headerlink" title="（1）主题河流"></a>（1）主题河流</h6><p>主要反映文本主题强弱变化的过程</p>
+<p>经典的主题河流模型包括两个属性：</p>
+<p><strong>颜色</strong>，表示主题的类型，一个主题用一个单一颜色的涌流表示。但是，颜色种类有限，若使用一种颜色表示一个主题，会限制主题的数量，因此，可以使用一种颜色表示一类主题</p>
+<p><strong>宽度</strong>，表示主题的数量（或强度），涌流的状态随着主题的变化，可以扩展、收缩或者保持不变</p>
+<h6 id="（2）文本流"><a href="#（2）文本流" class="headerlink" title="（2）文本流"></a>（2）文本流</h6><p>文本流是一个主题河流可视化技术的一种扩展，它不仅可以表达主题的变化，还能随着时间的推移展示各个主题之间分裂与合并的状态</p>
+<h6 id="（3）故事流"><a href="#（3）故事流" class="headerlink" title="（3）故事流"></a>（3）故事流</h6><p>故事流用来表示电影或者小说里的剧情线或者时间线</p>
+<h5 id="4-1-3-文本分布可视化"><a href="#4-1-3-文本分布可视化" class="headerlink" title="4.1.3 文本分布可视化"></a>4.1.3 文本分布可视化</h5><p>以上文档可视化方法都是通过关键词、文本主题来总结文本内容，但是文档中的其他特征，如词语的分布情况、句子的平均长度、词汇量等并没有展示出来</p>
+<h6 id="文本弧（TextArc）"><a href="#文本弧（TextArc）" class="headerlink" title="文本弧（TextArc）"></a>文本弧（TextArc）</h6><p>文本弧可视化不仅可以展示词频，还可以展示词的分布情况。</p>
+<p>文本弧是通过以下几点实现的：</p>
+<p>①用一条螺旋线表示一篇文章，螺旋线的首尾对应文章的首尾，文章的词语有序的分布在螺旋线上</p>
+<p>②若词语在整篇文章中出现都比较频繁，则靠近画布的中心分布</p>
+<p>③若词语只是局部出现的比较频繁，则靠近螺旋线分布</p>
+<p>④字体的大小和颜色深度代表着词语的出现频率。</p>
+<h4 id="4-2文本关系的可视化"><a href="#4-2文本关系的可视化" class="headerlink" title="4.2文本关系的可视化"></a>4.2文本关系的可视化</h4><p>可对单个文本进行内部的关系展示，也可以对多个文本进行文本之间的关系展示</p>
+<h6 id="4-2-1-基于图的文本关系可视化"><a href="#4-2-1-基于图的文本关系可视化" class="headerlink" title="4.2.1 基于图的文本关系可视化"></a>4.2.1 基于图的文本关系可视化</h6><p>①词语树（Word Tree）</p>
+<p>词语树使用树形图展示词语在文本中的出现情况，可以直观地呈现出一个词语和其前后的词语</p>
+<p>②短语网络（Phrase Nets）</p>
+<p>短语网络包括两种属性：</p>
+<p>1）节点，代表一个词语或短语</p>
+<p>2）带箭头的连线，表示节点与节点之间的关系，这个关系需要用户定义</p>
+<h6 id="4-2-2-文档间关系可视化"><a href="#4-2-2-文档间关系可视化" class="headerlink" title="4.2.2 文档间关系可视化"></a>4.2.2 文档间关系可视化</h6><p>当对多个文档进行可视化表示时，针对文本内容做可视化的方法就不合适了。此时就会引入向量空间模型来计算出各个文档之间的相似度，单个文档被定义成单个的特征向量，最终以投影等方式来呈现各个文档之间的关系</p>
+<p>①星系视图（Galaxy View）</p>
+<p>星系视图可以呈现出多个文档之间的相似度</p>
+<p>②文档集抽样投影</p>
+<p>当一个文档集中包含的文档数量巨大时，投影出来的星系视图中就会有很多重叠的星星，为了避免这种重叠性，可以对文档集进行抽样，有选择性地抽取部分文档进行投影，这样可以更加清晰地显示每个个体样本</p>
+<h4 id="4-3文本多样特征信息的可视化"><a href="#4-3文本多样特征信息的可视化" class="headerlink" title="4.3文本多样特征信息的可视化"></a>4.3文本多样特征信息的可视化</h4><p>是结合文本的多个特征进行全方位的可视化展示</p>
+<p>平行标签云将标签云在水平方向上基于多个不同的特征进行显示，每一个特征对应着一列标签云，列与列之间的特征都不一样</p>
+
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,16 +303,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/04/14/%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/12/%E4%BD%BF%E7%94%A8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B3%A2%E5%A3%AB%E9%A1%BF%E6%88%BF%E4%BB%B7%E7%9A%84%E9%A2%84%E6%B5%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用神经网络实现波士顿房价的预测</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -218,636 +386,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Pyecharts绘制基本图表-时间数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Pyecharts绘制基本图表1(时间数据)</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-  	<time datetime="2023-03-20T10:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Pyecharts绘制基本图表1"><a href="#使用Pyecharts绘制基本图表1" class="headerlink" title="使用Pyecharts绘制基本图表1"></a>使用Pyecharts绘制基本图表1</h1><h2 id="时间数据可视化"><a href="#时间数据可视化" class="headerlink" title="时间数据可视化"></a>时间数据可视化</h2><p>pyecharts版本：0.5.11</p>
-<p><a target="_blank" rel="noopener" href="https://05x-docs.pyecharts.org/">Pyecharts官网</a></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.</span> <span class="toc-text">文本数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%8F%90%E5%8F%96%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.</span> <span class="toc-text">1、使用网络爬虫提取文本数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%B0%83%E5%BA%A6%E5%99%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">（1）调度器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89URL%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">（2）URL管理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E7%BD%91%E9%A1%B5%E4%B8%8B%E8%BD%BD%E5%99%A8"><span class="toc-number">1.1.3.</span> <span class="toc-text">（3）网页下载器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%BD%91%E9%A1%B5%E8%A7%A3%E6%9E%90%E5%99%A8"><span class="toc-number">1.1.4.</span> <span class="toc-text">（4）网页解析器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.1.5.</span> <span class="toc-text">（5）应用程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Python%E5%86%85%E7%BD%AE%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BB%84%E4%BB%B6urllib"><span class="toc-number">1.2.</span> <span class="toc-text">2、Python内置抓取网页的组件urllib</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%96%87%E6%9C%AC%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90"><span class="toc-number">1.3.</span> <span class="toc-text">3、文本信息分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">3.1 向量空间模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-1-%E8%AF%8D%E8%A2%8B%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.0.1.1.</span> <span class="toc-text">3.1.1 词袋模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-2-TF-IDF"><span class="toc-number">1.3.0.1.2.</span> <span class="toc-text">3.1.2 TF-IDF</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%96%87%E6%9C%AC%E4%BF%A1%E6%81%AF%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.</span> <span class="toc-text">4、文本信息可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.1.</span> <span class="toc-text">4.1文本内容的可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-1-%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.1.1.</span> <span class="toc-text">4.1.1 关键字可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%A0%87%E7%AD%BE%E4%BA%91%EF%BC%88Tag-Clould%EF%BC%89"><span class="toc-number">1.4.0.1.1.1.</span> <span class="toc-text">（1）标签云（Tag Clould）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%96%87%E6%A1%A3%E6%95%A3%EF%BC%88DocuBurst%EF%BC%89"><span class="toc-number">1.4.0.1.1.2.</span> <span class="toc-text">（2）文档散（DocuBurst）</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-2-%E6%97%B6%E5%BA%8F%E6%96%87%E6%9C%AC%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.1.2.</span> <span class="toc-text">4.1.2 时序文本可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%B8%BB%E9%A2%98%E6%B2%B3%E6%B5%81"><span class="toc-number">1.4.0.1.2.1.</span> <span class="toc-text">（1）主题河流</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%96%87%E6%9C%AC%E6%B5%81"><span class="toc-number">1.4.0.1.2.2.</span> <span class="toc-text">（2）文本流</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%95%85%E4%BA%8B%E6%B5%81"><span class="toc-number">1.4.0.1.2.3.</span> <span class="toc-text">（3）故事流</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-3-%E6%96%87%E6%9C%AC%E5%88%86%E5%B8%83%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.1.3.</span> <span class="toc-text">4.1.3 文本分布可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%BC%A7%EF%BC%88TextArc%EF%BC%89"><span class="toc-number">1.4.0.1.3.1.</span> <span class="toc-text">文本弧（TextArc）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2%E6%96%87%E6%9C%AC%E5%85%B3%E7%B3%BB%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.2.</span> <span class="toc-text">4.2文本关系的可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-1-%E5%9F%BA%E4%BA%8E%E5%9B%BE%E7%9A%84%E6%96%87%E6%9C%AC%E5%85%B3%E7%B3%BB%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.2.0.1.</span> <span class="toc-text">4.2.1 基于图的文本关系可视化</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-2-%E6%96%87%E6%A1%A3%E9%97%B4%E5%85%B3%E7%B3%BB%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.2.0.2.</span> <span class="toc-text">4.2.2 文档间关系可视化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3%E6%96%87%E6%9C%AC%E5%A4%9A%E6%A0%B7%E7%89%B9%E5%BE%81%E4%BF%A1%E6%81%AF%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.0.3.</span> <span class="toc-text">4.3文本多样特征信息的可视化</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-github上传项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/">github上传、删除项目</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2023-03-19T09:36:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="github上传和删除项目"><a href="#github上传和删除项目" class="headerlink" title="github上传和删除项目"></a>github上传和删除项目</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-通过VUE-ElementUI绘制一个前端页面" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">通过VUE+ElementUI绘制一个前端页面</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/" class="archive-article-date">
-  	<time datetime="2023-03-19T07:50:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="通过VUE-ElementUI绘制一个前端页面"><a href="#通过VUE-ElementUI绘制一个前端页面" class="headerlink" title="通过VUE+ElementUI绘制一个前端页面"></a>通过VUE+ElementUI绘制一个前端页面</h1><p>展示图如下</p>
-<p>代码文件：myvueproject</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/wasdkd/wasdkd.github.io">我的GitHub</a></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统Apache服务器的应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/">Linux系统Apache服务器的应用</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2023-03-11T05:46:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统Apache服务器的应用"><a href="#Linux系统Apache服务器的应用" class="headerlink" title="Linux系统Apache服务器的应用"></a><strong>Linux系统Apache服务器的应用</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统FTP服务器配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统FTP服务器配置</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-10T08:24:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统FTP服务器配置"><a href="#Linux系统FTP服务器配置" class="headerlink" title="Linux系统FTP服务器配置"></a><strong>Linux系统FTP服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-<hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统DNS服务器配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统DNS服务器配置</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-09T15:43:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统DNS服务器配置"><a href="#Linux系统DNS服务器配置" class="headerlink" title="Linux系统DNS服务器配置"></a><strong>Linux系统DNS服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-<hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/09/Linux%E7%B3%BB%E7%BB%9FDNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Pyecharts绘制玫瑰图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/">使用Pyecharts绘制玫瑰图</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/" class="archive-article-date">
-  	<time datetime="2023-03-08T14:13:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图"><a href="#使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图" class="headerlink" title="使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图"></a>使用Pyecharts绘制玫瑰图、拟合曲线图、柱状图</h1><hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux系统DHCP服务器配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统DHCP服务器配置</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-07T12:50:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux系统DHCP服务器配置"><a href="#Linux系统DHCP服务器配置" class="headerlink" title="Linux系统DHCP服务器配置"></a><strong>Linux系统DHCP服务器配置</strong></h1><p>已安装VMware workstatio pro和CenOs7系统的电脑</p>
-<hr>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用JAVA-API访问及操作HDFS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/">使用JAVA API访问及操作HDFS</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/" class="archive-article-date">
-  	<time datetime="2023-03-05T08:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用JAVA-API访问及操作HDFS"><a href="#使用JAVA-API访问及操作HDFS" class="headerlink" title="使用JAVA API访问及操作HDFS"></a><strong>使用JAVA API访问及操作HDFS</strong></h1><hr>
-<p>Java代码—-文档末尾</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -874,8 +438,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
