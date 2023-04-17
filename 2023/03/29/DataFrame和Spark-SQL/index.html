@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://i.328888.xyz/2023/04/05/i8HhGz.png">
 <meta property="og:image" content="https://i.328888.xyz/2023/04/05/i8Howa.png">
 <meta property="article:published_time" content="2023-03-29T04:55:21.000Z">
-<meta property="article:modified_time" content="2023-04-13T14:42:46.721Z">
+<meta property="article:modified_time" content="2023-04-17T15:48:41.680Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.328888.xyz/2023/03/29/iWhFnJ.png">
@@ -273,7 +273,7 @@
 
 
 
-<h3 id="1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。"><a href="#1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。" class="headerlink" title="1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。"></a>1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一题：查出该单位当前设置有哪些岗位，按照岗位名称降序排序</span></span><br><span class="line">sql1 = <span class="string">&quot;select emp_job from Emp &quot;</span> \</span><br><span class="line">       <span class="string">&quot;group by emp_job &quot;</span> \</span><br><span class="line">       <span class="string">&quot;order by emp_job desc&quot;</span></span><br><span class="line"></span><br><span class="line">sparksql.sql(sql1).show()</span><br></pre></td></tr></table></figure>
+<h3 id="1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。"><a href="#1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。" class="headerlink" title="1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。"></a>1）查询所有员工的基本信息，字段包括：部门编号，部门名称，员工编号，姓名，性别，年龄，岗位，薪水，先按照部门编号升序排列，再按员工编号升序排列。</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一题：查询所有员工的基本信息，字段包括：部门编号，员工编号，姓名，性别，年龄，岗位，薪水</span></span><br><span class="line"><span class="comment"># 先按照部门编号升序排序，再按员工编号升序排序</span></span><br><span class="line"></span><br><span class="line">sql1 = <span class="string">&quot;select d.dept_id,dept_name,emp_id,emp_name,gender,emp_age,emp_job,salary &quot;</span> \</span><br><span class="line">       <span class="string">&quot;from Dept d join Emp e on d.dept_id=e.dept_id &quot;</span> \</span><br><span class="line">       <span class="string">&quot;order by dept_id asc,emp_id asc &quot;</span></span><br><span class="line"></span><br><span class="line">sparksql.sql(sql1).show()</span><br></pre></td></tr></table></figure>
 
   <img src="https://i.328888.xyz/2023/04/12/iXxOLy.png" alt="iXxOLy.png" border="0">  
 
