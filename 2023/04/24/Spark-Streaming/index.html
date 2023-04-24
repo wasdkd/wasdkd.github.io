@@ -6,15 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023 | 鳌伊耶学习历程</title>
+  <title>Spark  Streaming | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/archives/2023/page/3/index.html">
+  <meta name="description" content="Spark  Streaming词频统计 1、什么是Spark  StreamingSpark  Streaming用于流式数据的处理，使得构建可扩展容错流应用程序变得容易。Spark  Streaming具有易于使用、高容错性、高吞吐量等特点，它能够胜任实时的流计算，Spark  Streaming可以从Socket、文件系统、Kafka、Flume等数据源产生的数据，并对其进行无缝衔接、实时在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark  Streaming">
+<meta property="og:url" content="http://example.com/2023/04/24/Spark-Streaming/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="Spark  Streaming词频统计 1、什么是Spark  StreamingSpark  Streaming用于流式数据的处理，使得构建可扩展容错流应用程序变得容易。Spark  Streaming具有易于使用、高容错性、高吞吐量等特点，它能够胜任实时的流计算，Spark  Streaming可以从Socket、文件系统、Kafka、Flume等数据源产生的数据，并对其进行无缝衔接、实时在">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNBRV.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNpUN.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNXSd.gif">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNxVb.gif">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioN7bq.gif">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNE6z.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNeQw.gif">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioN6Ca.gif">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNFgx.gif">
+<meta property="article:published_time" content="2023-04-24T15:14:51.000Z">
+<meta property="article:modified_time" content="2023-04-24T15:15:09.035Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/04/24/ioNBRV.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,295 +169,235 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Spark-Streaming" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Spark  Streaming
+    </h1>
+  
+
+		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+        
+        <a href="/2023/04/24/Spark-Streaming/" class="archive-article-date">
+  	<time datetime="2023-04-24T15:14:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Spark-Streaming"><a href="#Spark-Streaming" class="headerlink" title="Spark  Streaming"></a>Spark  Streaming</h1><p>词频统计</p>
+<h2 id="1、什么是Spark-Streaming"><a href="#1、什么是Spark-Streaming" class="headerlink" title="1、什么是Spark  Streaming"></a>1、什么是Spark  Streaming</h2><p>Spark  Streaming用于流式数据的处理，使得构建可扩展容错流应用程序变得容易。Spark  Streaming具有<strong>易于使用、高容错性、高吞吐量</strong>等特点，它能够胜任实时的流计算，Spark  Streaming可以从<strong>Socket、文件系统、Kafka、Flume</strong>等数据源产生的数据，并对其进行无缝衔接、实时在线分析。</p>
+<span id="more"></span>
+
+<h2 id="2、Spark-Streaming工作原理"><a href="#2、Spark-Streaming工作原理" class="headerlink" title="2、Spark  Streaming工作原理"></a>2、Spark  Streaming工作原理</h2><p>Spark  Streaming从数据源接收实时数据流，并将数据分成若干批，然后由Spark引擎进行处理，最后批量生成结果流。</p>
+  <img src="https://i.328888.xyz/2023/04/24/ioNBRV.png" alt="ioNBRV.png" border="0">  
+
+<h2 id="3、数据流加载"><a href="#3、数据流加载" class="headerlink" title="3、数据流加载"></a>3、数据流加载</h2><h3 id="3-1-初始化-StreamingContext"><a href="#3-1-初始化-StreamingContext" class="headerlink" title="3.1  初始化 StreamingContext"></a>3.1  初始化 StreamingContext</h3><p>在使用Spark  Streaming进行流处理之前需要进行初始化，必须创建一个流上下文对象StreamingContext，这是所有Spark  Streaming功能的主要入口。该对象可以通过SparkContext对象进行创建</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.streaming <span class="keyword">import</span> StreamingContext</span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()  <span class="comment"># 创建SparkContext对象</span></span><br><span class="line">DS = StreamingContext(sc, <span class="number">1</span>)  <span class="comment"># 生成流计算上下文，1秒计算一次</span></span><br><span class="line"><span class="comment"># DS 即为SDtream，可以通过type函数查看，如type(DS)</span></span><br><span class="line"><span class="comment"># 在定义上下文之后，必须执行StreamingContext的start方法开始接收并对其进行处理</span></span><br><span class="line">DS.start()</span><br><span class="line">DS.awaitTermination()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-Spark-Streaming-实验"><a href="#3-2-Spark-Streaming-实验" class="headerlink" title="3.2  Spark  Streaming 实验"></a>3.2  Spark  Streaming 实验</h3><h4 id="实时词频统计"><a href="#实时词频统计" class="headerlink" title="实时词频统计"></a>实时词频统计</h4><h5 id="实验器材及实验条件"><a href="#实验器材及实验条件" class="headerlink" title="实验器材及实验条件"></a>实验器材及实验条件</h5><p>LSM平台</p>
+<p>Netcat工具</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> 下载 netcat-traditional</span></span><br><span class="line">sudo apt-get -y install netcat-traditional</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> 启动</span></span><br><span class="line">nc -l -p 9999</span><br></pre></td></tr></table></figure>
+
+<h5 id="1）-按时间段分别统计"><a href="#1）-按时间段分别统计" class="headerlink" title="1） 按时间段分别统计"></a>1） 按时间段分别统计</h5><p>获取scoket端口传输的数据，统计各个时间段内每个单词出现的次数</p>
+<p>（需要使用的关键的DStream成员函数：flatMap，map，reduceByKey）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.streaming <span class="keyword">import</span> StreamingContext</span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()</span><br><span class="line">DS = StreamingContext(sc, <span class="number">1</span>)  <span class="comment"># 一秒计算一次</span></span><br><span class="line">socketDS = DS.socketTextStream(<span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="number">9999</span>)   <span class="comment"># 绑定数据端口为9999</span></span><br><span class="line"><span class="comment"># 解析单词出现频率</span></span><br><span class="line">wordOneDS = socketDS.flatMap(<span class="keyword">lambda</span> x: x.split(<span class="string">&#x27; &#x27;</span>)).<span class="built_in">map</span>(<span class="keyword">lambda</span> y: (y, <span class="number">1</span>)).reduceByKey(<span class="keyword">lambda</span> x, y: x+y)</span><br><span class="line"><span class="comment"># 打印输出</span></span><br><span class="line">wordOneDS.pprint()</span><br><span class="line"><span class="comment"># 执行程序</span></span><br><span class="line">DS.start()</span><br><span class="line">DS.awaitTermination()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行步骤：先运行netcat，再运行python程序，在netcat中添加数据，查看结果</p>
+  <img src="https://i.328888.xyz/2023/04/24/ioNpUN.png" alt="ioNpUN.png" border="0">  
+
+<p>输出结果</p>
+  <img src="https://i.328888.xyz/2023/04/24/ioNXSd.gif" alt="ioNXSd.gif" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/24/ioNxVb.gif" alt="ioNxVb.gif" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/24/ioN7bq.gif" alt="ioN7bq.gif" border="0">  
+
+<h5 id="2）按历史时间累加统计"><a href="#2）按历史时间累加统计" class="headerlink" title="2）按历史时间累加统计"></a>2）按历史时间累加统计</h5><p>获取scoket端口传输的数据，统计历史时间段内每个单词累计出现的次数</p>
+<p>（需要使用的关键的DStream成员函数：flatMap，map，updateStateByKey）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.streaming <span class="keyword">import</span> StreamingContext</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">updateValue</span>(<span class="params">v1, v2</span>):</span><br><span class="line">    <span class="keyword">if</span> v2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        v2 = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(v1, v2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()</span><br><span class="line">DS = StreamingContext(sc, <span class="number">1</span>)</span><br><span class="line">DS.checkpoint(<span class="string">&#x27;/opt/cp&#x27;</span>)  <span class="comment"># 在使用updateStateByKey前需设置检查点(必须)</span></span><br><span class="line">socketDS = DS.socketTextStream(<span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="number">9999</span>)</span><br><span class="line"><span class="comment"># 累计</span></span><br><span class="line">wordOneDS = socketDS.flatMap(<span class="keyword">lambda</span> x: x.split(<span class="string">&#x27; &#x27;</span>)).<span class="built_in">map</span>(<span class="keyword">lambda</span> y: (y, <span class="number">1</span>)).updateStateByKey(updateValue)</span><br><span class="line">wordOneDS.pprint()</span><br><span class="line">DS.start()</span><br><span class="line">DS.awaitTermination()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/24/ioNE6z.png" alt="ioNE6z.png" border="0">  
+
+<p>输出结果</p>
+  <img src="https://i.328888.xyz/2023/04/24/ioNeQw.gif" alt="ioNeQw.gif" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/24/ioN6Ca.gif" alt="ioN6Ca.gif" border="0">
+
+<img src="https://i.328888.xyz/2023/04/24/ioNFgx.gif" alt="ioNFgx.gif" border="0">  
+
+
+
+<p>reduceByKey()是把相同的Key的DStream聚合在一起，但是只会统计一轮的数据，当后几轮的数据出现重复时，并不会进行累计</p>
+<p>updateStateByKey()是以DStream中的数据按Key做Reduce操作，然后对各个批次的数据进行累加，即统计所有轮的数据，数据出现重复，将所有重复数据进行累计</p>
+
+      
+		
+		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/" class="archive-article-date">
-  	<time datetime="2023-03-08T14:13:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/">使用Pyecharts绘制玫瑰图</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/04/24/Spark-Streaming/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-07T12:50:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%A4%A7%E5%85%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则表达式大全</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统DHCP服务器配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spark-Streaming"><span class="toc-number">1.</span> <span class="toc-text">Spark  Streaming</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFSpark-Streaming"><span class="toc-number">1.1.</span> <span class="toc-text">1、什么是Spark  Streaming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Spark-Streaming%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">2、Spark  Streaming工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%95%B0%E6%8D%AE%E6%B5%81%E5%8A%A0%E8%BD%BD"><span class="toc-number">1.3.</span> <span class="toc-text">3、数据流加载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%88%9D%E5%A7%8B%E5%8C%96-StreamingContext"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1  初始化 StreamingContext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Spark-Streaming-%E5%AE%9E%E9%AA%8C"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2  Spark  Streaming 实验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E6%97%B6%E8%AF%8D%E9%A2%91%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">实时词频统计</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%99%A8%E6%9D%90%E5%8F%8A%E5%AE%9E%E9%AA%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.3.2.1.1.</span> <span class="toc-text">实验器材及实验条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1%EF%BC%89-%E6%8C%89%E6%97%B6%E9%97%B4%E6%AE%B5%E5%88%86%E5%88%AB%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.3.2.1.2.</span> <span class="toc-text">1） 按时间段分别统计</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%EF%BC%89%E6%8C%89%E5%8E%86%E5%8F%B2%E6%97%B6%E9%97%B4%E7%B4%AF%E5%8A%A0%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.3.2.1.3.</span> <span class="toc-text">2）按历史时间累加统计</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/" class="archive-article-date">
-  	<time datetime="2023-03-05T08:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-05</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/">使用JAVA API访问及操作HDFS</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/04/hive%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-03-04T14:19:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/04/hive%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">hive常用操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/04/HDFS%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2023-03-04T13:39:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/04/HDFS%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8/">HDFS基本操作与使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E5%92%8CPython%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%92%8C%E6%93%8D%E4%BD%9CMongoDB/" class="archive-article-date">
-  	<time datetime="2023-03-03T06:15:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E5%92%8CPython%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%92%8C%E6%93%8D%E4%BD%9CMongoDB/">使用Java和Python来访问和操作MongoDB</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-03-03T05:39:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/">使用Java编程方法对HBase数据库进行操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/" class="archive-article-date">
-  	<time datetime="2023-03-02T04:59:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/">MongoDB的基本操作_2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/" class="archive-article-date">
-  	<time datetime="2023-03-01T11:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/">MongoDB的基本操作_1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/">Linux安装python3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2023/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2023/">1</a><a class="page-number" href="/archives/2023/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2023/page/4/">4</a><a class="page-number" href="/archives/2023/page/5/">5</a><a class="extend next" rel="next" href="/archives/2023/page/4/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -471,8 +425,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
