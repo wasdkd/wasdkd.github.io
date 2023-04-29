@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023 | 鳌伊耶学习历程</title>
+  <title>分析2015-2017年各大城市发展情况 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/archives/2023/page/2/index.html">
+  <meta name="description" content="数据挖掘与机器学习分析2015-2017年各大城市发展情况 Python + pandas + matplotlib">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分析2015-2017年各大城市发展情况">
+<meta property="og:url" content="http://example.com/2023/04/29/%E5%88%86%E6%9E%902015-2017%E5%B9%B4%E5%90%84%E5%A4%A7%E5%9F%8E%E5%B8%82%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="数据挖掘与机器学习分析2015-2017年各大城市发展情况 Python + pandas + matplotlib">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iK3T2p.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iK3MqL.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iK3aEU.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iK31Pv.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iK3YW3.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iK3qpy.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iK3uv5.png">
+<meta property="article:published_time" content="2023-04-29T08:01:14.000Z">
+<meta property="article:modified_time" content="2023-04-29T08:01:48.607Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/04/29/iK3T2p.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,295 +167,329 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-分析2015-2017年各大城市发展情况" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      分析2015-2017年各大城市发展情况
+    </h1>
+  
+
+		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+        
+        <a href="/2023/04/29/%E5%88%86%E6%9E%902015-2017%E5%B9%B4%E5%90%84%E5%A4%A7%E5%9F%8E%E5%B8%82%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5/" class="archive-article-date">
+  	<time datetime="2023-04-29T08:01:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-29</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据挖掘与机器学习"><a href="#数据挖掘与机器学习" class="headerlink" title="数据挖掘与机器学习"></a>数据挖掘与机器学习</h1><p>分析2015-2017年各大城市发展情况</p>
+<p>Python + pandas + matplotlib</p>
+<span id="more"></span>
+
+
+
+<h2 id="1、分析2015-2017年各大城市发展情况"><a href="#1、分析2015-2017年各大城市发展情况" class="headerlink" title="1、分析2015-2017年各大城市发展情况"></a>1、分析2015-2017年各大城市发展情况</h2><h3 id="一、查看数据"><a href="#一、查看数据" class="headerlink" title="一、查看数据"></a>一、查看数据</h3><h4 id="1-2015-data-csv"><a href="#1-2015-data-csv" class="headerlink" title="(1) 2015_data.csv"></a>(1) 2015_data.csv</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">地区,年份,国内生产总值,第一产业增加值,第二产业增加值,第三产业增加值,社会商品零售总额,货物进出口总额,年末总人口,在岗职工平均工资,普通高等学校在校学生数,医院、卫生院数,房地产开发投资额</span><br><span class="line">北京,<span class="number">2015</span>,<span class="number">23014.59</span>,<span class="number">140.21</span>,<span class="number">4542.64</span>,<span class="number">18331.74</span>,<span class="number">10338</span>,<span class="number">319416.16</span>,<span class="number">1345.2</span>,<span class="number">113073</span>,<span class="number">60.36</span>,<span class="number">701</span>,<span class="number">4177.05</span></span><br><span class="line">天津,<span class="number">2015</span>,<span class="number">16538.19</span>,<span class="number">208.82</span>,<span class="number">7704.22</span>,<span class="number">8625.15</span>,<span class="number">5257.3</span>,<span class="number">114282.8</span>,<span class="number">1026.9</span>,<span class="number">81486</span>,<span class="number">51.29</span>,<span class="number">661</span>,<span class="number">1871.55</span></span><br><span class="line">石家庄,<span class="number">2015</span>,<span class="number">5440.6</span>,<span class="number">494.44</span>,<span class="number">2452.4</span>,<span class="number">2493.77</span>,<span class="number">2693</span>,<span class="number">12160.29</span>,<span class="number">1028.84</span>,<span class="number">54441</span>,<span class="number">41.98</span>,<span class="number">393</span>,<span class="number">965.13</span></span><br><span class="line">太原,<span class="number">2015</span>,<span class="number">2735.34</span>,<span class="number">37.4</span>,<span class="number">1020.18</span>,<span class="number">1677.77</span>,<span class="number">1540.8</span>,<span class="number">10677.38</span>,<span class="number">367.39</span>,<span class="number">60516</span>,<span class="number">42.14</span>,<span class="number">247</span>,<span class="number">597.83</span></span><br><span class="line">呼和浩特,<span class="number">2015</span>,<span class="number">3090.52</span>,<span class="number">126.23</span>,<span class="number">867.08</span>,<span class="number">2097.21</span>,<span class="number">1353.5</span>,<span class="number">2072.75</span>,<span class="number">238.58</span>,<span class="number">53698</span>,<span class="number">23.52</span>,<span class="number">174</span>,<span class="number">509.05</span></span><br><span class="line">沈阳,<span class="number">2015</span>,<span class="number">7272.31</span>,<span class="number">341.43</span>,<span class="number">3474.18</span>,<span class="number">3456.69</span>,<span class="number">3883.2</span>,<span class="number">14080.8</span>,<span class="number">730.41</span>,<span class="number">61827</span>,<span class="number">40.4</span>,<span class="number">327</span>,<span class="number">1337.66</span></span><br><span class="line">大连,<span class="number">2015</span>,<span class="number">7731.64</span>,<span class="number">453.25</span>,<span class="number">3348.74</span>,<span class="number">3929.64</span>,<span class="number">3087.5</span>,<span class="number">56034.16</span>,<span class="number">593.56</span>,<span class="number">69390</span>,<span class="number">29</span>,<span class="number">304</span>,<span class="number">897.46</span></span><br><span class="line">长春,<span class="number">2015</span>,<span class="number">5530.03</span>,<span class="number">343.24</span>,<span class="number">2770.98</span>,<span class="number">2415.81</span>,<span class="number">2409.3</span>,<span class="number">13999.86</span>,<span class="number">753.83</span>,<span class="number">62519</span>,<span class="number">42.61</span>,<span class="number">301</span>,<span class="number">501.32</span></span><br><span class="line">哈尔滨,<span class="number">2015</span>,<span class="number">5751.21</span>,<span class="number">672.52</span>,<span class="number">1862.78</span>,<span class="number">3215.91</span>,<span class="number">3394.5</span>,<span class="number">4777.56</span>,<span class="number">961.37</span>,<span class="number">58405</span>,<span class="number">66.37</span>,<span class="number">462</span>,<span class="number">593.98</span></span><br><span class="line">上海,<span class="number">2015</span>,<span class="number">25123.45</span>,<span class="number">109.82</span>,<span class="number">7991</span>,<span class="number">17022.63</span>,<span class="number">10131.5</span>,<span class="number">449240.72</span>,<span class="number">1442.97</span>,<span class="number">109279</span>,<span class="number">51.16</span>,<span class="number">644</span>,<span class="number">3468.94</span></span><br><span class="line">南京,<span class="number">2015</span>,<span class="number">9720.77</span>,<span class="number">232.39</span>,<span class="number">3916.77</span>,<span class="number">5571.61</span>,<span class="number">4590.2</span>,<span class="number">53240.14</span>,<span class="number">653.4</span>,<span class="number">81075</span>,<span class="number">81.26</span>,<span class="number">213</span>,<span class="number">1429.02</span></span><br><span class="line">杭州,<span class="number">2015</span>,<span class="number">10050.21</span>,<span class="number">287.95</span>,<span class="number">3909.01</span>,<span class="number">5853.25</span>,<span class="number">4697.2</span>,<span class="number">66566.36</span>,<span class="number">723.55</span>,<span class="number">77816</span>,<span class="number">47.56</span>,<span class="number">333</span>,<span class="number">2472.6</span></span><br><span class="line">宁波,<span class="number">2015</span>,<span class="number">8003.61</span>,<span class="number">284.68</span>,<span class="number">4098.22</span>,<span class="number">3620.71</span>,<span class="number">3349.6</span>,<span class="number">100372.48</span>,<span class="number">586.57</span>,<span class="number">74989</span>,<span class="number">15.58</span>,<span class="number">243</span>,<span class="number">1228.84</span></span><br><span class="line">合肥,<span class="number">2015</span>,<span class="number">5660.27</span>,<span class="number">263.43</span>,<span class="number">2977.27</span>,<span class="number">2419.57</span>,<span class="number">2183.7</span>,<span class="number">20337.84</span>,<span class="number">717.72</span>,<span class="number">65806</span>,<span class="number">52.71</span>,<span class="number">470</span>,<span class="number">1259.14</span></span><br><span class="line">福州,<span class="number">2015</span>,<span class="number">5618.08</span>,<span class="number">434.69</span>,<span class="number">2449.55</span>,<span class="number">2733.83</span>,<span class="number">3488.7</span>,<span class="number">33342.36</span>,<span class="number">678.36</span>,<span class="number">62478</span>,<span class="number">32.1</span>,<span class="number">232</span>,<span class="number">1381.12</span></span><br><span class="line">厦门,<span class="number">2015</span>,<span class="number">3466.03</span>,<span class="number">23.93</span>,<span class="number">1511.28</span>,<span class="number">1930.82</span>,<span class="number">1168.4</span>,<span class="number">83290.67</span>,<span class="number">211.15</span>,<span class="number">66930</span>,<span class="number">14.4</span>,<span class="number">58</span>,<span class="number">774.07</span></span><br><span class="line">南昌,<span class="number">2015</span>,<span class="number">4000.01</span>,<span class="number">171.26</span>,<span class="number">2179.96</span>,<span class="number">1648.79</span>,<span class="number">1662.9</span>,<span class="number">11464.34</span>,<span class="number">520.38</span>,<span class="number">57730</span>,<span class="number">58.74</span>,<span class="number">195</span>,<span class="number">485.37</span></span><br><span class="line">济南,<span class="number">2015</span>,<span class="number">6100.23</span>,<span class="number">305.39</span>,<span class="number">2307</span>,<span class="number">3487.84</span>,<span class="number">3410.3</span>,<span class="number">9114.24</span>,<span class="number">625.73</span>,<span class="number">68997</span>,<span class="number">71.4</span>,<span class="number">269</span>,<span class="number">1014.4</span></span><br><span class="line">青岛,<span class="number">2015</span>,<span class="number">9300.07</span>,<span class="number">363.98</span>,<span class="number">4026.46</span>,<span class="number">4909.63</span>,<span class="number">3713.7</span>,<span class="number">70222.43</span>,<span class="number">783</span>,<span class="number">69465</span>,<span class="number">32.23</span>,<span class="number">308</span>,<span class="number">1122.35</span></span><br><span class="line">郑州,<span class="number">2015</span>,<span class="number">7311.52</span>,<span class="number">150.92</span>,<span class="number">3604.15</span>,<span class="number">3556.45</span>,<span class="number">3294.7</span>,<span class="number">57026.34</span>,<span class="number">810.49</span>,<span class="number">52987</span>,<span class="number">82.42</span>,<span class="number">312</span>,<span class="number">2000.2</span></span><br><span class="line">武汉,<span class="number">2015</span>,<span class="number">10905.6</span>,<span class="number">359.81</span>,<span class="number">4981.54</span>,<span class="number">5564.25</span>,<span class="number">5102.2</span>,<span class="number">28071.65</span>,<span class="number">829.27</span>,<span class="number">65720</span>,<span class="number">95.68</span>,<span class="number">372</span>,<span class="number">2581.79</span></span><br><span class="line">长沙,<span class="number">2015</span>,<span class="number">8510.13</span>,<span class="number">341.78</span>,<span class="number">4333.58</span>,<span class="number">3834.77</span>,<span class="number">3690.6</span>,<span class="number">12949.62</span>,<span class="number">680.36</span>,<span class="number">67266</span>,<span class="number">56.94</span>,<span class="number">284</span>,<span class="number">1006.84</span></span><br><span class="line">广州,<span class="number">2015</span>,<span class="number">18100.41</span>,<span class="number">226.84</span>,<span class="number">5726.08</span>,<span class="number">12147.49</span>,<span class="number">7988</span>,<span class="number">133867.68</span>,<span class="number">854.19</span>,<span class="number">81171</span>,<span class="number">104.32</span>,<span class="number">259</span>,<span class="number">2137.59</span></span><br><span class="line">深圳,<span class="number">2015</span>,<span class="number">17502.86</span>,<span class="number">6.65</span>,<span class="number">7207.94</span>,<span class="number">10288.28</span>,<span class="number">5017.8</span>,<span class="number">442458.63</span>,<span class="number">354.99</span>,<span class="number">81034</span>,<span class="number">9.01</span>,<span class="number">125</span>,<span class="number">1331.03</span></span><br><span class="line">南宁,<span class="number">2015</span>,<span class="number">3410.09</span>,<span class="number">370.35</span>,<span class="number">1345.66</span>,<span class="number">1694.08</span>,<span class="number">1786.7</span>,<span class="number">5623.55</span>,<span class="number">740.23</span>,<span class="number">66749</span>,<span class="number">37.52</span>,<span class="number">225</span>,<span class="number">657.19</span></span><br><span class="line">海口,<span class="number">2015</span>,<span class="number">1161.96</span>,<span class="number">57.09</span>,<span class="number">223.67</span>,<span class="number">881.21</span>,<span class="number">595.5</span>,<span class="number">4341.3</span>,<span class="number">164.8</span>,<span class="number">57455</span>,<span class="number">15.06</span>,<span class="number">133</span>,<span class="number">456.39</span></span><br><span class="line">重庆,<span class="number">2015</span>,<span class="number">15717.27</span>,<span class="number">1150.15</span>,<span class="number">7069.37</span>,<span class="number">7497.75</span>,<span class="number">6424</span>,<span class="number">74476.56</span>,<span class="number">3371.84</span>,<span class="number">62091</span>,<span class="number">71.66</span>,<span class="number">1568</span>,<span class="number">3751.28</span></span><br><span class="line">成都,<span class="number">2015</span>,<span class="number">10801.16</span>,<span class="number">373.15</span>,<span class="number">4723.49</span>,<span class="number">5704.52</span>,<span class="number">4946.2</span>,<span class="number">39531.52</span>,<span class="number">1228.05</span>,<span class="number">69123</span>,<span class="number">75.58</span>,<span class="number">768</span>,<span class="number">2435.25</span></span><br><span class="line">贵阳,<span class="number">2015</span>,<span class="number">2891.16</span>,<span class="number">129.89</span>,<span class="number">1108.52</span>,<span class="number">1652.75</span>,<span class="number">1060.2</span>,<span class="number">9121.49</span>,<span class="number">391.79</span>,<span class="number">63949</span>,<span class="number">36.85</span>,<span class="number">260</span>,<span class="number">1001.03</span></span><br><span class="line">昆明,<span class="number">2015</span>,<span class="number">3968.01</span>,<span class="number">188.1</span>,<span class="number">1586.38</span>,<span class="number">2193.52</span>,<span class="number">1937</span>,<span class="number">12364.43</span>,<span class="number">555.57</span>,<span class="number">62033</span>,<span class="number">43.64</span>,<span class="number">392</span>,<span class="number">1451.31</span></span><br><span class="line">拉萨,<span class="number">2015</span>,<span class="number">376.73</span>,<span class="number">13.8</span>,<span class="number">140.95</span>,<span class="number">221.98</span>,<span class="number">205.8</span>,<span class="number">640.55</span>,<span class="number">53.03</span>,<span class="number">114582</span>,<span class="number">2.14</span>,<span class="number">78</span>,</span><br><span class="line">西安,<span class="number">2015</span>,<span class="number">5801.2</span>,<span class="number">220.2</span>,<span class="number">2126.29</span>,<span class="number">3454.71</span>,<span class="number">3405.4</span>,<span class="number">25260</span>,<span class="number">815.66</span>,<span class="number">63193</span>,<span class="number">84.9</span>,<span class="number">395</span>,<span class="number">1820.85</span></span><br><span class="line">兰州,<span class="number">2015</span>,<span class="number">2095.99</span>,<span class="number">56.22</span>,<span class="number">782.65</span>,<span class="number">1257.11</span>,<span class="number">1152.1</span>,<span class="number">5058.6</span>,<span class="number">321.9</span>,<span class="number">62201</span>,<span class="number">41.64</span>,<span class="number">164</span>,<span class="number">320.56</span></span><br><span class="line">西宁,<span class="number">2015</span>,<span class="number">1131.62</span>,<span class="number">37.46</span>,<span class="number">543.47</span>,<span class="number">550.69</span>,<span class="number">461.9</span>,<span class="number">11410.38</span>,<span class="number">201.17</span>,<span class="number">58099</span>,<span class="number">6.99</span>,<span class="number">123</span>,<span class="number">280.43</span></span><br><span class="line">银川,<span class="number">2015</span>,<span class="number">1493.86</span>,<span class="number">58.62</span>,<span class="number">780.84</span>,<span class="number">654.4</span>,<span class="number">477.6</span>,<span class="number">3266.72</span>,<span class="number">179.23</span>,<span class="number">65643</span>,<span class="number">9.8</span>,<span class="number">92</span>,<span class="number">409.17</span></span><br><span class="line">乌鲁木齐,<span class="number">2015</span>,<span class="number">2631.64</span>,<span class="number">31.64</span>,<span class="number">787.37</span>,<span class="number">1812.62</span>,<span class="number">1151.5</span>,<span class="number">5843.11</span>,<span class="number">266.83</span>,<span class="number">67617</span>,<span class="number">18.05</span>,<span class="number">175</span>,<span class="number">366.87</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2016-data-csv"><a href="#2-2016-data-csv" class="headerlink" title="(2) 2016_data.csv"></a>(2) 2016_data.csv</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">地区,年份,国内生产总值,第一产业增加值,第二产业增加值,第三产业增加值,社会商品零售总额,货物进出口总额,年末总人口,在岗职工平均工资,普通高等学校在校学生数,医院、卫生院数,房地产开发投资额</span><br><span class="line">北京,<span class="number">2016</span>,<span class="number">25669.13</span>,<span class="number">129.79</span>,<span class="number">4944.44</span>,<span class="number">20594.9</span>,<span class="number">11005.1</span>,<span class="number">282348.96</span>,<span class="number">1362.86</span>,<span class="number">122749</span>,<span class="number">59.9188</span>,<span class="number">713</span>,<span class="number">4000.57</span></span><br><span class="line">天津,<span class="number">2016</span>,<span class="number">17885.39</span>,<span class="number">220.22</span>,<span class="number">7571.35</span>,<span class="number">10093.82</span>,<span class="number">5635.8</span>,<span class="number">102655.95</span>,<span class="number">1044.4</span>,<span class="number">87806</span>,<span class="number">51.3842</span>,<span class="number">571</span>,<span class="number">2300.01</span></span><br><span class="line">石家庄,<span class="number">2016</span>,<span class="number">5927.73</span>,<span class="number">480.88</span>,<span class="number">2693.92</span>,<span class="number">2752.93</span>,<span class="number">2975.2</span>,<span class="number">12160.29</span>,<span class="number">1038</span>,<span class="number">61189</span>,<span class="number">44.1812</span>,<span class="number">425</span>,<span class="number">1015.77</span></span><br><span class="line">太原,<span class="number">2016</span>,<span class="number">2955.6</span>,<span class="number">38.77</span>,<span class="number">1067.49</span>,<span class="number">1849.34</span>,<span class="number">1666.2</span>,<span class="number">13314.33</span>,<span class="number">370.25</span>,<span class="number">64820</span>,<span class="number">43.2234</span>,<span class="number">245</span>,<span class="number">680.13</span></span><br><span class="line">呼和浩特,<span class="number">2016</span>,<span class="number">3173.59</span>,<span class="number">113.49</span>,<span class="number">884.43</span>,<span class="number">2175.67</span>,<span class="number">1481.5</span>,<span class="number">1308.67</span>,<span class="number">240.97</span>,<span class="number">56213</span>,<span class="number">23.7734</span>,<span class="number">185</span>,<span class="number">520.52</span></span><br><span class="line">沈阳,<span class="number">2016</span>,<span class="number">5460.01</span>,<span class="number">266.36</span>,<span class="number">2135.63</span>,<span class="number">3058.02</span>,<span class="number">3985.9</span>,<span class="number">11331.41</span>,<span class="number">734.4</span>,<span class="number">67444</span>,<span class="number">40.3589</span>,<span class="number">383</span>,<span class="number">709.67</span></span><br><span class="line">大连,<span class="number">2016</span>,<span class="number">6730.33</span>,<span class="number">462.78</span>,<span class="number">2793.69</span>,<span class="number">3473.86</span>,<span class="number">3410.1</span>,<span class="number">51443.88</span>,<span class="number">595.63</span>,<span class="number">73764</span>,<span class="number">29.0217</span>,<span class="number">315</span>,<span class="number">535.17</span></span><br><span class="line">长春,<span class="number">2016</span>,<span class="number">5917.94</span>,<span class="number">323.53</span>,<span class="number">2915.66</span>,<span class="number">2678.74</span>,<span class="number">2650.3</span>,<span class="number">14162.91</span>,<span class="number">753.43</span>,<span class="number">68434</span>,<span class="number">43.4366</span>,<span class="number">297</span>,<span class="number">596.65</span></span><br><span class="line">哈尔滨,<span class="number">2016</span>,<span class="number">6101.61</span>,<span class="number">691.18</span>,<span class="number">1896.66</span>,<span class="number">3513.77</span>,<span class="number">3744.2</span>,<span class="number">3974.63</span>,<span class="number">962.05</span>,<span class="number">62583</span>,<span class="number">63.624</span>,<span class="number">471</span>,<span class="number">526.13</span></span><br><span class="line">上海,<span class="number">2016</span>,<span class="number">28178.65</span>,<span class="number">109.47</span>,<span class="number">8406.28</span>,<span class="number">19662.9</span>,<span class="number">10946.6</span>,<span class="number">433768.19</span>,<span class="number">1450</span>,<span class="number">120503</span>,<span class="number">51.4683</span>,<span class="number">656</span>,<span class="number">3709.03</span></span><br><span class="line">南京,<span class="number">2016</span>,<span class="number">10503.02</span>,<span class="number">252.54</span>,<span class="number">4117.32</span>,<span class="number">6133.16</span>,<span class="number">5088.2</span>,<span class="number">50214.06</span>,<span class="number">662.79</span>,<span class="number">90191</span>,<span class="number">82.7773</span>,<span class="number">225</span>,<span class="number">1845.6</span></span><br><span class="line">杭州,<span class="number">2016</span>,<span class="number">11313.72</span>,<span class="number">304.21</span>,<span class="number">4120.93</span>,<span class="number">6888.59</span>,<span class="number">5176.2</span>,<span class="number">67992.41</span>,<span class="number">736</span>,<span class="number">87153</span>,<span class="number">42.7978</span>,<span class="number">365</span>,<span class="number">2606.63</span></span><br><span class="line">宁波,<span class="number">2016</span>,<span class="number">8686.49</span>,<span class="number">302.06</span>,<span class="number">4455.34</span>,<span class="number">3929.1</span>,<span class="number">3667.6</span>,<span class="number">94923.22</span>,<span class="number">590.96</span>,<span class="number">83656</span>,<span class="number">15.5144</span>,<span class="number">251</span>,<span class="number">1270.33</span></span><br><span class="line">合肥,<span class="number">2016</span>,<span class="number">6274.38</span>,<span class="number">270.17</span>,<span class="number">3181.24</span>,<span class="number">2822.97</span>,<span class="number">2445.7</span>,<span class="number">18686.99</span>,<span class="number">729.83</span>,<span class="number">71054</span>,<span class="number">49.9515</span>,<span class="number">462</span>,<span class="number">1352.59</span></span><br><span class="line">福州,<span class="number">2016</span>,<span class="number">6197.64</span>,<span class="number">492.25</span>,<span class="number">2590.43</span>,<span class="number">3114.96</span>,<span class="number">3763.1</span>,<span class="number">31978.54</span>,<span class="number">687.06</span>,<span class="number">67630</span>,<span class="number">31.7477</span>,<span class="number">230</span>,<span class="number">1679.44</span></span><br><span class="line">厦门,<span class="number">2016</span>,<span class="number">3784.27</span>,<span class="number">23.19</span>,<span class="number">1544.59</span>,<span class="number">2216.49</span>,<span class="number">1283.5</span>,<span class="number">77176.81</span>,<span class="number">220.55</span>,<span class="number">69218</span>,<span class="number">14.2948</span>,<span class="number">60</span>,<span class="number">765.8</span></span><br><span class="line">南昌,<span class="number">2016</span>,<span class="number">4354.99</span>,<span class="number">181.77</span>,<span class="number">2307.24</span>,<span class="number">1865.98</span>,<span class="number">1868</span>,<span class="number">9407.28</span>,<span class="number">522.79</span>,<span class="number">65812</span>,<span class="number">61.1819</span>,<span class="number">194</span>,<span class="number">674.6</span></span><br><span class="line">济南,<span class="number">2016</span>,<span class="number">6536.12</span>,<span class="number">317.31</span>,<span class="number">2368.9</span>,<span class="number">3849.91</span>,<span class="number">3764.8</span>,<span class="number">9830.7</span>,<span class="number">632.83</span>,<span class="number">77012</span>,<span class="number">72.6301</span>,<span class="number">270</span>,<span class="number">1164.14</span></span><br><span class="line">青岛,<span class="number">2016</span>,<span class="number">10011.29</span>,<span class="number">371.01</span>,<span class="number">4160.67</span>,<span class="number">5479.61</span>,<span class="number">4104.9</span>,<span class="number">65581.15</span>,<span class="number">791.35</span>,<span class="number">76616</span>,<span class="number">34.0875</span>,<span class="number">322</span>,<span class="number">1369.14</span></span><br><span class="line">郑州,<span class="number">2016</span>,<span class="number">8025.31</span>,<span class="number">156.35</span>,<span class="number">3728.66</span>,<span class="number">4140.29</span>,<span class="number">3665.8</span>,<span class="number">55028.78</span>,<span class="number">827.06</span>,<span class="number">61149</span>,<span class="number">88.9329</span>,<span class="number">317</span>,<span class="number">2778.95</span></span><br><span class="line">武汉,<span class="number">2016</span>,<span class="number">11912.61</span>,<span class="number">390.62</span>,<span class="number">5227.05</span>,<span class="number">6294.94</span>,<span class="number">5610.6</span>,<span class="number">23780.93</span>,<span class="number">833.85</span>,<span class="number">71963</span>,<span class="number">94.8768</span>,<span class="number">386</span>,<span class="number">2517.44</span></span><br><span class="line">长沙,<span class="number">2016</span>,<span class="number">9455.36</span>,<span class="number">370.95</span>,<span class="number">4521.02</span>,<span class="number">4563.4</span>,<span class="number">4117.4</span>,<span class="number">10934.58</span>,<span class="number">696</span>,<span class="number">77782</span>,<span class="number">59.002</span>,<span class="number">286</span>,<span class="number">1266.63</span></span><br><span class="line">广州,<span class="number">2016</span>,<span class="number">19547.44</span>,<span class="number">239.28</span>,<span class="number">5751.59</span>,<span class="number">13556.57</span>,<span class="number">8706.5</span>,<span class="number">129308.95</span>,<span class="number">870.49</span>,<span class="number">89096</span>,<span class="number">105.7281</span>,<span class="number">273</span>,<span class="number">2540.85</span></span><br><span class="line">深圳,<span class="number">2016</span>,<span class="number">19492.6</span>,<span class="number">7.17</span>,<span class="number">7780.45</span>,<span class="number">11704.97</span>,<span class="number">5512.8</span>,<span class="number">398438.92</span>,<span class="number">384.52</span>,<span class="number">89757</span>,<span class="number">9.1883</span>,<span class="number">136</span>,<span class="number">1756.52</span></span><br><span class="line">南宁,<span class="number">2016</span>,<span class="number">3703.39</span>,<span class="number">400.67</span>,<span class="number">1427.16</span>,<span class="number">1875.57</span>,<span class="number">1980.4</span>,<span class="number">6266.41</span>,<span class="number">751.75</span>,<span class="number">68560</span>,<span class="number">40.0531</span>,<span class="number">228</span>,<span class="number">854</span></span><br><span class="line">海口,<span class="number">2016</span>,<span class="number">1257.67</span>,<span class="number">63.91</span>,<span class="number">233.56</span>,<span class="number">960.2</span>,<span class="number">653.9</span>,<span class="number">3918.43</span>,<span class="number">167.03</span>,<span class="number">62030</span>,<span class="number">13.2514</span>,<span class="number">139</span>,<span class="number">551.29</span></span><br><span class="line">重庆,<span class="number">2016</span>,<span class="number">17740.59</span>,<span class="number">1303.24</span>,<span class="number">7898.92</span>,<span class="number">8538.43</span>,<span class="number">7271.4</span>,<span class="number">62753.64</span>,<span class="number">3392.11</span>,<span class="number">67386</span>,<span class="number">73.2475</span>,<span class="number">1606</span>,<span class="number">3725.95</span></span><br><span class="line">成都,<span class="number">2016</span>,<span class="number">12170.23</span>,<span class="number">474.94</span>,<span class="number">5232.02</span>,<span class="number">6463.27</span>,<span class="number">5742.4</span>,<span class="number">41008.97</span>,<span class="number">1398.9</span>,<span class="number">74408</span>,<span class="number">79.1593</span>,<span class="number">866</span>,<span class="number">2641.14</span></span><br><span class="line">贵阳,<span class="number">2016</span>,<span class="number">3157.7</span>,<span class="number">137.14</span>,<span class="number">1218.79</span>,<span class="number">1801.77</span>,<span class="number">1195.3</span>,<span class="number">3927.47</span>,<span class="number">401.35</span>,<span class="number">70535</span>,<span class="number">40.4401</span>,<span class="number">258</span>,<span class="number">923.26</span></span><br><span class="line">昆明,<span class="number">2016</span>,<span class="number">4300.08</span>,<span class="number">200.51</span>,<span class="number">1660.11</span>,<span class="number">2439.46</span>,<span class="number">2310.1</span>,<span class="number">6681.32</span>,<span class="number">559.79</span>,<span class="number">68375</span>,<span class="number">46.5464</span>,<span class="number">414</span>,<span class="number">1530.5</span></span><br><span class="line">拉萨,<span class="number">2016</span>,<span class="number">424.95</span>,<span class="number">15.12</span>,<span class="number">162.8</span>,<span class="number">247.03</span>,<span class="number">229.7</span>,<span class="number">620.42</span>,<span class="number">53.78</span>,<span class="number">111009</span>,<span class="number">3.7205</span>,<span class="number">80</span>,</span><br><span class="line">西安,<span class="number">2016</span>,<span class="number">6257.18</span>,<span class="number">232.01</span>,<span class="number">2197.81</span>,<span class="number">3827.36</span>,<span class="number">3730.7</span>,<span class="number">27549.91</span>,<span class="number">824.93</span>,<span class="number">69611</span>,<span class="number">83.1569</span>,<span class="number">392</span>,<span class="number">1949.5</span></span><br><span class="line">兰州,<span class="number">2016</span>,<span class="number">2264.23</span>,<span class="number">60.36</span>,<span class="number">790.1</span>,<span class="number">1413.78</span>,<span class="number">1263.3</span>,<span class="number">4074.35</span>,<span class="number">324.23</span>,<span class="number">67011</span>,<span class="number">42.4842</span>,<span class="number">172</span>,<span class="number">370.39</span></span><br><span class="line">西宁,<span class="number">2016</span>,<span class="number">1248.17</span>,<span class="number">39.15</span>,<span class="number">595.64</span>,<span class="number">613.37</span>,<span class="number">513.1</span>,<span class="number">8508.26</span>,<span class="number">203.28</span>,<span class="number">61069</span>,<span class="number">7.1464</span>,<span class="number">127</span>,<span class="number">316.5</span></span><br><span class="line">银川,<span class="number">2016</span>,<span class="number">1617.71</span>,<span class="number">58.61</span>,<span class="number">825.61</span>,<span class="number">733.48</span>,<span class="number">514.2</span>,<span class="number">2490</span>,<span class="number">184.04</span>,<span class="number">70840</span>,<span class="number">9.8912</span>,<span class="number">104</span>,<span class="number">474.94</span></span><br><span class="line">乌鲁木齐,<span class="number">2016</span>,<span class="number">2458.98</span>,<span class="number">28.14</span>,<span class="number">704.08</span>,<span class="number">1726.76</span>,<span class="number">1236.7</span>,<span class="number">4902.58</span>,<span class="number">267.87</span>,<span class="number">73254</span>,<span class="number">17.3847</span>,<span class="number">152</span>,<span class="number">344.71</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2017-data-csv"><a href="#3-2017-data-csv" class="headerlink" title="(3) 2017_data.csv"></a>(3) 2017_data.csv</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">地区,年份,国内生产总值,第一产业增加值,第二产业增加值,第三产业增加值,社会商品零售总额,货物进出口总额,年末总人口,在岗职工平均工资,普通高等学校在校学生数,医院、卫生院数,房地产开发投资额</span><br><span class="line">北京,<span class="number">2017</span>,<span class="number">28014.94</span>,<span class="number">120.42</span>,<span class="number">5326.76</span>,<span class="number">22567.76</span>,<span class="number">11575.4</span>,<span class="number">324017.42</span>,<span class="number">1359.2</span>,<span class="number">134994</span>,<span class="number">59.2878</span>,<span class="number">656</span>,<span class="number">3692.54</span></span><br><span class="line">天津,<span class="number">2017</span>,<span class="number">18549.19</span>,<span class="number">168.96</span>,<span class="number">7593.59</span>,<span class="number">10786.64</span>,<span class="number">5729.7</span>,<span class="number">112919.17</span>,<span class="number">1049.99</span>,<span class="number">96965</span>,<span class="number">51.4669</span>,<span class="number">426</span>,<span class="number">2233.39</span></span><br><span class="line">石家庄,<span class="number">2017</span>,<span class="number">6460.88</span>,<span class="number">480.53</span>,<span class="number">2913.91</span>,<span class="number">3066.44</span>,<span class="number">2983.3</span>,<span class="number">12729.27</span>,<span class="number">973.29</span>,<span class="number">67880</span>,<span class="number">46.0695</span>,<span class="number">235</span>,<span class="number">1212.27</span></span><br><span class="line">太原,<span class="number">2017</span>,<span class="number">3382.18</span>,<span class="number">40.82</span>,<span class="number">1271.42</span>,<span class="number">2069.94</span>,<span class="number">1767.8</span>,<span class="number">13527.18</span>,<span class="number">369.17</span>,<span class="number">72114</span>,<span class="number">44.0173</span>,<span class="number">175</span>,<span class="number">470.63</span></span><br><span class="line">呼和浩特,<span class="number">2017</span>,<span class="number">2743.72</span>,<span class="number">107.74</span>,<span class="number">755.75</span>,<span class="number">1880.23</span>,<span class="number">1518.8</span>,<span class="number">1599.13</span>,<span class="number">242.85</span>,<span class="number">63084</span>,<span class="number">23.933</span>,<span class="number">108</span>,<span class="number">238.4</span></span><br><span class="line">沈阳,<span class="number">2017</span>,<span class="number">5864.97</span>,<span class="number">268.22</span>,<span class="number">2261.37</span>,<span class="number">3335.37</span>,<span class="number">3989.8</span>,<span class="number">12845.81</span>,<span class="number">736.95</span>,<span class="number">74181</span>,<span class="number">39.7776</span>,<span class="number">274</span>,<span class="number">814.24</span></span><br><span class="line">大连,<span class="number">2017</span>,<span class="number">7363.92</span>,<span class="number">477.1</span>,<span class="number">3052.56</span>,<span class="number">3834.26</span>,<span class="number">3722.5</span>,<span class="number">61789.87</span>,<span class="number">594.89</span>,<span class="number">81884</span>,<span class="number">28.4856</span>,<span class="number">153</span>,<span class="number">566.64</span></span><br><span class="line">长春,<span class="number">2017</span>,<span class="number">6530.03</span>,<span class="number">315.07</span>,<span class="number">3175.22</span>,<span class="number">3039.75</span>,<span class="number">2922.8</span>,<span class="number">14089.55</span>,<span class="number">748.92</span>,<span class="number">73469</span>,<span class="number">43.7812</span>,<span class="number">162</span>,<span class="number">573.78</span></span><br><span class="line">哈尔滨,<span class="number">2017</span>,<span class="number">6355.05</span>,<span class="number">688.79</span>,<span class="number">1820.73</span>,<span class="number">3845.52</span>,<span class="number">4044.8</span>,<span class="number">3352.93</span>,<span class="number">955</span>,<span class="number">67542</span>,<span class="number">50.8884</span>,<span class="number">310</span>,<span class="number">498.59</span></span><br><span class="line">上海,<span class="number">2017</span>,<span class="number">30632.99</span>,<span class="number">110.78</span>,<span class="number">9330.67</span>,<span class="number">21191.54</span>,<span class="number">11830.3</span>,<span class="number">476196.65</span>,<span class="number">1455.13</span>,<span class="number">130765</span>,<span class="number">51.4917</span>,<span class="number">363</span>,<span class="number">3856.53</span></span><br><span class="line">南京,<span class="number">2017</span>,<span class="number">11715.1</span>,<span class="number">263.01</span>,<span class="number">4454.87</span>,<span class="number">6997.22</span>,<span class="number">5604.7</span>,<span class="number">61187.27</span>,<span class="number">680.67</span>,<span class="number">101502</span>,<span class="number">72.154</span>,<span class="number">220</span>,<span class="number">2170.21</span></span><br><span class="line">杭州,<span class="number">2017</span>,<span class="number">12603.36</span>,<span class="number">311.08</span>,<span class="number">4362.48</span>,<span class="number">7929.8</span>,<span class="number">5717.4</span>,<span class="number">69012.88</span>,<span class="number">753.88</span>,<span class="number">96670</span>,<span class="number">42.5769</span>,<span class="number">302</span>,<span class="number">2734.2</span></span><br><span class="line">宁波,<span class="number">2017</span>,<span class="number">9842.1</span>,<span class="number">305.8</span>,<span class="number">5119.4</span>,<span class="number">4416.8</span>,<span class="number">4047.8</span>,<span class="number">112196.57</span>,<span class="number">596.93</span>,<span class="number">91705</span>,<span class="number">15.611</span>,<span class="number">154</span>,<span class="number">1374.47</span></span><br><span class="line">合肥,<span class="number">2017</span>,<span class="number">7213.45</span>,<span class="number">272.75</span>,<span class="number">3643.08</span>,<span class="number">3297.62</span>,<span class="number">2728.5</span>,<span class="number">24958.69</span>,<span class="number">742.76</span>,<span class="number">77484</span>,<span class="number">50.2943</span>,<span class="number">172</span>,<span class="number">1557.41</span></span><br><span class="line">福州,<span class="number">2017</span>,<span class="number">7103.4</span>,<span class="number">461.2</span>,<span class="number">2913.4</span>,<span class="number">3728.8</span>,<span class="number">4193.9</span>,<span class="number">34445.58</span>,<span class="number">693.35</span>,<span class="number">75133</span>,<span class="number">31.3857</span>,<span class="number">116</span>,<span class="number">1694.18</span></span><br><span class="line">厦门,<span class="number">2017</span>,<span class="number">4351.7</span>,<span class="number">23.5</span>,<span class="number">1812.2</span>,<span class="number">2516</span>,<span class="number">1446.7</span>,<span class="number">85814.12</span>,<span class="number">231.03</span>,<span class="number">75452</span>,<span class="number">14.0266</span>,<span class="number">51</span>,<span class="number">879.86</span></span><br><span class="line">南昌,<span class="number">2017</span>,<span class="number">5003.19</span>,<span class="number">192.13</span>,<span class="number">2666.1</span>,<span class="number">2144.96</span>,<span class="number">2097</span>,<span class="number">9885.59</span>,<span class="number">524.66</span>,<span class="number">72686</span>,<span class="number">60.9801</span>,<span class="number">118</span>,<span class="number">790.69</span></span><br><span class="line">济南,<span class="number">2017</span>,<span class="number">7201.96</span>,<span class="number">317.4</span>,<span class="number">2569.22</span>,<span class="number">4315.34</span>,<span class="number">4146.1</span>,<span class="number">11305.71</span>,<span class="number">643.62</span>,<span class="number">84645</span>,<span class="number">54.4448</span>,<span class="number">238</span>,<span class="number">1232.63</span></span><br><span class="line">青岛,<span class="number">2017</span>,<span class="number">11037.28</span>,<span class="number">380.97</span>,<span class="number">4546.21</span>,<span class="number">6110.1</span>,<span class="number">4541</span>,<span class="number">74124.17</span>,<span class="number">803.28</span>,<span class="number">83539</span>,<span class="number">34.6238</span>,<span class="number">410</span>,<span class="number">1330.54</span></span><br><span class="line">郑州,<span class="number">2017</span>,<span class="number">9130.2</span>,<span class="number">158.6</span>,<span class="number">4247.5</span>,<span class="number">4724.1</span>,<span class="number">4057.2</span>,<span class="number">59635.45</span>,<span class="number">842.25</span>,<span class="number">70486</span>,<span class="number">93.5332</span>,<span class="number">219</span>,<span class="number">3358.84</span></span><br><span class="line">武汉,<span class="number">2017</span>,<span class="number">13410.34</span>,<span class="number">408.2</span>,<span class="number">5861.35</span>,<span class="number">7140.79</span>,<span class="number">6196.3</span>,<span class="number">28597.09</span>,<span class="number">853.65</span>,<span class="number">79684</span>,<span class="number">94.7651</span>,<span class="number">354</span>,<span class="number">2686.34</span></span><br><span class="line">长沙,<span class="number">2017</span>,<span class="number">10535.51</span>,<span class="number">379.45</span>,<span class="number">4998.25</span>,<span class="number">5157.8</span>,<span class="number">4547.7</span>,<span class="number">13886.04</span>,<span class="number">708.79</span>,<span class="number">85187</span>,<span class="number">61.0379</span>,<span class="number">188</span>,<span class="number">1493.44</span></span><br><span class="line">广州,<span class="number">2017</span>,<span class="number">21503.15</span>,<span class="number">233.49</span>,<span class="number">6015.29</span>,<span class="number">15254.37</span>,<span class="number">9402.6</span>,<span class="number">143249.69</span>,<span class="number">897.87</span>,<span class="number">98612</span>,<span class="number">106.7335</span>,<span class="number">243</span>,<span class="number">2702.89</span></span><br><span class="line">深圳,<span class="number">2017</span>,<span class="number">22490.06</span>,<span class="number">19.57</span>,<span class="number">9320.2</span>,<span class="number">13150.28</span>,<span class="number">6016.2</span>,<span class="number">414145.96</span>,<span class="number">434.72</span>,<span class="number">100173</span>,<span class="number">8.0613</span>,<span class="number">135</span>,<span class="number">2130.86</span></span><br><span class="line">南宁,<span class="number">2017</span>,<span class="number">4118.83</span>,<span class="number">404.18</span>,<span class="number">1599.5</span>,<span class="number">2115.15</span>,<span class="number">2204.2</span>,<span class="number">8970</span>,<span class="number">756.86</span>,<span class="number">75481</span>,<span class="number">42.5726</span>,<span class="number">115</span>,<span class="number">958.09</span></span><br><span class="line">海口,<span class="number">2017</span>,<span class="number">1390.58</span>,<span class="number">62.51</span>,<span class="number">252.22</span>,<span class="number">1075.85</span>,<span class="number">726.1</span>,<span class="number">3109.28</span>,<span class="number">171.05</span>,<span class="number">68037</span>,<span class="number">12.7323</span>,<span class="number">123</span>,<span class="number">603.25</span></span><br><span class="line">重庆,<span class="number">2017</span>,<span class="number">19424.73</span>,<span class="number">1276.09</span>,<span class="number">8584.61</span>,<span class="number">9564.03</span>,<span class="number">8067.7</span>,<span class="number">66601.11</span>,<span class="number">3389.82</span>,<span class="number">73272</span>,<span class="number">74.6859</span>,<span class="number">749</span>,<span class="number">3980.08</span></span><br><span class="line">成都,<span class="number">2017</span>,<span class="number">13889.39</span>,<span class="number">500.87</span>,<span class="number">5998.19</span>,<span class="number">7390.34</span>,<span class="number">6403.5</span>,<span class="number">58315.58</span>,<span class="number">1435.33</span>,<span class="number">79292</span>,<span class="number">81.7432</span>,<span class="number">888</span>,<span class="number">2492.65</span></span><br><span class="line">贵阳,<span class="number">2017</span>,<span class="number">3537.96</span>,<span class="number">147.33</span>,<span class="number">1375.18</span>,<span class="number">2015.45</span>,<span class="number">1335.3</span>,<span class="number">2991.55</span>,<span class="number">408.31</span>,<span class="number">73939</span>,<span class="number">34.9952</span>,<span class="number">185</span>,<span class="number">1024.09</span></span><br><span class="line">昆明,<span class="number">2017</span>,<span class="number">4857.64</span>,<span class="number">210.13</span>,<span class="number">1865.97</span>,<span class="number">2781.54</span>,<span class="number">2591</span>,<span class="number">7817.84</span>,<span class="number">562.99</span>,<span class="number">76350</span>,<span class="number">50.3538</span>,<span class="number">308</span>,<span class="number">1683.33</span></span><br><span class="line">拉萨,<span class="number">2017</span>,<span class="number">479.25</span>,<span class="number">17.54</span>,<span class="number">189.38</span>,<span class="number">272.33</span>,<span class="number">258.8</span>,<span class="number">655.67</span>,<span class="number">54.36</span>,<span class="number">111092</span>,<span class="number">2.0404</span>,<span class="number">28</span>,</span><br><span class="line">西安,<span class="number">2017</span>,<span class="number">7469.85</span>,<span class="number">281.12</span>,<span class="number">2596.08</span>,<span class="number">4592.65</span>,<span class="number">4329.5</span>,<span class="number">37699.78</span>,<span class="number">905.68</span>,<span class="number">77774</span>,<span class="number">72.6752</span>,<span class="number">329</span>,<span class="number">2234.84</span></span><br><span class="line">兰州,<span class="number">2017</span>,<span class="number">2523.54</span>,<span class="number">61.47</span>,<span class="number">881.74</span>,<span class="number">1580.34</span>,<span class="number">1358.7</span>,<span class="number">1853.01</span>,<span class="number">325.55</span>,<span class="number">75709</span>,<span class="number">40.6279</span>,<span class="number">127</span>,<span class="number">418.26</span></span><br><span class="line">西宁,<span class="number">2017</span>,<span class="number">1284.91</span>,<span class="number">41.8</span>,<span class="number">556.44</span>,<span class="number">686.67</span>,<span class="number">560.8</span>,<span class="number">485.54</span>,<span class="number">205.58</span>,<span class="number">73540</span>,<span class="number">7.4222</span>,<span class="number">73</span>,<span class="number">351.33</span></span><br><span class="line">银川,<span class="number">2017</span>,<span class="number">1803.26</span>,<span class="number">61.37</span>,<span class="number">904.29</span>,<span class="number">837.59</span>,<span class="number">562.3</span>,<span class="number">3979.85</span>,<span class="number">188.59</span>,<span class="number">77206</span>,<span class="number">10.1638</span>,<span class="number">70</span>,<span class="number">402.82</span></span><br><span class="line">乌鲁木齐,<span class="number">2017</span>,<span class="number">2743.82</span>,<span class="number">29.62</span>,<span class="number">827.63</span>,<span class="number">1886.56</span>,<span class="number">1317.1</span>,<span class="number">6807.12</span>,<span class="number">222.62</span>,<span class="number">78072</span>,<span class="number">19.3853</span>,<span class="number">127</span>,<span class="number">422.74</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二、处理数据"><a href="#二、处理数据" class="headerlink" title="二、处理数据"></a>二、处理数据</h3><h4 id="（1）导入数据"><a href="#（1）导入数据" class="headerlink" title="（1）导入数据"></a>（1）导入数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入pandas库和matplotlib库</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">df2015=pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\文件\\2022作业文件\\数据挖掘与机器学习\\data\\data\\2015_data.csv&#x27;</span>)</span><br><span class="line">df2016=pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\文件\\2022作业文件\\数据挖掘与机器学习\\data\\data\\2016_data.csv&#x27;</span>)</span><br><span class="line">df2017=pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\文件\\2022作业文件\\数据挖掘与机器学习\\data\\data\\2017_data.csv&#x27;</span>)</span><br><span class="line">df2017.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iK3T2p.png" alt="iK3T2p.png" border="0">  
+
+<h4 id="2-将三张表的数据拼接"><a href="#2-将三张表的数据拼接" class="headerlink" title="(2)将三张表的数据拼接"></a>(2)将三张表的数据拼接</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># axis=1（列方向上）,即横向，默认=0，纵向</span></span><br><span class="line">df=pd.concat([df2015,df2016,df2017],axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-重置列名"><a href="#3-重置列名" class="headerlink" title="(3)重置列名"></a>(3)重置列名</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">df.shape</span><br><span class="line"><span class="comment"># 输出结果  (108, 13)</span></span><br><span class="line"></span><br><span class="line">df.shape[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 输出结果  108</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="将中文列名置换为英文"><a href="#将中文列名置换为英文" class="headerlink" title="将中文列名置换为英文"></a>将中文列名置换为英文</h4><table>
+<thead>
+<tr>
+<th>area</th>
+<th>地区</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>year</td>
+<td>年份</td>
+</tr>
+<tr>
+<td>total_value</td>
+<td>国内生产总值</td>
+</tr>
+<tr>
+<td>one_value</td>
+<td>第一产业增加值</td>
+</tr>
+<tr>
+<td>two_value</td>
+<td>第二产业增加值</td>
+</tr>
+<tr>
+<td>three_value</td>
+<td>第三产业增加值</td>
+</tr>
+<tr>
+<td>zero_value</td>
+<td>社会商品零售总额</td>
+</tr>
+<tr>
+<td>inout</td>
+<td>货物进出口总额</td>
+</tr>
+<tr>
+<td>population</td>
+<td>年末总人口</td>
+</tr>
+<tr>
+<td>pay</td>
+<td>在岗职工平均工资</td>
+</tr>
+<tr>
+<td>student</td>
+<td>普通高等学校在校学生数</td>
+</tr>
+<tr>
+<td>hospitalt</td>
+<td>医院、卫生院数</td>
+</tr>
+<tr>
+<td>realty</td>
+<td>房地产开发投资额</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># df.shape[0] 取到形状的第一位  108</span></span><br><span class="line">df.index=[i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(df.shape[<span class="number">0</span>])]</span><br><span class="line">df.columns=[<span class="string">&#x27;area&#x27;</span>, <span class="string">&#x27;year&#x27;</span>, <span class="string">&#x27;total_value&#x27;</span>, <span class="string">&#x27;one_value&#x27;</span>, <span class="string">&#x27;two_value&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;three_value&#x27;</span>,<span class="string">&#x27;zero_value&#x27;</span>, <span class="string">&#x27;inout&#x27;</span>, <span class="string">&#x27;population&#x27;</span>, <span class="string">&#x27;pay&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;student&#x27;</span>, <span class="string">&#x27;hospitalt&#x27;</span>, <span class="string">&#x27;realty&#x27;</span>]</span><br><span class="line">df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iK3MqL.png" alt="iK3MqL.png" border="0">  
+
+<h4 id="（4）处理缺失值"><a href="#（4）处理缺失值" class="headerlink" title="（4）处理缺失值"></a>（4）处理缺失值</h4><p>先判断缺失值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断缺失值</span></span><br><span class="line">df.isnull().<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iK3aEU.png" alt="iK3aEU.png" border="0">  
+
+<p>可以看到realty这一列有三个缺失值，可以使用realty这一列的均值填充</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;realty&#x27;</span>]=df[<span class="string">&#x27;realty&#x27;</span>].fillna(value=df[<span class="string">&#x27;realty&#x27;</span>].mean())</span><br><span class="line">df.isnull().<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iK31Pv.png" alt="iK31Pv.png" border="0">  
+
+<h3 id="三、绘制图像"><a href="#三、绘制图像" class="headerlink" title="三、绘制图像"></a>三、绘制图像</h3><h4 id="（1）绘图准备"><a href="#（1）绘图准备" class="headerlink" title="（1）绘图准备"></a>（1）绘图准备</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置图像风格：</span></span><br><span class="line"><span class="comment"># plt.style.use(&#x27;ggplot&#x27;)</span></span><br><span class="line"><span class="comment">#设置字体格式及负值显示</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] =[<span class="string">&#x27;Microsoft YaHei&#x27;</span>]</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span></span><br><span class="line"><span class="comment">#设置图像标题</span></span><br><span class="line">plot_title = [<span class="string">&#x27;图1：国内生产总值&#x27;</span>, <span class="string">&#x27;图2：第一产业增加值&#x27;</span>, <span class="string">&#x27;图3：第二产业增加值&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;图4：第三产业增加值&#x27;</span>, <span class="string">&#x27;图5：社会商品零售总额&#x27;</span>, <span class="string">&#x27;图6：货物进出口总额&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;图7：在岗职工平均工资&#x27;</span>, <span class="string">&#x27;图8：普通高等学校在校学生数&#x27;</span>, <span class="string">&#x27;图9：医院、卫生院数&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;图10：房地产开发投资额&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）获取数据"><a href="#（2）获取数据" class="headerlink" title="（2）获取数据"></a>（2）获取数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取各年</span></span><br><span class="line">dt2015 = df[df[<span class="string">&#x27;year&#x27;</span>] == <span class="number">2015</span>]</span><br><span class="line">dt2016 = df[df[<span class="string">&#x27;year&#x27;</span>] == <span class="number">2016</span>]</span><br><span class="line">dt2017 = df[df[<span class="string">&#x27;year&#x27;</span>] == <span class="number">2017</span>]</span><br><span class="line"><span class="comment">#定义列表</span></span><br><span class="line">dataArr = [<span class="string">&#x27;area&#x27;</span>, <span class="string">&#x27;total_value&#x27;</span>, <span class="string">&#x27;one_value&#x27;</span>, <span class="string">&#x27;two_value&#x27;</span>, <span class="string">&#x27;three_value&#x27;</span>,</span><br><span class="line">           <span class="string">&#x27;zero_value&#x27;</span>, <span class="string">&#x27;inout&#x27;</span>, <span class="string">&#x27;pay&#x27;</span>, <span class="string">&#x27;student&#x27;</span>, <span class="string">&#x27;hospitalt&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-绘制折线图"><a href="#3-绘制折线图" class="headerlink" title="(3)绘制折线图"></a>(3)绘制折线图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义折线图函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">plotType</span>(<span class="params">data</span>):</span><br><span class="line">    <span class="comment">#设置布画</span></span><br><span class="line">    fig = plt.figure()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(data) - <span class="number">1</span>):</span><br><span class="line">        <span class="comment"># fig.add_subplot绘制子图</span></span><br><span class="line">        ax = fig.add_subplot(<span class="number">5</span>, <span class="number">2</span>, i + <span class="number">1</span>)</span><br><span class="line">        <span class="comment"># 4-2、选择绘制线形图</span></span><br><span class="line">        <span class="comment"># dt2015[data[0]]:得到area列数据</span></span><br><span class="line">        ax.plot(dt2015[data[<span class="number">0</span>]], dt2015[data[i + <span class="number">1</span>]], marker=<span class="string">&#x27;o&#x27;</span>, label=<span class="string">&#x27;2015&#x27;</span>)</span><br><span class="line">        ax.plot(dt2016[data[<span class="number">0</span>]], dt2016[data[i + <span class="number">1</span>]], marker=<span class="string">&#x27;o&#x27;</span>, label=<span class="string">&#x27;2016&#x27;</span>)</span><br><span class="line">        ax.plot(dt2017[data[<span class="number">0</span>]], dt2017[data[i + <span class="number">1</span>]], marker=<span class="string">&#x27;o&#x27;</span>, label=<span class="string">&#x27;2017&#x27;</span>)</span><br><span class="line">        <span class="comment"># 标题</span></span><br><span class="line">        ax.set_title(plot_title[i])</span><br><span class="line">        <span class="comment"># 设置 X 轴刻度对应的标签</span></span><br><span class="line">        ax.set_xticklabels(labels=dt2015[data[<span class="number">0</span>]], rotation=<span class="number">90</span>)</span><br><span class="line">        <span class="comment"># 图例</span></span><br><span class="line">        ax.legend(loc=<span class="string">&#x27;best&#x27;</span>)</span><br><span class="line">        <span class="comment"># 调整子图之间间隙</span></span><br><span class="line">        fig.subplots_adjust(top=<span class="number">5</span>, bottom=<span class="number">0.1</span>, left=<span class="number">0.9</span>, right= <span class="number">3.6</span>, hspace=<span class="number">0.3</span>, wspace=<span class="number">0.3</span>)</span><br><span class="line">        </span><br><span class="line"><span class="comment">#调用折线图函数显示数据</span></span><br><span class="line">plotType(data=dataArr)</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="https://i.328888.xyz/2023/04/29/iK3YW3.png" alt="iK3YW3.png" border="0"><img src="https://i.328888.xyz/2023/04/29/iK3qpy.png" alt="iK3qpy.png" border="0"><img src="https://i.328888.xyz/2023/04/29/iK3uv5.png" alt="iK3uv5.png" border="0">  </p>
+<h3 id="四、可视化分析"><a href="#四、可视化分析" class="headerlink" title="四、可视化分析"></a>四、可视化分析</h3><h4 id="第一、二、三产业百度百科介绍如下："><a href="#第一、二、三产业百度百科介绍如下：" class="headerlink" title="第一、二、三产业百度百科介绍如下："></a><strong>第一、二、三产业百度百科介绍如下：</strong></h4><ul>
+<li>第一产业指生产食材以及其它一些生物材料的产业，如：种植业、林业、畜牧业、水产养殖业等直接以自然物为生产对象的产业。</li>
+<li>第二产业主要指加工制造产业，利用自然界和第一产业提供的基本材料进行加工处理。</li>
+<li>第三产业是指第一、第二产业以外的其他行业，主要包括交通运输业、通讯产业、商业、餐饮业、金融业、教育产业、公共服务等非物质生产部门。</li>
+</ul>
+<h4 id="由上面的线形图可视化可分析如下："><a href="#由上面的线形图可视化可分析如下：" class="headerlink" title="由上面的线形图可视化可分析如下："></a><strong>由上面的线形图可视化可分析如下：</strong></h4><p><strong>总体来看</strong></p>
+<ul>
+<li>各个省份的各项指标总体来说，呈现逐年增加的态势，不过增加的幅度不是很大</li>
+</ul>
+<hr>
+<h4 id="各项指标"><a href="#各项指标" class="headerlink" title="各项指标"></a><strong>各项指标</strong></h4><h5 id="在国内生产总值指标中"><a href="#在国内生产总值指标中" class="headerlink" title="在国内生产总值指标中"></a><strong>在国内生产总值指标中</strong></h5><ul>
+<li>北上广深、重庆占据绝对优势</li>
+<li>太原、呼和浩特、海口、西宁倒数，占比最小</li>
+</ul>
+<h5 id="在第一、二、三产业指标中"><a href="#在第一、二、三产业指标中" class="headerlink" title="在第一、二、三产业指标中"></a><strong>在第一、二、三产业指标中</strong></h5><ul>
+<li>重庆是第一、第二产业龙头</li>
+<li>北上广深是第二、三产业龙头</li>
+</ul>
+<h5 id="在零售总额指标中"><a href="#在零售总额指标中" class="headerlink" title="在零售总额指标中"></a><strong>在零售总额指标中</strong></h5><ul>
+<li>北上广深、重庆不负众望，仍然占据绝对优势</li>
+</ul>
+<h5 id="在货物进出口指标中"><a href="#在货物进出口指标中" class="headerlink" title="在货物进出口指标中"></a><strong>在货物进出口指标中</strong></h5><ul>
+<li>北上深以绝对的优势碾压各省</li>
+<li>其他省份普遍较低</li>
+</ul>
+<h5 id="在平均工资指标中"><a href="#在平均工资指标中" class="headerlink" title="在平均工资指标中"></a><strong>在平均工资指标中</strong></h5><ul>
+<li>北上广深，拉萨占比较大</li>
+</ul>
+<h5 id="在校学生数指标中"><a href="#在校学生数指标中" class="headerlink" title="在校学生数指标中"></a><strong>在校学生数指标中</strong></h5><ul>
+<li>宁夏、厦门、深圳、海口、拉萨、西宁、银川占比最小</li>
+<li>深圳虽然是一线城市，但是大学学校不多</li>
+</ul>
+<h5 id="在医院数指标中"><a href="#在医院数指标中" class="headerlink" title="在医院数指标中"></a><strong>在医院数指标中</strong></h5><ul>
+<li>重庆、成都占比较大</li>
+</ul>
+<h5 id="在房地产投资指标中"><a href="#在房地产投资指标中" class="headerlink" title="在房地产投资指标中"></a><strong>在房地产投资指标中</strong></h5><ul>
+<li>北京、上海、杭州、郑州、广州、重庆、西安占比较大</li>
+</ul>
+<h5 id="综上所述"><a href="#综上所述" class="headerlink" title="综上所述"></a><strong>综上所述</strong></h5><ul>
+<li>发展比较好的城市：北上广深、重庆</li>
+<li>发展比较落后的城市：太原、呼和浩特、海口、西宁</li>
+</ul>
+
+      
+		
+		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/29/DataFrame%E5%92%8CSpark-SQL/" class="archive-article-date">
-  	<time datetime="2023-03-29T04:55:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/29/DataFrame%E5%92%8CSpark-SQL/">DataFrame和Spark SQL</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/04/29/%E5%88%86%E6%9E%902015-2017%E5%B9%B4%E5%90%84%E5%A4%A7%E5%9F%8E%E5%B8%82%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/27/Spark-RDD/" class="archive-article-date">
-  	<time datetime="2023-03-27T15:54:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/24/Spark-Streaming/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spark  Streaming</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/27/Spark-RDD/">Spark RDD</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">数据挖掘与机器学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%88%86%E6%9E%902015-2017%E5%B9%B4%E5%90%84%E5%A4%A7%E5%9F%8E%E5%B8%82%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5"><span class="toc-number">1.1.</span> <span class="toc-text">1、分析2015-2017年各大城市发展情况</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.1.</span> <span class="toc-text">一、查看数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2015-data-csv"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">(1) 2015_data.csv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2016-data-csv"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">(2) 2016_data.csv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2017-data-csv"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">(3) 2017_data.csv</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.2.</span> <span class="toc-text">二、处理数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">（1）导入数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%B0%86%E4%B8%89%E5%BC%A0%E8%A1%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%8B%BC%E6%8E%A5"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">(2)将三张表的数据拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%87%8D%E7%BD%AE%E5%88%97%E5%90%8D"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">(3)重置列名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E4%B8%AD%E6%96%87%E5%88%97%E5%90%8D%E7%BD%AE%E6%8D%A2%E4%B8%BA%E8%8B%B1%E6%96%87"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">将中文列名置换为英文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%A4%84%E7%90%86%E7%BC%BA%E5%A4%B1%E5%80%BC"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">（4）处理缺失值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BB%98%E5%88%B6%E5%9B%BE%E5%83%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">三、绘制图像</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%BB%98%E5%9B%BE%E5%87%86%E5%A4%87"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">（1）绘图准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">（2）获取数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%BB%98%E5%88%B6%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">(3)绘制折线图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90"><span class="toc-number">1.1.4.</span> <span class="toc-text">四、可视化分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E3%80%81%E4%B8%89%E4%BA%A7%E4%B8%9A%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%E4%BB%8B%E7%BB%8D%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">第一、二、三产业百度百科介绍如下：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B1%E4%B8%8A%E9%9D%A2%E7%9A%84%E7%BA%BF%E5%BD%A2%E5%9B%BE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%8F%AF%E5%88%86%E6%9E%90%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">由上面的线形图可视化可分析如下：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%84%E9%A1%B9%E6%8C%87%E6%A0%87"><span class="toc-number">1.1.4.3.</span> <span class="toc-text">各项指标</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E5%9B%BD%E5%86%85%E7%94%9F%E4%BA%A7%E6%80%BB%E5%80%BC%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.1.</span> <span class="toc-text">在国内生产总值指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E3%80%81%E4%B8%89%E4%BA%A7%E4%B8%9A%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.2.</span> <span class="toc-text">在第一、二、三产业指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E9%9B%B6%E5%94%AE%E6%80%BB%E9%A2%9D%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.3.</span> <span class="toc-text">在零售总额指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E8%B4%A7%E7%89%A9%E8%BF%9B%E5%87%BA%E5%8F%A3%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.4.</span> <span class="toc-text">在货物进出口指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E5%B9%B3%E5%9D%87%E5%B7%A5%E8%B5%84%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.5.</span> <span class="toc-text">在平均工资指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E6%A0%A1%E5%AD%A6%E7%94%9F%E6%95%B0%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.6.</span> <span class="toc-text">在校学生数指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E5%8C%BB%E9%99%A2%E6%95%B0%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.7.</span> <span class="toc-text">在医院数指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E6%88%BF%E5%9C%B0%E4%BA%A7%E6%8A%95%E8%B5%84%E6%8C%87%E6%A0%87%E4%B8%AD"><span class="toc-number">1.1.4.3.8.</span> <span class="toc-text">在房地产投资指标中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%BC%E4%B8%8A%E6%89%80%E8%BF%B0"><span class="toc-number">1.1.4.3.9.</span> <span class="toc-text">综上所述</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/27/%E4%BD%BF%E7%94%A8Pycharm%E5%BC%80%E5%8F%91%E6%97%B6%EF%BC%8C%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2023-03-27T09:29:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-27</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/27/%E4%BD%BF%E7%94%A8Pycharm%E5%BC%80%E5%8F%91%E6%97%B6%EF%BC%8C%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">使用Pycharm开发时，可能遇到的问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/21/%E4%BD%BF%E7%94%A8Pyecharts%E5%92%8CMatplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A82/" class="archive-article-date">
-  	<time datetime="2023-03-21T15:16:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/21/%E4%BD%BF%E7%94%A8Pyecharts%E5%92%8CMatplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A82/">使用Pyecharts和Matplotlib绘制基本图表2(比例数据)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-  	<time datetime="2023-03-20T12:57:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Matplotlib%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A81-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Matplotlib绘制基本图表1(时间数据)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-  	<time datetime="2023-03-20T10:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/20/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%9B%BE%E8%A1%A8-%E6%97%B6%E9%97%B4%E6%95%B0%E6%8D%AE/">使用Pyecharts绘制基本图表1(时间数据)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2023-03-19T09:36:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/19/github%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE/">github上传、删除项目</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/" class="archive-article-date">
-  	<time datetime="2023-03-19T07:50:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/19/%E9%80%9A%E8%BF%87VUE-ElementUI%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2/">通过VUE+ElementUI绘制一个前端页面</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2023-03-11T05:46:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/11/Linux%E7%B3%BB%E7%BB%9FApache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8/">Linux系统Apache服务器的应用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-10T08:24:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/10/Linux%E7%B3%BB%E7%BB%9FFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统FTP服务器配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2023/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2023/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2023/page/3/">3</a><a class="page-number" href="/archives/2023/page/4/">4</a><a class="page-number" href="/archives/2023/page/5/">5</a><a class="extend next" rel="next" href="/archives/2023/page/3/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -471,8 +517,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
