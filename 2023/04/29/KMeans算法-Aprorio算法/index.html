@@ -6,15 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>KMeans算法 + Aprorio算法 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/page/4/index.html">
+  <meta name="description" content="KMeans算法 + Aprorio算法数据挖掘与机器学习 机器学习处理问题的过程有6步： 数据加载、选择模型、训练模型、模型预测、模型评测、模型保存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KMeans算法 + Aprorio算法">
+<meta property="og:url" content="http://example.com/2023/04/29/KMeans%E7%AE%97%E6%B3%95-Aprorio%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="KMeans算法 + Aprorio算法数据挖掘与机器学习 机器学习处理问题的过程有6步： 数据加载、选择模型、训练模型、模型预测、模型评测、模型保存">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKe3l8.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKeNQ5.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKecLF.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKeRxZ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKepnH.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKeBRQ.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKeXoE.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKexfC.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKe7jP.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKeEFX.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKeeYt.png">
+<meta property="article:published_time" content="2023-04-29T13:22:17.000Z">
+<meta property="article:modified_time" content="2023-04-29T13:22:37.723Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/04/29/iKe3l8.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,39 +171,130 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-MongoDB的基本操作-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-KMeans算法-Aprorio算法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/">MongoDB的基本操作_2</a>
+    <h1 class="article-title" itemprop="name">
+      KMeans算法 + Aprorio算法
     </h1>
   
 
 		<!--显示阅读次数-->
 
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
 <!--显示阅读次数完毕-->
 
         
-        <a href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/" class="archive-article-date">
-  	<time datetime="2023-03-02T04:59:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-02</time>
+        <a href="/2023/04/29/KMeans%E7%AE%97%E6%B3%95-Aprorio%E7%AE%97%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2023-04-29T13:22:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MongoDB的基本操作二"><a href="#MongoDB的基本操作二" class="headerlink" title="MongoDB的基本操作二"></a>MongoDB的基本操作二</h1><p>mongodb的find查询操作</p>
-<p>查询条件和特定查询方法</p>
-<p>通过游标查询数据的方法</p>
-        
+        <h1 id="KMeans算法-Aprorio算法"><a href="#KMeans算法-Aprorio算法" class="headerlink" title="KMeans算法 + Aprorio算法"></a>KMeans算法 + Aprorio算法</h1><p>数据挖掘与机器学习</p>
+<p>机器学习处理问题的过程有6步：</p>
+<p>数据加载、选择模型、训练模型、模型预测、模型评测、模型保存</p>
+<span id="more"></span>
+
+<p>无监督学习KMeans(聚类)算法的运行过程</p>
+<p>① 从D中任意选择k个对象作为聚类中心。</p>
+<p>② 根据数据到聚类中心的距离（欧氏距离），对每个对象进行分配。</p>
+<p>③ 更新聚类中心位置，即计算每个簇中所有对象的质心，将聚类中心移动到质心。</p>
+<p>④ 重复②、③，直到聚类中心不在发生变化。</p>
+<p>降维分析（主成分分析PCA算法）</p>
+<p>从高维数据空间到低维数据空间的变化过程，本质是在尽量保证数据本质和质量的前提下将数据特征的维数降低。</p>
+<h2 id="一、使用KMeans算法对乳腺癌数据进行聚类"><a href="#一、使用KMeans算法对乳腺癌数据进行聚类" class="headerlink" title="一、使用KMeans算法对乳腺癌数据进行聚类"></a>一、使用KMeans算法对乳腺癌数据进行聚类</h2><h3 id="（1）导入相关库"><a href="#（1）导入相关库" class="headerlink" title="（1）导入相关库"></a>（1）导入相关库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入库</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_breast_cancer</span><br><span class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA</span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> silhouette_score</span><br><span class="line"><span class="keyword">import</span> matplotlib.pylab <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+<h3 id="（2）加载数据"><a href="#（2）加载数据" class="headerlink" title="（2）加载数据"></a>（2）加载数据</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#加载sklearn自带的乳腺癌数据集</span></span><br><span class="line">lb=load_breast_cancer()</span><br><span class="line">lb</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKe3l8.png" alt="iKe3l8.png" border="0">  
+
+  <img src="https://i.328888.xyz/2023/04/29/iKeNQ5.png" alt="iKeNQ5.png" border="0">  
+
+<h3 id="3-获取样本数据和特征名称"><a href="#3-获取样本数据和特征名称" class="headerlink" title="(3) 获取样本数据和特征名称"></a>(3) 获取样本数据和特征名称</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取样本数据</span></span><br><span class="line">data=lb.data</span><br><span class="line"><span class="comment">#获取特征名称</span></span><br><span class="line">feature_name=lb.feature_names</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;data:\n&#x27;</span>, data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;feature_name:\n&#x27;</span>, feature_name)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKecLF.png" alt="iKecLF.png" border="0">  
+
+<h3 id="4-封装数据成一个DataFrame对象"><a href="#4-封装数据成一个DataFrame对象" class="headerlink" title="(4) 封装数据成一个DataFrame对象"></a>(4) 封装数据成一个DataFrame对象</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#封装数据成一个DataFrame对象</span></span><br><span class="line">df=pd.DataFrame(data,columns=feature_name)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKeRxZ.png" alt="iKeRxZ.png" border="0">  
+
+<h3 id="5-用PCA主成分分析法对数据降维"><a href="#5-用PCA主成分分析法对数据降维" class="headerlink" title="(5) 用PCA主成分分析法对数据降维"></a>(5) 用PCA主成分分析法对数据降维</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用PCA主成分分析法对数据降维</span></span><br><span class="line">model=PCA(n_components=<span class="number">20</span>)</span><br><span class="line">data1=model.fit_transform(data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;未作降维之前的data的形状:&quot;</span>,data.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;使用主成分分析法降维后data的形状:&quot;</span>,data1.shape)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKepnH.png" alt="iKepnH.png" border="0">  
+
+<h3 id="6-构建KMeans模型并训练"><a href="#6-构建KMeans模型并训练" class="headerlink" title="(6) 构建KMeans模型并训练"></a>(6) 构建KMeans模型并训练</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建KMeans模型并进行训练</span></span><br><span class="line"></span><br><span class="line">accuracy = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="number">30</span>):</span><br><span class="line">    kmeans=KMeans(n_clusters=i)</span><br><span class="line">    kmeans.fit(data1)</span><br><span class="line">    <span class="comment">#预测</span></span><br><span class="line">    y_label=kmeans.labels_</span><br><span class="line">    <span class="comment">#评估(轮廓系数)</span></span><br><span class="line">    score=silhouette_score(data1,y_label)</span><br><span class="line">    <span class="comment">#将轮廓系数添加到数组accuracy中</span></span><br><span class="line">    accuracy.append(score)</span><br><span class="line">    </span><br><span class="line">x=<span class="built_in">range</span>(<span class="number">2</span>,<span class="number">30</span>)</span><br><span class="line"><span class="comment">#画图</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;I&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;ACCURACY&#x27;</span>)</span><br><span class="line">plt.plot(x,accuracy,<span class="string">&#x27;o-&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKeBRQ.png" alt="iKeBRQ.png" border="0">  
+
+<h3 id="7-使用模型进行预测并计算其轮廓系数"><a href="#7-使用模型进行预测并计算其轮廓系数" class="headerlink" title="(7)  使用模型进行预测并计算其轮廓系数"></a>(7)  使用模型进行预测并计算其轮廓系数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建KMeans模型</span></span><br><span class="line">kmeans=KMeans(n_clusters=<span class="number">26</span>)</span><br><span class="line"><span class="comment">#训练</span></span><br><span class="line">kmeans.fit(data1)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKeXoE.png" alt="iKeXoE.png" border="0">  
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用模型进行预测并计算其轮廓系数</span></span><br><span class="line">pred_y=kmeans.labels_</span><br><span class="line"><span class="comment">#模型的评估</span></span><br><span class="line">score = silhouette_score(data1,pred_y)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;评估分数&quot;</span>,score)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKexfC.png" alt="iKexfC.png" border="0">  
+
+<h2 id="二、利用Aprorio关联规则算法对数据进行挖掘"><a href="#二、利用Aprorio关联规则算法对数据进行挖掘" class="headerlink" title="二、利用Aprorio关联规则算法对数据进行挖掘"></a>二、利用Aprorio关联规则算法对数据进行挖掘</h2><p>Apriori算法是经典的挖掘频繁项集和关联规则的数据挖掘算法  </p>
+<p>对数据进行扫描并计算支持度和置信度</p>
+<p>Apriori算法使用一种被称为逐层搜索的迭代方法，其中k项集用于探索k+1项集。关联规则挖掘过程主要包括两个阶段：第一阶段从资料集合中找出所有的高频项目组，第二阶段这些高频项目组产生关联规则  </p>
+<h3 id="（1）导入库-和-加载数据"><a href="#（1）导入库-和-加载数据" class="headerlink" title="（1）导入库 和 加载数据"></a>（1）导入库 和 加载数据</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入库</span></span><br><span class="line"><span class="keyword">from</span> apyori <span class="keyword">import</span> apriori</span><br><span class="line"><span class="comment"># 加载数据</span></span><br><span class="line">data = [[<span class="string">&#x27;牛奶&#x27;</span>,<span class="string">&#x27;面包&#x27;</span>],</span><br><span class="line">        [<span class="string">&#x27;面包&#x27;</span>,<span class="string">&#x27;尿布&#x27;</span>,<span class="string">&#x27;啤酒&#x27;</span>,<span class="string">&#x27;鸡蛋&#x27;</span>],</span><br><span class="line">        [<span class="string">&#x27;牛奶&#x27;</span>,<span class="string">&#x27;尿布&#x27;</span>,<span class="string">&#x27;啤酒&#x27;</span>,<span class="string">&#x27;可乐&#x27;</span>],</span><br><span class="line">        [<span class="string">&#x27;面包&#x27;</span>,<span class="string">&#x27;牛奶&#x27;</span>,<span class="string">&#x27;尿布&#x27;</span>,<span class="string">&#x27;啤酒&#x27;</span>],</span><br><span class="line">        [<span class="string">&#x27;面包&#x27;</span>,<span class="string">&#x27;牛奶&#x27;</span>,<span class="string">&#x27;尿布&#x27;</span>,<span class="string">&#x27;可乐&#x27;</span>]]</span><br><span class="line">data</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKe7jP.png" alt="iKe7jP.png" border="0">  
+
+<h3 id="（2）构建Aprorio模型并进行训练"><a href="#（2）构建Aprorio模型并进行训练" class="headerlink" title="（2）构建Aprorio模型并进行训练"></a>（2）构建Aprorio模型并进行训练</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建Aprorio模型并进行训练</span></span><br><span class="line">resluct=apriori(data,min_support=<span class="number">0.5</span>,min_confidence=<span class="number">0.7</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> resluct:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKeEFX.png" alt="iKeEFX.png" border="0">  
+
+<h3 id="3-使用模型进行预测并计算"><a href="#3-使用模型进行预测并计算" class="headerlink" title="(3)使用模型进行预测并计算"></a>(3)使用模型进行预测并计算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#提取结果</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">Extract_Result=[]</span><br><span class="line"><span class="keyword">for</span> rule <span class="keyword">in</span> resluct:</span><br><span class="line">    <span class="comment"># 获取支持度</span></span><br><span class="line">    support=<span class="built_in">round</span>(rule.support,<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> rule.ordered_statistics:</span><br><span class="line">        <span class="comment"># 取商品的基本项和增加项</span></span><br><span class="line">        head_set=<span class="built_in">list</span>(a.items_base)</span><br><span class="line">        tail_set=<span class="built_in">list</span>(a.items_add)</span><br><span class="line">        <span class="comment"># 判断基本项为空则跳过</span></span><br><span class="line">        <span class="keyword">if</span> head_set==[]:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="comment"># 拼接基本项和增加项</span></span><br><span class="line">        relates_category=<span class="built_in">str</span>(head_set)+<span class="string">&#x27;→&#x27;</span>+<span class="built_in">str</span>(tail_set)</span><br><span class="line">        <span class="comment"># 获取置信度</span></span><br><span class="line">        confidence=<span class="built_in">round</span>(a.confidence,<span class="number">3</span>)</span><br><span class="line">        lift=<span class="built_in">round</span>(a.lift,<span class="number">3</span>)</span><br><span class="line">        Extract_Result.append([relates_category,support,confidence,lift])</span><br><span class="line">        </span><br><span class="line">Rule_DF=pd.DataFrame(Extract_Result,columns=[<span class="string">&#x27;RelationshipRule&#x27;</span>,<span class="string">&#x27;Support&#x27;</span>,<span class="string">&#x27;Confidence&#x27;</span>,<span class="string">&#x27;Lift&#x27;</span>])</span><br><span class="line"></span><br><span class="line">Rule_DF</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.328888.xyz/2023/04/29/iKeeYt.png" alt="iKeeYt.png" border="0">  
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -196,16 +303,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/04/29/KMeans%E7%AE%97%E6%B3%95-Aprorio%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/29/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95-%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">线性回归算法 + 分类算法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,630 +386,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MongoDB的基本操作-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/">MongoDB的基本操作_1</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/" class="archive-article-date">
-  	<time datetime="2023-03-01T11:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="MongoDB的基本操作"><a href="#MongoDB的基本操作" class="headerlink" title="MongoDB的基本操作"></a><strong>MongoDB的基本操作</strong></h1><p>创建数据库、创建集合、插入数据、查询数据</p>
-<p>向数组中添加元素及数组的定位</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#KMeans%E7%AE%97%E6%B3%95-Aprorio%E7%AE%97%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">KMeans算法 + Aprorio算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BD%BF%E7%94%A8KMeans%E7%AE%97%E6%B3%95%E5%AF%B9%E4%B9%B3%E8%85%BA%E7%99%8C%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E8%81%9A%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">一、使用KMeans算法对乳腺癌数据进行聚类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AF%BC%E5%85%A5%E7%9B%B8%E5%85%B3%E5%BA%93"><span class="toc-number">1.1.1.</span> <span class="toc-text">（1）导入相关库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.2.</span> <span class="toc-text">（2）加载数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%8E%B7%E5%8F%96%E6%A0%B7%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%92%8C%E7%89%B9%E5%BE%81%E5%90%8D%E7%A7%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">(3) 获取样本数据和特征名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B0%81%E8%A3%85%E6%95%B0%E6%8D%AE%E6%88%90%E4%B8%80%E4%B8%AADataFrame%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.4.</span> <span class="toc-text">(4) 封装数据成一个DataFrame对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%94%A8PCA%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E6%B3%95%E5%AF%B9%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4"><span class="toc-number">1.1.5.</span> <span class="toc-text">(5) 用PCA主成分分析法对数据降维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%9E%84%E5%BB%BAKMeans%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%AE%AD%E7%BB%83"><span class="toc-number">1.1.6.</span> <span class="toc-text">(6) 构建KMeans模型并训练</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E9%A2%84%E6%B5%8B%E5%B9%B6%E8%AE%A1%E7%AE%97%E5%85%B6%E8%BD%AE%E5%BB%93%E7%B3%BB%E6%95%B0"><span class="toc-number">1.1.7.</span> <span class="toc-text">(7)  使用模型进行预测并计算其轮廓系数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%A9%E7%94%A8Aprorio%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%8C%96%E6%8E%98"><span class="toc-number">1.2.</span> <span class="toc-text">二、利用Aprorio关联规则算法对数据进行挖掘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AF%BC%E5%85%A5%E5%BA%93-%E5%92%8C-%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="toc-number">1.2.1.</span> <span class="toc-text">（1）导入库 和 加载数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%9E%84%E5%BB%BAAprorio%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%BF%9B%E8%A1%8C%E8%AE%AD%E7%BB%83"><span class="toc-number">1.2.2.</span> <span class="toc-text">（2）构建Aprorio模型并进行训练</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E9%A2%84%E6%B5%8B%E5%B9%B6%E8%AE%A1%E7%AE%97"><span class="toc-number">1.2.3.</span> <span class="toc-text">(3)使用模型进行预测并计算</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-Linux安装python3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/">Linux安装python3</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Ubuntu21-04下安装Python3-4-4"><a href="#Ubuntu21-04下安装Python3-4-4" class="headerlink" title="Ubuntu21.04下安装Python3.4.4"></a>Ubuntu21.04下安装Python3.4.4</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu更新失败解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Ubuntu执行sudo apt-get update失败解决办法</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:28:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Ubuntu更新源问题"><a href="#Ubuntu更新源问题" class="headerlink" title="Ubuntu更新源问题"></a>Ubuntu更新源问题</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hadoop伪分布式配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/28/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/">Hadoop伪分布式配置</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/28/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-02-28T05:22:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hadoop伪分布式配置"><a href="#Hadoop伪分布式配置" class="headerlink" title="Hadoop伪分布式配置"></a>Hadoop伪分布式配置</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/28/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-HBase-shell-基本操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/27/HBase-shell-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">HBase shell 基本操作</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/27/HBase-shell-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-02-27T09:26:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hbase-shell-命令基本操作"><a href="#Hbase-shell-命令基本操作" class="headerlink" title="Hbase shell 命令基本操作"></a>Hbase shell 命令基本操作</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/27/HBase-shell-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spark搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/22/Spark%E6%90%AD%E5%BB%BA/">Spark搭建</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/22/Spark%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2023-02-22T04:29:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Spark搭建"><a href="#Spark搭建" class="headerlink" title="Spark搭建"></a>Spark搭建</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/22/Spark%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-配置hbase使用自己安装的Zookeeper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/20/%E9%85%8D%E7%BD%AEhbase%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E5%AE%89%E8%A3%85%E7%9A%84Zookeeper/">配置hbase使用自己安装的Zookeeper</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/20/%E9%85%8D%E7%BD%AEhbase%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E5%AE%89%E8%A3%85%E7%9A%84Zookeeper/" class="archive-article-date">
-  	<time datetime="2023-02-20T15:34:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="配置hbase使用自己安装的Zookeeper"><a href="#配置hbase使用自己安装的Zookeeper" class="headerlink" title="配置hbase使用自己安装的Zookeeper"></a>配置hbase使用自己安装的Zookeeper</h1><p>Hbased 的安装请看前面的 HBase伪分布式安装 文档</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/20/%E9%85%8D%E7%BD%AEhbase%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E5%AE%89%E8%A3%85%E7%9A%84Zookeeper/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Zookeeper伪分布式安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/20/Zookeeper%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">Zookeeper伪分布式安装</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/20/Zookeeper%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-20T08:25:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Zookeeper伪分布式"><a href="#Zookeeper伪分布式" class="headerlink" title="Zookeeper伪分布式"></a>Zookeeper伪分布式</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/20/Zookeeper%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-pig和sqoop的安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/">pig和sqoop的安装</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2023-02-20T04:53:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="pig和sqoop"><a href="#pig和sqoop" class="headerlink" title="pig和sqoop"></a>pig和sqoop</h1>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/20/pig%E5%92%8Csqoop%E7%9A%84%E5%AE%89%E8%A3%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -870,8 +438,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
