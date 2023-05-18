@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023 | 鳌伊耶学习历程</title>
+  <title>使用卷积神经网络实现猫和狗的预测 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/archives/2023/page/4/index.html">
+  <meta name="description" content="使用卷积神经网络实现猫和狗的预测一、实验原理或实验内容1.将图片数据分为训练集和验证集，训练集中猫和狗各10000张图片，验证集中猫和狗各2500张图片。 2.构建一个神经网络模型，并使用划分好的训练集数据训练模型，使用验证集的数据验证模型，训练迭代30次，建议使用生成器。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用卷积神经网络实现猫和狗的预测">
+<meta property="og:url" content="http://example.com/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="使用卷积神经网络实现猫和狗的预测一、实验原理或实验内容1.将图片数据分为训练集和验证集，训练集中猫和狗各10000张图片，验证集中猫和狗各2500张图片。 2.构建一个神经网络模型，并使用划分好的训练集数据训练模型，使用验证集的数据验证模型，训练迭代30次，建议使用生成器。">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.328888.xyz/2023/05/18/VVYiId.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/05/18/VVYVdb.png">
+<meta property="og:image" content="https://i.328888.xyz/2023/05/18/VVYfqq.png">
+<meta property="article:published_time" content="2023-05-18T12:55:43.000Z">
+<meta property="article:modified_time" content="2023-05-18T12:57:03.217Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.328888.xyz/2023/05/18/VVYiId.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,295 +163,226 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-使用卷积神经网络实现猫和狗的预测" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用卷积神经网络实现猫和狗的预测
+    </h1>
+  
+
+		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+        
+        <a href="/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/" class="archive-article-date">
+  	<time datetime="2023-05-18T12:55:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用卷积神经网络实现猫和狗的预测"><a href="#使用卷积神经网络实现猫和狗的预测" class="headerlink" title="使用卷积神经网络实现猫和狗的预测"></a>使用卷积神经网络实现猫和狗的预测</h1><h2 id="一、实验原理或实验内容"><a href="#一、实验原理或实验内容" class="headerlink" title="一、实验原理或实验内容"></a>一、实验原理或实验内容</h2><p>1.将图片数据分为训练集和验证集，训练集中猫和狗各10000张图片，验证集中猫和狗各2500张图片。</p>
+<p>2.构建一个神经网络模型，并使用划分好的训练集数据训练模型，使用验证集的数据验证模型，训练迭代30次，建议使用生成器。</p>
+<span id="more"></span>
+
+<p>3.获取训练过程中的训练精度、验证精度，并使用matplotlib来绘制精度变化曲线，要求模型的验证精度达到80%以上（注意不是训练精度），可以使用数据增强、预训练的卷积神经网络等方法。</p>
+<p>4.使用训练好的模型做猫狗预测，至少预测2张图片（有猫有狗）</p>
+<h2 id="二、实验器材及实验条件"><a href="#二、实验器材及实验条件" class="headerlink" title="二、实验器材及实验条件"></a>二、实验器材及实验条件</h2><p>Windows10</p>
+<p>Python3.8</p>
+<p>Pycharm</p>
+<p>Tensorflow</p>
+<p>Matplotlib</p>
+<p>猫狗图片数据集：(dog_and_cat.rar)</p>
+<h2 id="三、实验步骤与结果"><a href="#三、实验步骤与结果" class="headerlink" title="三、实验步骤与结果"></a>三、实验步骤与结果</h2><h3 id="1、加载数据"><a href="#1、加载数据" class="headerlink" title="1、加载数据"></a>1、加载数据</h3><h4 id="1-导入相关库并设置支持中文"><a href="#1-导入相关库并设置支持中文" class="headerlink" title="(1) 导入相关库并设置支持中文"></a>(1) 导入相关库并设置支持中文</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pathlib</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Conv2D, MaxPooling2D, Flatten, Dense</span><br><span class="line"><span class="keyword">from</span> keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"></span><br><span class="line">matplotlib.use(<span class="string">&#x27;TkAgg&#x27;</span>)</span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）将图片数据分为训练集和验证集"><a href="#（2）将图片数据分为训练集和验证集" class="headerlink" title="（2）将图片数据分为训练集和验证集"></a>（2）将图片数据分为训练集和验证集</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置文件路径</span></span><br><span class="line">original_dir = pathlib.Path(<span class="string">r&quot;D:\桌面文件\2023学习资料+作业\Python深度学习\archive\PetImages&quot;</span>)  <span class="comment"># 原始数据目录</span></span><br><span class="line">new_base_dir = pathlib.Path(<span class="string">r&quot;D:\桌面文件\2023学习资料+作业\Python深度学习\archive\cats_vs_dogs_small&quot;</span>)  <span class="comment"># 新目录</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建目录并复制文件到下面去</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_subset</span>(<span class="params">subset_name, start_index, end_index</span>):</span><br><span class="line">    <span class="keyword">for</span> category <span class="keyword">in</span> (<span class="string">&quot;Cat&quot;</span>, <span class="string">&quot;Dog&quot;</span>):</span><br><span class="line">        <span class="built_in">dir</span> = new_base_dir / subset_name / category</span><br><span class="line">        os.makedirs(<span class="built_in">dir</span>, exist_ok=<span class="literal">True</span>)  <span class="comment"># D:\workspace\data\cats_vs_dogs_small\train\Cat</span></span><br><span class="line">        fnames = [<span class="string">f&quot;<span class="subst">&#123;i&#125;</span>.jpg&quot;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(start_index, end_index)]</span><br><span class="line">        <span class="keyword">for</span> fname <span class="keyword">in</span> fnames:</span><br><span class="line">            shutil.copyfile(src=original_dir / category / fname, dst=<span class="built_in">dir</span> / fname, follow_symlinks=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将图片数据分为训练集和验证集，训练集中猫和狗各10000张图片，验证集中猫和狗各2500张图片</span></span><br><span class="line">make_subset(<span class="string">&quot;train&quot;</span>, start_index=<span class="number">0</span>, end_index=<span class="number">10000</span>)  <span class="comment"># 训练子集</span></span><br><span class="line">make_subset(<span class="string">&quot;validation&quot;</span>, start_index=<span class="number">10000</span>, end_index=<span class="number">12499</span>)  <span class="comment"># 验证子集</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://i.328888.xyz/2023/05/18/VVYiId.png" alt="VVYiId.png" border="0">
+
+<h4 id="（3）创建数据生成器"><a href="#（3）创建数据生成器" class="headerlink" title="（3）创建数据生成器"></a>（3）创建数据生成器</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建数据生成器</span></span><br><span class="line">train_datagen = ImageDataGenerator(rescale=<span class="number">1.</span> / <span class="number">255</span>)</span><br><span class="line">validation_datagen = ImageDataGenerator(rescale=<span class="number">1.</span> / <span class="number">255</span>)</span><br><span class="line"></span><br><span class="line">train_generator = train_datagen.flow_from_directory(</span><br><span class="line">    <span class="string">r&quot;D:\桌面文件\2023学习资料+作业\Python深度学习\archive\cats_vs_dogs_small\train&quot;</span>,</span><br><span class="line">    target_size=(<span class="number">150</span>, <span class="number">150</span>),</span><br><span class="line">    batch_size=<span class="number">20</span>,</span><br><span class="line">    class_mode=<span class="string">&#x27;binary&#x27;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">validation_generator = validation_datagen.flow_from_directory(</span><br><span class="line">    <span class="string">r&quot;D:\桌面文件\2023学习资料+作业\Python深度学习\archive\cats_vs_dogs_small\validation&quot;</span>,</span><br><span class="line">    target_size=(<span class="number">150</span>, <span class="number">150</span>),</span><br><span class="line">    batch_size=<span class="number">20</span>,</span><br><span class="line">    class_mode=<span class="string">&#x27;binary&#x27;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-构建深度学习模型"><a href="#2-构建深度学习模型" class="headerlink" title="2. 构建深度学习模型"></a>2. 构建深度学习模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建一个神经网络模型，并使用划分好的训练集数据训练模型，使用验证集的数据验证模型，训练迭代30次，建议使用生成器</span></span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>, input_shape=(<span class="number">150</span>, <span class="number">150</span>, <span class="number">3</span>)))</span><br><span class="line">model.add(MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(Conv2D(<span class="number">128</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(Conv2D(<span class="number">128</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(Flatten())</span><br><span class="line">model.add(Dense(<span class="number">512</span>, activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-训练模型（需要添加验证集）"><a href="#3-训练模型（需要添加验证集）" class="headerlink" title="3. 训练模型（需要添加验证集）"></a>3. 训练模型（需要添加验证集）</h3><h4 id="（1）编译模型"><a href="#（1）编译模型" class="headerlink" title="（1）编译模型"></a>（1）编译模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编译模型</span></span><br><span class="line">model.<span class="built_in">compile</span>(loss=<span class="string">&#x27;binary_crossentropy&#x27;</span>, optimizer=<span class="string">&#x27;rmsprop&#x27;</span>,</span><br><span class="line">              metrics=[<span class="string">&#x27;acc&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）保存模型"><a href="#（2）保存模型" class="headerlink" title="（2）保存模型"></a>（2）保存模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 回调函数，用于保存模型</span></span><br><span class="line">callbacks = [</span><br><span class="line">    keras.callbacks.ModelCheckpoint(</span><br><span class="line">        filepath=<span class="string">r&quot;D:\桌面文件\2023学习资料+作业\Python深度学习\实验3\实验3\模型\\cats_and_dogs_model_02.h5&quot;</span>,</span><br><span class="line">        save_best_only=<span class="literal">True</span>,</span><br><span class="line">        monitor=<span class="string">&quot;val_loss&quot;</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）训练模型"><a href="#（3）训练模型" class="headerlink" title="（3）训练模型"></a>（3）训练模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">history = model.fit(</span><br><span class="line">    train_generator,</span><br><span class="line">    steps_per_epoch=<span class="number">100</span>,</span><br><span class="line">    epochs=<span class="number">30</span>,</span><br><span class="line">    validation_data=validation_generator,</span><br><span class="line">    validation_steps=<span class="number">50</span>,</span><br><span class="line">    callbacks=callbacks</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-获取历史精度数据，绘制精度变化折线图"><a href="#4-获取历史精度数据，绘制精度变化折线图" class="headerlink" title="4. 获取历史精度数据，绘制精度变化折线图"></a>4. 获取历史精度数据，绘制精度变化折线图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘制精度变化折线图</span></span><br><span class="line">train_acc = history.history.get(<span class="string">&quot;acc&quot;</span>)</span><br><span class="line">valid_acc = history.history.get(<span class="string">&quot;val_acc&quot;</span>)</span><br><span class="line">data_x = <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(train_acc) + <span class="number">1</span>)</span><br><span class="line">plt.plot(data_x, train_acc, color=<span class="string">&quot;red&quot;</span>, label=<span class="string">&quot;训练精度&quot;</span>)</span><br><span class="line">plt.plot(data_x, valid_acc, color=<span class="string">&quot;green&quot;</span>, label=<span class="string">&quot;验证精度&quot;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="5．预测"><a href="#5．预测" class="headerlink" title="5．预测"></a>5．预测</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> img_to_array</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> load_model</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 加载模型</span></span><br><span class="line">model = load_model(<span class="string">r&quot;D:\model\cats_and_dogs_model_02.h5&quot;</span>)</span><br><span class="line"><span class="comment"># 待预测的图片路径</span></span><br><span class="line">image_paths = [</span><br><span class="line">    <span class="string">r&quot;D:\model\img\10006.jpg&quot;</span>,</span><br><span class="line">    <span class="string">r&quot;D:\model\img\10045.jpg&quot;</span>,</span><br><span class="line">    <span class="string">r&quot;D:\model\img\10078.jpg&quot;</span>,</span><br><span class="line">    <span class="string">r&quot;D:\model\img\10054.jpg&quot;</span>,</span><br><span class="line">    <span class="string">r&quot;D:\model\img\10069.jpg&quot;</span>,</span><br><span class="line">    <span class="string">r&quot;D:\model\img\10086.jpg&quot;</span>,</span><br><span class="line">]</span><br><span class="line"><span class="comment"># 对每张图片进行预测</span></span><br><span class="line"><span class="keyword">for</span> path <span class="keyword">in</span> image_paths:</span><br><span class="line">    <span class="comment"># 加载图片并进行预处理</span></span><br><span class="line">    img = Image.<span class="built_in">open</span>(path).resize((<span class="number">150</span>, <span class="number">150</span>))</span><br><span class="line">    x = img_to_array(img)</span><br><span class="line">    x = x / <span class="number">255.0</span>  <span class="comment"># 归一化</span></span><br><span class="line">    x = np.expand_dims(x, axis=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 预测图片类别</span></span><br><span class="line">    prediction = model.predict(x)[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">if</span> prediction &lt; <span class="number">0.5</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;path&#125;</span>: 猫&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;path&#125;</span>: 狗&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="6、运行结果"><a href="#6、运行结果" class="headerlink" title="6、运行结果"></a>6、运行结果</h3><img src="https://i.328888.xyz/2023/05/18/VVYVdb.png" alt="VVYVdb.png" border="0">
+
+<h3 id="7、预测结果（前面3张是猫的图片，后面三张是狗的图片"><a href="#7、预测结果（前面3张是猫的图片，后面三张是狗的图片" class="headerlink" title="7、预测结果（前面3张是猫的图片，后面三张是狗的图片"></a>7、预测结果（前面3张是猫的图片，后面三张是狗的图片</h3><img src="https://i.328888.xyz/2023/05/18/VVYfqq.png" alt="VVYfqq.png" border="0">
+
+
+      
+		
+		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/" class="archive-article-date">
-  	<time datetime="2023-03-08T14:13:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/08/%E4%BD%BF%E7%94%A8Pyecharts%E7%BB%98%E5%88%B6%E7%8E%AB%E7%91%B0%E5%9B%BE/">使用Pyecharts绘制玫瑰图</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-03-07T12:50:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/16/Tableau%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Tableau工具绘制基础图表</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/07/Linux%E7%B3%BB%E7%BB%9FDHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">Linux系统DHCP服务器配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B"><span class="toc-number">1.</span> <span class="toc-text">使用卷积神经网络实现猫和狗的预测</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E9%AA%8C%E5%8E%9F%E7%90%86%E6%88%96%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">一、实验原理或实验内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E9%AA%8C%E5%99%A8%E6%9D%90%E5%8F%8A%E5%AE%9E%E9%AA%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">二、实验器材及实验条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.</span> <span class="toc-text">三、实验步骤与结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、加载数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AF%BC%E5%85%A5%E7%9B%B8%E5%85%B3%E5%BA%93%E5%B9%B6%E8%AE%BE%E7%BD%AE%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">(1) 导入相关库并设置支持中文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B0%86%E5%9B%BE%E7%89%87%E6%95%B0%E6%8D%AE%E5%88%86%E4%B8%BA%E8%AE%AD%E7%BB%83%E9%9B%86%E5%92%8C%E9%AA%8C%E8%AF%81%E9%9B%86"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">（2）将图片数据分为训练集和验证集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">（3）创建数据生成器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9E%84%E5%BB%BA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 构建深度学习模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%88%E9%9C%80%E8%A6%81%E6%B7%BB%E5%8A%A0%E9%AA%8C%E8%AF%81%E9%9B%86%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 训练模型（需要添加验证集）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%BC%96%E8%AF%91%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">（1）编译模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E4%BF%9D%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">（2）保存模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">（3）训练模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%8E%B7%E5%8F%96%E5%8E%86%E5%8F%B2%E7%B2%BE%E5%BA%A6%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%BB%98%E5%88%B6%E7%B2%BE%E5%BA%A6%E5%8F%98%E5%8C%96%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 获取历史精度数据，绘制精度变化折线图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EF%BC%8E%E9%A2%84%E6%B5%8B"><span class="toc-number">1.3.5.</span> <span class="toc-text">5．预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.6.</span> <span class="toc-text">6、运行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C%EF%BC%88%E5%89%8D%E9%9D%A23%E5%BC%A0%E6%98%AF%E7%8C%AB%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%8C%E5%90%8E%E9%9D%A2%E4%B8%89%E5%BC%A0%E6%98%AF%E7%8B%97%E7%9A%84%E5%9B%BE%E7%89%87"><span class="toc-number">1.3.7.</span> <span class="toc-text">7、预测结果（前面3张是猫的图片，后面三张是狗的图片</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/" class="archive-article-date">
-  	<time datetime="2023-03-05T08:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-05</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/05/%E4%BD%BF%E7%94%A8JAVA-API%E8%AE%BF%E9%97%AE%E5%8F%8A%E6%93%8D%E4%BD%9CHDFS/">使用JAVA API访问及操作HDFS</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/04/hive%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-03-04T14:19:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/04/hive%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">hive常用操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/04/HDFS%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2023-03-04T13:39:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/04/HDFS%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8/">HDFS基本操作与使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E5%92%8CPython%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%92%8C%E6%93%8D%E4%BD%9CMongoDB/" class="archive-article-date">
-  	<time datetime="2023-03-03T06:15:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E5%92%8CPython%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%92%8C%E6%93%8D%E4%BD%9CMongoDB/">使用Java和Python来访问和操作MongoDB</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-03-03T05:39:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/">使用Java编程方法对HBase数据库进行操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/" class="archive-article-date">
-  	<time datetime="2023-03-02T04:59:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/">MongoDB的基本操作_2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/" class="archive-article-date">
-  	<time datetime="2023-03-01T11:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/">MongoDB的基本操作_1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/">Linux安装python3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2023/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2023/">1</a><a class="page-number" href="/archives/2023/page/2/">2</a><a class="page-number" href="/archives/2023/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/2023/page/5/">5</a><a class="page-number" href="/archives/2023/page/6/">6</a><a class="extend next" rel="next" href="/archives/2023/page/5/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -471,8 +410,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
