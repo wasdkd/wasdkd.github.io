@@ -15,20 +15,20 @@
 <meta property="og:site_name" content="鳌伊耶学习历程">
 <meta property="og:description" content="Spark  Streaming词频统计 1、什么是Spark  StreamingSpark  Streaming用于流式数据的处理，使得构建可扩展容错流应用程序变得容易。Spark  Streaming具有易于使用、高容错性、高吞吐量等特点，它能够胜任实时的流计算，Spark  Streaming可以从Socket、文件系统、Kafka、Flume等数据源产生的数据，并对其进行无缝衔接、实时在">
 <meta property="og:locale">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNBRV.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNpUN.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNXSd.gif">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNxVb.gif">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioN7bq.gif">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNE6z.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNeQw.gif">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioN6Ca.gif">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/24/ioNFgx.gif">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioNBRV.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioNpUN.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioNXSd.gif">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioNxVb.gif">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioN7bq.gif">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioNE6z.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioNeQw.gif">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioN6Ca.gif">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/24/ioNFgx.gif">
 <meta property="article:published_time" content="2023-04-24T15:14:51.000Z">
-<meta property="article:modified_time" content="2023-04-24T15:15:09.035Z">
+<meta property="article:modified_time" content="2023-05-22T14:58:16.096Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.328888.xyz/2023/04/24/ioNBRV.png">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/04/24/ioNBRV.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -206,7 +206,7 @@
 <span id="more"></span>
 
 <h2 id="2、Spark-Streaming工作原理"><a href="#2、Spark-Streaming工作原理" class="headerlink" title="2、Spark  Streaming工作原理"></a>2、Spark  Streaming工作原理</h2><p>Spark  Streaming从数据源接收实时数据流，并将数据分成若干批，然后由Spark引擎进行处理，最后批量生成结果流。</p>
-  <img src="https://i.328888.xyz/2023/04/24/ioNBRV.png" alt="ioNBRV.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/24/ioNBRV.png" alt="ioNBRV.png" border="0">  
 
 <h2 id="3、数据流加载"><a href="#3、数据流加载" class="headerlink" title="3、数据流加载"></a>3、数据流加载</h2><h3 id="3-1-初始化-StreamingContext"><a href="#3-1-初始化-StreamingContext" class="headerlink" title="3.1  初始化 StreamingContext"></a>3.1  初始化 StreamingContext</h3><p>在使用Spark  Streaming进行流处理之前需要进行初始化，必须创建一个流上下文对象StreamingContext，这是所有Spark  Streaming功能的主要入口。该对象可以通过SparkContext对象进行创建</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.streaming <span class="keyword">import</span> StreamingContext</span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()  <span class="comment"># 创建SparkContext对象</span></span><br><span class="line">DS = StreamingContext(sc, <span class="number">1</span>)  <span class="comment"># 生成流计算上下文，1秒计算一次</span></span><br><span class="line"><span class="comment"># DS 即为SDtream，可以通过type函数查看，如type(DS)</span></span><br><span class="line"><span class="comment"># 在定义上下文之后，必须执行StreamingContext的start方法开始接收并对其进行处理</span></span><br><span class="line">DS.start()</span><br><span class="line">DS.awaitTermination()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -220,27 +220,27 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.streaming <span class="keyword">import</span> StreamingContext</span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()</span><br><span class="line">DS = StreamingContext(sc, <span class="number">1</span>)  <span class="comment"># 一秒计算一次</span></span><br><span class="line">socketDS = DS.socketTextStream(<span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="number">9999</span>)   <span class="comment"># 绑定数据端口为9999</span></span><br><span class="line"><span class="comment"># 解析单词出现频率</span></span><br><span class="line">wordOneDS = socketDS.flatMap(<span class="keyword">lambda</span> x: x.split(<span class="string">&#x27; &#x27;</span>)).<span class="built_in">map</span>(<span class="keyword">lambda</span> y: (y, <span class="number">1</span>)).reduceByKey(<span class="keyword">lambda</span> x, y: x+y)</span><br><span class="line"><span class="comment"># 打印输出</span></span><br><span class="line">wordOneDS.pprint()</span><br><span class="line"><span class="comment"># 执行程序</span></span><br><span class="line">DS.start()</span><br><span class="line">DS.awaitTermination()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>运行步骤：先运行netcat，再运行python程序，在netcat中添加数据，查看结果</p>
-  <img src="https://i.328888.xyz/2023/04/24/ioNpUN.png" alt="ioNpUN.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/24/ioNpUN.png" alt="ioNpUN.png" border="0">  
 
 <p>输出结果</p>
-  <img src="https://i.328888.xyz/2023/04/24/ioNXSd.gif" alt="ioNXSd.gif" border="0">  
+  <img src="https://i.imgloc.com/2023/04/24/ioNXSd.gif" alt="ioNXSd.gif" border="0">  
 
-  <img src="https://i.328888.xyz/2023/04/24/ioNxVb.gif" alt="ioNxVb.gif" border="0">  
+  <img src="https://i.imgloc.com/2023/04/24/ioNxVb.gif" alt="ioNxVb.gif" border="0">  
 
-  <img src="https://i.328888.xyz/2023/04/24/ioN7bq.gif" alt="ioN7bq.gif" border="0">  
+  <img src="https://i.imgloc.com/2023/04/24/ioN7bq.gif" alt="ioN7bq.gif" border="0">  
 
 <h5 id="2）按历史时间累加统计"><a href="#2）按历史时间累加统计" class="headerlink" title="2）按历史时间累加统计"></a>2）按历史时间累加统计</h5><p>获取scoket端口传输的数据，统计历史时间段内每个单词累计出现的次数</p>
 <p>（需要使用的关键的DStream成员函数：flatMap，map，updateStateByKey）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line">os.environ[<span class="string">&quot;PYSPARK_DRIVER_PYTHON&quot;</span>] = <span class="string">&quot;/opt/conda3/bin/python3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入pyspark包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkContext</span><br><span class="line"><span class="keyword">from</span> pyspark.streaming <span class="keyword">import</span> StreamingContext</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">updateValue</span>(<span class="params">v1, v2</span>):</span><br><span class="line">    <span class="keyword">if</span> v2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        v2 = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(v1, v2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化入口</span></span><br><span class="line">sc = SparkContext()</span><br><span class="line">DS = StreamingContext(sc, <span class="number">1</span>)</span><br><span class="line">DS.checkpoint(<span class="string">&#x27;/opt/cp&#x27;</span>)  <span class="comment"># 在使用updateStateByKey前需设置检查点(必须)</span></span><br><span class="line">socketDS = DS.socketTextStream(<span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="number">9999</span>)</span><br><span class="line"><span class="comment"># 累计</span></span><br><span class="line">wordOneDS = socketDS.flatMap(<span class="keyword">lambda</span> x: x.split(<span class="string">&#x27; &#x27;</span>)).<span class="built_in">map</span>(<span class="keyword">lambda</span> y: (y, <span class="number">1</span>)).updateStateByKey(updateValue)</span><br><span class="line">wordOneDS.pprint()</span><br><span class="line">DS.start()</span><br><span class="line">DS.awaitTermination()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/24/ioNE6z.png" alt="ioNE6z.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/24/ioNE6z.png" alt="ioNE6z.png" border="0">  
 
 <p>输出结果</p>
-  <img src="https://i.328888.xyz/2023/04/24/ioNeQw.gif" alt="ioNeQw.gif" border="0">  
+  <img src="https://i.imgloc.com/2023/04/24/ioNeQw.gif" alt="ioNeQw.gif" border="0">  
 
-  <img src="https://i.328888.xyz/2023/04/24/ioN6Ca.gif" alt="ioN6Ca.gif" border="0">
+  <img src="https://i.imgloc.com/2023/04/24/ioN6Ca.gif" alt="ioN6Ca.gif" border="0">
 
-<img src="https://i.328888.xyz/2023/04/24/ioNFgx.gif" alt="ioNFgx.gif" border="0">  
+<img src="https://i.imgloc.com/2023/04/24/ioNFgx.gif" alt="ioNFgx.gif" border="0">  
 
 
 

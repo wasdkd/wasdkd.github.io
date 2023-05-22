@@ -15,22 +15,22 @@
 <meta property="og:site_name" content="鳌伊耶学习历程">
 <meta property="og:description" content="配置hbase使用自己安装的ZookeeperHbased 的安装请看前面的 HBase伪分布式安装 文档">
 <meta property="og:locale">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZLwX.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZJYP.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZM7t.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZPMJ.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZatc.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZ1mA.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZQso.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gZqyN.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/giZGd.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/giiqb.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/02/20/gifwq.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZLwX.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZJYP.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZM7t.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZPMJ.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZatc.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZ1mA.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZQso.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gZqyN.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/giZGd.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/giiqb.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/02/20/gifwq.png">
 <meta property="article:published_time" content="2023-02-20T15:34:17.000Z">
-<meta property="article:modified_time" content="2023-02-28T04:39:16.844Z">
+<meta property="article:modified_time" content="2023-05-22T14:58:16.141Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.328888.xyz/2023/02/20/gZLwX.png">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/02/20/gZLwX.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -213,51 +213,51 @@
 
 <hr>
 <h2 id="1、配置-hbase-env-sh"><a href="#1、配置-hbase-env-sh" class="headerlink" title="1、配置 hbase-env.sh"></a>1、配置 hbase-env.sh</h2><p>进入到 confs 文件目录下，然后执行 vi hbase-env.sh 命令打开并编辑</p>
-  <img src="https://i.328888.xyz/2023/02/20/gZLwX.png" alt="gZLwX.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZLwX.png" alt="gZLwX.png" border="0">  
 
-  <img src="https://i.328888.xyz/2023/02/20/gZJYP.png" alt="gZJYP.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZJYP.png" alt="gZJYP.png" border="0">  
 
 <p>配置为false表示使用外面安装的Zookeeper</p>
-  <img src="https://i.328888.xyz/2023/02/20/gZM7t.png" alt="gZM7t.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZM7t.png" alt="gZM7t.png" border="0">  
 
 <h2 id="2、配置-hbase-site-xml"><a href="#2、配置-hbase-site-xml" class="headerlink" title="2、配置 hbase-site.xml"></a>2、配置 hbase-site.xml</h2><p>进入到 confs 文件目录下，然后 执行 vi hbase-site.xml 命令打开并编辑</p>
-  <img src="https://i.328888.xyz/2023/02/20/gZPMJ.png" alt="gZPMJ.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZPMJ.png" alt="gZPMJ.png" border="0">  
 
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.cluster.distributed<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.rootdir\<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://node1:8020/hbase\<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>指定Region服务器共享的目录，用来持久存储HBase的数据，URL必须完全正确，其中包含了文件系统的schema。</span><br><span class="line"></span><br><span class="line">默认值\&quot;\$&#123;hbase.tmp.dir&#125;/hbase\&quot;,**该值要和Hadoop里的core-site.html 的fs.defaultFS值相同**，node1 为主机名称，执行 hostname 命令可以查看主机名称；执行 sudo vi /etc/hostname 命令 可以修改主机名称。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.zookeeper.quorum<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>node1:2181<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>配置zookeeper集群地址,如果有多个 zookeeper 可以用逗号分开配置多个 <span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&lt;!\--指定Zookeeper数据存储目录\--\&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hbase.zookeeper.property.dataDir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/home/hyk/zookeeper/zkdata<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>此为zookeeper数据存放位置配置，在zookeeper安装目录下新建 zkdata文件夹用于存放zookeeper数据，可以自行创建一个文件夹保存 <span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="3、HBase测试运行"><a href="#3、HBase测试运行" class="headerlink" title="3、HBase测试运行"></a>3、HBase测试运行</h2><h3 id="3-1、启动-hadoop"><a href="#3-1、启动-hadoop" class="headerlink" title="3.1、启动 hadoop"></a>3.1、启动 hadoop</h3><p>执行命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-all.sh</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/02/20/gZatc.png" alt="gZatc.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZatc.png" alt="gZatc.png" border="0">  
 
 <h3 id="3-2、启动Zookeeper"><a href="#3-2、启动Zookeeper" class="headerlink" title="3.2、启动Zookeeper"></a>3.2、启动Zookeeper</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zkServer.sh start</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/02/20/gZ1mA.png" alt="gZ1mA.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZ1mA.png" alt="gZ1mA.png" border="0">  
 
 <h3 id="3-3-启动hbase"><a href="#3-3-启动hbase" class="headerlink" title="3.3 启动hbase"></a>3.3 启动hbase</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-hbase.sh</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-4-使用hbase-shell-命令进入hbase"><a href="#3-4-使用hbase-shell-命令进入hbase" class="headerlink" title="3.4 使用hbase shell 命令进入hbase"></a>3.4 使用hbase shell 命令进入hbase</h3><p>并使用list指令看能否正常列出已有的表</p>
-  <img src="https://i.328888.xyz/2023/02/20/gZQso.png" alt="gZQso.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZQso.png" alt="gZQso.png" border="0">  
 
 
 
 <h3 id="3-5关闭-后jps查看进程"><a href="#3-5关闭-后jps查看进程" class="headerlink" title="3.5关闭 后jps查看进程"></a>3.5关闭 后jps查看进程</h3><p>关闭hbase （stop-hbase.sh ），关闭zookeeper（zkServer.sh stop）关闭hadoop(stop-all.sh)</p>
-  <img src="https://i.328888.xyz/2023/02/20/gZqyN.png" alt="gZqyN.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gZqyN.png" alt="gZqyN.png" border="0">  
 
 <p>注：启动zookeeper,执行zkServer.sh start 命令时，出现权限不够问题解决方法</p>
 <ol>
 <li>将Zookeeper的权限赋给用户</li>
 </ol>
-  <img src="https://i.328888.xyz/2023/02/20/giZGd.png" alt="giZGd.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/giZGd.png" alt="giZGd.png" border="0">  
 
 <ol start="2">
 <li>使用ll命令查看（如下即成功）</li>
 </ol>
-  <img src="https://i.328888.xyz/2023/02/20/giiqb.png" alt="giiqb.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/giiqb.png" alt="giiqb.png" border="0">  
 
 <p>③启动zookeeper（zkServer.sh start）时，出现zoo.cfg文件不存在的问题</p>
 <p>使用cp zoo_sample.cfg zoo.cfg命令复制一份即可成功启动</p>
-  <img src="https://i.328888.xyz/2023/02/20/gifwq.png" alt="gifwq.png" border="0">  
+  <img src="https://i.imgloc.com/2023/02/20/gifwq.png" alt="gifwq.png" border="0">  
       
 		
 		

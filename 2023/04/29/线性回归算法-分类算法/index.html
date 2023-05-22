@@ -15,22 +15,22 @@
 <meta property="og:site_name" content="鳌伊耶学习历程">
 <meta property="og:description" content="线性回归算法 + 分类算法数据挖掘与机器学习 回归分析是确定两种或两种以上变量间相互依赖关系的一种统计分析方法，是应用极其广泛的数据分析方法之一，使用线性回归模型实现预测   一、使用线性回归算法的最小二乘法进行房价预测   二、使用线性回归算法的梯度下降进行房价预测">
 <meta property="og:locale">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXJ43.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXKNy.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXLd5.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXMu8.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKX27H.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXHMQ.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXbtE.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXjmC.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKX8sP.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXNyX.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/04/29/iKXrIt.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXJ43.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXKNy.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXLd5.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXMu8.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKX27H.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXHMQ.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXbtE.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXjmC.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKX8sP.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXNyX.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/04/29/iKXrIt.png">
 <meta property="article:published_time" content="2023-04-29T09:59:11.000Z">
-<meta property="article:modified_time" content="2023-04-29T09:59:29.038Z">
+<meta property="article:modified_time" content="2023-05-22T14:58:16.137Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.328888.xyz/2023/04/29/iKXJ43.png">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/04/29/iKXJ43.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -219,22 +219,22 @@
 
 <h3 id="（3）数据拆分"><a href="#（3）数据拆分" class="headerlink" title="（3）数据拆分"></a>（3）数据拆分</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#数据切分</span></span><br><span class="line">x_train,x_test,y_train,y_test=train_test_split(lb.data,lb.target,test_size=<span class="number">0.25</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x_train:&#x27;</span>, x_train.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x_test:&#x27;</span>, x_test.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y_train:&#x27;</span>, y_train.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y_test:&#x27;</span>, y_test.shape)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXJ43.png" alt="iKXJ43.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXJ43.png" alt="iKXJ43.png" border="0">  
 
 <h3 id="（4）构建模型并训练模型"><a href="#（4）构建模型并训练模型" class="headerlink" title="（4）构建模型并训练模型"></a>（4）构建模型并训练模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#线性回归模型,最小二乘法</span></span><br><span class="line">LR=LinearRegression()</span><br><span class="line"><span class="comment"># 训练数据</span></span><br><span class="line">LR.fit(x_train,y_train)</span><br><span class="line"><span class="comment"># 运用模型进行训练  round():四舍五入</span></span><br><span class="line">y_predict=LR.predict(x_test).<span class="built_in">round</span>()</span><br><span class="line">y_predict</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXKNy.png" alt="iKXKNy.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXKNy.png" alt="iKXKNy.png" border="0">  
 
 <h3 id="（5）计算均分误差、绝对误差、权重系数"><a href="#（5）计算均分误差、绝对误差、权重系数" class="headerlink" title="（5）计算均分误差、绝对误差、权重系数"></a>（5）计算均分误差、绝对误差、权重系数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#均方误差</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;均方误差:&quot;</span>,mean_squared_error(y_test,y_predict))</span><br><span class="line"><span class="comment">#绝对误差</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;绝对误差:&quot;</span>,mean_absolute_error(y_test,y_predict))</span><br><span class="line"><span class="comment">#权重系数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;权重系数:&quot;</span>,r2_score(y_test,y_predict))</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXLd5.png" alt="iKXLd5.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXLd5.png" alt="iKXLd5.png" border="0">  
 
 <h2 id="二、梯度下降"><a href="#二、梯度下降" class="headerlink" title="二、梯度下降"></a>二、梯度下降</h2><p>根据最小二乘法修改模型即可</p>
 <h3 id="（1）构建模型并训练"><a href="#（1）构建模型并训练" class="headerlink" title="（1）构建模型并训练"></a>（1）构建模型并训练</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#梯度下降法</span></span><br><span class="line">SR=SGDRegressor()</span><br><span class="line">SR.fit(x_train,y_train)</span><br><span class="line"><span class="comment">#运用模型进行训练</span></span><br><span class="line">y_predict=SR.predict(x_test).<span class="built_in">round</span>()<span class="comment">#对预测的结果四舍五入</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="（2）计算均分误差、绝对误差、权重系数"><a href="#（2）计算均分误差、绝对误差、权重系数" class="headerlink" title="（2）计算均分误差、绝对误差、权重系数"></a>（2）计算均分误差、绝对误差、权重系数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#均方误差</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;均方误差:&quot;</span>,mean_squared_error(y_test,y_predict))</span><br><span class="line"><span class="comment">#绝对误差</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;绝对误差:&quot;</span>,mean_absolute_error(y_test,y_predict))</span><br><span class="line"><span class="comment">#权重系数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;权重系数:&quot;</span>,r2_score(y_test,y_predict))</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXMu8.png" alt="iKXMu8.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXMu8.png" alt="iKXMu8.png" border="0">  
 
 <h1 id="分类算法"><a href="#分类算法" class="headerlink" title="分类算法"></a>分类算法</h1><p>使用KNN算法对鸢尾花进行分类，使用交叉验证和网格搜索进行优化</p>
 <h2 id="一、使用KNN算法对鸢尾花数据进行分类预测"><a href="#一、使用KNN算法对鸢尾花数据进行分类预测" class="headerlink" title="一、使用KNN算法对鸢尾花数据进行分类预测"></a>一、使用KNN算法对鸢尾花数据进行分类预测</h2><h3 id="（1）导入库"><a href="#（1）导入库" class="headerlink" title="（1）导入库"></a>（1）导入库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入库</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># datasets是sklearn提供的数据源</span></span><br><span class="line"><span class="keyword">import</span> sklearn.datasets <span class="keyword">as</span> dt</span><br><span class="line"><span class="comment"># model_selection里的train_test_split是用于切割数据源，分割为训练集数据（x_train,y_train）和测试集数据(x_test,y_test)</span></span><br><span class="line"><span class="keyword">import</span> sklearn.model_selection <span class="keyword">as</span> md</span><br><span class="line"><span class="comment"># neighbors里的Kneighbors是sklearn提供的K近邻算法，也叫模型</span></span><br><span class="line"><span class="keyword">import</span> sklearn.neighbors <span class="keyword">as</span> nb</span><br><span class="line"><span class="comment"># metrics里的predict是sklearn提供的模型评估，用于检测预测值和真实值之间的误差大小，既y_predict和y_test的误差</span></span><br><span class="line"><span class="keyword">import</span> sklearn.metrics <span class="keyword">as</span> mt</span><br><span class="line"><span class="comment"># pickle 是用于模型存储</span></span><br><span class="line"><span class="keyword">import</span> pickle</span><br></pre></td></tr></table></figure>
@@ -243,25 +243,25 @@
 
 <h3 id="（3）查看训练集和测试集的形状"><a href="#（3）查看训练集和测试集的形状" class="headerlink" title="（3）查看训练集和测试集的形状"></a>（3）查看训练集和测试集的形状</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看训练集或测试集的形状（行，列）</span></span><br><span class="line"><span class="built_in">print</span>(X.shape)</span><br><span class="line"><span class="built_in">print</span>(Y.shape)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKX27H.png" alt="iKX27H.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKX27H.png" alt="iKX27H.png" border="0">  
 
 <h3 id="（4）分割数据"><a href="#（4）分割数据" class="headerlink" title="（4）分割数据"></a>（4）分割数据</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对源数据进行切割为训练集和测试集，random_state是随机种子，确保每一次分割数据是一样的。</span></span><br><span class="line">x_train,x_test,y_train,y_test=md.train_test_split(X,Y,random_state=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="（5）查看数据形状"><a href="#（5）查看数据形状" class="headerlink" title="（5）查看数据形状"></a>（5）查看数据形状</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看测试集和训练集数据的形状</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x_train:&#x27;</span>, x_train.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x_test:&#x27;</span>, x_test.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y_train:&#x27;</span>, y_train.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y_test:&#x27;</span>, y_test.shape)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXHMQ.png" alt="iKXHMQ.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXHMQ.png" alt="iKXHMQ.png" border="0">  
 
 <h3 id="（6）调用KNN模型并训练模型"><a href="#（6）调用KNN模型并训练模型" class="headerlink" title="（6）调用KNN模型并训练模型"></a>（6）调用KNN模型并训练模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调用KNN算法模型，</span></span><br><span class="line">model=nb.KNeighborsClassifier()</span><br><span class="line"><span class="comment"># 利用模型对数据进行训练、学习、捏合</span></span><br><span class="line">model.fit(x_train,y_train)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXbtE.png" alt="iKXbtE.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXbtE.png" alt="iKXbtE.png" border="0">  
 
 <h3 id="（7）预测目标值"><a href="#（7）预测目标值" class="headerlink" title="（7）预测目标值"></a>（7）预测目标值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 利用模型预测目标值</span></span><br><span class="line">y_predict=model.predict(x_test)</span><br><span class="line">y_predict</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXjmC.png" alt="iKXjmC.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXjmC.png" alt="iKXjmC.png" border="0">  
 
 <h3 id="（8）对模型的准确率进行评估"><a href="#（8）对模型的准确率进行评估" class="headerlink" title="（8）对模型的准确率进行评估"></a>（8）对模型的准确率进行评估</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对模型的准确率进行评估</span></span><br><span class="line">score=mt.accuracy_score(y_test,y_predict)</span><br><span class="line">score</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKX8sP.png" alt="iKX8sP.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKX8sP.png" alt="iKX8sP.png" border="0">  
 
 <h3 id="（9）保存模型"><a href="#（9）保存模型" class="headerlink" title="（9）保存模型"></a>（9）保存模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 保存模型</span></span><br><span class="line">save_model=pickle.dumps(model)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;model_knn.pk1&quot;</span>,mode=<span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> f1:</span><br><span class="line">    f1.write(save_model)</span><br></pre></td></tr></table></figure>
 
@@ -270,11 +270,11 @@
 
 <h3 id="（3）-KNN算法优化策略"><a href="#（3）-KNN算法优化策略" class="headerlink" title="（3） KNN算法优化策略"></a>（3） KNN算法优化策略</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">k_range=<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">31</span>)</span><br><span class="line">k_score=[]</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> k_range:</span><br><span class="line">    knn=KNeighborsClassifier(n_neighbors=k)</span><br><span class="line">    score=cross_val_score(knn,X,Y,cv=<span class="number">10</span>,scoring=<span class="string">&#x27;accuracy&#x27;</span>)</span><br><span class="line">    k_score.append(score.mean())</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(k_score))</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXNyX.png" alt="iKXNyX.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXNyX.png" alt="iKXNyX.png" border="0">  
 
 <h3 id="（4）绘制图像"><a href="#（4）绘制图像" class="headerlink" title="（4）绘制图像"></a>（4）绘制图像</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(k_range,k_score)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Value of k for KNN&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;accuracy&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/04/29/iKXrIt.png" alt="iKXrIt.png" border="0">  
+  <img src="https://i.imgloc.com/2023/04/29/iKXrIt.png" alt="iKXrIt.png" border="0">  
       
 		
 		

@@ -15,23 +15,23 @@
 <meta property="og:site_name" content="鳌伊耶学习历程">
 <meta property="og:description" content="MongoDB的基本操作二mongodb的find查询操作 查询条件和特定查询方法 通过游标查询数据的方法">
 <meta property="og:locale">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6h7yy.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hE85.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6heG8.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hzqZ.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hFwF.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hG7H.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hdMQ.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6h5tE.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hSmC.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hosP.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6hvyX.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/02/6h9It.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6h7yy.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hE85.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6heG8.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hzqZ.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hFwF.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hG7H.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hdMQ.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6h5tE.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hSmC.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hosP.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6hvyX.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/02/6h9It.png">
 <meta property="article:published_time" content="2023-03-02T04:59:28.000Z">
-<meta property="article:modified_time" content="2023-03-02T05:00:21.772Z">
+<meta property="article:modified_time" content="2023-05-22T14:58:16.083Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.328888.xyz/2023/03/02/6h7yy.png">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/03/02/6h7yy.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -213,51 +213,51 @@
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1416438275&auto=1&height=66"></iframe>
 
 <hr>
-<h2 id="1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档"><a href="#1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档" class="headerlink" title="1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档"></a>1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档</h2>  <img src="https://i.328888.xyz/2023/03/02/6h7yy.png" alt="6h7yy.png" border="0">  
+<h2 id="1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档"><a href="#1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档" class="headerlink" title="1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档"></a>1、在mongodb中创建一个自己名字拼音的集合，并在集合中添加如下图的文档</h2>  <img src="https://i.imgloc.com/2023/03/02/6h7yy.png" alt="6h7yy.png" border="0">  
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">use weikedan</span><br><span class="line"></span><br><span class="line">db.createCollction(&#x27;weikedan&#x27;)</span><br><span class="line"></span><br><span class="line">db.weikedan.insertMany([</span><br><span class="line">&#123;&#x27;_id&#x27;:1,&#x27;name&#x27;:&#x27;tql&#x27;,&#x27;high&#x27;:173,&#x27;age&#x27;:20,&#x27;hadoop&#x27;:70,&#x27;mongodb&#x27;:80&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:2,&#x27;name&#x27;:&#x27;lili&#x27;,&#x27;high&#x27;:158,&#x27;age&#x27;:18,&#x27;hadoop&#x27;:81,&#x27;mongodb&#x27;:90&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:4,&#x27;name&#x27;:&#x27;liu&#x27;,&#x27;high&#x27;:168,&#x27;age&#x27;:28,&#x27;hadoop&#x27;:71,&#x27;mongodb&#x27;:85&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:3,&#x27;name&#x27;:&#x27;zhang&#x27;,&#x27;high&#x27;:180,&#x27;age&#x27;:25,&#x27;hadoop&#x27;:80,&#x27;mongodb&#x27;:75&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:6,&#x27;name&#x27;:&#x27;zhe&#x27;,&#x27;high&#x27;:173,&#x27;age&#x27;:35,&#x27;hadoop&#x27;:90,&#x27;mongodb&#x27;:85&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:5,&#x27;num&#x27;:[171,172,173,174]&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:7,&#x27;num&#x27;:[171,172]&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:9,&#x27;num&#x27;:[181,183,182]&#125;</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line">db.weikedan.find()</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6hE85.png" alt="6hE85.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6hE85.png" alt="6hE85.png" border="0">  
 
 <h2 id="2-查找你名字的集合中，high大于170，且age大于20的文档，并且只显示-id、name和hadoop这三个key（要求-and查询分别使用显式和隐式两种方法实现）"><a href="#2-查找你名字的集合中，high大于170，且age大于20的文档，并且只显示-id、name和hadoop这三个key（要求-and查询分别使用显式和隐式两种方法实现）" class="headerlink" title="2. 查找你名字的集合中，high大于170，且age大于20的文档，并且只显示_id、name和hadoop这三个key（要求$and查询分别使用显式和隐式两种方法实现）"></a>2. 查找你名字的集合中，high大于170，且age大于20的文档，并且只显示_id、name和hadoop这三个key（要求$and查询分别使用显式和隐式两种方法实现）</h2><p>显式：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.weikedan.find(&#123;$and:[&#123;high:&#123;$gt:170&#125;,age:&#123;$gte:20&#125;&#125;]&#125;,&#123;&#x27;_id&#x27;:1,&#x27;name&#x27;:1,&#x27;hadoop&#x27;:1&#125;)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6heG8.png" alt="6heG8.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6heG8.png" alt="6heG8.png" border="0">  
 
 <p>隐式：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.weikedan.find(&#123;high:&#123;$gt:170&#125;,age:&#123;$gte:20&#125;&#125;,&#123;&#x27;_id&#x27;:1,&#x27;name&#x27;:1,&#x27;hadoop&#x27;:1&#125;)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6hzqZ.png" alt="6hzqZ.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6hzqZ.png" alt="6hzqZ.png" border="0">  
 
 <h2 id="3-查找你名字的集合中，hadoop大于80，或者mongodb大于等于85的文档"><a href="#3-查找你名字的集合中，hadoop大于80，或者mongodb大于等于85的文档" class="headerlink" title="3.查找你名字的集合中，hadoop大于80，或者mongodb大于等于85的文档"></a>3.查找你名字的集合中，hadoop大于80，或者mongodb大于等于85的文档</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.weikedan.find(&#123;$or:[&#123;hadoop:&#123;$gt:80&#125;&#125;,&#123;mongodb:&#123;$gte:85&#125;&#125;]&#125;)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6hFwF.png" alt="6hFwF.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6hFwF.png" alt="6hFwF.png" border="0">  
 
 <h2 id="4-使用-all查询num对应的数组中存在171和172的文档"><a href="#4-使用-all查询num对应的数组中存在171和172的文档" class="headerlink" title="4.使用$all查询num对应的数组中存在171和172的文档"></a>4.使用$all查询num对应的数组中存在171和172的文档</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.weikedan.find(&#123;num:&#123;$all:[171,172]&#125;&#125;)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6hG7H.png" alt="6hG7H.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6hG7H.png" alt="6hG7H.png" border="0">  
 
 <h2 id="5-对你名字的集合中的-id降序排序，并只显示前面的5个文档"><a href="#5-对你名字的集合中的-id降序排序，并只显示前面的5个文档" class="headerlink" title="5.对你名字的集合中的_id降序排序，并只显示前面的5个文档"></a>5.对你名字的集合中的_id降序排序，并只显示前面的5个文档</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.weikedan.find().sort(&#123;&#x27;_id&#x27;:-1&#125;).limit(5)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6hdMQ.png" alt="6hdMQ.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6hdMQ.png" alt="6hdMQ.png" border="0">  
 
 <h2 id="6-用游标的方式输出整个你名字的集合"><a href="#6-用游标的方式输出整个你名字的集合" class="headerlink" title="6.用游标的方式输出整个你名字的集合"></a>6.用游标的方式输出整个你名字的集合</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var getname=function(obj)&#123;print(obj.name)&#125;</span><br><span class="line"></span><br><span class="line"> var cursor=db.weikedan.find()</span><br><span class="line"></span><br><span class="line"> cursor.forEach(getname)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6h5tE.png" alt="6h5tE.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6h5tE.png" alt="6h5tE.png" border="0">  
 
-<h2 id="7-创建一个商品信息表，如下图"><a href="#7-创建一个商品信息表，如下图" class="headerlink" title="7.创建一个商品信息表，如下图"></a>7.创建一个商品信息表，如下图</h2>  <img src="https://i.328888.xyz/2023/03/02/6hSmC.png" alt="6hSmC.png" border="0">  
+<h2 id="7-创建一个商品信息表，如下图"><a href="#7-创建一个商品信息表，如下图" class="headerlink" title="7.创建一个商品信息表，如下图"></a>7.创建一个商品信息表，如下图</h2>  <img src="https://i.imgloc.com/2023/03/02/6hSmC.png" alt="6hSmC.png" border="0">  
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">use weikedan</span><br><span class="line"></span><br><span class="line">db.createCollection(&#x27;newstu&#x27;)</span><br><span class="line"></span><br><span class="line">db.newstu.insertMany([</span><br><span class="line">&#123;&#x27;_id&#x27;:1,&#x27;quantity&#x27;:2,&#x27;price&#x27;:10,&#x27;num&#x27;:1&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:2,&#x27;quantity&#x27;:4,&#x27;price&#x27;:9,&#x27;num&#x27;:1&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:3,&#x27;quantity&#x27;:5,&#x27;price&#x27;:20,&#x27;num&#x27;:2&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:4,&#x27;quantity&#x27;:5,&#x27;price&#x27;:20,&#x27;num&#x27;:3&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:5,&#x27;quantity&#x27;:15,&#x27;price&#x27;:10,&#x27;num&#x27;:3&#125;,</span><br><span class="line">&#123;&#x27;_id&#x27;:6,&#x27;quantity&#x27;:5,&#x27;price&#x27;:25,&#x27;num&#x27;:2&#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
 
 
 
-  <img src="https://i.328888.xyz/2023/03/02/6hosP.png" alt="6hosP.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6hosP.png" alt="6hosP.png" border="0">  
 
-<h2 id="8-参考官方文档：官方文档，对上面创建好的集合（num为商品编号，quantity为销售数量-price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）"><a href="#8-参考官方文档：官方文档，对上面创建好的集合（num为商品编号，quantity为销售数量-price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）" class="headerlink" title="8.参考官方文档：官方文档，对上面创建好的集合（num为商品编号，quantity为销售数量,price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）"></a>8.参考官方文档：<a target="_blank" rel="noopener" href="https://www.mongodb.com/docs/manual/core/aggregation-pipeline/">官方文档</a>，对上面创建好的集合（num为商品编号，quantity为销售数量,price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）</h2>  <img src="https://i.328888.xyz/2023/03/02/6hvyX.png" alt="6hvyX.png" border="0">  
+<h2 id="8-参考官方文档：官方文档，对上面创建好的集合（num为商品编号，quantity为销售数量-price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）"><a href="#8-参考官方文档：官方文档，对上面创建好的集合（num为商品编号，quantity为销售数量-price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）" class="headerlink" title="8.参考官方文档：官方文档，对上面创建好的集合（num为商品编号，quantity为销售数量,price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）"></a>8.参考官方文档：<a target="_blank" rel="noopener" href="https://www.mongodb.com/docs/manual/core/aggregation-pipeline/">官方文档</a>，对上面创建好的集合（num为商品编号，quantity为销售数量,price为价格），请使用聚合运算统计每个商品的销售额（即每个商品的销售数量X销售价格，然后将属于相同编号的商品相加）</h2>  <img src="https://i.imgloc.com/2023/03/02/6hvyX.png" alt="6hvyX.png" border="0">  
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.newstu.aggregate([&#123;$group:&#123;_id:&#x27;$num&#x27;,total:&#123;$sum:&#123;$multiply:[&#x27;$quantity&#x27;,&#x27;$price&#x27;]&#125;&#125;&#125;&#125;]).sort(&#123;_id:-1&#125;)</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/02/6h9It.png" alt="6h9It.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/02/6h9It.png" alt="6h9It.png" border="0">  
       
 		
 		

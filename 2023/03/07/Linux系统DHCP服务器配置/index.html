@@ -15,23 +15,23 @@
 <meta property="og:site_name" content="鳌伊耶学习历程">
 <meta property="og:description" content="Linux系统DHCP服务器配置已安装VMware workstatio pro和CenOs7系统的电脑">
 <meta property="og:locale">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5b8i3.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bb5v.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bIby.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bNz5.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5br18.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bRCZ.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bcXF.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bmKH.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bBDQ.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bX3E.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5bgSC.png">
-<meta property="og:image" content="https://i.328888.xyz/2023/03/07/5b7iP.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5b8i3.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bb5v.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bIby.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bNz5.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5br18.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bRCZ.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bcXF.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bmKH.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bBDQ.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bX3E.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5bgSC.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/03/07/5b7iP.png">
 <meta property="article:published_time" content="2023-03-07T12:50:27.000Z">
-<meta property="article:modified_time" content="2023-03-07T12:53:02.943Z">
+<meta property="article:modified_time" content="2023-05-22T14:58:16.079Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.328888.xyz/2023/03/07/5b8i3.png">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/03/07/5b8i3.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -214,37 +214,37 @@
 <hr>
 <h2 id="1、检查计算机中是否安装dhcp这个软件包"><a href="#1、检查计算机中是否安装dhcp这个软件包" class="headerlink" title="1、检查计算机中是否安装dhcp这个软件包"></a>1、检查计算机中是否安装dhcp这个软件包</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep dhcp</span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/07/5b8i3.png" alt="5b8i3.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5b8i3.png" alt="5b8i3.png" border="0">  
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">若没有先</span><br><span class="line">yum clean all</span><br><span class="line">再</span><br><span class="line">yum -y install dhcp</span><br><span class="line">进行安装</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="2、添加网络适配器（自定义为VMnet1和VMnet2-仅主机模式-）"><a href="#2、添加网络适配器（自定义为VMnet1和VMnet2-仅主机模式-）" class="headerlink" title="2、添加网络适配器（自定义为VMnet1和VMnet2(仅主机模式)）"></a>2、添加网络适配器（自定义为VMnet1和VMnet2(仅主机模式)）</h2>  <img src="https://i.328888.xyz/2023/03/07/5bb5v.png" alt="5bb5v.png" border="0">  
+<h2 id="2、添加网络适配器（自定义为VMnet1和VMnet2-仅主机模式-）"><a href="#2、添加网络适配器（自定义为VMnet1和VMnet2-仅主机模式-）" class="headerlink" title="2、添加网络适配器（自定义为VMnet1和VMnet2(仅主机模式)）"></a>2、添加网络适配器（自定义为VMnet1和VMnet2(仅主机模式)）</h2>  <img src="https://i.imgloc.com/2023/03/07/5bb5v.png" alt="5bb5v.png" border="0">  
 
-<h2 id="3、在主机网络连接中查看，看到VMnet1和VMnet2"><a href="#3、在主机网络连接中查看，看到VMnet1和VMnet2" class="headerlink" title="3、在主机网络连接中查看，看到VMnet1和VMnet2"></a>3、在主机网络连接中查看，看到VMnet1和VMnet2</h2>  <img src="https://i.328888.xyz/2023/03/07/5bIby.png" alt="5bIby.png" border="0">  
+<h2 id="3、在主机网络连接中查看，看到VMnet1和VMnet2"><a href="#3、在主机网络连接中查看，看到VMnet1和VMnet2" class="headerlink" title="3、在主机网络连接中查看，看到VMnet1和VMnet2"></a>3、在主机网络连接中查看，看到VMnet1和VMnet2</h2>  <img src="https://i.imgloc.com/2023/03/07/5bIby.png" alt="5bIby.png" border="0">  
 
-<h2 id="4、将VMnet1和VMnet2的IP设为自动获取"><a href="#4、将VMnet1和VMnet2的IP设为自动获取" class="headerlink" title="4、将VMnet1和VMnet2的IP设为自动获取"></a>4、将VMnet1和VMnet2的IP设为自动获取</h2>  <img src="https://i.328888.xyz/2023/03/07/5bNz5.png" alt="5bNz5.png" border="0">  
+<h2 id="4、将VMnet1和VMnet2的IP设为自动获取"><a href="#4、将VMnet1和VMnet2的IP设为自动获取" class="headerlink" title="4、将VMnet1和VMnet2的IP设为自动获取"></a>4、将VMnet1和VMnet2的IP设为自动获取</h2>  <img src="https://i.imgloc.com/2023/03/07/5bNz5.png" alt="5bNz5.png" border="0">  
 
-<h2 id="5、设置固定IP地址（cd-x2F-etc-x2F-sysconfig-x2F-network-scrpts）"><a href="#5、设置固定IP地址（cd-x2F-etc-x2F-sysconfig-x2F-network-scrpts）" class="headerlink" title="5、设置固定IP地址（cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scrpts）"></a>5、设置固定IP地址（cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scrpts）</h2>  <img src="https://i.328888.xyz/2023/03/07/5br18.png" alt="5br18.png" border="0">  
+<h2 id="5、设置固定IP地址（cd-x2F-etc-x2F-sysconfig-x2F-network-scrpts）"><a href="#5、设置固定IP地址（cd-x2F-etc-x2F-sysconfig-x2F-network-scrpts）" class="headerlink" title="5、设置固定IP地址（cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scrpts）"></a>5、设置固定IP地址（cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scrpts）</h2>  <img src="https://i.imgloc.com/2023/03/07/5br18.png" alt="5br18.png" border="0">  
 
 <p>使用vim ifcfg-ens33 和vim ifcfg-ens37命令设置固定IP</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">TYPE=Ethernet</span><br><span class="line"></span><br><span class="line">PROXY_METHOD=none</span><br><span class="line"></span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line"></span><br><span class="line">BOOTPROTO=<span class="keyword">static</span></span><br><span class="line"></span><br><span class="line">DEFROUTE=yes</span><br><span class="line"></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line"></span><br><span class="line">IPV6INIT=yes</span><br><span class="line"></span><br><span class="line">IPV6_AUTOCONF=yes</span><br><span class="line"></span><br><span class="line">IPV6_DEFROUTE=yes</span><br><span class="line"></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line"></span><br><span class="line">IPV6_ADDR_GEN_MODE=stable-privacy</span><br><span class="line"></span><br><span class="line">NAME=ens33</span><br><span class="line"></span><br><span class="line">UUID=7124c6bb-dc88-4bb4-<span class="number">8514</span>-8a583dc3657a</span><br><span class="line"></span><br><span class="line">DEVICE=ens33</span><br><span class="line"></span><br><span class="line">ONBOOT=yes</span><br><span class="line"></span><br><span class="line">IPADDR=<span class="number">10.10</span><span class="number">.10</span><span class="number">.50</span></span><br><span class="line"></span><br><span class="line">PREFIX=<span class="number">24</span></span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/07/5bRCZ.png" alt="5bRCZ.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5bRCZ.png" alt="5bRCZ.png" border="0">  
 
 <p>使用</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmcli con show</span><br></pre></td></tr></table></figure>
 
 <p>命令查看UUID号</p>
-  <img src="https://i.328888.xyz/2023/03/07/5bcXF.png" alt="5bcXF.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5bcXF.png" alt="5bcXF.png" border="0">  
 
 <p>ens33 和ens37的IP如下</p>
-  <img src="https://i.328888.xyz/2023/03/07/5bmKH.png" alt="5bmKH.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5bmKH.png" alt="5bmKH.png" border="0">  
 
 <h2 id="6修改dhcp配置文件（-x2F-etc-x2F-dhcp），vim-dhcpd-conf修改文件如下"><a href="#6修改dhcp配置文件（-x2F-etc-x2F-dhcp），vim-dhcpd-conf修改文件如下" class="headerlink" title="6修改dhcp配置文件（&#x2F;etc&#x2F;dhcp），vim dhcpd.conf修改文件如下"></a>6修改dhcp配置文件（&#x2F;etc&#x2F;dhcp），vim dhcpd.conf修改文件如下</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">default</span>-lease-time <span class="number">600</span>;</span><br><span class="line"></span><br><span class="line">max-lease-time <span class="number">7200</span>;</span><br><span class="line"></span><br><span class="line">subnet <span class="number">10.10</span><span class="number">.10</span><span class="number">.0</span> netmask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span> &#123;</span><br><span class="line"></span><br><span class="line">range <span class="number">10.10</span><span class="number">.10</span><span class="number">.20</span> <span class="number">10.10</span><span class="number">.10</span><span class="number">.40</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">host fantasia &#123;</span><br><span class="line"></span><br><span class="line">hardware ethernet <span class="number">00</span>:<span class="number">50</span>:<span class="number">56</span>:c0:<span class="number">00</span>:<span class="number">01</span>;</span><br><span class="line"></span><br><span class="line">fixed-address fantasia.fugue.com;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">subnet <span class="number">10.10</span><span class="number">.20</span><span class="number">.0</span> netmask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span> &#123;</span><br><span class="line"></span><br><span class="line">range <span class="number">10.10</span><span class="number">.20</span><span class="number">.20</span> <span class="number">10.10</span><span class="number">.20</span><span class="number">.40</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-  <img src="https://i.328888.xyz/2023/03/07/5bBDQ.png" alt="5bBDQ.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5bBDQ.png" alt="5bBDQ.png" border="0">  
 
 <h2 id="7、启动dhcp"><a href="#7、启动dhcp" class="headerlink" title="7、启动dhcp"></a>7、启动dhcp</h2><p>使用命令</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service dhcp start</span><br></pre></td></tr></table></figure>
@@ -253,12 +253,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable dhcpd.service</span><br></pre></td></tr></table></figure>
 
 <p>命令设置开机自动启动dhcp(关闭用disable)</p>
-  <img src="https://i.328888.xyz/2023/03/07/5bX3E.png" alt="5bX3E.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5bX3E.png" alt="5bX3E.png" border="0">  
 
 <h2 id="8、测试dhcp"><a href="#8、测试dhcp" class="headerlink" title="8、测试dhcp"></a>8、测试dhcp</h2><p>禁用再重新启动VMnet1和VMnet2查看是否成功获取正确的IP</p>
-  <img src="https://i.328888.xyz/2023/03/07/5bgSC.png" alt="5bgSC.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5bgSC.png" alt="5bgSC.png" border="0">  
 
-  <img src="https://i.328888.xyz/2023/03/07/5b7iP.png" alt="5b7iP.png" border="0">  
+  <img src="https://i.imgloc.com/2023/03/07/5b7iP.png" alt="5b7iP.png" border="0">  
 
 <p>成功获取IP</p>
 
