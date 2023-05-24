@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>使用循环神经网络实现气温的预测 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="使用循环神经网络实现气温的预测一、实验要求1. 下载数据，下载地址： https:&#x2F;&#x2F;s3.amazonaws.com&#x2F;keras- datasets&#x2F;jena_climate_2009_2016.csv.zip 2. 加载数据，可以使用pandas加载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用循环神经网络实现气温的预测">
+<meta property="og:url" content="http://example.com/2023/05/24/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="使用循环神经网络实现气温的预测一、实验要求1. 下载数据，下载地址： https:&#x2F;&#x2F;s3.amazonaws.com&#x2F;keras- datasets&#x2F;jena_climate_2009_2016.csv.zip 2. 加载数据，可以使用pandas加载">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.imgloc.com/2023/05/24/VDOBGo.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/05/24/VDOpIA.png">
+<meta property="article:published_time" content="2023-05-24T15:29:23.000Z">
+<meta property="article:modified_time" content="2023-05-24T15:29:50.710Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/05/24/VDOBGo.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,20 +162,26 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-使用循环神经网络实现气温的预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-使用循环神经网络实现气温的预测" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/24/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B/">使用循环神经网络实现气温的预测</a>
+    <h1 class="article-title" itemprop="name">
+      使用循环神经网络实现气温的预测
     </h1>
   
 
 		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
 
 <!--显示阅读次数完毕-->
 
@@ -184,10 +197,76 @@
         <h1 id="使用循环神经网络实现气温的预测"><a href="#使用循环神经网络实现气温的预测" class="headerlink" title="使用循环神经网络实现气温的预测"></a>使用循环神经网络实现气温的预测</h1><h2 id="一、实验要求"><a href="#一、实验要求" class="headerlink" title="一、实验要求"></a>一、实验要求</h2><p>1. 下载数据，下载地址：</p>
 <p><a target="_blank" rel="noopener" href="https://s3.amazonaws.com/keras-">https://s3.amazonaws.com/keras-</a> datasets&#x2F;jena_climate_2009_2016.csv.zip</p>
 <p>2. 加载数据，可以使用pandas加载</p>
-        
+<span id="more"></span>
+
+<p>3. 对浮点型数据进行标准化处理</p>
+<p>4. 创建一个生成时间序列样本及其目标的生成器，以5天前（720个时间步）的数据作为样本数据,采样周期为每小时1次(6个时间步），以1天后（144个时间步）的气温值作为标签</p>
+<p>5. 准备训练生成器（20万行）、验证生成器（10万行）</p>
+<p>6. 构建模型（可以综合使用各种循环层、一维卷积层等）</p>
+<p>7. 训练模型（需要添加验证集）</p>
+<p>8. 获取训练过程中的训练mae值、验证mae，并使用matplotlib来绘制mae变化曲线，要求模型的验证mae值在0.3以下（注意不是训练的mae值）</p>
+<h2 id="二、实验器材及实验条件"><a href="#二、实验器材及实验条件" class="headerlink" title="二、实验器材及实验条件"></a>二、实验器材及实验条件</h2><p>Windows10</p>
+<p>Python 3.8</p>
+<p>Pycharm</p>
+<p>Matplotlib</p>
+<h2 id="三、实验步骤与结果"><a href="#三、实验步骤与结果" class="headerlink" title="三、实验步骤与结果"></a>三、实验步骤与结果</h2><h3 id="查看数据"><a href="#查看数据" class="headerlink" title="查看数据"></a>查看数据</h3><img src="https://i.imgloc.com/2023/05/24/VDOBGo.png" alt="VDOBGo.png" border="0">
+
+<h3 id="1、导入相关库"><a href="#1、导入相关库" class="headerlink" title="1、导入相关库"></a>1、导入相关库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入相关库</span></span><br><span class="line"><span class="comment"># import keras</span></span><br><span class="line"><span class="comment"># import matplotlib</span></span><br><span class="line"><span class="comment"># matplotlib.use(&#x27;TkAgg&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.applications.densenet <span class="keyword">import</span> layers</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、加载数据"><a href="#2、加载数据" class="headerlink" title="2、加载数据"></a>2、加载数据</h3><h4 id="（1）定义generator方法，生成时间序列样本以其目标的生成器"><a href="#（1）定义generator方法，生成时间序列样本以其目标的生成器" class="headerlink" title="（1）定义generator方法，生成时间序列样本以其目标的生成器"></a>（1）定义generator方法，生成时间序列样本以其目标的生成器</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成时间序列样本及其目标的生成器，要求传入一个二维的浮点型数组</span></span><br><span class="line"><span class="comment"># 返回指定范围内的样本和标签</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generator</span>(<span class="params">data, lookback, delay, min_index, max_index,</span></span><br><span class="line"><span class="params">              shuffle=<span class="literal">False</span>, batch_size =<span class="number">128</span>, step =<span class="number">6</span></span>):</span><br><span class="line">    <span class="keyword">if</span> max_index <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        max_index = <span class="built_in">len</span>(data) - delay - <span class="number">1</span></span><br><span class="line">    i = min_index + lookback</span><br><span class="line">    <span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> shuffle:</span><br><span class="line">            rows = np.random.randint(min_index + lookback, max_index, size=batch_size)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> i + batch_size &gt;= max_index:</span><br><span class="line">                i = min_index + lookback</span><br><span class="line">            rows = np.arange(i, <span class="built_in">min</span>(i + batch_size, max_index))</span><br><span class="line">            i += <span class="built_in">len</span>(rows)</span><br><span class="line">        samples = np.zeros((<span class="built_in">len</span>(rows), lookback // step, data.shape[-<span class="number">1</span>]))</span><br><span class="line">        targets = np.zeros((<span class="built_in">len</span>(rows),))</span><br><span class="line">        <span class="keyword">for</span> j, row <span class="keyword">in</span> <span class="built_in">enumerate</span>(rows):</span><br><span class="line">            indices = <span class="built_in">range</span>(rows[j] - lookback, rows[j], step)</span><br><span class="line">            samples[j] = data[indices]</span><br><span class="line">            targets[j] = data[rows[j] + delay][<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">yield</span> samples, targets</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）使用pandas读取数据并对数据中浮点数据进行标准化处理"><a href="#（2）使用pandas读取数据并对数据中浮点数据进行标准化处理" class="headerlink" title="（2）使用pandas读取数据并对数据中浮点数据进行标准化处理"></a>（2）使用pandas读取数据并对数据中浮点数据进行标准化处理</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 加载数据</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\Python深度学习\\jena_climate_2009_2016\\jena_climate_2009_2016.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line"><span class="comment"># print(df)</span></span><br><span class="line"><span class="comment"># 对浮点型数据进行标准化处理</span></span><br><span class="line">float_data = df.loc[:, <span class="string">&quot;p (mbar)&quot;</span>:].to_numpy()</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）对所有数值进行标准化"><a href="#（3）对所有数值进行标准化" class="headerlink" title="（3）对所有数值进行标准化"></a>（3）对所有数值进行标准化</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对所有数值进行标准化，值的标准化只能用训练集求出平均值和标准差</span></span><br><span class="line">mean = float_data[:<span class="number">200000</span>].mean(axis=<span class="number">0</span>)</span><br><span class="line">float_data -= mean</span><br><span class="line">std = float_data[:<span class="number">200000</span>].std(axis=<span class="number">0</span>)</span><br><span class="line">float_data /= std</span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）分割训练集和验证集"><a href="#（4）分割训练集和验证集" class="headerlink" title="（4）分割训练集和验证集"></a>（4）分割训练集和验证集</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">lookback = <span class="number">1440</span>  <span class="comment"># 输入数据应该包括过去多少个时间步，这里是10天</span></span><br><span class="line">step = <span class="number">6</span>  <span class="comment"># 数据采样的周期（单位：时间步），这里是每小时（6*10分钟）抽取一个数据点</span></span><br><span class="line">delay = <span class="number">144</span>  <span class="comment"># 目标应该在未来多少个时间步之后</span></span><br><span class="line">batch_size = <span class="number">128</span>  <span class="comment"># 生成数据的批次大小</span></span><br><span class="line"><span class="comment"># 取0~200000作为训练集，里面已经包含标签数据（生成器对象），训练集打乱数据对于性能的提升有帮助</span></span><br><span class="line">train_gen = generator(float_data, lookback=lookback, delay=delay, step=step, shuffle=<span class="literal">True</span>,</span><br><span class="line">                      batch_size=batch_size, min_index=<span class="number">0</span>, max_index=<span class="number">200000</span>)</span><br><span class="line"><span class="comment"># 取200000-300000作为验证集</span></span><br><span class="line">valid_gen = generator(float_data, lookback=lookback, delay=delay, step=step,</span><br><span class="line">                      batch_size=batch_size, min_index=<span class="number">200001</span>, max_index=<span class="number">300000</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取3000001~最后一行作为验证数据（生成器对象）</span></span><br><span class="line"><span class="comment"># test_gen = generator(float_data, lookback=lookback, delay=delay, step=step,</span></span><br><span class="line"><span class="comment">#                      batch_size=batch_size, min_index=300001, max_index=None)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、构建深度学习模型"><a href="#3、构建深度学习模型" class="headerlink" title="3、构建深度学习模型"></a>3、构建深度学习模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;构建模型&quot;&quot;&quot;</span></span><br><span class="line">model = Sequential()</span><br><span class="line"><span class="comment"># 使用  SimpleRNN（简单循环神经网络）</span></span><br><span class="line">model.add(layers.SimpleRNN(<span class="number">32</span>, input_shape=(<span class="literal">None</span>, float_data.shape[-<span class="number">1</span>])))</span><br><span class="line">model.add(layers.Dense(<span class="number">1</span>))</span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&quot;rmsprop&quot;</span>, loss=<span class="string">&#x27;mse&#x27;</span>, metrics=[<span class="string">&#x27;mae&#x27;</span>])</span><br><span class="line"><span class="comment"># 计算为了查看验证集，需要从val_gen中抽取多少次</span></span><br><span class="line">val_steps = (<span class="number">300000</span> - <span class="number">200001</span> - lookback) // batch_size</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、训练模型（需要添加验证集）"><a href="#4、训练模型（需要添加验证集）" class="headerlink" title="4、训练模型（需要添加验证集）"></a>4、训练模型（需要添加验证集）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">history = model.fit(train_gen, steps_per_epoch=<span class="number">500</span>, epochs=<span class="number">20</span>,</span><br><span class="line">                              validation_data=valid_gen, validation_steps=val_steps)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5、获取历史mae数据，绘制mae变化折线图"><a href="#5、获取历史mae数据，绘制mae变化折线图" class="headerlink" title="5、获取历史mae数据，绘制mae变化折线图"></a>5、获取历史mae数据，绘制mae变化折线图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘制mae变化折线图</span></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line">train_mae = history.history.get(<span class="string">&quot;mae&quot;</span>)</span><br><span class="line">valid_mae = history.history.get(<span class="string">&quot;val_mae&quot;</span>)</span><br><span class="line">data_x = <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(train_mae) + <span class="number">1</span>)</span><br><span class="line">plt.plot(data_x, train_mae, color=<span class="string">&quot;red&quot;</span>, label=<span class="string">&quot;训练mae&quot;</span>)</span><br><span class="line">plt.plot(data_x, valid_mae, color=<span class="string">&quot;green&quot;</span>, label=<span class="string">&quot;验证mae&quot;</span>)</span><br><span class="line"><span class="comment"># 设置y轴的最小值和最大值</span></span><br><span class="line"><span class="comment"># plt.ylim(0.20, 0.35)</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、运行结果"><a href="#6、运行结果" class="headerlink" title="6、运行结果"></a>6、运行结果</h3><img src="https://i.imgloc.com/2023/05/24/VDOpIA.png" alt="VDOpIA.png" border="0">
+
+<h2 id="四、实验分析与结论"><a href="#四、实验分析与结论" class="headerlink" title="四、实验分析与结论"></a>四、实验分析与结论</h2><p>本实验使用普通的循环神经网络(SimpleRNN)实现气温的预测，定义一个方法来分割训练数据集和验证数据集，使用matplotlib绘制mae变化折线图，从运行结果图可以看到，验证mae低于0.3，满足实验的要求</p>
+<h2 id="实验全部代码"><a href="#实验全部代码" class="headerlink" title="实验全部代码"></a>实验全部代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用循环神经网络实现气温的预测</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入相关库</span></span><br><span class="line"><span class="keyword">import</span> keras</span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="comment"># matplotlib.use(&#x27;TkAgg&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.applications.densenet <span class="keyword">import</span> layers</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成时间序列样本及其目标的生成器，要求传入一个二维的浮点型数组</span></span><br><span class="line"><span class="comment"># 返回指定范围内的样本和标签</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generator</span>(<span class="params">data, lookback, delay, min_index, max_index,</span></span><br><span class="line"><span class="params">              shuffle=<span class="literal">False</span>, batch_size =<span class="number">128</span>, step =<span class="number">6</span></span>):</span><br><span class="line">    <span class="keyword">if</span> max_index <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        max_index = <span class="built_in">len</span>(data) - delay - <span class="number">1</span></span><br><span class="line">    i = min_index + lookback</span><br><span class="line">    <span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> shuffle:</span><br><span class="line">            rows = np.random.randint(min_index + lookback, max_index, size=batch_size)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> i + batch_size &gt;= max_index:</span><br><span class="line">                i = min_index + lookback</span><br><span class="line">            rows = np.arange(i, <span class="built_in">min</span>(i + batch_size, max_index))</span><br><span class="line">            i += <span class="built_in">len</span>(rows)</span><br><span class="line">        samples = np.zeros((<span class="built_in">len</span>(rows), lookback // step, data.shape[-<span class="number">1</span>]))</span><br><span class="line">        targets = np.zeros((<span class="built_in">len</span>(rows),))</span><br><span class="line">        <span class="keyword">for</span> j, row <span class="keyword">in</span> <span class="built_in">enumerate</span>(rows):</span><br><span class="line">            indices = <span class="built_in">range</span>(rows[j] - lookback, rows[j], step)</span><br><span class="line">            samples[j] = data[indices]</span><br><span class="line">            targets[j] = data[rows[j] + delay][<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">yield</span> samples, targets</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载数据</span></span><br><span class="line">filename = <span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\Python深度学习\\jena_climate_2009_2016\\jena_climate_2009_2016.csv&#x27;</span></span><br><span class="line">df = pd.read_csv(filename)</span><br><span class="line"><span class="comment"># print(df)</span></span><br><span class="line"><span class="comment"># 对浮点型数据进行标准化处理</span></span><br><span class="line">float_data = df.loc[:, <span class="string">&quot;p (mbar)&quot;</span>:].to_numpy()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对所有数值进行标准化，值的标准化只能用训练集求出平均值和标准差</span></span><br><span class="line">mean = float_data[:<span class="number">200000</span>].mean(axis=<span class="number">0</span>)</span><br><span class="line">float_data -= mean</span><br><span class="line">std = float_data[:<span class="number">200000</span>].std(axis=<span class="number">0</span>)</span><br><span class="line">float_data /= std</span><br><span class="line"></span><br><span class="line">lookback = <span class="number">1440</span>  <span class="comment"># 输入数据应该包括过去多少个时间步，这里是10天</span></span><br><span class="line">step = <span class="number">6</span>  <span class="comment"># 数据采样的周期（单位：时间步），这里是每小时（6*10分钟）抽取一个数据点</span></span><br><span class="line">delay = <span class="number">144</span>  <span class="comment"># 目标应该在未来多少个时间步之后</span></span><br><span class="line">batch_size = <span class="number">128</span>  <span class="comment"># 生成数据的批次大小</span></span><br><span class="line"><span class="comment"># 取0~200000作为训练集，里面已经包含标签数据（生成器对象），训练集打乱数据对于性能的提升有帮助</span></span><br><span class="line">train_gen = generator(float_data, lookback=lookback, delay=delay, step=step, shuffle=<span class="literal">True</span>,</span><br><span class="line">                      batch_size=batch_size, min_index=<span class="number">0</span>, max_index=<span class="number">200000</span>)</span><br><span class="line"><span class="comment"># 取200000-300000作为验证集</span></span><br><span class="line">valid_gen = generator(float_data, lookback=lookback, delay=delay, step=step,</span><br><span class="line">                      batch_size=batch_size, min_index=<span class="number">200001</span>, max_index=<span class="number">300000</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取3000001~最后一行作为验证数据（生成器对象）</span></span><br><span class="line"><span class="comment"># test_gen = generator(float_data, lookback=lookback, delay=delay, step=step,</span></span><br><span class="line"><span class="comment">#                      batch_size=batch_size, min_index=300001, max_index=None)</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;构建模型&quot;&quot;&quot;</span></span><br><span class="line">model = Sequential()</span><br><span class="line"><span class="comment"># 使用  SimpleRNN（简单循环神经网络）</span></span><br><span class="line">model.add(layers.SimpleRNN(<span class="number">32</span>, input_shape=(<span class="literal">None</span>, float_data.shape[-<span class="number">1</span>])))</span><br><span class="line">model.add(layers.Dense(<span class="number">1</span>))</span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&quot;rmsprop&quot;</span>, loss=<span class="string">&#x27;mse&#x27;</span>, metrics=[<span class="string">&#x27;mae&#x27;</span>])</span><br><span class="line"><span class="comment"># 计算为了查看验证集，需要从val_gen中抽取多少次</span></span><br><span class="line">val_steps = (<span class="number">300000</span> - <span class="number">200001</span> - lookback) // batch_size</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">history = model.fit(train_gen, steps_per_epoch=<span class="number">500</span>, epochs=<span class="number">20</span>,</span><br><span class="line">                              validation_data=valid_gen, validation_steps=val_steps)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制mae变化折线图</span></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line">train_mae = history.history.get(<span class="string">&quot;mae&quot;</span>)</span><br><span class="line">valid_mae = history.history.get(<span class="string">&quot;val_mae&quot;</span>)</span><br><span class="line">data_x = <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(train_mae) + <span class="number">1</span>)</span><br><span class="line">plt.plot(data_x, train_mae, color=<span class="string">&quot;red&quot;</span>, label=<span class="string">&quot;训练mae&quot;</span>)</span><br><span class="line">plt.plot(data_x, valid_mae, color=<span class="string">&quot;green&quot;</span>, label=<span class="string">&quot;验证mae&quot;</span>)</span><br><span class="line"><span class="comment"># plt.ylim(0.20, 0.35)</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -196,16 +275,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/24/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/05/24/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/22/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客图片不能加载问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,641 +358,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-博客图片不能加载问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/22/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/">博客图片不能加载问题</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/22/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2023-05-22T15:14:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="博客图片不能加载问题"><a href="#博客图片不能加载问题" class="headerlink" title="博客图片不能加载问题"></a>博客图片不能加载问题</h1><p>用于保存图片的仓库：<a target="_blank" rel="noopener" href="https://imgloc.com/">https://imgloc.com/</a></p>
-<p>遇到网站不能正常进入，后了好久又能进入了，这时候之前的图片不能在博客上显示了</p>
-<p>查看仓库，图片还在，看路径，发现仓库的路径变了</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/22/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B"><span class="toc-number">1.</span> <span class="toc-text">使用循环神经网络实现气温的预测</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E9%AA%8C%E8%A6%81%E6%B1%82"><span class="toc-number">1.1.</span> <span class="toc-text">一、实验要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E9%AA%8C%E5%99%A8%E6%9D%90%E5%8F%8A%E5%AE%9E%E9%AA%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">二、实验器材及实验条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.</span> <span class="toc-text">三、实验步骤与结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.1.</span> <span class="toc-text">查看数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AF%BC%E5%85%A5%E7%9B%B8%E5%85%B3%E5%BA%93"><span class="toc-number">1.3.2.</span> <span class="toc-text">1、导入相关库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.3.</span> <span class="toc-text">2、加载数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AE%9A%E4%B9%89generator%E6%96%B9%E6%B3%95%EF%BC%8C%E7%94%9F%E6%88%90%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%A0%B7%E6%9C%AC%E4%BB%A5%E5%85%B6%E7%9B%AE%E6%A0%87%E7%9A%84%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">（1）定义generator方法，生成时间序列样本以其目标的生成器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E4%BD%BF%E7%94%A8pandas%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AF%B9%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%A0%87%E5%87%86%E5%8C%96%E5%A4%84%E7%90%86"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">（2）使用pandas读取数据并对数据中浮点数据进行标准化处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%AF%B9%E6%89%80%E6%9C%89%E6%95%B0%E5%80%BC%E8%BF%9B%E8%A1%8C%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">（3）对所有数值进行标准化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%88%86%E5%89%B2%E8%AE%AD%E7%BB%83%E9%9B%86%E5%92%8C%E9%AA%8C%E8%AF%81%E9%9B%86"><span class="toc-number">1.3.3.4.</span> <span class="toc-text">（4）分割训练集和验证集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%9E%84%E5%BB%BA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.4.</span> <span class="toc-text">3、构建深度学习模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%88%E9%9C%80%E8%A6%81%E6%B7%BB%E5%8A%A0%E9%AA%8C%E8%AF%81%E9%9B%86%EF%BC%89"><span class="toc-number">1.3.5.</span> <span class="toc-text">4、训练模型（需要添加验证集）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%8E%B7%E5%8F%96%E5%8E%86%E5%8F%B2mae%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%BB%98%E5%88%B6mae%E5%8F%98%E5%8C%96%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.3.6.</span> <span class="toc-text">5、获取历史mae数据，绘制mae变化折线图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.7.</span> <span class="toc-text">6、运行结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90%E4%B8%8E%E7%BB%93%E8%AE%BA"><span class="toc-number">1.4.</span> <span class="toc-text">四、实验分析与结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%85%A8%E9%83%A8%E4%BB%A3%E7%A0%81"><span class="toc-number">1.5.</span> <span class="toc-text">实验全部代码</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-GraphFrames图计算" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/22/GraphFrames%E5%9B%BE%E8%AE%A1%E7%AE%97/">GraphFrames图计算</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/22/GraphFrames%E5%9B%BE%E8%AE%A1%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2023-05-22T14:19:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="GraphFrames图计算"><a href="#GraphFrames图计算" class="headerlink" title="GraphFrames图计算"></a>GraphFrames图计算</h1><h2 id="1、图的概念"><a href="#1、图的概念" class="headerlink" title="1、图的概念"></a>1、图的概念</h2><p>一般来说，图是由顶点的非空有限集和边的有限集构成的，记作 G &#x3D;&lt; V，E &gt; ，其中，G表示一个图，V表示图G顶点(Vertices)的集合，E表示图G中边(Edges)的集合，E中的一条边连接V中的两个顶点</p>
-<p>图分为有向图和无向图</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/22/GraphFrames%E5%9B%BE%E8%AE%A1%E7%AE%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Tableau工具搭建BI仪表盘" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/20/Tableau%E5%B7%A5%E5%85%B7%E6%90%AD%E5%BB%BABI%E4%BB%AA%E8%A1%A8%E7%9B%98/">Tableau工具搭建BI仪表盘</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/20/Tableau%E5%B7%A5%E5%85%B7%E6%90%AD%E5%BB%BABI%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="archive-article-date">
-  	<time datetime="2023-05-20T09:05:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Tableau工具搭建BI仪表盘"><a href="#Tableau工具搭建BI仪表盘" class="headerlink" title="Tableau工具搭建BI仪表盘"></a>Tableau工具搭建BI仪表盘</h1><h2 id="一、搭建准备"><a href="#一、搭建准备" class="headerlink" title="一、搭建准备"></a>一、搭建准备</h2><p><strong>仪表盘主题：</strong>每日营收情况</p>
-<p><strong>关键数据：</strong>营收数据、流量数据</p>
-<p><strong>营收数据：</strong>GMV、商家实收、用户实付、总订单数（有效订单数、无效订单数）、cpc总费用、各平台数据对比</p>
-<p><strong>流量数据：</strong>曝光人数、进店人数、下单人数、进店转化率、下单转化率、新客数、老客数、复购率</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/20/Tableau%E5%B7%A5%E5%85%B7%E6%90%AD%E5%BB%BABI%E4%BB%AA%E8%A1%A8%E7%9B%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用卷积神经网络实现猫和狗的预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/">使用卷积神经网络实现猫和狗的预测</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/" class="archive-article-date">
-  	<time datetime="2023-05-18T12:55:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用卷积神经网络实现猫和狗的预测"><a href="#使用卷积神经网络实现猫和狗的预测" class="headerlink" title="使用卷积神经网络实现猫和狗的预测"></a>使用卷积神经网络实现猫和狗的预测</h1><h2 id="一、实验原理或实验内容"><a href="#一、实验原理或实验内容" class="headerlink" title="一、实验原理或实验内容"></a>一、实验原理或实验内容</h2><p>1.将图片数据分为训练集和验证集，训练集中猫和狗各10000张图片，验证集中猫和狗各2500张图片。</p>
-<p>2.构建一个神经网络模型，并使用划分好的训练集数据训练模型，使用验证集的数据验证模型，训练迭代30次，建议使用生成器。</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Tableau工具绘制基础图表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/16/Tableau%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8/">Tableau工具绘制基础图表</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/16/Tableau%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2023-05-16T14:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Tableau工具绘制基础图表"><a href="#Tableau工具绘制基础图表" class="headerlink" title="Tableau工具绘制基础图表"></a>Tableau工具绘制基础图表</h1><h2 id="1、软件简介"><a href="#1、软件简介" class="headerlink" title="1、软件简介"></a>1、软件简介</h2><p> Tableau公司将<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/9890322?fromModule=lemma_inlink">数据运算</a>与美观的图表完美地嫁接在一起。它的程序很容易上手，各公司可以用它将大量数据拖放到数字“画布”上，转眼间就能创建好各种图表。 这一软件的理念是，界面上的数据越容易操控，公司对自己在所在业务领域里的所作所为到底是正确还是错误，就能了解得越透彻。 </p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/16/Tableau%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Excel工具进行数据分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/12/%E4%BD%BF%E7%94%A8Excel%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">使用Excel工具进行数据分析</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/12/%E4%BD%BF%E7%94%A8Excel%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2023-05-11T16:04:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用Excel工具进行数据分析"><a href="#使用Excel工具进行数据分析" class="headerlink" title="使用Excel工具进行数据分析"></a>使用Excel工具进行数据分析</h1><p>一、常用函数：<strong>sum、sumif、sumifs、subtotal、if、vlookup、index、math</strong></p>
-<p>二、报表开发</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/12/%E4%BD%BF%E7%94%A8Excel%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spark机器学习库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/07/Spark%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%93/">Spark机器学习库</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/07/Spark%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2023-05-07T07:19:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Spark机器学习库"><a href="#Spark机器学习库" class="headerlink" title="Spark机器学习库"></a>Spark机器学习库</h1><h2 id="1、Spark机器学习库的构成"><a href="#1、Spark机器学习库的构成" class="headerlink" title="1、Spark机器学习库的构成"></a>1、Spark机器学习库的构成</h2><p>Spark机器学习库目前分为两个包：<strong>spark.mllib、spark.ml</strong></p>
-<p>spark.mllib包含基于RDD的机器学习API。Spark MLlib由来已久，在spark1.0以前的版本就已经存在，提供的算法丰富多彩，目前处于维护状态，不再添加新功能</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/07/Spark%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-复杂数据可视化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/07/%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">复杂数据可视化</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/07/%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2023-05-06T16:13:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="复杂数据可视化"><a href="#复杂数据可视化" class="headerlink" title="复杂数据可视化"></a>复杂数据可视化</h1><p><strong>散点矩阵图 + 平行坐标 + 雷达图</strong> <strong>+ 箱型图</strong></p>
-<h2 id="一、高维多元数据在大数据中的应用"><a href="#一、高维多元数据在大数据中的应用" class="headerlink" title="一、高维多元数据在大数据中的应用"></a>一、高维多元数据在大数据中的应用</h2><p>高维多元数据指每个数据对象有两个或两个以上独立或者相关属性的数据。</p>
-<p>高维指数据具有多个独立属性，多元指数据具有多个相关属性</p>
-<p>多元数据可视化的三类基本方法：<strong>空间映射、图标法和基于像素的可视化方法</strong></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/07/%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-对牛客网实习岗位进行数据分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/02/%E5%AF%B9%E7%89%9B%E5%AE%A2%E7%BD%91%E5%AE%9E%E4%B9%A0%E5%B2%97%E4%BD%8D%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">对牛客网实习岗位进行数据分析</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/02/%E5%AF%B9%E7%89%9B%E5%AE%A2%E7%BD%91%E5%AE%9E%E4%B9%A0%E5%B2%97%E4%BD%8D%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2023-05-02T09:11:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="对牛客网实习岗位进行数据分析"><a href="#对牛客网实习岗位进行数据分析" class="headerlink" title="对牛客网实习岗位进行数据分析"></a>对牛客网实习岗位进行数据分析</h1><p>使用<strong>八爪鱼</strong>工具采集牛客网的数据<br><strong>数据分析</strong>实习生:174条数据<br><strong>数据挖掘</strong>实习生:18条数据<br><strong>大数据开发</strong>:33条数据<br>采集到的数据量过少<br>采集到的数据使用<strong>excel</strong>进行简单处理，给三个表设置列名，并且删除没用的数据,列名如下：<br><strong>‘公司名’, ‘公司链接’, ‘岗位链接’, ‘关键词’, ‘城市’, ‘每周工作时长’, ‘实习时长’, ‘公司行业’, ‘公司规模’</strong></p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/02/%E5%AF%B9%E7%89%9B%E5%AE%A2%E7%BD%91%E5%AE%9E%E4%B9%A0%E5%B2%97%E4%BD%8D%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -881,8 +410,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
