@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | 鳌伊耶学习历程</title>
+  <title>使用函数式API编程实现图片的分类 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/archives/page/5/index.html">
+  <meta name="description" content="使用函数式API编程实现图片的分类一、实验原理或实验内容1.从keras的数据集中加载手写数字图片数据，转成网络需要的数据格式。 2.构建一个神经网络模型，要求使用keras函数式API，并使用划分好的训练集数据训练模型，使用划分好的测试集的数据验证模型，训练迭代20次。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用函数式API编程实现图片的分类">
+<meta property="og:url" content="http://example.com/2023/06/02/%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8FAPI%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E5%88%86%E7%B1%BB/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="使用函数式API编程实现图片的分类一、实验原理或实验内容1.从keras的数据集中加载手写数字图片数据，转成网络需要的数据格式。 2.构建一个神经网络模型，要求使用keras函数式API，并使用划分好的训练集数据训练模型，使用划分好的测试集的数据验证模型，训练迭代20次。">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/02/Vk2Qqa.png">
+<meta property="article:published_time" content="2023-06-02T01:19:40.000Z">
+<meta property="article:modified_time" content="2023-06-02T01:20:02.009Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/06/02/Vk2Qqa.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,295 +161,210 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-使用函数式API编程实现图片的分类" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用函数式API编程实现图片的分类
+    </h1>
+  
+
+		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+        
+        <a href="/2023/06/02/%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8FAPI%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E5%88%86%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2023-06-02T01:19:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-02</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用函数式API编程实现图片的分类"><a href="#使用函数式API编程实现图片的分类" class="headerlink" title="使用函数式API编程实现图片的分类"></a>使用函数式API编程实现图片的分类</h1><h2 id="一、实验原理或实验内容"><a href="#一、实验原理或实验内容" class="headerlink" title="一、实验原理或实验内容"></a>一、实验原理或实验内容</h2><p>1.从keras的数据集中加载手写数字图片数据，转成网络需要的数据格式。</p>
+<p>2.构建一个神经网络模型，要求使用keras函数式API，并使用划分好的训练集数据训练模型，使用划分好的测试集的数据验证模型，训练迭代20次。</p>
+<span id="more"></span>
+
+<p>3.获取训练过程中的训练精度、验证精度，并使用matplotlib来绘制精度变化曲线，要求模型的验证精度达到95%以上（注意不是训练精度）。</p>
+<p>4.写实验报告，将实验代码和绘制精度变化曲线截图粘贴到实验报告中。</p>
+<h2 id="二、实验器材及实验条件"><a href="#二、实验器材及实验条件" class="headerlink" title="二、实验器材及实验条件"></a>二、实验器材及实验条件</h2><p>Windows10、python、pycharm</p>
+<h2 id="三、实验步骤与结果"><a href="#三、实验步骤与结果" class="headerlink" title="三、实验步骤与结果"></a>三、实验步骤与结果</h2><h3 id="1-加载数据，并将读取到的数据转换成深度学习所需的格式"><a href="#1-加载数据，并将读取到的数据转换成深度学习所需的格式" class="headerlink" title="1.加载数据，并将读取到的数据转换成深度学习所需的格式"></a>1.加载数据，并将读取到的数据转换成深度学习所需的格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> Input, Model</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> layers</span><br><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> mnist</span><br><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> to_categorical</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据准备</span></span><br><span class="line">(train_x, train_y), (test_x, test_y) = mnist.load_data()</span><br><span class="line"><span class="comment"># 对于特征数据,Conv2D层处理的是4维数据（包括样本维），所以对数据源进行重塑</span></span><br><span class="line"><span class="comment"># 准备图像数据（数据需要根据模型要求进行预处理）</span></span><br><span class="line">train_x = train_x.reshape((<span class="number">60000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)).astype(<span class="string">&quot;float32&quot;</span>) / <span class="number">255</span></span><br><span class="line">test_x = test_x.reshape((<span class="number">10000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)).astype(<span class="string">&quot;float32&quot;</span>) / <span class="number">255</span></span><br><span class="line">train_y = to_categorical(train_y)</span><br><span class="line">test_y = to_categorical(test_y)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-构建深度学习网络和模型"><a href="#2-构建深度学习网络和模型" class="headerlink" title="2.构建深度学习网络和模型"></a>2.构建深度学习网络和模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建函数式API</span></span><br><span class="line">inputTensor = Input((<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">x1 = layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>)(inputTensor)</span><br><span class="line">x2 = layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>))(x1)</span><br><span class="line">x3 = layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>)(x2)</span><br><span class="line">x4 = layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>))(x3)</span><br><span class="line">x5 = layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>)(x4)</span><br><span class="line">x6 = layers.Flatten()(x5)</span><br><span class="line">x7 = layers.Dense(<span class="number">64</span>, activation=<span class="string">&#x27;relu&#x27;</span>)(x6)</span><br><span class="line">outputTensor = layers.Dense(<span class="number">10</span>, activation=<span class="string">&#x27;softmax&#x27;</span>)(x7)</span><br><span class="line">model = Model(inputTensor, outputTensor)</span><br><span class="line">model.summary()</span><br><span class="line"><span class="comment"># 编译模型</span></span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&#x27;rmsprop&#x27;</span>, loss=<span class="string">&#x27;categorical_crossentropy&#x27;</span>, metrics=[<span class="string">&#x27;acc&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-训练模型"><a href="#3-训练模型" class="headerlink" title="3.训练模型"></a>3.训练模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">history = model.fit(train_x, train_y, epochs=<span class="number">20</span>, batch_size=<span class="number">128</span>, validation_split=<span class="number">0.2</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-获取历史精度数据，绘制精度变化折线图"><a href="#4-获取历史精度数据，绘制精度变化折线图" class="headerlink" title="4.获取历史精度数据，绘制精度变化折线图"></a>4.获取历史精度数据，绘制精度变化折线图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘制精度变化折线图</span></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line">train_acc = history.history.get(<span class="string">&quot;acc&quot;</span>)</span><br><span class="line">valid_acc = history.history.get(<span class="string">&quot;val_acc&quot;</span>)</span><br><span class="line">data_x = <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(train_acc) + <span class="number">1</span>)</span><br><span class="line">plt.plot(data_x, train_acc, color=<span class="string">&quot;red&quot;</span>, label=<span class="string">&quot;训练精度&quot;</span>)</span><br><span class="line">plt.plot(data_x, valid_acc, color=<span class="string">&quot;green&quot;</span>, label=<span class="string">&quot;验证精度&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;精度变化折线图&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;训练次数&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;精度&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、运行结果"><a href="#5、运行结果" class="headerlink" title="5、运行结果"></a>5、运行结果</h3><img src="https://i.imgloc.com/2023/06/02/Vk2Qqa.png" alt="Vk2Qqa.png" border="0" />
+
+<h2 id="五、实验分析与结论"><a href="#五、实验分析与结论" class="headerlink" title="五、实验分析与结论"></a>五、实验分析与结论</h2><p>本实验使用函数式API编程实现mnist图片的分类，加载数据后，需要将数据进行重塑，使用函数式API的方式构建神经网络，编译训练。通过运行结果可以看到训练精度和验证精度的变化折线图。验证精度可以达到98%以上，符合实验预期结果。</p>
+<h2 id="实验全部代码"><a href="#实验全部代码" class="headerlink" title="实验全部代码"></a>实验全部代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> Input, Model</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> layers</span><br><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> mnist</span><br><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> to_categorical</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据准备</span></span><br><span class="line">(train_x, train_y), (test_x, test_y) = mnist.load_data()</span><br><span class="line"><span class="comment"># 对于特征数据,Conv2D层处理的是4维数据（包括样本维），所以对数据源进行重塑</span></span><br><span class="line"><span class="comment"># 准备图像数据（数据需要根据模型要求进行预处理）</span></span><br><span class="line">train_x = train_x.reshape((<span class="number">60000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)).astype(<span class="string">&quot;float32&quot;</span>) / <span class="number">255</span></span><br><span class="line">test_x = test_x.reshape((<span class="number">10000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)).astype(<span class="string">&quot;float32&quot;</span>) / <span class="number">255</span></span><br><span class="line">train_y = to_categorical(train_y)</span><br><span class="line">test_y = to_categorical(test_y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建函数式API</span></span><br><span class="line">inputTensor = Input((<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">x1 = layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>)(inputTensor)</span><br><span class="line">x2 = layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>))(x1)</span><br><span class="line">x3 = layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>)(x2)</span><br><span class="line">x4 = layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>))(x3)</span><br><span class="line">x5 = layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>)(x4)</span><br><span class="line">x6 = layers.Flatten()(x5)</span><br><span class="line">x7 = layers.Dense(<span class="number">64</span>, activation=<span class="string">&#x27;relu&#x27;</span>)(x6)</span><br><span class="line">outputTensor = layers.Dense(<span class="number">10</span>, activation=<span class="string">&#x27;softmax&#x27;</span>)(x7)</span><br><span class="line">model = Model(inputTensor, outputTensor)</span><br><span class="line">model.summary()</span><br><span class="line"><span class="comment"># 编译模型</span></span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&#x27;rmsprop&#x27;</span>, loss=<span class="string">&#x27;categorical_crossentropy&#x27;</span>, metrics=[<span class="string">&#x27;acc&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">history = model.fit(train_x, train_y, epochs=<span class="number">20</span>, batch_size=<span class="number">128</span>, validation_split=<span class="number">0.2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制精度变化折线图</span></span><br><span class="line"><span class="comment"># 支持中文</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>  <span class="comment"># 用来正常显示负号</span></span><br><span class="line"></span><br><span class="line">train_acc = history.history.get(<span class="string">&quot;acc&quot;</span>)</span><br><span class="line">valid_acc = history.history.get(<span class="string">&quot;val_acc&quot;</span>)</span><br><span class="line">data_x = <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(train_acc) + <span class="number">1</span>)</span><br><span class="line">plt.plot(data_x, train_acc, color=<span class="string">&quot;red&quot;</span>, label=<span class="string">&quot;训练精度&quot;</span>)</span><br><span class="line">plt.plot(data_x, valid_acc, color=<span class="string">&quot;green&quot;</span>, label=<span class="string">&quot;验证精度&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;精度变化折线图&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;训练次数&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;精度&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+		
+		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/04/HDFS%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2023-03-04T13:39:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/04/HDFS%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8/">HDFS基本操作与使用</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/06/02/%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8FAPI%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E5%88%86%E7%B1%BB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E5%92%8CPython%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%92%8C%E6%93%8D%E4%BD%9CMongoDB/" class="archive-article-date">
-  	<time datetime="2023-03-03T06:15:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/25/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E5%BD%B1%E8%AF%84%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%86%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用循环神经网络实现影评数据的分类</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E5%92%8CPython%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%92%8C%E6%93%8D%E4%BD%9CMongoDB/">使用Java和Python来访问和操作MongoDB</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8FAPI%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">使用函数式API编程实现图片的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E9%AA%8C%E5%8E%9F%E7%90%86%E6%88%96%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">一、实验原理或实验内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E9%AA%8C%E5%99%A8%E6%9D%90%E5%8F%8A%E5%AE%9E%E9%AA%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">二、实验器材及实验条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.</span> <span class="toc-text">三、实验步骤与结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%B9%B6%E5%B0%86%E8%AF%BB%E5%8F%96%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E6%88%90%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%89%80%E9%9C%80%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.加载数据，并将读取到的数据转换成深度学习所需的格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9E%84%E5%BB%BA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%BB%9C%E5%92%8C%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.构建深度学习网络和模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.训练模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%8E%B7%E5%8F%96%E5%8E%86%E5%8F%B2%E7%B2%BE%E5%BA%A6%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%BB%98%E5%88%B6%E7%B2%BE%E5%BA%A6%E5%8F%98%E5%8C%96%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.获取历史精度数据，绘制精度变化折线图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.5.</span> <span class="toc-text">5、运行结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90%E4%B8%8E%E7%BB%93%E8%AE%BA"><span class="toc-number">1.4.</span> <span class="toc-text">五、实验分析与结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%85%A8%E9%83%A8%E4%BB%A3%E7%A0%81"><span class="toc-number">1.5.</span> <span class="toc-text">实验全部代码</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-03-03T05:39:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-03</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/03/%E4%BD%BF%E7%94%A8Java%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E5%AF%B9HBase%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/">使用Java编程方法对HBase数据库进行操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/" class="archive-article-date">
-  	<time datetime="2023-03-02T04:59:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/02/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-2/">MongoDB的基本操作_2</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/" class="archive-article-date">
-  	<time datetime="2023-03-01T11:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/MongoDB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1/">MongoDB的基本操作_1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/Linux%E5%AE%89%E8%A3%85python3/">Linux安装python3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2023-03-01T09:28:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/01/Ubuntu%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Ubuntu执行sudo apt-get update失败解决办法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/28/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2023-02-28T05:22:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/28/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/">Hadoop伪分布式配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/27/HBase-shell-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-02-27T09:26:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/27/HBase-shell-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">HBase shell 基本操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/22/Spark%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2023-02-22T04:29:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/22/Spark%E6%90%AD%E5%BB%BA/">Spark搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/6/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -471,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
