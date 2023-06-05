@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>鳌伊耶学习历程</title>
+  <title>数据可视化中的交互 | 鳌伊耶学习历程</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="鳌伊耶学习历程">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="数据可视化中的交互地图 + 日历热力图 一、实验内容1、地图读取给定数据covid_data； 2、处理数据，统计各个省份的新增确诊人数；">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据可视化中的交互">
+<meta property="og:url" content="http://example.com/2023/06/05/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%AD%E7%9A%84%E4%BA%A4%E4%BA%92/index.html">
 <meta property="og:site_name" content="鳌伊耶学习历程">
+<meta property="og:description" content="数据可视化中的交互地图 + 日历热力图 一、实验内容1、地图读取给定数据covid_data； 2、处理数据，统计各个省份的新增确诊人数；">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlVY0z.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlVqXw.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlVuJa.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlfiDx.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlfV3k.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/Vlff5L.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/Vlf4ip.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlfAbU.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlfDzv.png">
+<meta property="og:image" content="https://i.imgloc.com/2023/06/05/VlfU13.png">
+<meta property="article:published_time" content="2023-06-05T15:53:14.000Z">
+<meta property="article:modified_time" content="2023-06-05T15:53:40.014Z">
 <meta property="article:author" content="鳌伊耶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgloc.com/2023/06/05/VlVY0z.png">
   
     <link rel="alternative" href="/atom.xml" title="鳌伊耶学习历程" type="application/atom+xml">
   
@@ -155,20 +170,26 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-数据可视化中的交互" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-数据可视化中的交互" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/06/05/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%AD%E7%9A%84%E4%BA%A4%E4%BA%92/">数据可视化中的交互</a>
+    <h1 class="article-title" itemprop="name">
+      数据可视化中的交互
     </h1>
   
 
 		<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
 
 <!--显示阅读次数完毕-->
 
@@ -184,10 +205,100 @@
         <h1 id="数据可视化中的交互"><a href="#数据可视化中的交互" class="headerlink" title="数据可视化中的交互"></a>数据可视化中的交互</h1><p><strong>地图 + 日历热力图</strong></p>
 <h2 id="一、实验内容"><a href="#一、实验内容" class="headerlink" title="一、实验内容"></a>一、实验内容</h2><p>1、地图读取给定数据covid_data；</p>
 <p>2、处理数据，统计各个省份的新增确诊人数；</p>
-        
+<span id="more"></span>
+
+<p>3、将处理过的数据进行可视化，使用pyecharts绘制地图；</p>
+<p>4、对图表进行分析；</p>
+<p>5、日历热力图分别读取北京、上海、广州、深圳四个城市的空气质量数据；</p>
+<p>6、处理数据，将Date列数据转换为datetime格式；</p>
+<p>7、使用pyecharts的HeatMap，绘制四个城市的日历热力图；</p>
+<p>8、对图表进行分析</p>
+<h2 id="二、实验器材及实验条件"><a href="#二、实验器材及实验条件" class="headerlink" title="二、实验器材及实验条件"></a>二、实验器材及实验条件</h2><p>1、个人笔记本电脑</p>
+<p>2、windows 10操作系统</p>
+<p>3、安装 PyCharm 、python 3.10，pyecharts 0.5.11</p>
+<h2 id="三、实验步骤与结果"><a href="#三、实验步骤与结果" class="headerlink" title="三、实验步骤与结果"></a>三、实验步骤与结果</h2><p>注意：pyehcarts地图显示需要安装这些地图插件：echarts-countries-pypkg 是全球国家地图，echarts-china-provinces-pypkg是中国省级地图， echarts-china-cities-pypkg是中国城市地图</p>
+<h3 id="1、地图-统计各个省份的新增确诊人数"><a href="#1、地图-统计各个省份的新增确诊人数" class="headerlink" title="1、地图(统计各个省份的新增确诊人数)"></a>1、地图(统计各个省份的新增确诊人数)</h3><h4 id="（1）读取数据"><a href="#（1）读取数据" class="headerlink" title="（1）读取数据"></a>（1）读取数据</h4><p>Pandas的read_csv方法读取数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Map</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\covid_data.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）统计各个省份的新增确诊人数"><a href="#（2）统计各个省份的新增确诊人数" class="headerlink" title="（2）统计各个省份的新增确诊人数"></a>（2）统计各个省份的新增确诊人数</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 分组计算</span></span><br><span class="line">grouped_data = df.groupby([<span class="string">&#x27;province_name&#x27;</span>], as_index=<span class="literal">False</span>)[<span class="string">&#x27;confirmed_count&#x27;</span>].<span class="built_in">sum</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取各省市的名称和确诊人数</span></span><br><span class="line">province_name = grouped_data[<span class="string">&#x27;province_name&#x27;</span>]</span><br><span class="line">confirmed_count = grouped_data[<span class="string">&#x27;confirmed_count&#x27;</span>]</span><br><span class="line"><span class="comment"># print(province_name)</span></span><br><span class="line"><span class="comment"># print(confirmed_count)</span></span><br><span class="line">city = []</span><br><span class="line">value = []</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">zip</span>(province_name, confirmed_count):</span><br><span class="line">    city.append(i)</span><br><span class="line">    value.append(j)</span><br><span class="line"><span class="comment"># print(city)</span></span><br><span class="line"><span class="comment"># print(value)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）处理省市数据，各省市的名称数据需删去后面的词"><a href="#（3）处理省市数据，各省市的名称数据需删去后面的词" class="headerlink" title="（3）处理省市数据，各省市的名称数据需删去后面的词"></a>（3）处理省市数据，各省市的名称数据需删去后面的词</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result_city = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(city)):</span><br><span class="line">    item = (city[i].strip(<span class="string">&quot;省市自治区回族壮族维吾尔族&quot;</span>))</span><br><span class="line">    result_city.append(item)</span><br><span class="line"><span class="built_in">print</span>(result_city)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.imgloc.com/2023/06/05/VlVY0z.png" alt="VlVY0z.png" border="0">  
+
+<h4 id="（4）绘制地图"><a href="#（4）绘制地图" class="headerlink" title="（4）绘制地图"></a>（4）绘制地图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span> = Map(<span class="string">&#x27;中国疫情地图&#x27;</span>, width=<span class="number">1200</span>, height=<span class="number">600</span>)</span><br><span class="line"><span class="built_in">map</span>.add(<span class="string">&#x27;各省市累计确诊人数&#x27;</span>, result_city, value, <span class="string">&#x27;china&#x27;</span>, is_visualmap=<span class="literal">True</span>,</span><br><span class="line">        visual_text_color=<span class="string">&#x27;#000&#x27;</span>, visual_range=[<span class="number">0</span>, <span class="number">50000</span>],is_label_show=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">map</span>.render(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\各个省份的新增确诊人数.html&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="（5）运行结果"><a href="#（5）运行结果" class="headerlink" title="（5）运行结果"></a>（5）运行结果</h4>  <img src="https://i.imgloc.com/2023/06/05/VlVqXw.png" alt="VlVqXw.png" border="0">  
+
+<h4 id="（6）结果分析"><a href="#（6）结果分析" class="headerlink" title="（6）结果分析"></a>（6）结果分析</h4>  <img src="https://i.imgloc.com/2023/06/05/VlVuJa.png" alt="VlVuJa.png" border="0">  
+
+<p>从图中可以看出，湖北颜色最明显，累计确诊的人数最多，有1253702人，靠经湖北的几个省市确诊人数也比较多，如河南、湖南、江西、安徽、浙江，广东确诊人数也比较多，西藏是确诊人数最少的。</p>
+<h3 id="2、日历热力图（北京、上海、广州、深圳四个城市的空气质量）"><a href="#2、日历热力图（北京、上海、广州、深圳四个城市的空气质量）" class="headerlink" title="2、日历热力图（北京、上海、广州、深圳四个城市的空气质量）"></a>2、日历热力图（北京、上海、广州、深圳四个城市的空气质量）</h3><h4 id="（1）分别读取北京、上海、广州、深圳四个城市的空气质量数据"><a href="#（1）分别读取北京、上海、广州、深圳四个城市的空气质量数据" class="headerlink" title="（1）分别读取北京、上海、广州、深圳四个城市的空气质量数据"></a>（1）分别读取北京、上海、广州、深圳四个城市的空气质量数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> HeatMap, Page</span><br><span class="line"></span><br><span class="line">df1 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\beijing_AQI_2018.csv&#x27;</span>)</span><br><span class="line">df2 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\guangzhou_AQI_2018.csv&#x27;</span>)</span><br><span class="line">df3 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\shanghai_AQI_2018.csv&#x27;</span>)</span><br><span class="line">df4 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\shenzhen_AQI_2018.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）将Date列数据转换为datetime格式（以df1（北京空气质量数据）为例）"><a href="#（2）将Date列数据转换为datetime格式（以df1（北京空气质量数据）为例）" class="headerlink" title="（2）将Date列数据转换为datetime格式（以df1（北京空气质量数据）为例）"></a>（2）将Date列数据转换为datetime格式（以df1（北京空气质量数据）为例）</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dom1 = df1[[<span class="string">&#x27;Date&#x27;</span>, <span class="string">&#x27;PM&#x27;</span>]]</span><br><span class="line">list1 = []</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">zip</span>(dom1[<span class="string">&#x27;Date&#x27;</span>], dom1[<span class="string">&#x27;PM&#x27;</span>]):</span><br><span class="line">    time_list = i.split(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">    time = datetime.date(<span class="built_in">int</span>(time_list[<span class="number">0</span>]), <span class="built_in">int</span>(time_list[<span class="number">1</span>]), <span class="built_in">int</span>(time_list[<span class="number">2</span>]))</span><br><span class="line">    PM = <span class="built_in">int</span>(j)</span><br><span class="line">    list1.append([<span class="built_in">str</span>(time), <span class="built_in">str</span>(PM)])</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br></pre></td></tr></table></figure>
+
+  <img src="https://i.imgloc.com/2023/06/05/VlfiDx.png" alt="VlfiDx.png" border="0">  
+
+<p>df2、df3、df4做相同的操作</p>
+<h4 id="3-使用pyecharts的HeatMap，绘制四个城市的日历热力图-以北京为例"><a href="#3-使用pyecharts的HeatMap，绘制四个城市的日历热力图-以北京为例" class="headerlink" title="(3) 使用pyecharts的HeatMap，绘制四个城市的日历热力图(以北京为例)"></a>(3) 使用pyecharts的HeatMap，绘制四个城市的日历热力图(以北京为例)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">heatmap1 = HeatMap(<span class="string">&#x27;2018年北京PM2.5指数日历图&#x27;</span>, title_pos=<span class="string">&#x27;40%&#x27;</span>, title_top=<span class="string">&#x27;10&#x27;</span>, width=<span class="number">800</span>, height=<span class="number">400</span>)</span><br><span class="line"></span><br><span class="line">heatmap1.add(<span class="string">&#x27;&#x27;</span>, list1, is_calendar_heatmap=<span class="literal">True</span>, visual_text_color=<span class="string">&#x27;#000&#x27;</span>, visual_range_text=[<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span>],</span><br><span class="line">             visual_range=[<span class="number">0</span>, <span class="number">300</span>],is_visualmap=<span class="literal">True</span>, calendar_cell_size=[<span class="string">&#x27;auto&#x27;</span>, <span class="number">30</span>], calendar_date_range=<span class="string">&#x27;2018&#x27;</span>,</span><br><span class="line">             visual_orient=<span class="string">&#x27;horizontal&#x27;</span>, visual_pos=<span class="string">&#x27;26%&#x27;</span>, visual_top=<span class="string">&#x27;70%&#x27;</span>, is_piecewise=<span class="literal">True</span>, visual_split_number=<span class="number">6</span>)</span><br><span class="line"><span class="comment"># heatmap1.render(&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\北京空气质量日历热力图.html&#x27;)</span></span><br></pre></td></tr></table></figure>
+
+<p>上海、广州、深圳三个城市使用同样的方法绘制</p>
+<h4 id="（4）运行结果"><a href="#（4）运行结果" class="headerlink" title="（4）运行结果"></a>（4）运行结果</h4><h5 id="①2018年北京PM2-5指数日历图"><a href="#①2018年北京PM2-5指数日历图" class="headerlink" title="①2018年北京PM2.5指数日历图"></a>①2018年北京PM2.5指数日历图</h5><p>​    <img src="https://i.imgloc.com/2023/06/05/VlfV3k.png" alt="VlfV3k.png" border="0">    </p>
+<h5 id="②2018年上海PM2-5指数日历图"><a href="#②2018年上海PM2-5指数日历图" class="headerlink" title="②2018年上海PM2.5指数日历图"></a>②2018年上海PM2.5指数日历图</h5>  <img src="https://i.imgloc.com/2023/06/05/Vlff5L.png" alt="Vlff5L.png" border="0">  
+
+<h5 id="③2018年广州PM2-5指数日历图"><a href="#③2018年广州PM2-5指数日历图" class="headerlink" title="③2018年广州PM2.5指数日历图"></a>③2018年广州PM2.5指数日历图</h5>  <img src="https://i.imgloc.com/2023/06/05/Vlf4ip.png" alt="Vlf4ip.png" border="0">  
+
+<h5 id="④2018年深圳PM2-5指数日历图"><a href="#④2018年深圳PM2-5指数日历图" class="headerlink" title="④2018年深圳PM2.5指数日历图"></a>④2018年深圳PM2.5指数日历图</h5>  <img src="https://i.imgloc.com/2023/06/05/VlfAbU.png" alt="VlfAbU.png" border="0">  
+
+<h4 id="（5）将四个城市的热力图放到同一个页面"><a href="#（5）将四个城市的热力图放到同一个页面" class="headerlink" title="（5）将四个城市的热力图放到同一个页面"></a>（5）将四个城市的热力图放到同一个页面</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用Page()方法将四个图展示在同一页面</span></span><br><span class="line">page = Page()</span><br><span class="line">page.add(heatmap1)</span><br><span class="line">page.add(heatmap2)</span><br><span class="line">page.add(heatmap3)</span><br><span class="line">page.add(heatmap4)</span><br><span class="line">page.render(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\北京、上海、广州、深圳空气质量日历热力图.html&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="（6）运行结果"><a href="#（6）运行结果" class="headerlink" title="（6）运行结果"></a>（6）运行结果</h4>  <img src="https://i.imgloc.com/2023/06/05/VlfDzv.png" alt="VlfDzv.png" border="0">  
+
+  <img src="https://i.imgloc.com/2023/06/05/VlfU13.png" alt="VlfU13.png" border="0">  
+
+<h4 id="（7）结果分析"><a href="#（7）结果分析" class="headerlink" title="（7）结果分析"></a>（7）结果分析</h4><p>总体来看，四个城市中，2018年空气质量最好的城市是深圳市，最不好的是北京市。北京市空气质量较差的时间在3月份、11月份，PM2.5达到200-250之间，并且北京市PM2.5在100-200之间在这四个城市中是最多的。上海和广州空气质量在2018年中，一月份相对其他月份较差。深圳市空气质量在2018年都比较好，只有一月份和二月份的PM2.5达到50-100之间，其他的基本都在50以下</p>
+<h2 id="四、实验分析与结论"><a href="#四、实验分析与结论" class="headerlink" title="四、实验分析与结论"></a>四、实验分析与结论</h2><p>本实验使用pyecharts(0.5.11版本)绘制地图和日历热力图。绘制中国地图时，需要下载echarts-china-provinces-pypkg包，在获取各省市的名称时，需要处理名称数据，绘制地图时，只留下各省市简称，使用strip()方法删去”省市自治区回族壮族维吾尔族”，最后使用Map对象绘制地图。绘制日历热力图需要将各城市空气质量数据的日期数据改成datatime格式，然后将处理好的数据添加到新数组中，最后使用HeatMap对象绘制热力图，可以使用Page()对象将四个图展示在同一个页面中</p>
+<h2 id="地图代码"><a href="#地图代码" class="headerlink" title="地图代码"></a>地图代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Map</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\covid_data.csv&#x27;</span>)</span><br><span class="line"><span class="comment"># 分组计算</span></span><br><span class="line">grouped_data = df.groupby([<span class="string">&#x27;province_name&#x27;</span>], as_index=<span class="literal">False</span>)[<span class="string">&#x27;confirmed_count&#x27;</span>].<span class="built_in">sum</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取各省市的名称和确诊人数</span></span><br><span class="line">province_name = grouped_data[<span class="string">&#x27;province_name&#x27;</span>]</span><br><span class="line">confirmed_count = grouped_data[<span class="string">&#x27;confirmed_count&#x27;</span>]</span><br><span class="line"><span class="comment"># print(province_name)</span></span><br><span class="line"><span class="comment"># print(confirmed_count)</span></span><br><span class="line">city = []</span><br><span class="line">value = []</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">zip</span>(province_name, confirmed_count):</span><br><span class="line">    city.append(i)</span><br><span class="line">    value.append(j)</span><br><span class="line"><span class="comment"># print(city)</span></span><br><span class="line"><span class="comment"># print(value)</span></span><br><span class="line">result_city = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(city)):</span><br><span class="line">    item = (city[i].strip(<span class="string">&quot;省市自治区回族壮族维吾尔族&quot;</span>))</span><br><span class="line">    result_city.append(item)</span><br><span class="line"><span class="built_in">print</span>(result_city)</span><br><span class="line"><span class="built_in">map</span> = Map(<span class="string">&#x27;中国疫情地图&#x27;</span>, width=<span class="number">1200</span>, height=<span class="number">600</span>)</span><br><span class="line"><span class="built_in">map</span>.add(<span class="string">&#x27;各省市累计确诊人数&#x27;</span>, result_city, value, <span class="string">&#x27;china&#x27;</span>, is_visualmap=<span class="literal">True</span>,</span><br><span class="line">        visual_text_color=<span class="string">&#x27;#000&#x27;</span>, visual_range=[<span class="number">0</span>, <span class="number">50000</span>],is_label_show=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">map</span>.render(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\各个省份的新增确诊人数.html&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="日历热力图代码"><a href="#日历热力图代码" class="headerlink" title="日历热力图代码"></a>日历热力图代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> HeatMap, Page</span><br><span class="line"></span><br><span class="line">df1 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\beijing_AQI_2018.csv&#x27;</span>)</span><br><span class="line">df2 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\guangzhou_AQI_2018.csv&#x27;</span>)</span><br><span class="line">df3 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\shanghai_AQI_2018.csv&#x27;</span>)</span><br><span class="line">df4 = pd.read_csv(<span class="string">&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\数据\\实验六\\shenzhen_AQI_2018.csv&#x27;</span>)</span><br><span class="line"></span><br><span class="line">dom1 = df1[[<span class="string">&#x27;Date&#x27;</span>, <span class="string">&#x27;PM&#x27;</span>]]</span><br><span class="line">list1 = []</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">zip</span>(dom1[<span class="string">&#x27;Date&#x27;</span>], dom1[<span class="string">&#x27;PM&#x27;</span>]):</span><br><span class="line">    time_list = i.split(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">    time = datetime.date(<span class="built_in">int</span>(time_list[<span class="number">0</span>]), <span class="built_in">int</span>(time_list[<span class="number">1</span>]), <span class="built_in">int</span>(time_list[<span class="number">2</span>]))</span><br><span class="line">    PM = <span class="built_in">int</span>(j)</span><br><span class="line">    list1.append([<span class="built_in">str</span>(time), <span class="built_in">str</span>(PM)])</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br><span class="line"></span><br><span class="line">dom2 = df2[[<span class="string">&#x27;Date&#x27;</span>, <span class="string">&#x27;PM&#x27;</span>]]</span><br><span class="line">list2 = []</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">zip</span>(dom2[<span class="string">&#x27;Date&#x27;</span>], dom2[<span class="string">&#x27;PM&#x27;</span>]):</span><br><span class="line">    time_list = i.split(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">    time = datetime.date(<span class="built_in">int</span>(time_list[<span class="number">0</span>]), <span class="built_in">int</span>(time_list[<span class="number">1</span>]), <span class="built_in">int</span>(time_list[<span class="number">2</span>]))</span><br><span class="line">    PM = <span class="built_in">int</span>(j)</span><br><span class="line">    list2.append([<span class="built_in">str</span>(time), <span class="built_in">str</span>(PM)])</span><br><span class="line"><span class="comment"># print(list2)</span></span><br><span class="line"></span><br><span class="line">dom3 = df3[[<span class="string">&#x27;Date&#x27;</span>, <span class="string">&#x27;PM&#x27;</span>]]</span><br><span class="line">list3 = []</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">zip</span>(dom3[<span class="string">&#x27;Date&#x27;</span>], dom3[<span class="string">&#x27;PM&#x27;</span>]):</span><br><span class="line">    time_list = i.split(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">    time = datetime.date(<span class="built_in">int</span>(time_list[<span class="number">0</span>]), <span class="built_in">int</span>(time_list[<span class="number">1</span>]), <span class="built_in">int</span>(time_list[<span class="number">2</span>]))</span><br><span class="line">    PM = <span class="built_in">int</span>(j)</span><br><span class="line">    list3.append([<span class="built_in">str</span>(time), <span class="built_in">str</span>(PM)])</span><br><span class="line"><span class="comment"># print(list3)</span></span><br><span class="line"></span><br><span class="line">dom4 = df4[[<span class="string">&#x27;Date&#x27;</span>, <span class="string">&#x27;PM&#x27;</span>]]</span><br><span class="line">list4 = []</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> <span class="built_in">zip</span>(dom4[<span class="string">&#x27;Date&#x27;</span>], dom4[<span class="string">&#x27;PM&#x27;</span>]):</span><br><span class="line">    time_list = i.split(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">    time = datetime.date(<span class="built_in">int</span>(time_list[<span class="number">0</span>]), <span class="built_in">int</span>(time_list[<span class="number">1</span>]), <span class="built_in">int</span>(time_list[<span class="number">2</span>]))</span><br><span class="line">    PM = <span class="built_in">int</span>(j)</span><br><span class="line">    list4.append([<span class="built_in">str</span>(time), <span class="built_in">str</span>(PM)])</span><br><span class="line"><span class="comment"># print(list4)</span></span><br><span class="line"></span><br><span class="line">heatmap1 = HeatMap(<span class="string">&#x27;2018年北京PM2.5指数日历图&#x27;</span>, title_pos=<span class="string">&#x27;40%&#x27;</span>, title_top=<span class="string">&#x27;10&#x27;</span>, width=<span class="number">800</span>, height=<span class="number">400</span>)</span><br><span class="line"></span><br><span class="line">heatmap1.add(<span class="string">&#x27;&#x27;</span>, list1, is_calendar_heatmap=<span class="literal">True</span>, visual_text_color=<span class="string">&#x27;#000&#x27;</span>, visual_range_text=[<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span>],</span><br><span class="line">             visual_range=[<span class="number">0</span>, <span class="number">300</span>],is_visualmap=<span class="literal">True</span>, calendar_cell_size=[<span class="string">&#x27;auto&#x27;</span>, <span class="number">30</span>], calendar_date_range=<span class="string">&#x27;2018&#x27;</span>,</span><br><span class="line">             visual_orient=<span class="string">&#x27;horizontal&#x27;</span>, visual_pos=<span class="string">&#x27;26%&#x27;</span>, visual_top=<span class="string">&#x27;70%&#x27;</span>, is_piecewise=<span class="literal">True</span>, visual_split_number=<span class="number">6</span>)</span><br><span class="line"><span class="comment"># heatmap1.render(&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\北京空气质量日历热力图.html&#x27;)</span></span><br><span class="line"></span><br><span class="line">heatmap2 = HeatMap(<span class="string">&#x27;2018年上海PM2.5指数日历图&#x27;</span>, title_pos=<span class="string">&#x27;40%&#x27;</span>, title_top=<span class="string">&#x27;10&#x27;</span>, width=<span class="number">800</span>, height=<span class="number">400</span>)</span><br><span class="line">heatmap2.add(<span class="string">&#x27;&#x27;</span>, list2, is_calendar_heatmap=<span class="literal">True</span>, visual_text_color=<span class="string">&#x27;#000&#x27;</span>, visual_range_text=[<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span>],</span><br><span class="line">             visual_range=[<span class="number">0</span>, <span class="number">300</span>],is_visualmap=<span class="literal">True</span>, calendar_cell_size=[<span class="string">&#x27;auto&#x27;</span>, <span class="number">30</span>], calendar_date_range=<span class="string">&#x27;2018&#x27;</span>,</span><br><span class="line">             visual_orient=<span class="string">&#x27;horizontal&#x27;</span>, visual_pos=<span class="string">&#x27;26%&#x27;</span>, visual_top=<span class="string">&#x27;70%&#x27;</span>, is_piecewise=<span class="literal">True</span>, visual_split_number=<span class="number">6</span>)</span><br><span class="line"><span class="comment"># heatmap2.render(&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\上海空气质量日历热力图.html&#x27;)</span></span><br><span class="line"></span><br><span class="line">heatmap3 = HeatMap(<span class="string">&#x27;2018年广州PM2.5指数日历图&#x27;</span>, title_pos=<span class="string">&#x27;40%&#x27;</span>, title_top=<span class="string">&#x27;10&#x27;</span>, width=<span class="number">800</span>, height=<span class="number">400</span>)</span><br><span class="line">heatmap3.add(<span class="string">&#x27;&#x27;</span>, list3, is_calendar_heatmap=<span class="literal">True</span>, visual_text_color=<span class="string">&#x27;#000&#x27;</span>, visual_range_text=[<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span>],</span><br><span class="line">             visual_range=[<span class="number">0</span>, <span class="number">300</span>],is_visualmap=<span class="literal">True</span>, calendar_cell_size=[<span class="string">&#x27;auto&#x27;</span>, <span class="number">30</span>], calendar_date_range=<span class="string">&#x27;2018&#x27;</span>,</span><br><span class="line">             visual_orient=<span class="string">&#x27;horizontal&#x27;</span>, visual_pos=<span class="string">&#x27;26%&#x27;</span>, visual_top=<span class="string">&#x27;70%&#x27;</span>, is_piecewise=<span class="literal">True</span>, visual_split_number=<span class="number">6</span>)</span><br><span class="line"><span class="comment"># heatmap3.render(&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\广州空气质量日历热力图.html&#x27;)</span></span><br><span class="line"></span><br><span class="line">heatmap4 = HeatMap(<span class="string">&#x27;2018年深圳PM2.5指数日历图&#x27;</span>, title_pos=<span class="string">&#x27;40%&#x27;</span>, title_top=<span class="string">&#x27;10&#x27;</span>, width=<span class="number">800</span>, height=<span class="number">400</span>)</span><br><span class="line">heatmap4.add(<span class="string">&#x27;&#x27;</span>, list4, is_calendar_heatmap=<span class="literal">True</span>, visual_text_color=<span class="string">&#x27;#000&#x27;</span>, visual_range_text=[<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span>],</span><br><span class="line">             visual_range=[<span class="number">0</span>, <span class="number">300</span>],is_visualmap=<span class="literal">True</span>, calendar_cell_size=[<span class="string">&#x27;auto&#x27;</span>, <span class="number">30</span>], calendar_date_range=<span class="string">&#x27;2018&#x27;</span>,</span><br><span class="line">             visual_orient=<span class="string">&#x27;horizontal&#x27;</span>, visual_pos=<span class="string">&#x27;26%&#x27;</span>, visual_top=<span class="string">&#x27;70%&#x27;</span>, is_piecewise=<span class="literal">True</span>, visual_split_number=<span class="number">6</span>)</span><br><span class="line"><span class="comment"># heatmap4.render(&#x27;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\深圳空气质量日历热力图.html&#x27;)</span></span><br><span class="line"><span class="comment"># 使用Page()方法将四个图展示在同一页面</span></span><br><span class="line">page = Page()</span><br><span class="line">page.add(heatmap1)</span><br><span class="line">page.add(heatmap2)</span><br><span class="line">page.add(heatmap3)</span><br><span class="line">page.add(heatmap4)</span><br><span class="line">page.render(<span class="string">&quot;D:\\桌面文件\\2023学习资料+作业\\大数据可视化技术\\可视化\\北京、上海、广州、深圳空气质量日历热力图.html&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       
 		
 		
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -196,16 +307,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/06/05/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%AD%E7%9A%84%E4%BA%A4%E4%BA%92/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wasdkd.github.io/023/06/05/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%AD%E7%9A%84%E4%BA%A4%E4%BA%92/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/06/03/%E5%9B%BD%E5%86%85%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E7%BB%BC%E5%90%88%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B9%B3%E5%8F%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">国内疫情数据综合可视化平台</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,641 +390,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-国内疫情数据综合可视化平台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/06/03/%E5%9B%BD%E5%86%85%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E7%BB%BC%E5%90%88%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B9%B3%E5%8F%B0/">国内疫情数据综合可视化平台</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/06/03/%E5%9B%BD%E5%86%85%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E7%BB%BC%E5%90%88%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B9%B3%E5%8F%B0/" class="archive-article-date">
-  	<time datetime="2023-06-03T03:42:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="国内疫情数据综合可视化平台"><a href="#国内疫情数据综合可视化平台" class="headerlink" title="国内疫情数据综合可视化平台"></a>国内疫情数据综合可视化平台</h1><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p><strong>Python、Mysql、Echarts、Pycharm开发工具、Django框架、HTML、CSS、JavaScript</strong></p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>完成一个Web项目的搭建，实现将国内疫情相关的数据以可视化大屏的方式展现出来。如下图  </p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/06/03/%E5%9B%BD%E5%86%85%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E7%BB%BC%E5%90%88%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B9%B3%E5%8F%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%AD%E7%9A%84%E4%BA%A4%E4%BA%92"><span class="toc-number">1.</span> <span class="toc-text">数据可视化中的交互</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">一、实验内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E9%AA%8C%E5%99%A8%E6%9D%90%E5%8F%8A%E5%AE%9E%E9%AA%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">二、实验器材及实验条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4%E4%B8%8E%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.</span> <span class="toc-text">三、实验步骤与结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9C%B0%E5%9B%BE-%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%AA%E7%9C%81%E4%BB%BD%E7%9A%84%E6%96%B0%E5%A2%9E%E7%A1%AE%E8%AF%8A%E4%BA%BA%E6%95%B0"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、地图(统计各个省份的新增确诊人数)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">（1）读取数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%AA%E7%9C%81%E4%BB%BD%E7%9A%84%E6%96%B0%E5%A2%9E%E7%A1%AE%E8%AF%8A%E4%BA%BA%E6%95%B0"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">（2）统计各个省份的新增确诊人数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%A4%84%E7%90%86%E7%9C%81%E5%B8%82%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%90%84%E7%9C%81%E5%B8%82%E7%9A%84%E5%90%8D%E7%A7%B0%E6%95%B0%E6%8D%AE%E9%9C%80%E5%88%A0%E5%8E%BB%E5%90%8E%E9%9D%A2%E7%9A%84%E8%AF%8D"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">（3）处理省市数据，各省市的名称数据需删去后面的词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%BB%98%E5%88%B6%E5%9C%B0%E5%9B%BE"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">（4）绘制地图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">（5）运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-number">1.3.1.6.</span> <span class="toc-text">（6）结果分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%97%A5%E5%8E%86%E7%83%AD%E5%8A%9B%E5%9B%BE%EF%BC%88%E5%8C%97%E4%BA%AC%E3%80%81%E4%B8%8A%E6%B5%B7%E3%80%81%E5%B9%BF%E5%B7%9E%E3%80%81%E6%B7%B1%E5%9C%B3%E5%9B%9B%E4%B8%AA%E5%9F%8E%E5%B8%82%E7%9A%84%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%EF%BC%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、日历热力图（北京、上海、广州、深圳四个城市的空气质量）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%88%86%E5%88%AB%E8%AF%BB%E5%8F%96%E5%8C%97%E4%BA%AC%E3%80%81%E4%B8%8A%E6%B5%B7%E3%80%81%E5%B9%BF%E5%B7%9E%E3%80%81%E6%B7%B1%E5%9C%B3%E5%9B%9B%E4%B8%AA%E5%9F%8E%E5%B8%82%E7%9A%84%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">（1）分别读取北京、上海、广州、深圳四个城市的空气质量数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B0%86Date%E5%88%97%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E4%B8%BAdatetime%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BB%A5df1%EF%BC%88%E5%8C%97%E4%BA%AC%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%95%B0%E6%8D%AE%EF%BC%89%E4%B8%BA%E4%BE%8B%EF%BC%89"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">（2）将Date列数据转换为datetime格式（以df1（北京空气质量数据）为例）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8pyecharts%E7%9A%84HeatMap%EF%BC%8C%E7%BB%98%E5%88%B6%E5%9B%9B%E4%B8%AA%E5%9F%8E%E5%B8%82%E7%9A%84%E6%97%A5%E5%8E%86%E7%83%AD%E5%8A%9B%E5%9B%BE-%E4%BB%A5%E5%8C%97%E4%BA%AC%E4%B8%BA%E4%BE%8B"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">(3) 使用pyecharts的HeatMap，绘制四个城市的日历热力图(以北京为例)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">（4）运行结果</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A02018%E5%B9%B4%E5%8C%97%E4%BA%ACPM2-5%E6%8C%87%E6%95%B0%E6%97%A5%E5%8E%86%E5%9B%BE"><span class="toc-number">1.3.2.4.1.</span> <span class="toc-text">①2018年北京PM2.5指数日历图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A12018%E5%B9%B4%E4%B8%8A%E6%B5%B7PM2-5%E6%8C%87%E6%95%B0%E6%97%A5%E5%8E%86%E5%9B%BE"><span class="toc-number">1.3.2.4.2.</span> <span class="toc-text">②2018年上海PM2.5指数日历图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A22018%E5%B9%B4%E5%B9%BF%E5%B7%9EPM2-5%E6%8C%87%E6%95%B0%E6%97%A5%E5%8E%86%E5%9B%BE"><span class="toc-number">1.3.2.4.3.</span> <span class="toc-text">③2018年广州PM2.5指数日历图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A32018%E5%B9%B4%E6%B7%B1%E5%9C%B3PM2-5%E6%8C%87%E6%95%B0%E6%97%A5%E5%8E%86%E5%9B%BE"><span class="toc-number">1.3.2.4.4.</span> <span class="toc-text">④2018年深圳PM2.5指数日历图</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E5%B0%86%E5%9B%9B%E4%B8%AA%E5%9F%8E%E5%B8%82%E7%9A%84%E7%83%AD%E5%8A%9B%E5%9B%BE%E6%94%BE%E5%88%B0%E5%90%8C%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.3.2.5.</span> <span class="toc-text">（5）将四个城市的热力图放到同一个页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.2.6.</span> <span class="toc-text">（6）运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%887%EF%BC%89%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-number">1.3.2.7.</span> <span class="toc-text">（7）结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90%E4%B8%8E%E7%BB%93%E8%AE%BA"><span class="toc-number">1.4.</span> <span class="toc-text">四、实验分析与结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%B0%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">1.5.</span> <span class="toc-text">地图代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%8E%86%E7%83%AD%E5%8A%9B%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">1.6.</span> <span class="toc-text">日历热力图代码</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-使用函数式API编程实现图片的分类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/06/02/%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8FAPI%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E5%88%86%E7%B1%BB/">使用函数式API编程实现图片的分类</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/06/02/%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8FAPI%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E5%88%86%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2023-06-02T01:19:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用函数式API编程实现图片的分类"><a href="#使用函数式API编程实现图片的分类" class="headerlink" title="使用函数式API编程实现图片的分类"></a>使用函数式API编程实现图片的分类</h1><h2 id="一、实验原理或实验内容"><a href="#一、实验原理或实验内容" class="headerlink" title="一、实验原理或实验内容"></a>一、实验原理或实验内容</h2><p>1.从keras的数据集中加载手写数字图片数据，转成网络需要的数据格式。</p>
-<p>2.构建一个神经网络模型，要求使用keras函数式API，并使用划分好的训练集数据训练模型，使用划分好的测试集的数据验证模型，训练迭代20次。</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/06/02/%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8FAPI%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%9A%84%E5%88%86%E7%B1%BB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用循环神经网络实现影评数据的分类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/25/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E5%BD%B1%E8%AF%84%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%86%E7%B1%BB/">使用循环神经网络实现影评数据的分类</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/25/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E5%BD%B1%E8%AF%84%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%86%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2023-05-25T15:57:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用循环神经网络实现影评数据的分类"><a href="#使用循环神经网络实现影评数据的分类" class="headerlink" title="使用循环神经网络实现影评数据的分类"></a>使用循环神经网络实现影评数据的分类</h1><h2 id="一、实验原理或实验内容"><a href="#一、实验原理或实验内容" class="headerlink" title="一、实验原理或实验内容"></a>一、实验原理或实验内容</h2><p>1.从keras的数据集中加载影评数据，注意需要填充（截断）数据，并转成数组的形式。</p>
-<p>2.构建一个神经网络模型，要求使用词嵌入和循环层，并使用划分好的训练集数据训练模型，使用划分好的测试集的数据验证模型，训练迭代20次。</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/25/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E5%BD%B1%E8%AF%84%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%86%E7%B1%BB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用循环神经网络实现气温的预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/24/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B/">使用循环神经网络实现气温的预测</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/24/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B/" class="archive-article-date">
-  	<time datetime="2023-05-24T15:29:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用循环神经网络实现气温的预测"><a href="#使用循环神经网络实现气温的预测" class="headerlink" title="使用循环神经网络实现气温的预测"></a>使用循环神经网络实现气温的预测</h1><h2 id="一、实验要求"><a href="#一、实验要求" class="headerlink" title="一、实验要求"></a>一、实验要求</h2><p>1. 下载数据，下载地址：</p>
-<p><a target="_blank" rel="noopener" href="https://s3.amazonaws.com/keras-">https://s3.amazonaws.com/keras-</a> datasets&#x2F;jena_climate_2009_2016.csv.zip</p>
-<p>2. 加载数据，可以使用pandas加载</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/24/%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E6%B0%94%E6%B8%A9%E7%9A%84%E9%A2%84%E6%B5%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-博客图片不能加载问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/22/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/">博客图片不能加载问题</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/22/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2023-05-22T15:14:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="博客图片不能加载问题"><a href="#博客图片不能加载问题" class="headerlink" title="博客图片不能加载问题"></a>博客图片不能加载问题</h1><p>用于保存图片的仓库：<a target="_blank" rel="noopener" href="https://imgloc.com/">https://imgloc.com/</a></p>
-<p>遇到网站不能正常进入，后了好久又能进入了，这时候之前的图片不能在博客上显示了</p>
-<p>查看仓库，图片还在，看路径，发现仓库的路径变了</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/22/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-GraphFrames图计算" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/22/GraphFrames%E5%9B%BE%E8%AE%A1%E7%AE%97/">GraphFrames图计算</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/22/GraphFrames%E5%9B%BE%E8%AE%A1%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2023-05-22T14:19:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="GraphFrames图计算"><a href="#GraphFrames图计算" class="headerlink" title="GraphFrames图计算"></a>GraphFrames图计算</h1><h2 id="1、图的概念"><a href="#1、图的概念" class="headerlink" title="1、图的概念"></a>1、图的概念</h2><p>一般来说，图是由顶点的非空有限集和边的有限集构成的，记作 G &#x3D;&lt; V，E &gt; ，其中，G表示一个图，V表示图G顶点(Vertices)的集合，E表示图G中边(Edges)的集合，E中的一条边连接V中的两个顶点</p>
-<p>图分为有向图和无向图</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/22/GraphFrames%E5%9B%BE%E8%AE%A1%E7%AE%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Tableau工具搭建BI仪表盘" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/20/Tableau%E5%B7%A5%E5%85%B7%E6%90%AD%E5%BB%BABI%E4%BB%AA%E8%A1%A8%E7%9B%98/">Tableau工具搭建BI仪表盘</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/20/Tableau%E5%B7%A5%E5%85%B7%E6%90%AD%E5%BB%BABI%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="archive-article-date">
-  	<time datetime="2023-05-20T09:05:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Tableau工具搭建BI仪表盘"><a href="#Tableau工具搭建BI仪表盘" class="headerlink" title="Tableau工具搭建BI仪表盘"></a>Tableau工具搭建BI仪表盘</h1><h2 id="一、搭建准备"><a href="#一、搭建准备" class="headerlink" title="一、搭建准备"></a>一、搭建准备</h2><p><strong>仪表盘主题：</strong>每日营收情况</p>
-<p><strong>关键数据：</strong>营收数据、流量数据</p>
-<p><strong>营收数据：</strong>GMV、商家实收、用户实付、总订单数（有效订单数、无效订单数）、cpc总费用、各平台数据对比</p>
-<p><strong>流量数据：</strong>曝光人数、进店人数、下单人数、进店转化率、下单转化率、新客数、老客数、复购率</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/20/Tableau%E5%B7%A5%E5%85%B7%E6%90%AD%E5%BB%BABI%E4%BB%AA%E8%A1%A8%E7%9B%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用卷积神经网络实现猫和狗的预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/">使用卷积神经网络实现猫和狗的预测</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/" class="archive-article-date">
-  	<time datetime="2023-05-18T12:55:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用卷积神经网络实现猫和狗的预测"><a href="#使用卷积神经网络实现猫和狗的预测" class="headerlink" title="使用卷积神经网络实现猫和狗的预测"></a>使用卷积神经网络实现猫和狗的预测</h1><h2 id="一、实验原理或实验内容"><a href="#一、实验原理或实验内容" class="headerlink" title="一、实验原理或实验内容"></a>一、实验原理或实验内容</h2><p>1.将图片数据分为训练集和验证集，训练集中猫和狗各10000张图片，验证集中猫和狗各2500张图片。</p>
-<p>2.构建一个神经网络模型，并使用划分好的训练集数据训练模型，使用验证集的数据验证模型，训练迭代30次，建议使用生成器。</p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/18/%E4%BD%BF%E7%94%A8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0%E7%8C%AB%E5%92%8C%E7%8B%97%E7%9A%84%E9%A2%84%E6%B5%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Tableau工具绘制基础图表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/16/Tableau%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8/">Tableau工具绘制基础图表</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-        
-        <a href="/2023/05/16/Tableau%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2023-05-16T14:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Tableau工具绘制基础图表"><a href="#Tableau工具绘制基础图表" class="headerlink" title="Tableau工具绘制基础图表"></a>Tableau工具绘制基础图表</h1><h2 id="1、软件简介"><a href="#1、软件简介" class="headerlink" title="1、软件简介"></a>1、软件简介</h2><p> Tableau公司将<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/9890322?fromModule=lemma_inlink">数据运算</a>与美观的图表完美地嫁接在一起。它的程序很容易上手，各公司可以用它将大量数据拖放到数字“画布”上，转眼间就能创建好各种图表。 这一软件的理念是，界面上的数据越容易操控，公司对自己在所在业务领域里的所作所为到底是正确还是错误，就能了解得越透彻。 </p>
-        
-      
-		
-		
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/16/Tableau%E5%B7%A5%E5%85%B7%E7%BB%98%E5%88%B6%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -881,8 +442,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
